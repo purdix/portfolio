@@ -1,26 +1,18 @@
 body {
   text-align: center;
-  vertical-align: middle;
-  margin: 0;
   background-color: #080926;
   font-family: Lato, sans-serif;
 }
 
 h1 {
   font-size: 6em;
+  font-weight: 700;
 }
 
 p {
   font-size: 1.5em;
+  font-weight: 400;
   color: #fff;
-}
-
-article {
-  display: block;
-  text-align: centre;
-  width: 650px;
-  margin: 0 auto;
-  line-height: 2em;
 }
 
 a {
@@ -33,15 +25,27 @@ a:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+    line-height: 1em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
+
 .color-red {
   color: #FF3464;
 }
 
-.container {
-  position: relative;
-  background: none;
-  padding: 15%;
-  margin: auto;
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
 .stage {
