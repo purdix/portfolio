@@ -1,43 +1,40 @@
 body {
   text-align: center;
-  background-color: #080926;
+  background-color: #0E0F34;
   font-family: Lato, sans-serif;
 }
 
 h1 {
-  font-size: 6em;
+  color: #FF3464;
+  font-size: 4em;
   font-weight: 700;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 400;
-  color: #fff;
+  color: #f0f0f0;
 }
 
 a {
-  color: #FF3464;
+  color: #61A1FF;
   text-decoration: none;
 }
 
 a:hover {
-  color: #333;
+  color: #61A1FF;
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 920px) {
   h1 {
     font-size: 3em;
     line-height: 1em;
   }
 
   p {
-    font-size: 1.5em;
+    font-size: 1.125em;
   }
-}
-
-.color-red {
-  color: #FF3464;
 }
 
 .center {
@@ -64,38 +61,55 @@ a:hover {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FF3464;
-  color: #FF3464;
-  box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+  background-color: #61A1FF;
+  color: #61A1FF;
+  box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   animation: dotTyping 1.5s infinite linear;
 }
 
 @keyframes dotTyping {
   0% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
 
   16.667% {
-    box-shadow: 9984px -10px 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px -10px 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
 
   33.333% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
 
   50% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px -10px 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px -10px 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
 
   66.667% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
 
   83.333% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px -10px 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px -10px 0 0 #61A1FF;
   }
 
   100% {
-    box-shadow: 9984px 0 0 0 #FF3464, 9999px 0 0 0 #FF3464, 10014px 0 0 0 #FF3464;
+    box-shadow: 9984px 0 0 0 #61A1FF, 9999px 0 0 0 #61A1FF, 10014px 0 0 0 #61A1FF;
   }
+}
+
+.fa {
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+.footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px 40px;
 }
