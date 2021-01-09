@@ -37,10 +37,23 @@ html {
   margin-top: 180px;
 }
 
+.spacer-large-chart {
+  margin-top: 180px;
+}
+
 @media only screen and (max-width: 600px) {
   .spacer {
     margin-top: 20px;
   }
+
+  .spacer-medium {
+    margin-top: 60px;
+  }
+
+  .spacer-large {
+    margin-top: 90px;
+  }
+
 }
 
 body {
@@ -403,6 +416,12 @@ a .logo-dark {
 .full-width-container {
   padding-top: 240px;
    background-image: linear-gradient(to right, #0bbafb, #4285ec);
+}
+
+@media (max-width: 900px) {
+  .full-width-container {
+    padding-top: 140px;
+  }
 }
 
 .full-width-image img {
