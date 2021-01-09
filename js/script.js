@@ -26,10 +26,6 @@ function play() {
 }
 /////////////////////
 
-//Scroll Reveal
-ScrollReveal().reveal('.scrollContent');
-/////////////////////
-
 // Image to Lightbox Overlay
 $('img').on('click', function() {
   $('#overlay')
