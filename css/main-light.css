@@ -457,6 +457,7 @@ a .logo-dark {
 .card-locked{
   background-color: #f9f9f9;
   border: none;
+  padding: 150px 75px;
 }
 
 .card-title {
