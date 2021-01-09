@@ -436,6 +436,12 @@ a .logo-dark {
    background-image: linear-gradient(to right, #0bbafb, #4285ec);
 }
 
+@media (max-width: 900px) {
+  .full-width-container {
+    padding-top: 140px;
+  }
+}
+
 .full-width-image img {
   width: 65%;
   display: block;
