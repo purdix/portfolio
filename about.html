@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Kogulan Sivaneshan</title>
+  <!-- Meta properties -->
+  <meta charset="utf-8">
+  <meta name="author" content="Kogulan Sivaneshan">
+  <meta name="description" content="Hi there, I'm Kogulan - A product designer and gamer based in Toronto. Welcome to my digital portfolio!">
+  <meta name="keywords" content="kogulan sivaneshan, designer, ui/ux, product design, portfolio, personal website, ubisoft, design, user experience">
+  <meta property="og:title" content="Kogulan Sivaneshan | Portfolio">
+  <meta property="og:description" content="Product designer and gamer based in Toronto.">
+  <meta property="og:url" content="https://sivaneshan.com">
+  <meta property="og:image" content="./files/og-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Extras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHHQM48PX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNHHQM48PX');
+  </script>
+  <!--Dark & light mode -->
+  <link href="./css/main.css" rel="stylesheet" id="dark-stylesheet">
+  <link href="./css/main-light.css" rel="stylesheet alternate" id="light-stylesheet">
+  <script>
+    function enableStylesheet(node) {
+      node.rel = 'stylesheet';
+    }
+    function disableStylesheet(node) {
+      node.rel = 'alternate stylesheet';
+    }
+    if (localStorage.getItem('mode') === 'light') {
+      disableStylesheet(document.getElementById('dark-stylesheet'));
+      enableStylesheet(document.getElementById('light-stylesheet'));
+    } else {
+      localStorage.setItem('mode', 'dark');
+    }
+  </script>
+
+  <style> html {
+    overflow-y: scroll;
+    }
+  </style>
+</head>
+
+<body class="bg">
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- Main Navigation -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="files/logo.svg" height="50px" alt="Kogulan Sivaneshan">
+        <img class="logo-dark" src="files/logo-dark.svg" height="50px" alt="Kogulan Sivaneshan">
+      </a>
+      <div class="navbar-toggler" tabindex="0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" aria-current="page" href="/">Work</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Dark Mode Toggle-->
+  <div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
+    <img src="files/moon-white.svg" alt="" class="moon moon--white">
+    <img src="files/moon.svg" alt="" class="moon moon--black">
+    <div id="theme-toggle">
+      <div id="theme-toggle-knob"></div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="welcome">
+        <p id="scrollUpTitle" class="title1 animate__animated animate__fadeInUp" tabindex="-1">A bit about <span class="color-blue">myself</span></p>
+        <h1 class="animate__animated animate__fadeInUp">Product designer, gamer & <a class="underline-link" href="#drawings">pencil artist.</a></h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-5 d-flex animate__animated animate__fadeInUp">
+          <img class="img-fluid img rounded shadow" src="./files/kogulan.jpg" alt="">
+        </div>
+        <div class="col-md-6 mb-5 animate__animated animate__fadeInUp">
+          <p>👋🏾 Hey there! I'm Kogulan. I’m currently pursuing a Master of Information (UXD) at the University of Toronto. Prior to that, I completed an Honours B.Sc. with a double major in Toxicology and Nutrition.</p>
+          <p>My love for design began as far back as high school when I was first introduced to Photoshop. Since then, I’ve made it my goal to learn and immerse myself in the field.</p>
+          <p>As a self-taught designer with a background in science, I've come to realize that good design is much more than pretty pixels on a screen; it’s about crafting memorable experiences that are grounded in research.</p>
+          <p>Most recently, I worked at Ubisoft Toronto as both a UI Artist and UX design intern on <a class="underline-link-mini" href="https://www.ubisoft.com/en-ca/game/far-cry/far-cry-6">Far Cry 6</a>. Besides work, I spend my time drawing and losing games in Dota 2 (no, that wasn't a typo 😭).</p>
+        </div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <section class="bg-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5">
+            <h2>Education</h2><br>
+            <div>
+              <h3 class="color-blue">Master of Information (MI)</h3>
+              <p class="reg-text">User Experience Design</p>
+              <p class="reg-text">University of Toronto — 2019-2021</p><br>
+            </div>
+            <div>
+              <h3 class="color-blue">Honours Bachelor of Science (HBSc)</h3>
+              <p class="reg-text">Biomedical Toxicology & Nutritional Science</p>
+              <p class="reg-text">University of Toronto — 2014-2018</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <h2>Experience</h2><br>
+            <div>
+              <h3 class="color-blue">Ubisoft Toronto</h3>
+              <p class="reg-text">UX Design Intern — May-Dec 2020</p>
+              <p class="reg-text">UI Art Intern — Summer 2019</p>
+              <p class="reg-text"><i>Worked on Far Cry 6 as part of the UI/UX team on Greater Gameplay</i></p><br>
+            </div>
+            <div>
+              <h3 class="color-blue">BlueFlower Media</h3>
+              <p class="reg-text">Graphic Designer (Freelance) — Sep-Dec 2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 spacer">
+            <h3><a class="link" target="_blank" href="./files/KogulanSivaneshan_Resume.pdf">View my resume<img class="link-arrow" src="files/arrow.svg" alt="" width="24"><img src="files/arrow-dark.svg" alt="" class="link-arrow-dark" width="24"><a/></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="drawings">
+      <div class="container">
+        <div class="spacer-medium"></div>
+        <h2>Hobbies</h2>
+        <p>Besides UX and gaming, I occassionally draw. Check out some of my work over the past few years.</p><br role="presentation">
+      <div class="row">
+        <div class="col-md col-6 d-flex">
+          <a data-toggle="tooltip" title="Click to expand" href="./files/drawings/drawing1.jpg" data-fancybox="drawing" data-caption="20 hrs, Charcoal & Graphite, 11x14 (2019)"><img class="img-fluid img-custom-small rounded shadow-sm mb-4" src="./files/drawings/drawing1.jpg" alt="Pencil drawing of a couple"></a>
+        </div>
+        <div class="col-md col-6 d-flex">
+          <a data-toggle="tooltip" title="Click to expand" href="./files/drawings/drawing2.png" data-fancybox="drawing" data-caption="<b>Rihanna</b><br/>12 hrs, Charcoal & Graphite, 11x14 (2017)"><img class="img-fluid img-custom-small rounded shadow-sm mb-4" src="./files/drawings/drawing2.png" alt="Pencil drawing of Rihanna"></a>
+        </div>
+        <div class="col-md col-6 d-flex">
+          <a data-toggle="tooltip" title="Click to expand" href="./files/drawings/drawing3.png" data-fancybox="drawing" data-caption="<b>Morgan Freeman</b><br/>12 hrs, Uniball pen & Charcoal, 8.5x11 (2016)"><img class="img-fluid img-custom-small rounded shadow-sm mb-4" src="./files/drawings/drawing3.png" alt="Pencil drawing of Morgan Freeman"></a>
+        </div>
+        <div class="col-md col-6 d-flex">
+          <a data-toggle="tooltip" title="Click to expand" href="./files/drawings/drawing4.jpg" data-fancybox="drawing" data-caption="<b>Emma Watson</b><br/>9 hrs, Charcoal & Graphite, 11x14 (2015)"><img class="img-fluid img-custom-small rounded shadow-sm mb-4" src="./files/drawings/drawing4.jpg" alt="Pencil drawing of Emma Watson"></a>
+        </div>
+        <div class="col-md col-6 d-flex">
+          <a data-toggle="tooltip" title="Click to expand" href="./files/drawings/drawing5.jpg" data-fancybox="drawing" data-caption="3 hrs, Charcoal & Graphite, 8.5x11 (2014)"><img class="img-fluid img-custom-small rounded shadow-sm mb-4" src="./files/drawings/drawing5.jpg" alt="Pencil drawing of a baby"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="spacer-large"></div>
+    <button onclick="topFunction()" id="scrollToTop" class="scrollBtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span></button>
+  </main>
+
+    <!--Footer-->
+    <footer class="footer">
+      <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fab fa-linkedin fa-lg footer-fa" aria-label="Linkedin"></a>
+      <a href="https://www.behance.net/sivaneshan" class="fab fa-behance fa-lg footer-fa" aria-label="Behance"></a>
+      <a href="mailto:kogulan.sivaneshan@gmail.com" class="fas fa-envelope fa-lg footer-fa" aria-label="Email"></a>
+      <p>Handcrafted with ❤️ in Canada.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+    <script src="./js/script.js"></script>
+
+
+    <script>
+      document.getElementById('theme-toggle-container').addEventListener('click',
+        function() {
+          var current_theme = localStorage.getItem('mode');
+          if (current_theme === 'dark') {
+            // switch to light theme
+            disableStylesheet(document.getElementById('dark-stylesheet'));
+            enableStylesheet(document.getElementById('light-stylesheet'));
+            localStorage.setItem('mode', 'light');
+          } else {
+            // switch to dark theme
+            disableStylesheet(document.getElementById('light-stylesheet'));
+            enableStylesheet(document.getElementById('dark-stylesheet'));
+            localStorage.setItem('mode', 'dark');
+          }
+        }
+      );
+
+      document.getElementById('theme-toggle-container').addEventListener('keypress',
+        function(e) {
+          if (e.key === 'Enter') {
+            var current_theme = localStorage.getItem('mode');
+            if (current_theme === 'dark') {
+              // switch to light theme
+              disableStylesheet(document.getElementById('dark-stylesheet'));
+              enableStylesheet(document.getElementById('light-stylesheet'));
+              localStorage.setItem('mode', 'light');
+            } else {
+              // switch to dark theme
+              disableStylesheet(document.getElementById('light-stylesheet'));
+              enableStylesheet(document.getElementById('dark-stylesheet'));
+              localStorage.setItem('mode', 'dark');
+            }
+          }
+        }
+      );
+    </script>
+  </body>
+
+</html>

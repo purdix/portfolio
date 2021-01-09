@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2205" height="3400" viewBox="0 0 2205 3400">
+  <defs>
+    <clipPath id="clip-iPhone_XR_XS_Max_11_1">
+      <rect width="2205" height="3400"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_XR_XS_Max_11_1" data-name="iPhone XR, XS Max, 11 – 1" clip-path="url(#clip-iPhone_XR_XS_Max_11_1)">
+    <g id="Group_5" data-name="Group 5" transform="translate(0 211)">
+      <g id="Group_4" data-name="Group 4" transform="translate(101 315)">
+        <g id="Rectangle_8" data-name="Rectangle 8" transform="matrix(0.966, -0.259, 0.259, 0.966, -72.92, 1548.366)" fill="none" stroke="#efefef" stroke-width="75" opacity="0.05">
+          <rect width="550" height="550" stroke="none"/>
+          <rect x="37.5" y="37.5" width="475" height="475" fill="none"/>
+        </g>
+        <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(1154.228 -526.837) rotate(30)" fill="none" stroke="#efefef" stroke-width="75" opacity="0.05">
+          <rect width="550" height="550" stroke="none"/>
+          <rect x="37.5" y="37.5" width="475" height="475" fill="none"/>
+        </g>
+        <g id="Polygon_1" data-name="Polygon 1" transform="translate(653.387 398.629) rotate(45)" fill="none" opacity="0.05">
+          <path d="M329.5,0,659,571H0Z" stroke="none"/>
+          <path d="M 329.5 150.0570068359375 L 129.8709106445313 496 L 529.1290893554688 496 L 329.5 150.0570068359375 M 329.5 0 L 659 571 L 0 571 L 329.5 0 Z" stroke="none" fill="#efefef"/>
+        </g>
+        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(-101 -58)" fill="none" stroke="#efefef" stroke-width="75" opacity="0.05">
+          <circle cx="282.5" cy="282.5" r="282.5" stroke="none"/>
+          <circle cx="282.5" cy="282.5" r="245" fill="none"/>
+        </g>
+        <g id="Group_2" data-name="Group 2" transform="matrix(0.966, 0.259, -0.259, 0.966, -881.584, 1381.724)" opacity="0.05">
+          <line id="Line_1" data-name="Line 1" x2="510.317" y2="510.317" transform="translate(1517.5 454.5)" fill="none" stroke="#efefef" stroke-width="75"/>
+          <line id="Line_2" data-name="Line 2" x1="510.317" y2="510.317" transform="translate(1517.5 454.5)" fill="none" stroke="#efefef" stroke-width="75"/>
+        </g>
+        <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(880 1338)" fill="none" stroke="#efefef" stroke-width="75" opacity="0.05">
+          <circle cx="282.5" cy="282.5" r="282.5" stroke="none"/>
+          <circle cx="282.5" cy="282.5" r="245" fill="none"/>
+        </g>
+        <g id="Polygon_2" data-name="Polygon 2" transform="matrix(-0.259, 0.966, -0.966, -0.259, 2104.553, 2237.12)" fill="none" opacity="0.05">
+          <path d="M329.5,0,659,571H0Z" stroke="none"/>
+          <path d="M 329.5 150.0570068359375 L 129.8709106445313 496 L 529.1290893554688 496 L 329.5 150.0570068359375 M 329.5 0 L 659 571 L 0 571 L 329.5 0 Z" stroke="none" fill="#efefef"/>
+        </g>
+        <g id="Group_3" data-name="Group 3" transform="matrix(0.966, 0.259, -0.259, 0.966, 194.416, -324.276)" opacity="0.05">
+          <line id="Line_1-2" data-name="Line 1" x2="510.317" y2="510.317" transform="translate(1517.5 454.5)" fill="none" stroke="#efefef" stroke-width="75"/>
+          <line id="Line_2-2" data-name="Line 2" x1="510.317" y2="510.317" transform="translate(1517.5 454.5)" fill="none" stroke="#efefef" stroke-width="75"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

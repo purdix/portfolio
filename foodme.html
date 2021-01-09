@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Kogulan Sivaneshan</title>
+  <!-- Meta properties -->
+  <meta charset="utf-8">
+  <meta name="author" content="Kogulan Sivaneshan">
+  <meta name="description" content="Hi there, I'm Kogulan - A product designer and gamer based in Toronto. Welcome to my digital portfolio!">
+  <meta name="keywords" content="kogulan sivaneshan, designer, ui/ux, product design, portfolio, personal website, ubisoft, design, user experience">
+  <meta property="og:title" content="Kogulan Sivaneshan | Portfolio">
+  <meta property="og:description" content="Product designer and gamer based in Toronto.">
+  <meta property="og:url" content="https://sivaneshan.com">
+  <meta property="og:image" content="./files/og-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Extras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHHQM48PX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNHHQM48PX');
+  </script>
+  <!--Dark & light mode -->
+  <link href="./css/main.css" rel="stylesheet" id="dark-stylesheet">
+  <link href="./css/main-light.css" rel="stylesheet alternate" id="light-stylesheet">
+  <script>
+    function enableStylesheet(node) {
+      node.rel = 'stylesheet';
+    }
+    function disableStylesheet(node) {
+      node.rel = 'alternate stylesheet';
+    }
+    if (localStorage.getItem('mode') === 'light') {
+      disableStylesheet(document.getElementById('dark-stylesheet'));
+      enableStylesheet(document.getElementById('light-stylesheet'));
+    } else {
+      localStorage.setItem('mode', 'dark');
+    }
+  </script>
+</head>
+
+<body class="bg" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- Main Navigation -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="files/logo.svg" height="50px" alt="Kogulan Sivaneshan">
+        <img class="logo-dark" src="files/logo-dark.svg" height="50px" alt="Kogulan Sivaneshan">
+      </a>
+      <div class="navbar-toggler" tabindex="0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link active" aria-current="page" href="/">Work</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Dark Mode Toggle-->
+  <div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
+    <img src="files/moon-white.svg" alt="" class="moon moon--white">
+    <img src="files/moon.svg" alt="" class="moon moon--black">
+    <div id="theme-toggle">
+      <div id="theme-toggle-knob"></div>
+    </div>
+  </div>
+
+<!--Main Content-->
+<main>
+  <div  id="scrollUpTitle" tabindex="-1" class="full-width-container animate__animated animate__fadeIn">
+    <div class="full-width-image">
+      <img class="animate__animated animate__fadeInUp" src="./files/foodme/foodme.png" alt="">
+    </div>
+  </div>
+<div class="bg-2" id="main-content">
+  <div class="container">
+      <br role="presentation">
+      <div class="row">
+        <div class="col-lg-7 mb-4">
+          <div class="tag animated fadeInUp">UX Research</div>
+          <div class="tag animated fadeInUp">UI Design</div>
+          <h1 class="title-text animate__animated animate__fadeInUp">FoodMe for UofT</h1>
+          <p>An online food ordering app that helps students find the perfect meal on campus based on their needs, such as budget, dietary preferences, and location. With FoodMe, students can order and pay for food ahead of time so that they can
+            focus on things that really matter. </p>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+          <h3><span class="color-blue">Client</span></h3>
+          <p>University of Toronto (Innovation Hub)</p>
+          <h3><span class="color-blue">Role</span></h3>
+          <p>In a team of four, I was responsible for conducting user research, ideating, prototyping (including sketches, wireframes and storyboards), usability testing, visuals & overall design direction.</p>
+          <h3><span class="color-blue">Tools</span></h3>
+          <p>Photoshop, Illustrator & Figma</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Side Bar-->
+  <div class="container spacer-large">
+  <div class="row">
+    <nav class="col-md-3 sidebar-custom d-none d-md-block" id="scrollHighlight" aria-label="Sidebar">
+      <ul class="nav sticky-top flex-column">
+        <li>
+          <a class="nav-link" href="#section1">Overview</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#section2">Research</a>
+          <ul class="nav sticky-top flex-column ">
+            <li><a class="nav-link" href="#section2-1">Secondary Research</a></li>
+            <li><a class="nav-link" href="#section2-2">Primary Research</a></li>
+            <li><a class="nav-link" href="#section2-3">Defining the Scope</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="#section3">Design</a>
+          <ul class="nav sticky-top flex-column">
+            <li><a class="nav-link" href="#section3-1">Ideation</a></li>
+            <li><a class="nav-link" href="#section3-2">Storyboards & Sketches</a></li>
+            <li><a class="nav-link" href="#section3-3">Low-fi Prototype</a></li>
+            <li><a class="nav-link" href="#section3-4">Usability Testing</a></li>
+            <li><a class="nav-link" href="#section3-5">Hi-fi Prototype</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="#section4">Evaluate</a>
+          <ul class="nav sticky-top flex-column">
+            <li><a class="nav-link" href="#section4-1">Strengths</a></li>
+            <li><a class="nav-link" href="#section4-2">Considerations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="#section5">Key Lessons</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#section6">Extras</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="col-md-8">
+      <section id="section1" class="section">
+        <h2 class="color-blue">Overview</h2>
+        <p class="overview">Food services on campus are an important part of student life. While the University of Toronto offers over 30 on-campus food locations, students are often limited by their budget,
+          dietary needs, schedule and location. The goal of this project was to develop a solution that would help alleviate some of these pain points and improve the overall food experience for students on campus.</p>
+      </section>
+      <hr class="inner">
+      <section id="section2" class="section">
+        <h2 class="color-blue">Research</h2>
+        <p>Our first step was to understand the challenges faced by students in regards to campus food. To do this, we conducted both primary and secondary research.</p>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <section id="section2-1" class="section">
+        <h3 class="color-blue">Secondary Research</h3>
+        <p>Our secondary research consisted of a literature review and a competitive analysis of existing solutions. Based on this research, we identified the following:</p><br role="presentation">
+        <!--Key Findings-->
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-carrot fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center d-flex">
+            <p class="description">Food quality and price value are two significant factors that impact students’ food experience <a class="underline-link-mini" href="https://doi.org/10.1080/15378020.2013.810534">(Kwun et al. 2013).</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-map-marker-alt fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center">
+            <p class="description">Students are convenience-driven and make choices based on current or future location <a class="underline-link-mini" href="https://sustainability.mit.edu/resource/user-experience-research-connected-campus-food-system">(McClave,
+                2019).</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x fa-inverse"></i>
+              <i class="fas fa-cog fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center d-flex">
+            <p class="description">Current UofT solutions are scattered with no systematic source for food service information.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-mobile-alt fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center d-flex">
+            <p class="description">Other universities offer apps with centralized information related to food services on campus, including menus, locations, store hours and online ordering.</p>
+          </div>
+        </div>
+        <!--spacer--><div class="spacer"></div><!--spacer-->
+        <figure>
+          <div class="row">
+            <div class="col-6">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/waterloo.jpg" data-fancybox="apps"><img class="figure-img img-responsive rounded shadow mb-4" src="./files/foodme/waterloo.jpg" alt="Screenshot of University of Waterloo's Food Services app"></a>
+            </div>
+            <div class="col-6">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/queens.png" data-fancybox="apps"><img class="figure-img img-responsive rounded shadow mb-4" src="./files/foodme/queens.png" alt="Screenshot of Queen's EngConnect app and its dining services feature"></a>
+            </div>
+            <figcaption class="figure-caption">Screenshots of the University of Waterloo Food Services app and Queen's University EngConnect app.</figcaption>
+          </div>
+        </figure>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <section id="section2-2" class="section">
+        <h3 class="color-blue">Primary Research</h3>
+        <p>Our primary research consisted of semi-structured interviews and online surveys. Participants included both graduate & undergraduate students who were above the age of 18 and purchased at least 3-5 meals on campus each week.</p><br
+          role="presentation">
+        <h4>Interviews</h4>
+        <p>We conducted 10 semi-structured interviews. Interviews were done in-person near popular cafeterias around campus. Questions were mainly open-ended to help us gain qualitative insight into some of the challenges faced by students.</p>
+        <blockquote class="blockquote">
+          <p class="mb-0">I feel like I'm missing out on great options because of the lack of time to look around.</p>
+        </blockquote>
+        <blockquote class="blockquote">
+          <p class="mb-0">I think there are quite a bit of food options around campus, but two days of the week I am a vegetarian and finding food on those two days becomes a challenge [...] I usually just give up and go to Tim Hortons.</p>
+        </blockquote>
+        <h4>Survey</h4>
+        <p>We collected a total of 67 survey responses—56 of which met screening requirements. Surveys were distributed through online platforms commonly used by UofT students, such as Reddit, Instagram and Facebook. The survey allowed us to
+          expand our sample size while also asking broader, closed-ended questions to obtain more quantitative data.</p>
+        <div class="spacer">
+        </div>
+        <figure class="chart-container" style="position: relative; height: 25vh" aria-label="Pie chart showing the most important factors when considering where to eat on campus with proximity being the most popular at 47.3%">
+          <p class="chart-title" aria-hidden="true">What is the most important factor when deciding where to eat on campus?</p>
+          <canvas id="myChart"></canvas>
+        </figure>
+        <div class="spacer-large"></div>
+        <h4>Overall Findings</h4>
+        <p>Our primary research provided us with a deeper level of insight into some of the frustrations that students experience when it comes to campus food. These pain points can largely be defined by five general themes:﻿</p>
+        <!--spacer--><div class="spacer"></div><!--spacer-->
+        <!--Accordian-->
+        <div class="accordion" id="accordian">
+          <div class="row">
+            <div class="col-md col-2">
+              <span data-toggle="tooltip" title="Time (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#time" role="button" aria-expanded="true" aria-controls="#time" aria-label="Time, theme 1 of 5"><i class="far fa-clock"></i></button></span>
+            </div>
+            <div class="col-md col-2">
+              <span data-toggle="tooltip" title="Quality (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#quality" role="button" aria-expanded="false" aria-controls="#quality" aria-label="Quality, theme 2 of 5"><i class="far fa-thumbs-up"></i></button></span>
+            </div>
+            <div class="col-md col-2">
+              <span data-toggle="tooltip" title="Cost (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#cost" role="button" aria-expanded="false" aria-controls="#cost" aria-label="Cost, theme 3 of 5"><i class="fas fa-search-dollar"></i></button></span>
+            </div>
+            <div class="col-md col-2">
+              <span data-toggle="tooltip" title="Proximity (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#proximity" role="button" aria-expanded="false" aria-controls="#proximity" aria-label="Proximity, theme 4 of 5"><i class="fas fa-street-view"></i></button></span>
+            </div>
+            <div class="col-md col-2">
+              <span data-toggle="tooltip" title="Diet (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#diet" role="button" aria-expanded="false" aria-controls="#diet" aria-label="Diet, theme 5 of 5"><i class="fas fa-leaf"></i></button></span>
+            </div>
+          </div>
+          <div class="collapse show" id="time" data-parent="#accordian">
+            <div class="card card-body">
+              <p class="title1">Time</p>
+              <p>Students often have a limited amount of time between classes to find food.</p>
+            </div>
+          </div>
+          <div class="collapse" id="quality" data-parent="#accordian">
+            <div class="card card-body">
+              <p class="title1">Quality</p>
+              <p>Students' food experience is greatly impacted by the quality and value of the food they purchase.</p>
+            </div>
+          </div>
+          <div class="collapse" id="cost" data-parent="#accordian">
+            <div class="card card-body">
+              <p class="title1">Cost</p>
+              <p>The price of food plays a significant role in determining what students buy and where they buy it from.</p>
+            </div>
+          </div>
+          <div class="collapse" id="proximity" data-parent="#accordian">
+            <div class="card card-body">
+              <p class="title1">Proximity</p>
+              <p>Proximity to where students frequently spend their time is an important factor in determining the food services they regularly interact with.</p>
+            </div>
+          </div>
+          <div class="collapse" id="diet" data-parent="#accordian">
+            <div class="card card-body">
+              <p class="title1">Diet</p>
+              <p>Many students are limited in their options due to strict dietary needs, including vegetarian, halal and kosher food.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <br role="presentation">
+      <section id="section2-3" class="section">
+        <h3 class="color-blue">Defining the Scope</h3>
+        <p>As an embodiment of these five themes, we created a persona named Bilal. We stepped into his shoes and explored some of his food-related challenges on campus based closely on our research findings. We organized these thoughts
+          and ideas into an empathy map and an as-is scenario to better understand and identify areas of opportunity to improve Bilal’s and other UofT students’ food experiences.﻿</p><br role="presentation">
+        <div class="row">
+          <div class="col-md-12">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/persona.jpg" data-fancybox="scope" data-caption="<b>Persona</b>"><img class="img-fluid rounded shadow mb-4" src="./files/foodme/persona.jpg" alt="A bio of our persona, Bilal the Business Student. Click to expand"></a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/as_is.png" data-fancybox="scope" data-caption="<b>As-is scenario</b><br/> Mapping out the steps Bilal must currently take to purchase food on campus."><img
+                class="img-custom img-fluid rounded shadow mb-4" src="./files/foodme/as_is.png" alt="As is scenario"></a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/empathymap.png" data-fancybox="scope" data-caption="<b>Empathy map</b><br/> Gaining deeper insight into Bilal's thoughts, feelings and behaviour."><img class="img-custom img-fluid rounded shadow mb-4" src="./files/foodme/empathymap.png"
+                alt="Empathy map"></a>
+          </div>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <hr class="inner">
+      <section id="section3" class="section">
+        <h2 class="color-blue">Design</h2>
+      </section>
+      <section id="section3-1" class="section">
+        <h3 class="color-blue">Ideation</h3>
+        <p>Our next step was to ideate based on the areas of opportunity we identified. As a team, we came up with over 20 different ideas — six of which were my own. To narrow down this list, we voted on the ideas based on feasibility and impact before plotting them on a prioritization grid.</p>
+        <!--spacer-->
+        <div class="spacer"></div>
+        <!--spacer-->
+        <div class="row">
+          <div class="col-md-6">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/ideas.png" data-fancybox="ideation" data-caption="<b>Our Ideas</b><br>After drafting out ideas, we categorized them based on common themes."><img class="img-custom img-fluid img-responsive rounded shadow mb-4"
+                src="./files/foodme/ideas.png" alt="Our ideas"></a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/prioritization2.png" data-fancybox="ideation" data-caption="<b>Prioritization Grid</b><br>We decided to focus on the four highest-ranking ideas (shown in red)."><img class="img-custom img-fluid img-responsive rounded shadow mb-4" src="./files/foodme/prioritization2.png" alt="Prioritization grid"></a>
+          </div>
+        </div><br>
+        <p>We then chose four of these ideas that ranked highest on 🔵 Feasibility and 🔴 Impact:</p>
+        <div class="row">
+          <div class="col-3">
+            <img class="img-fluid img-responsive mb-4" src="./files/foodme/idea1.png" alt="Idea 1, a map that shows you the quickest way of getting to a store">
+          </div>
+          <div class="col-3">
+            <img class="img-fluid img-responsive mb-4" src="./files/foodme/idea2.png" alt="Idea 2, a financial advisor who helps you pick food based on your budget">
+          </div>
+          <div class="col-3">
+            <img class="img-fluid img-responsive mb-4" src="./files/foodme/idea3.png" alt="Idea 3, a VIP pass that allows you to skip the line to purchase food">
+          </div>
+          <div class="col-3">
+            <img class="img-fluid img-responsive mb-4" src="./files/foodme/idea4.png" alt="Idea 4, A food critic who helps you find the best and worst quality food out there">
+          </div>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <section id="section3-2" class="section">
+        <h3 class="color-blue">Storyboards & Sketches</h3>
+        <div class="row">
+          <div class="col-7">
+            <p>Using our top ideas, we created storyboards to brainstorm how Bilal and others would use our app. We each sketched screens of how we imagined the app would look. <br><br> We took features we liked from each of our sketches and refined them. Together, these features formed the core functionalities of our app, FoodMe for UofT: </p><br role="presentation">
+          </div>
+          <div class="col-5">
+            <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/storyboards.png" data-fancybox="storyboard" data-caption="<b>Initial storyboarding</b>"><img class="img-fluid img-custom-large rounded shadow mb-4" src="./files/foodme/storyboards.png"
+                alt="Photo of our initial storyboarding. Click to expand"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-sort-amount-down-alt fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center">
+            <p class="title1">Filters</p>
+            <p>Find food places on campus based on budget, distance, dietary, rating, and others.</p>
+          </div>
+        </div><br role="presentation">
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-mobile-alt fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center">
+            <p class="title1">Mobile Ordering</p>
+            <p>Order & pay online to skip lines, save time and quickly pick up food between classes.</p>
+          </div>
+        </div><br role="presentation">
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="far fa-map fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center">
+            <p class="title1">Directions</p>
+            <p>View directions on a map to unfamiliar food places within the app.</p>
+          </div>
+        </div><br role="presentation">
+        <div class="row">
+          <div class="col-3">
+            <span class="fa-stack" aria-hidden="true">
+              <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
+              <i class="fas fa-star fa-stack-1x"></i></span></div>
+          <div class="col-9 align-self-center">
+            <p class="title1">Ratings</p>
+            <p>Discover food places on campus that are rated highly among fellow students.</p>
+          </div>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <section id="section3-3" class="section">
+        <h3 class="color-blue">Low-fi Prototype</h3>
+        <p>Based on these core functionalities, we designed a low-fi prototype, which I personally sketched out using pen and paper:</p>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1" ></li>
+              <li data-target="#carousel" data-slide-to="2" ></li>
+              <li data-target="#carousel" data-slide-to="3" ></li>
+              <li data-target="#carousel" data-slide-to="4" ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="lofi1">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/lofi1.png" data-fancybox="lofi"><img class="img-responsive d-block w-100" src="./files/foodme/lofi1.png" alt="Steps 1 and 2, logging into the app"></a>
+            </div>
+            <div class="carousel-item" id="lofi2">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/lofi2.png" data-fancybox="lofi"><img class="img-responsive d-block w-100" src="./files/foodme/lofi2.png" alt="Steps 3 and 4, filtering the stores by walk time, price and dietary needs"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/lofi3.png" data-fancybox="lofi"><img class="img-responsive d-block w-100" src="./files/foodme/lofi3.png" alt="Steps 5 and 6, selecting a store and choosing a dish"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/lofi4.png" data-fancybox="lofi"><img class="img-responsive d-block w-100" src="./files/foodme/lofi4.png" alt="Steps 7 and 8, customizing the order and checking out"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/lofi5.png" data-fancybox="lofi"><img class="img-responsive d-block w-100" src="./files/foodme/lofi5.png" alt="Steps 9 and 10, viewing the order summary and directions to the store"></a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <section id="section3-4" class="section">
+        <h3 class="color-blue">Usability Testing</h3>
+        <p>To understand if we were on the right track, we conducted formative usability testing with 4 representative users using our low-fi prototype. We gave them 5 tasks to perform using a think-aloud protocol:</p>
+        <ol>
+          <li>Search using the filter menu</li>
+          <li>Select a store</li>
+          <li>Choose a food item to order</li>
+          <li>Customize the food and place an order</li>
+          <li>Checkout and view directions</li>
+        </ol><br role="presentation">
+        <p>We ended each test with an interview to gather additional feedback. Shown below are some of the findings and iterations we made to our mid-fi prototype.</p>
+        <div id="carousel2" class="carousel slide" data-ride="carousel2">
+          <ol class="carousel-indicators">
+              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel2" data-slide-to="1" ></li>
+              <li data-target="#carousel2" data-slide-to="2" ></li>
+              <li data-target="#carousel2" data-slide-to="3" ></li>
+              <li data-target="#carousel2" data-slide-to="4" ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="lofi1">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/midfi1.png" data-fancybox="midfi"><img class="img-responsive d-block w-100" src="./files/foodme/midfi1.png" alt="Added a skip for now option"></a>
+            </div>
+            <div class="carousel-item" id="lofi2">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/midfi2.png" data-fancybox="midfi"><img class="img-responsive d-block w-100" src="./files/foodme/midfi2.png" alt="Reworded ratings to reviews and added TBucks discount label"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/midfi3.png" data-fancybox="midfi"><img class="img-responsive d-block w-100" src="./files/foodme/midfi3.png" alt="Changed filters for walk time and price from tabs to sliders for easier understanding"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/midfi4.png" data-fancybox="midfi"><img class="img-responsive d-block w-100" src="./files/foodme/midfi4.png" alt="Added sorting options to search results"></a>
+            </div>
+            <div class="carousel-item">
+              <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/midfi5.png" data-fancybox="midfi"><img class="img-responsive d-block w-100" src="./files/foodme/midfi5.png" alt="Added dietary labels to food items and a heart button to favorite stores"></a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer-medium"></div><!--spacer-->
+      <section id="section3-5">
+        <h3 class="color-blue">Hi-fi Prototype</h3>
+        <br role="presentation">
+          <div class="row">
+            <div class="col-5">
+              <video class="img-responsive rounded shadow d-block w-100" controls autoplay loop src="./files/foodme/hifi1.mp4" aria-label="video of our high fidelity prototype">Unfortunately, your browser does not support this video.</video>
+            </div>
+            <div class="offset-1 col-6 align-self-center">
+              <p class="title3">Find the perfect bite.</p>
+              <p>Choose from a range of filters to find the perfect place to eat. From budget to distance and everything in between, you'll be able to find something for every occassion.</p>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="row">
+            <div class="col-6 align-self-center">
+              <p class="title3">Customize your meals.</p>
+              <p>Don't like tomatoes? Want some extra guac? Mix and match ingredients to create the perfect meal in just a few taps.</p>
+            </div>
+            <div class="offset-1 col-5">
+              <video class="img-responsive rounded shadow d-block w-100" controls autoplay loop src="./files/foodme/hifi2.mp4" aria-label="video of our high fidelity prototype">Unfortunately, your browser does not support this video.</video>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="row">
+            <div class="col-5">
+              <video class="img-responsive rounded shadow d-block w-100" controls autoplay loop src="./files/foodme/hifi3.mp4" aria-label="video of our high fidelity prototype">Unfortunately, your browser does not support this video.</video>
+            </div>
+            <div class="offset-1 col-6 align-self-center">
+              <p class="title3">Get detailed directions.</p>
+              <p>New to the area? Feeling adventurous and want to try out a new place? Don't sweat it! FoodMe will help you get there in a flash.</p>
+            </div>
+          </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <hr class="inner">
+      <section id="section4" class="section">
+        <h2 class="color-blue">Evaluate</h2>
+        <p>We further evaluated our prototype by conducting a summative usability test with 3 representative users. Using similar tasks and protocol, we discovered the following:</p>
+      </section>
+        <br role="presentation">
+        <section id="section4-1" class="section">
+        <h3 class="color-blue">Strengths</h3>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-check-square"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Familiarity</p>
+            <p>Overall flow of the app feels familiar and consistent with other available food app</p>
+          </div>
+        </div>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-check-square"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Streamlined</p>
+            <p>Ordering & paying feels streamlined and intuitive</p>
+          </div>
+        </div>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-check-square"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Informative</p>
+            <p>Ordering & paying feels streamlined and intuitive</p>
+          </div>
+        </div>
+        </section>
+        <br role="presentation">
+        <section id="section4-2" class="section">
+        <h3 class="color-blue">Considerations</h3>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-question-circle"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Privacy</p>
+            <p>Can the app be used without location services? How will credit card information be handled?</p>
+          </div>
+        </div>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-question-circle"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Convenience</p>
+            <p>Can users order food to pick-up for later? Can portion sizes be customized earlier in the process (rather than at checkout)?</p>
+          </div>
+        </div>
+        <br role="presentation">
+        <div class="row">
+          <div class="col-2 col-lg-1">
+            <i aria-hidden="true" class="far fa-question-circle"></i>
+          </div>
+          <div class="col-10 col-lg-11 align-self-center">
+            <p class="title2">Additional features</p>
+            <p>Could the app show nutritional information if available? More detailed directions (i.e. floor numbers)?</p>
+          </div>
+        </div>
+      </section>
+        <br role="presentation">
+        <p>Our next steps would be to continue to iterate on the designs based on the feedback we received. This includes re-evaluating our existing features (i.e. customization and directions), integrating new features (i.e. nutritional information) and putting more focus on privacy concerns.</p>
+      <hr class="inner">
+      <section id="section5" class="section">
+        <h2 class="color-blue">Key Lessons</h2>
+        <ol>
+          <li class="text"><span class="color-blue"><b>We are not the user.</b></span> While it is often tempting for us to use our own personal experiences to inform design decisions, we must recognize the reality that our needs and users’ needs may not always align. Instead, we must set aside our ego and immerse ourselves in research to find the pain points that truly matter.</li>
+          <li class="text"><span class="color-blue"><b>Asking the right questions is challenging.</b></span>It’s true what they say, “Great questions lead to great design.” By asking the right questions, we can identify the right problems and come up with the right solutions. Figuring out what those questions are, however, is often half the battle and this project proved no different.</li>
+          <li class="text"><span class="color-blue"><b>Storytelling is powerful.</b></span>After four presentations in front of industry professionals, I’ve learned the importance of visual storytelling in establishing emotional connection with audience and demonstrating product value. As a fundamental human experience, a good story can help build a memorable and engaging atmosphere where empathizing with users becomes a much easier endeavour.</li>
+          <li class="text"><span class="color-blue"><b>UX design is a team sport.</b></span>Developing a product requires a whole range of skills that one person alone will never possess. Working as a team with diverse backgrounds  provides us with the opportunity to collaborate while leveraging our individual strengths to achieve a common goal.</li>
+        </ol>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <hr class="inner">
+      <section id="section6">
+        <h2 class="color-blue">Extras</h2>
+        <p>To wrap up our project, we created a fun little promotional video for our app. Check it out below!</p>
+        <br role="presentation">
+        <div class="resp-container">
+          <iframe tabindex="0" aria-label="Promotional video of our app" class="resp-iframe" src="https://player.vimeo.com/video/379616947?portrait=0&byline=0&title=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+      <!--spacer--><div class="spacer"></div><!--spacer-->
+      </div>
+    </div>
+  </div>
+</div>
+<button onclick="topFunction()" id="scrollToTop" class="scrollBtn" tabindex="0" aria-label="scroll to top"><span class="fas fa-chevron-up "></span></button>
+</main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fab fa-linkedin fa-lg footer-fa" aria-label="Linkedin"></a>
+    <a href="https://www.behance.net/sivaneshan" class="fab fa-behance fa-lg footer-fa" aria-label="Behance"></a>
+    <a href="mailto:kogulan.sivaneshan@gmail.com" class="fas fa-envelope fa-lg footer-fa" aria-label="Email"></a>
+    <p>Handcrafted with ❤️ in Canada.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+  <script src="./js/script.js"></script>
+
+
+  <script>
+    document.getElementById('theme-toggle-container').addEventListener('click',
+      function() {
+        var current_theme = localStorage.getItem('mode');
+        if (current_theme === 'dark') {
+          // switch to light theme
+          disableStylesheet(document.getElementById('dark-stylesheet'));
+          enableStylesheet(document.getElementById('light-stylesheet'));
+          localStorage.setItem('mode', 'light');
+        } else {
+          // switch to dark theme
+          disableStylesheet(document.getElementById('light-stylesheet'));
+          enableStylesheet(document.getElementById('dark-stylesheet'));
+          localStorage.setItem('mode', 'dark');
+        }
+      }
+    );
+
+    document.getElementById('theme-toggle-container').addEventListener('keypress',
+      function(e) {
+        if (e.key === 'Enter') {
+          var current_theme = localStorage.getItem('mode');
+          if (current_theme === 'dark') {
+            // switch to light theme
+            disableStylesheet(document.getElementById('dark-stylesheet'));
+            enableStylesheet(document.getElementById('light-stylesheet'));
+            localStorage.setItem('mode', 'light');
+          } else {
+            // switch to dark theme
+            disableStylesheet(document.getElementById('light-stylesheet'));
+            enableStylesheet(document.getElementById('dark-stylesheet'));
+            localStorage.setItem('mode', 'dark');
+          }
+        }
+      }
+    );
+  </script>
+
+  <script>
+  Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+      color: '#FFF',
+      align: 'end',
+      clamp: 'true'
+  });
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Cost', 'Types of cuisine', 'Dietary restrictions', 'Healthy options', 'Proximity'],
+      datasets: [{
+        label: '# of Votes',
+        data: [17, 5, 5, 2, 26],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.8)',
+          'rgba(54, 162, 235, 0.8)',
+          'rgba(255, 206, 86, 0.8)',
+          'rgba(75, 192, 192, 0.8)',
+          'rgba(153, 102, 255, 0.8)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      responsive: true,
+      legend: {
+        position: 'right',
+        labels: {
+          padding: 20,
+          boxWidth: 20,
+          fontFamily: 'Lato',
+          fontSize: 18,
+          fontColor: '#808194',
+        }
+      },
+      tooltips: {
+        titleFontSize: 18,
+        bodyFontSize: 16,
+        callbacks: {
+                    title: function (tooltipItem, data) { return data.labels[tooltipItem[0].index]; },
+                    label: function (tooltipItem, data) {
+                        var amount = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        var total = eval(data.datasets[tooltipItem.datasetIndex].data.join("+"));
+                        return ' ' + amount + ' / ' + total + ' people';
+                    },
+                    //footer: function(tooltipItem, data) { return 'Total: 100 planos.'; }
+                }
+      },
+      plugins: {
+          labels: {
+            render: args => {
+            if (args.percentage < 5) {
+              return '';
+            }
+            return args.percentage + '%';
+          },
+            precision: 1,
+            fontColor: '#FFF',
+            fontSize: 14,
+            position: 'border'
+          }
+        },
+    }
+  });
+
+  </script>
+</body>
+
+</html>

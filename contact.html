@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Kogulan Sivaneshan</title>
+  <!-- Meta properties -->
+  <meta charset="utf-8">
+  <meta name="author" content="Kogulan Sivaneshan">
+  <meta name="description" content="Hi there, I'm Kogulan - A product designer and gamer based in Toronto. Welcome to my digital portfolio!">
+  <meta name="keywords" content="kogulan sivaneshan, designer, ui/ux, product design, portfolio, personal website, ubisoft, design, user experience">
+  <meta property="og:title" content="Kogulan Sivaneshan | Portfolio">
+  <meta property="og:description" content="Product designer and gamer based in Toronto.">
+  <meta property="og:url" content="https://sivaneshan.com">
+  <meta property="og:image" content="./files/og-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Extras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHHQM48PX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNHHQM48PX');
+  </script>
+  <!--Dark & light mode -->
+  <link href="./css/main.css" rel="stylesheet" id="dark-stylesheet">
+  <link href="./css/main-light.css" rel="stylesheet alternate" id="light-stylesheet">
+  <script>
+    function enableStylesheet(node) {
+      node.rel = 'stylesheet';
+    }
+    function disableStylesheet(node) {
+      node.rel = 'alternate stylesheet';
+    }
+    if (localStorage.getItem('mode') === 'light') {
+      disableStylesheet(document.getElementById('dark-stylesheet'));
+      enableStylesheet(document.getElementById('light-stylesheet'));
+    } else {
+      localStorage.setItem('mode', 'dark');
+    }
+  </script>
+
+  <style>
+    html {
+    overflow: hidden;
+    width: 100%;
+    width: 100vw;
+    }
+  </style>
+</head>
+
+<body id="contact" class="bg" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- Main Navigation -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="files/logo.svg" alt="Kogulan Sivaneshan">
+        <img class="logo-dark" src="files/logo-dark.svg" alt="Kogulan Sivaneshan">
+      </a>
+      <div class="navbar-toggler" tabindex="0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" aria-current="page" href="/">Work</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link active" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Dark Mode Toggle-->
+  <div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
+    <img src="files/moon-white.svg" alt="" class="moon moon--white">
+    <img src="files/moon.svg" alt="" class="moon moon--black">
+    <div id="theme-toggle">
+      <div id="theme-toggle-knob"></div>
+    </div>
+  </div>
+  <main id="main-content">
+    <div class="container vertical-center flex-column" align="center">
+    <div class="welcome"></div>
+        <p id="scrollUpTitle" class="title1 animate__animated animate__fadeInUp" tabindex="-1">Looking for <span class="color-blue">new grad</span> opportunities</p>
+        <h1 class="animate__animated animate__fadeInUp">Let's stay in touch</h1>
+        <div class="spacer-medium"></div>
+        <p class="animate__animated animate__fadeIn">
+        <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fab fa-linkedin contact-fa" aria-label="Linkedin"></a>
+        <a href="https://www.behance.net/sivaneshan" class="fab fa-behance contact-fa" aria-label="Behance"></a>
+        <a href="mailto:kogulan.sivaneshan@gmail.com" class="fas fa-envelope contact-fa" aria-label="Email"></a>
+        </p>
+    </div>
+  </main>
+
+    <!--Footer-->
+    <footer class="footer">
+      <p>Handcrafted with ❤️ in Canada.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+      document.getElementById('theme-toggle-container').addEventListener('click',
+        function() {
+          var current_theme = localStorage.getItem('mode');
+          if (current_theme === 'dark') {
+            // switch to light theme
+            disableStylesheet(document.getElementById('dark-stylesheet'));
+            enableStylesheet(document.getElementById('light-stylesheet'));
+            localStorage.setItem('mode', 'light');
+          } else {
+            // switch to dark theme
+            disableStylesheet(document.getElementById('light-stylesheet'));
+            enableStylesheet(document.getElementById('dark-stylesheet'));
+            localStorage.setItem('mode', 'dark');
+          }
+        }
+      );
+
+      document.getElementById('theme-toggle-container').addEventListener('keypress',
+        function(e) {
+          if (e.key === 'Enter') {
+            var current_theme = localStorage.getItem('mode');
+            if (current_theme === 'dark') {
+              // switch to light theme
+              disableStylesheet(document.getElementById('dark-stylesheet'));
+              enableStylesheet(document.getElementById('light-stylesheet'));
+              localStorage.setItem('mode', 'light');
+            } else {
+              // switch to dark theme
+              disableStylesheet(document.getElementById('light-stylesheet'));
+              enableStylesheet(document.getElementById('dark-stylesheet'));
+              localStorage.setItem('mode', 'dark');
+            }
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

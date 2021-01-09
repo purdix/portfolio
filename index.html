@@ -1,34 +1,209 @@
-<!doctype html>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
+  <title>Kogulan Sivaneshan</title>
+  <!-- Meta properties -->
   <meta charset="utf-8">
+  <meta name="author" content="Kogulan Sivaneshan">
+  <meta name="description" content="Hi there, I'm Kogulan - A product designer and gamer based in Toronto. Welcome to my digital portfolio!">
+  <meta name="keywords" content="kogulan sivaneshan, designer, ui/ux, product design, portfolio, personal website, ubisoft, design, user experience">
+  <meta property="og:title" content="Kogulan Sivaneshan | Portfolio">
+  <meta property="og:description" content="Product designer and gamer based in Toronto.">
+  <meta property="og:url" content="https://sivaneshan.com">
+  <meta property="og:image" content="./files/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kogulan Sivaneshan - Under Construction</title>
-  <link  href="./main.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="icon" href="./favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="theme-color" content="#080926">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Extras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHHQM48PX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNHHQM48PX');
+  </script>
+  <!--Dark & light mode -->
+  <link href="./css/main.css" rel="stylesheet" id="dark-stylesheet">
+  <link href="./css/main-light.css" rel="stylesheet alternate" id="light-stylesheet">
+  <script>
+    function enableStylesheet(node) {
+      node.rel = 'stylesheet';
+    }
+    function disableStylesheet(node) {
+      node.rel = 'alternate stylesheet';
+    }
+    if (localStorage.getItem('mode') === 'light') {
+      disableStylesheet(document.getElementById('dark-stylesheet'));
+      enableStylesheet(document.getElementById('light-stylesheet'));
+    } else {
+      localStorage.setItem('mode', 'dark');
+    }
+  </script>
 </head>
 
-<body>
-    <div class="center">
-      <div class="stage" data-title=".dot-typing">
-        <div class="dot-typing"></div>
+<body class="bg" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- Main Navigation -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="files/logo.svg" height="50px" alt="Kogulan Sivaneshan">
+        <img class="logo-dark" src="files/logo-dark.svg" height="50px" alt="Kogulan Sivaneshan">
+      </a>
+      <div class="navbar-toggler" tabindex="0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
       </div>
-      <h1>Be back soon!</h1>
-      <p>Working on some super secret stuff that I can't show just yet.</p><br>
-      <p>&mdash; Kogulan ✌🏾</p>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link active" aria-current="page" href="/">Work</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="main-nav nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Dark Mode Toggle-->
+  <div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
+    <img src="files/moon-white.svg" alt="" class="moon moon--white">
+    <img src="files/moon.svg" alt="" class="moon moon--black">
+    <div id="theme-toggle">
+      <div id="theme-toggle-knob"></div>
+    </div>
+  </div>
+
+  <!--Main Content-->
+  <main id="main-content">
+    <!--Welcome-->
+    <div class="container">
+      <div class="welcome">
+        <p id="scrollUpTitle" class="title1 animate__animated animate__fadeInUp" tabindex="-1">Hey, I'm <span class="color-blue" role="text">Kogulan <i>(Cō·ga·lin)</i></span></h3><button class="pronunciation" onclick="play()" aria-label="name pronunciation"><span class="fas fa-volume-up"></span><audio id="audio" src="./files/pronunciation.mp3"></audio></button></p>
+        <h1 class="animate__animated animate__fadeInUp">Product designer based in Toronto.
+          <br>Recent UXD intern <a class="underline-link" href="https://toronto.ubisoft.com/" target=”_blank” aria-label="Learn more about Ubisoft Toronto">@UbisoftTO.</a>
+          <br>Currently pursuing a masters <a class="underline-link" href="https://ischool.utoronto.ca/" target=”_blank” aria-label="Learn more about my Master of Information degree at UofT" tabindex="0">@UofT.</a>
+        </h1>
+      </div>
+
+      <!--Projects-->
+      <div class="row">
+        <div class="col-md-6 d-flex mb-4 animate__animated animate__fadeInUp">
+          <a href="foodme.html" class="card" aria-label="View my case study on FoodMe for UofT, an online food ordering service">
+            <div class="image">
+              <img class="card-img-top" src="/files/foodme.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">FoodMe for UofT</h2>
+              <p class="card-text">Designing an app to help students find the perfect meal.</p>
+              <p class="card-link">View the Case Study</p><img src="files/arrow.svg" alt="" class="card-link-arrow" width="24"><img src="files/arrow-dark.svg" alt="" class="card-link-arrow-dark" width="24">
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 d-flex mb-4 animate__animated animate__fadeInUp">
+          <a href="https://www.behance.net/gallery/95375477/Currys-Redesign" target="_blank" class="card" aria-label="View my redesign case study for Curry's, a local Toronto based art store, on Behance.net">
+            <div class="image">
+              <img class="card-img-top" src="/files/currys.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Redesigning Curry's</h2>
+              <p class="card-text">Redesigning the website for a local Toronto-based art store.</p>
+              <p class="card-link">View on Behance</p><img src="files/arrow.svg" alt="" class="card-link-arrow" width="24"><img src="files/arrow-dark.svg" alt="" class="card-link-arrow-dark" width="24">
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex mb-4 animate__animated animate__fadeInUp">
+          <a href="https://www.behance.net/gallery/78622377/Nintendo-UI-Logo-Concept" target="_blank" class="card" aria-label="View my redesign case study for Nintendo on Behance.net">
+            <div class="image">
+              <img class="card-img-top" src="/files/nintendo.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Redesigning Nintendo</h2>
+              <p class="card-text">Exploring a complete web redesign for the popular video game company.</p>
+              <p class="card-link">View on Behance</p><img src="files/arrow.svg" alt="" class="card-link-arrow" width="24"><img src="files/arrow-dark.svg" alt="" class="card-link-arrow-dark" width="24">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 d-flex mb-4 animate__animated animate__fadeInUp">
+          <div class="card card-locked flex-fill justify-content-center">
+            <img src="files/lock.svg" alt="" class="lock" width="24"><img src="files/lock-dark.svg" alt="" class="lock-dark" width="24">
+            <p class="locked-text">More projects coming soon!</p>
+          </div>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <footer class="footer">
-        <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fa fa-linkedin fa-lg"></a>
-        <a href="https://www.behance.net/sivaneshan" class="fa fa-behance fa-lg"></a>
-        <a href="mailto:kogulan.sivaneshan@gmail.com" class="fa fa-envelope fa-lg"></a>
-    </footer>
+    <button onclick="topFunction()" id="scrollToTop" class="scrollBtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span></button>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fab fa-linkedin footer-fa" aria-label="Linkedin"></a>
+    <a href="https://www.behance.net/sivaneshan" class="fab fa-behance footer-fa" aria-label="Behance"></a>
+    <a href="mailto:kogulan.sivaneshan@gmail.com" class="fas fa-envelope footer-fa" aria-label="Email"></a>
+    <p>Handcrafted with ❤️ in Canada.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+
+
+  <script>
+    document.getElementById('theme-toggle-container').addEventListener('click',
+      function() {
+        var current_theme = localStorage.getItem('mode');
+        if (current_theme === 'dark') {
+          // switch to light theme
+          disableStylesheet(document.getElementById('dark-stylesheet'));
+          enableStylesheet(document.getElementById('light-stylesheet'));
+          localStorage.setItem('mode', 'light');
+        } else {
+          // switch to dark theme
+          disableStylesheet(document.getElementById('light-stylesheet'));
+          enableStylesheet(document.getElementById('dark-stylesheet'));
+          localStorage.setItem('mode', 'dark');
+        }
+      }
+    );
+
+    document.getElementById('theme-toggle-container').addEventListener('keypress',
+      function(e) {
+        if (e.key === 'Enter') {
+          var current_theme = localStorage.getItem('mode');
+          if (current_theme === 'dark') {
+            // switch to light theme
+            disableStylesheet(document.getElementById('dark-stylesheet'));
+            enableStylesheet(document.getElementById('light-stylesheet'));
+            localStorage.setItem('mode', 'light');
+          } else {
+            // switch to dark theme
+            disableStylesheet(document.getElementById('light-stylesheet'));
+            enableStylesheet(document.getElementById('dark-stylesheet'));
+            localStorage.setItem('mode', 'dark');
+          }
+        }
+      }
+    );
+  </script>
 </body>
-
-
 </html>
