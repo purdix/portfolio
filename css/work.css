@@ -21,8 +21,14 @@ html {
 }
 
 .bg-2 {
-  padding: 120px 0px 120px;
+  padding: 120px 0px;
   background-color: #0A0B2C;
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-2 {
+    padding: 60px 0px;
+  }
 }
 
 .spacer {
@@ -41,19 +47,16 @@ html {
   margin-top: 180px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .spacer {
     margin-top: 20px;
   }
-
   .spacer-medium {
     margin-top: 60px;
   }
-
   .spacer-large {
     margin-top: 90px;
   }
-
 }
 
 body {

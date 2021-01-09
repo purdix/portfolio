@@ -25,6 +25,12 @@ html {
   background-color: #F9F9F9;
 }
 
+@media only screen and (max-width: 768px) {
+  .bg-2 {
+    padding: 60px 0px;
+  }
+}
+
 .spacer {
   margin-top: 60px;
 }
@@ -37,9 +43,19 @@ html {
   margin-top: 180px;
 }
 
-@media only screen and (max-width: 600px) {
+.spacer-large-chart {
+  margin-top: 180px;
+}
+
+@media only screen and (max-width: 768px) {
   .spacer {
     margin-top: 20px;
+  }
+  .spacer-medium {
+    margin-top: 60px;
+  }
+  .spacer-large {
+    margin-top: 90px;
   }
 }
 
