@@ -121,7 +121,7 @@ h1 {
 h2 {
   font-size: 2em;
   font-weight: 700;
-  line-height: 1.875em;
+  line-height: 1.5em;
 }
 
 h3 {
@@ -457,7 +457,7 @@ a .logo-dark {
 .card-locked{
   background-color: #f9f9f9;
   border: none;
-  padding: 150px 75px;
+  padding: 150px 50px;
 }
 
 .card-title {
