@@ -49,7 +49,7 @@ html {
 
 @media only screen and (max-width: 768px) {
   .spacer {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .spacer-medium {
     margin-top: 60px;
@@ -318,6 +318,12 @@ a .logo-dark {
   display: none;
 }
 
+@media only screen and (max-width: 768px) {
+  a .logo {
+    height: 40px;
+  }
+}
+
 .navbar-nav>li>a {
   padding-top: 15px;
   padding-bottom: 10px;
@@ -349,7 +355,7 @@ a .logo-dark {
 }
 
 /*---------------- Hover (Animation)  ----------------*/
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .main-nav.nav-link {
     text-decoration: none;
     background-image: linear-gradient(to right, #61A1FF, #61A1FF);
@@ -501,6 +507,10 @@ hr.inner {
   hr {
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+  hr.inner {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 

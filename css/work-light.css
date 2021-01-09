@@ -319,6 +319,12 @@ a .logo-dark {
   height: 50px;
 }
 
+@media only screen and (max-width: 768px) {
+  a .logo-dark {
+    height: 40px;
+  }
+}
+
 .navbar-nav>li>a {
   padding-top: 15px;
   padding-bottom: 10px;
@@ -496,6 +502,10 @@ hr.inner {
   hr {
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+  hr.inner {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
