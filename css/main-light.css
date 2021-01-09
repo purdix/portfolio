@@ -172,7 +172,7 @@ p {
   display: block;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   h1 {
     font-size: 2.375em;
     line-height: 1.4em;
@@ -221,7 +221,7 @@ a .logo-dark {
   height: 50px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   a .logo-dark {
     height: 40px;
   }
@@ -271,6 +271,13 @@ a .logo-dark {
 .navbar-toggler-icon:focus {
   box-shadow: none;
   outline: auto 5px -webkit-focus-ring-color;
+}
+
+@media (max-width: 767px) {
+    .navbar-toggler {
+      border: none;
+      outline: none;
+    }
 }
 
 /*-------------------- Hamburger (Animation)  --------------------*/

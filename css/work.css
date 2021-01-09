@@ -26,7 +26,7 @@ html {
   background-color: #0A0B2C;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .bg-2 {
     padding: 60px 0px;
   }
@@ -48,7 +48,7 @@ html {
   margin-top: 180px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .spacer {
     margin-top: 30px;
   }
@@ -319,7 +319,7 @@ a .logo-dark {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   a .logo {
     height: 40px;
   }
@@ -355,6 +355,12 @@ a .logo-dark {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
+@media (max-width: 767px) {
+    .navbar-toggler {
+      border: none;
+      outline: none;
+    }
+}
 /*---------------- Hover (Animation)  ----------------*/
 @media only screen and (min-width: 992px) {
   .main-nav.nav-link {
@@ -504,7 +510,7 @@ hr.inner {
   border-top: 1px solid rgba(97, 161, 255, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   hr {
     margin-top: 60px;
     margin-bottom: 60px;
