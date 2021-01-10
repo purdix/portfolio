@@ -412,7 +412,7 @@ a .logo-dark {
   margin-bottom: 180px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .welcome {
     margin-top: 180px;
     margin-bottom: 100px;
