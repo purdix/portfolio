@@ -44,10 +44,6 @@ html {
   margin-top: 180px;
 }
 
-.spacer-large-chart {
-  margin-top: 180px;
-}
-
 @media only screen and (max-width: 767px) {
   .spacer {
     margin-top: 20px;
@@ -264,6 +260,12 @@ ul li.regular-text {
   font-style: italic;
 }
 
+@media only screen and (max-width: 767px) {
+  .chart-container{
+    display:none;
+  }
+}
+
 .chart-title {
   text-align: center;
   padding: 20px;
@@ -364,7 +366,7 @@ a .logo-dark {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .navbar-toggler {
       border: none;
       outline: none;
@@ -520,7 +522,7 @@ hr.inner {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   hr {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -565,7 +567,7 @@ hr.inner {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   #theme-toggle-container {
     display: none;
   }
@@ -623,7 +625,7 @@ hr.inner {
   margin-bottom: 120px;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .welcome {
     margin-top: 180px;
     margin-bottom: 60px;
@@ -718,7 +720,7 @@ hr.inner {
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .fa-stack {
     font-size: 2em;
   }

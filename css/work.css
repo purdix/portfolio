@@ -44,10 +44,6 @@ html {
   margin-top: 180px;
 }
 
-.spacer-large-chart {
-  margin-top: 180px;
-}
-
 @media only screen and (max-width: 767px) {
   .spacer {
     margin-top: 30px;
@@ -263,6 +259,12 @@ ul li.regular-text {
   font-style: italic;
 }
 
+@media only screen and (max-width: 767px) {
+  .chart-container{
+    display:none;
+  }
+}
+
 .chart-title {
   text-align: center;
   padding: 20px;
@@ -362,7 +364,7 @@ a .logo-dark {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .navbar-toggler {
       border: none;
       outline: none;
@@ -517,7 +519,7 @@ hr.inner {
   border-top: 1px solid rgba(97, 161, 255, 0.5);
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   hr {
     margin-top: 60px;
     margin-bottom: 60px;
