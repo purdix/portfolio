@@ -270,24 +270,24 @@ ul li.regular-text {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   h1 {
-    font-size: 2.375em;
-    line-height: 1.4em;
+    font-size: 2em;
+    line-height: 1.625em;
   }
 
   h2 {
-    font-size: 1.75em;
-    line-height: 2em
+    font-size: 1.5em;
+    line-height: 1.25em;
   }
 
   h3 {
     font-size: 1.25em;
   }
 
-  .intro-text {
+  .title1 {
     font-size: 1.375em;
-    line-height: 1em;
+    line-height: 1.25em;
   }
 }
 

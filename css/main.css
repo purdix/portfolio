@@ -175,12 +175,12 @@ p {
 
 @media only screen and (max-width: 767px) {
   h1 {
-    font-size: 2.375em;
-    line-height: 1.4em;
+    font-size: 2em;
+    line-height: 1.625em;
   }
 
   h2 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 1.25em
   }
 
@@ -188,9 +188,9 @@ p {
     font-size: 1.25em;
   }
 
-  .intro-text{
+  .title1{
   font-size: 1.375em;
-  line-height: 1em;
+  line-height: 1.25em;
   }
 }
 /*-------------------- Navigation  --------------------*/
@@ -426,8 +426,8 @@ a .logo-dark {
 }
 
 .pronunciation{
-  margin: 5px;
-  font-size: 1.125em !important;
+  margin-left: 5px;
+  font-size: 1.125em;
   color: #61A1FF;
   border: none;
   background: none;
@@ -441,7 +441,6 @@ a .logo-dark {
   transform: scale(1.2);
   transition-delay: 0s !important;
 }
-
 /*-------------------- Project Cards --------------------*/
 .card:not(.card-locked) {
   background: #080926;
