@@ -232,10 +232,17 @@ a .logo-dark {
   padding-bottom: 10px;
 }
 
+@supports ((-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) {
+  .navbar-custom {
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+   -webkit-backdrop-filter: blur(20px) saturate(180%);
+   border-bottom: 1px solid #DFDFDF;
+  }
+}
+
 .navbar-custom {
-  background-color: rgba(255,255,255,0.85);
-  backdrop-filter: blur(20px) saturate(180%);
- -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255,255,255,0.98);
  border-bottom: 1px solid #DFDFDF;
 }
 
