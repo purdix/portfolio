@@ -233,12 +233,11 @@ a .logo-dark {
   padding-bottom: 10px;
 }
 
-@supports (-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px)) {
+@supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
   .navbar-custom {
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(8,9,38,0.9);
     backdrop-filter: blur(20px) saturate(180%);
    -webkit-backdrop-filter: blur(20px) saturate(180%);
-   border-bottom: 1px solid #DFDFDF;
   }
 }
 
