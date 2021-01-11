@@ -232,18 +232,18 @@ a .logo-dark {
   padding-bottom: 10px;
 }
 
-@supports (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) {
+.navbar-custom {
+  background-color: rgba(255,255,255,0.98);
+  border-bottom: 1px solid #DFDFDF;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .navbar-custom {
     background-color: rgba(255,255,255,0.85);
     backdrop-filter: blur(20px) saturate(180%);
    -webkit-backdrop-filter: blur(20px) saturate(180%);
    border-bottom: 1px solid #DFDFDF;
   }
-}
-
-.navbar-custom {
-  background-color: rgba(255,255,255,0.98);
- border-bottom: 1px solid #DFDFDF;
 }
 
 .active {
