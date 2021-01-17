@@ -5,7 +5,7 @@ html {
   min-height: 100%;
 }
 
-body {
+main {
   margin-bottom: 250px;
 }
 
@@ -619,7 +619,6 @@ font-size: 1.25em;
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding: 60px;
   text-align: center;
 }

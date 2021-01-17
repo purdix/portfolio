@@ -5,7 +5,7 @@ html {
   min-height: 100%;
 }
 
-body {
+main {
   margin-bottom: 250px;
 }
 
@@ -607,8 +607,4 @@ font-size: 1.25em;
   width: 100%;
   padding: 60px;
   text-align: center;
-}
-
-#contact{
-  overflow-y: hidden !important;
 }
