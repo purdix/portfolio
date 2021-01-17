@@ -621,7 +621,7 @@ hr.inner {
   margin-bottom: 120px;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .welcome {
     margin-top: 180px;
     margin-bottom: 60px;
