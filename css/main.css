@@ -568,13 +568,10 @@ a .logo-dark {
   transition-delay: 0s !important;
 }
 /*-------------------- End --------------------*/
-.contact-email {
-font-size: 1.25em;
-}
 
 .contact-fa{
   padding: 25px;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #61A1FF;
   transition-property: transform, box-shadow, background-color;
   transition: all .2s ease-in-out
@@ -584,6 +581,12 @@ font-size: 1.25em;
   color: #408DFF;
   transform: scale(1.2);
   transition-delay: 0s !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-fa {
+    padding: 10px;
+  }
 }
 
 .footer-fa{
