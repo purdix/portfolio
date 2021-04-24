@@ -393,7 +393,7 @@ a .logo-dark {
   height: 24px;
   width: 48px;
   border-radius: 1px;
-  background-color: #FF3464;
+  background-color: rgba(0, 0, 0, 0.08);
   padding: 2px;
   margin-bottom: 1px;
   margin-left: 5px;
