@@ -270,6 +270,7 @@ a .logo-dark {
 /*-------------------- End  --------------------*/
 
 .navbar-toggler{
+  background-color: none;
   border: none;
 }
 
@@ -282,6 +283,7 @@ a .logo-dark {
 
 @media (max-width: 767px) {
     .navbar-toggler {
+      background-color: none;
       border: none;
       outline: none;
     }

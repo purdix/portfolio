@@ -354,8 +354,10 @@ a .logo-dark {
 .nav-link:hover, .nav-link:focus {
   color: #3F6AE7;
 }
+/*-------------------- End  --------------------*/
 
-.navbar-toggler {
+.navbar-toggler{
+  background-color: none;
   border: none;
 }
 
@@ -366,13 +368,13 @@ a .logo-dark {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .navbar-toggler {
+      background-color: none;
       border: none;
       outline: none;
     }
 }
-
 /*---------------- Hover (Animation)  ----------------*/
 @media (min-width: 992px) {
   .main-nav.nav-link {
