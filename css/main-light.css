@@ -83,31 +83,10 @@ a {
   text-decoration: none;
 }
 
-.underline-link {
-  padding: 0px 4px 2px;
-  color: #000 !important;
-  padding-right: 4px;
-  box-shadow: inset 0 -4px 0 #FF3464 !important;
-  border-bottom: 2px solid #FF3464;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-.underline-link:hover, .underline-link:focus {
-  padding: 0px 4px 2px;
-  color: #FFF !important;
-  padding-right: 4px;
-  box-shadow: inset 0 -1.5em 0 #FF3464 !important;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-}
-
 .underline-link-mini {
-  padding: 0px 4px 2px;
-  color: #000 !important;
-  padding-right: 4px;
+  margin-left: 2px;
+  padding: 4px 6px 2px;
+  color: #000;
   box-shadow: inset 0 -1px 0 #FF3464 !important;
   border-bottom: 3px solid #FF3464;
   -webkit-transition: all ease 0.5s;
@@ -115,14 +94,21 @@ a {
   transition: all ease 0.5s;
 }
 
-.underline-link-mini:hover, .underline-link-mini:focus {
+.underline-link-mini:hover, .underline-link-mini:focus, .underline-link-mini:hover svg path, .underline-link-mini:focus svg path {
   font-weight: 700;
   color: #FFF !important;
-  padding-right: 4px;
-  box-shadow: inset 0 -1.25em 0 #FF3464 !important;
+  stroke: #FFF !important;
+  box-shadow: inset 0 -1.5em 0 #FF3464 !important;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.external-link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+  margin-left: 2px;
 }
 /*-------------------- Typography --------------------*/
 h1 {
@@ -550,24 +536,6 @@ a .logo-dark {
   100% {
     transform: translate(10px);
   }
-}
-
-.link-arrow {
-  display: none;
-}
-
-.link-arrow-dark {
-  margin-bottom: 3px;
-  margin-left: 10px;
-  transition-property: transform, fill;
-  transition-duration: 0.15s;
-}
-
-.link:hover .link-arrow-dark,
-.link:focus .link-arrow-dark {
-  animation: hover 0.8s infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
 }
 
 /*-------------------- Scroll to Top Button --------------------*/
