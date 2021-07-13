@@ -104,6 +104,26 @@ a {
   transition: all ease 0.3s;
 }
 
+.underline-link-mini {
+  padding: 0px 4px 2px;
+  color: #000 !important;
+  padding-right: 4px;
+  box-shadow: inset 0 -1px 0 #FF3464 !important;
+  border-bottom: 3px solid #FF3464;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.underline-link-mini:hover, .underline-link-mini:focus {
+  font-weight: 700;
+  color: #FFF !important;
+  padding-right: 4px;
+  box-shadow: inset 0 -1.25em 0 #FF3464 !important;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
 /*-------------------- Typography --------------------*/
 h1 {
   font-size: 3em;
@@ -223,7 +243,7 @@ a .logo-dark {
 
 @media only screen and (max-width: 767px) {
   a .logo-dark {
-    height: 40px;
+    height: 45px;
   }
 }
 
@@ -268,7 +288,6 @@ a .logo-dark {
   background-size: 100% 3px;
 }
 /*-------------------- End  --------------------*/
-
 .navbar-toggler{
   border: none;
 }
@@ -291,7 +310,7 @@ a .logo-dark {
 .menu-btn {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 50px;
   height: 50px;
@@ -416,7 +435,7 @@ a .logo-dark {
 /*-------------------- Body --------------------*/
 .welcome {
   margin-top: 240px;
-  margin-bottom: 180px;
+  margin-bottom: 160px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -456,20 +475,20 @@ a .logo-dark {
 
 /*-------------------- Project Cards --------------------*/
 .card:not(.card-locked) {
-  position: relative;
-  background: #FFF;
-  border-radius: 0px;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   transition-property: transform, box-shadow, background-color;
   transition: all .2s ease-in-out
 }
 
 .card:hover:not(.card-locked), .card:focus:not(.card-locked) {
   box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.25);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .card-locked{
-  background-color: #f9f9f9;
+  background-color: #F9F9F9;
   border: none;
   padding: 150px 25px;
 }
