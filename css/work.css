@@ -571,7 +571,7 @@ hr.inner {
 .toggle-background {
   position: absolute;
   right: 0px;
-  border-radius: 0px;
+  border-radius: 2px;
   background-color: rgba(8, 9, 38, 0.90);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -606,7 +606,7 @@ hr.inner {
 #theme-toggle-knob {
   height: 20px;
   width: 19px;
-  border-radius: 1px;
+  border-radius: 2px;
   background-color: #fff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
   transform: translateX(16px);

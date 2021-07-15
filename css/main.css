@@ -459,30 +459,12 @@ a .logo-dark {
   transition-delay: 0s !important;
 }
 
-.experiences{
-  margin-top: 120px;
-  background-color: #080926;
-  padding: 30px 30px 20px;
-  border-radius: 5px;
-}
-
-.experience_name{
-  display: flex;
-  justify-content: space-between;
-}
-
-@media only screen and (max-width: 767px) {
-  .experiences {
-    margin-top: 80px;
-    font-size: 0.875em;
-  }
-}
-
 /*-------------------- Project Cards --------------------*/
 
 .card:not(.card-locked) {
   background: #080926;
   border: none;
+  border-radius: 2px;
   transition-property: transform, box-shadow, background-color;
   transition: all .2s ease-in-out
 }
@@ -494,7 +476,7 @@ a .logo-dark {
 
 .card-locked {
   background: #080926;
-  border-radius: 0px;
+  border-radius: 2px;
   padding: 150px 25px;
 }
 
