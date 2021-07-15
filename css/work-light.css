@@ -123,8 +123,9 @@ a:hover {
   transition: all ease 0.5s;
 }
 
-.underline-link:hover, .underline-link:focus {
+.underline-link:hover, .underline-link:focus, .underline-link-mini:hover svg path, .underline-link-mini:focus svg path {
   color: #FFF !important;
+  stroke: #FFF !important;
   box-shadow: inset 0 -1.5em 0 #FF3464 !important;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -132,7 +133,6 @@ a:hover {
 }
 
 .underline-link-mini {
-  margin-left: 2px;
   padding: 4px 6px 2px;
   color: #000;
   box-shadow: inset 0 -1px 0 #FF3464 !important;
@@ -149,6 +149,13 @@ a:hover {
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.external-link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+  margin-left: 2px;
 }
 
 /*-------------------- Typography --------------------*/
