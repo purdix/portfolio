@@ -142,7 +142,6 @@ a:hover {
 }
 
 .underline-link-mini:hover, .underline-link-mini:focus, .underline-link-mini:hover svg path, .underline-link-mini:focus svg path {
-  font-weight: 700;
   color: #0E0F34 !important;
   stroke: #0E0F34 !important;
   box-shadow: inset 0 -1.5em 0 #FF3464 !important;
