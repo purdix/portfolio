@@ -52,6 +52,12 @@ $(document).ready(function() {
     interval: false,
     wrap: false,
 });
+
+// Tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 //Disable arrow on first and last slides
 /* checkitem = function() {
  var $this;
