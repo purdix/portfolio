@@ -367,12 +367,6 @@ a .logo {
 }
 
 /*-------------------- Navigation (Mobile)  --------------------*/
-.navbar-toggler {
-  position: absolute;
-  right: 15px; /* Adjust to align with the right side of the navbar */
-  top: 15px; /* Adjust to align vertically with the navbar */
-}
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
