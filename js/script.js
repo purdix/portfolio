@@ -33,8 +33,6 @@ window.onscroll = () => {
     }
 };
 
-/////////////////////
-
 // Scroll up button
 myID = document.getElementById("scrollToTop");
 var myScrollFunc = function() {
@@ -54,27 +52,12 @@ function topFunction() {
   const title = document.getElementById("scrollUpTitle");
   title.focus();
 }
-/////////////////////
 
 //Pronunciation
 function play() {
   var audio = document.getElementById("audio");
   audio.play();
 }
-/////////////////////
-
-// Image to Lightbox Overlay
-$('img').on('click', function() {
-  $('#overlay')
-    .css({
-      backgroundImage: `url(${this.src})`
-    })
-    .addClass('open')
-    .one('click', function() {
-      $(this).removeClass('open');
-    });
-});
-/////////////////////
 
 // Prevent right click on images
 $(document).ready(function() {
@@ -82,8 +65,6 @@ $(document).ready(function() {
         return false;
      });
  });
-/////////////////////
-
 
 // Submenu
 document.addEventListener("DOMContentLoaded", function () {
@@ -119,4 +100,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-/////////////////////
