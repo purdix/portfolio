@@ -320,6 +320,13 @@ a .logo {
   height: 48px;
 }
 
+.navbar {
+  position: sticky; /* Use sticky instead of fixed */
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
 .navbar-nav>li>a {
   padding-top: 15px;
   padding-bottom: 10px;
@@ -332,7 +339,6 @@ a .logo {
   margin: auto;
   top: 24px;
   border-radius: 12px;
-  padding: 1rem;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -361,8 +367,10 @@ a .logo {
 }
 
 /*-------------------- Navigation (Mobile)  --------------------*/
-.navbar-toggler{
-  border: none;
+.navbar-toggler {
+  position: absolute;
+  right: 15px; /* Adjust to align with the right side of the navbar */
+  top: 15px; /* Adjust to align vertically with the navbar */
 }
 
 .navbar-toggler:focus,
@@ -857,6 +865,7 @@ a .logo {
 /* Main Dialog */
 #mainDialog {
   max-width: 400px;
+  width: 90vw;
   margin: 8px;
   background-color: var(--color-black-900);
   border: 1px var(--color-border-nav) solid;
@@ -958,6 +967,11 @@ a .logo {
     margin-bottom: 80px;
   }
 
+  .welcome-other {
+    margin-top: 160px;
+    margin-bottom: 80px;
+  }
+
   .card-container {
     margin-top: 80px;
   }
@@ -970,26 +984,31 @@ a .logo {
 }
 
 @media only screen and (max-width: 768px) {
-  .navbar-default {
-    width: 94vw;
-    background-color: var(--color-bg-nav);
-    border: 1px var(--color-border-nav) solid;
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-  }
   
   /* Ensure background covers the expanded menu */
-  .collapse {
-  margin-top: 24px;
-    background-color: var(--color-bg-nav);
-    border-radius: 12px;
-    border: 1px var(--color-border-nav) solid;
-    padding: 1rem;
-  }
+.collapse {
+  position: absolute; /* Position absolute to ensure it's aligned with the navbar */
+  top: 88px; /* Adjust based on the height of your navbar */
+  right: 0; /* Align to the right */
+  width: 100%; /* Ensure it stretches across the full width if desired */
+  background-color: var(--color-bg-nav);
+  border-radius: 12px;
+  border: 1px var(--color-border-nav) solid;
+  padding: 1rem;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
 
-  .collapse.show {
-  max-height: 500px; /* Adjust according to your content's height */
-  padding: 1rem; /* Match the padding */
+/* Ensure the collapsing transition is smooth */
+.collapsing {
+  position: absolute; /* Position absolute to ensure it's aligned with the navbar */
+  top: 88px; /* Adjust based on the height of your navbar */
+  right: 0; /* Align to the right */
+  width: 100%; /* Ensure it stretches across the full width if desired */
+  background-color: var(--color-bg-nav);
+  border-radius: 12px;
+  border: 1px var(--color-border-nav) solid;
+  padding: 1rem;
+  z-index: 1000; /* Ensure it appears on top of other content */
 }
 
   .container {
@@ -998,7 +1017,12 @@ a .logo {
   }
 
   .welcome-home {
-    margin-top: 160px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+
+    .welcome-other {
+    margin-top: 120px;
     margin-bottom: 60px;
   }
 
@@ -1042,11 +1066,11 @@ a .logo {
 
 @media only screen and (max-width: 576px) {
   h1 {
-    font-size: 3rem;
+    font-size: 4.75rem;
     line-height: 1;
   }
 
   .rotateWords{
-    --height: 5rem;
+    --height: 5.5rem;
   }
 }
