@@ -973,7 +973,25 @@ a .logo {
 @media only screen and (max-width: 768px) {
   .navbar-default {
     width: 94vw;
+    background-color: var(--color-bg-nav);
+    border: 1px var(--color-border-nav) solid;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
+  
+  /* Ensure background covers the expanded menu */
+  .collapse {
+  margin-top: 24px;
+    background-color: var(--color-bg-nav);
+    border-radius: 12px;
+    border: 1px var(--color-border-nav) solid;
+    padding: 1rem;
+  }
+
+  .collapse.show {
+  max-height: 500px; /* Adjust according to your content's height */
+  padding: 1rem; /* Match the padding */
+}
 
   .container {
     padding-left: 30px;
@@ -1003,7 +1021,7 @@ a .logo {
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 
   a .logo {
