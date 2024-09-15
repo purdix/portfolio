@@ -52,14 +52,14 @@ html {
   font-size: 16px;
 }
 
-main {
+.index main,
+.about main {
   margin-bottom: 250px;
 }
 
 #home{
   display: flex;
   align-items: center; /* Vertically centers the content */
-  height: 100%;
 }
 
 .container {
@@ -865,7 +865,7 @@ a .logo {
 /* Main Dialog */
 #mainDialog {
   max-width: 400px;
-  width: 90vw;
+  width: 84vw;
   margin: 8px;
   background-color: var(--color-black-900);
   border: 1px var(--color-border-nav) solid;
@@ -1045,11 +1045,16 @@ a .logo {
 
   h1 {
     font-size: 6rem;
+    white-space: normal;
   }
 
   .rotateWords{
   --height: 8rem;
 }
+
+.content-gradient {
+                display: block; /* Move "me" to the next line */
+            }
 
   a .logo {
     height: 40px;
@@ -1066,11 +1071,19 @@ a .logo {
 
 @media only screen and (max-width: 576px) {
   h1 {
-    font-size: 4.75rem;
+    font-size: 4.3rem;
     line-height: 1;
+  }
+
+  .hero-subheader{
+    font-size: 2rem;
   }
 
   .rotateWords{
     --height: 5.5rem;
+  }
+
+  .scrollbtn-show {
+visibility: hidden;
   }
 }
