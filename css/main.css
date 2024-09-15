@@ -971,7 +971,7 @@ a .logo {
   }
 }
 
-@media only screen and (max-width: 1052px) {
+@media only screen and (max-width: 1152px) {
   .circle {
     display: none;
   }
