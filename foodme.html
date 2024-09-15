@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>FoodMe for UofT - Kogulan Sivaneshan</title>
+  <title>Food Me - Kogulan Sivaneshan</title>
   <!-- Favicons -->
   <link rel="shortcut icon" href="files/favicon/favicon.ico">
 <link rel="icon" sizes="16x16 32x32 64x64" href="files/favicon/favicon.ico">
@@ -39,7 +39,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap & Font Awesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <!-- Extras -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -55,7 +56,7 @@
   </script>
   <!--Dark & light mode -->
   <link href="./css/work.css" rel="stylesheet" id="dark-stylesheet">
-  <link href="./css/work-light.css" rel="stylesheet alternate" id="light-stylesheet">
+  <!--<link href="./css/main-light.css" rel="stylesheet alternate" id="light-stylesheet">
   <script>
     function enableStylesheet(node) {
       node.rel = 'stylesheet';
@@ -69,18 +70,17 @@
     } else {
       localStorage.setItem('mode', 'dark');
     }
-  </script>
+  </script>-->
 </head>
 
 <body class="bg" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
-  <a class="skip-nav" href="#main-content">Skip to main content</a>
 
   <!-- Main Navigation -->
-  <nav class="navbar fixed-top navbar-expand-md navbar-custom py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
+  <nav class="navbar fixed-top navbar-expand-md navbar-default py-3 compensate-for-scrollbar" id="mainNav" aria-label="Main">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img class="logo" src="files/logo.svg" height="50px" alt="Kogulan Sivaneshan">
-        <img class="logo-dark" src="files/logo-dark.svg" height="50px" alt="Kogulan Sivaneshan">
+        <img class="logo" src="files/logo.svg" alt="Kogulan Sivaneshan">
+        <img class="logo-dark" src="files/logo-dark.svg" alt="Kogulan Sivaneshan">
       </a>
       <div class="navbar-toggler" tabindex="0" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" role="button">
         <div class="menu-btn">
@@ -95,55 +95,52 @@
           <li class="nav-item px-2">
             <a class="main-nav nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item px-2">
-            <a class="main-nav nav-link" href="contact.html">Contact</a>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!--Dark Mode Toggle-->
-  <div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
+  <!--<div id="theme-toggle-container" class="toggle-background" role="button" aria-label="Dark mode toggle" tabindex="0">
     <img src="files/moon-white.svg" alt="" class="moon moon--white">
     <img src="files/moon.svg" alt="" class="moon moon--black">
     <div id="theme-toggle">
       <div id="theme-toggle-knob"></div>
     </div>
-  </div>
+  </div>-->
 
 <!--Main Content-->
-<main>
+<main class="bg">
   <div  id="scrollUpTitle" tabindex="-1" class="full-width-container animate__animated animate__fadeIn">
     <div class="full-width-image">
       <img class="animate__animated animate__fadeInUp" src="./files/foodme/foodme.png" alt="">
     </div>
   </div>
-<div class="bg-2" id="main-content">
+
+<div class="hero-section" id="main-content">
   <div class="container">
       <br role="presentation">
       <div class="row">
         <div class="col-lg-7 mb-4">
-          <div class="tag animate__animated animate__fadeInUp">UX Research</div>
-          <div class="tag animate__animated animate__fadeInUp">UI Design</div>
-          <h1 class="title-text animate__animated animate__fadeInUp">FoodMe for UofT</h1>
+          <h1 class="animate__animated animate__fadeInUp spacer-bottom-sm"><span class="color-gradient">FoodMe</span> for UofT</h1>
           <p class="animate__animated animate__fadeInUp">An online food ordering app that helps students find the perfect meal on campus based on their needs, such as budget, dietary preferences, and location. With FoodMe, students can order and pay for food ahead of time so that they can
             focus on things that really matter. </p>
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-4">
-          <h3><span class="color-blue">Collaborator</span></h3>
-          <p>University of Toronto (Innovation Hub)</p>
-          <h3><span class="color-blue">Role</span></h3>
-          <p>In a team of four, I was responsible for conducting user research, ideating, prototyping (including sketches, wireframes and storyboards), usability testing, visuals & overall design direction.</p>
-          <h3><span class="color-blue">Tools</span></h3>
-          <p>Photoshop, Illustrator & Figma</p>
+          <h3><span class="content-highlight">Collaborator</span></h3>
+          <p class="content-weak spacer-bottom-sm">University of Toronto (Innovation Hub)</p>
+          <h3><span class="content-highlight">Role</span></h3>
+          <p class="content-weak spacer-bottom-sm">In a team of four, I was responsible for conducting user research, ideating, prototyping (including sketches, wireframes and storyboards), usability testing, visuals & overall design direction.</p>
+          <h3><span class="content-highlight">Tools</span></h3>
+          <p class="content-weak spacer-bottom-sm">Photoshop, Illustrator & Figma</p>
         </div>
       </div>
     </div>
   </div>
+
   <!--Side Bar-->
-  <div class="container spacer-large">
+  <div class="container spacer-top-lg">
   <div class="row">
     <nav class="col-md-3 sidebar-custom d-none d-md-block" id="scrollHighlight" aria-label="Sidebar">
       <ul class="nav sticky-top flex-column">
@@ -195,7 +192,7 @@
         <h2 class="color-blue">Research</h2>
         <p>Our first step was to understand the challenges faced by students in regards to campus food. To do this, we conducted both primary and secondary research.</p>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <section id="section2-1" class="section">
         <h3 class="color-blue">Secondary Research</h3>
         <p>Our secondary research consisted of a literature review and a competitive analysis of existing solutions. Based on this research, we identified the following:</p><br role="presentation">
@@ -206,7 +203,7 @@
               <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
               <i class="fas fa-carrot fa-stack-1x"></i></span></div>
           <div class="col-9 align-self-center d-flex">
-            <p class="description">Food quality and price value are two significant factors that impact students’ food experience <a class="underline-link-mini" href="https://doi.org/10.1080/15378020.2013.810534">(Kwun et al. 2013) <svg class="external-link" width="9" height="9" viewBox="0 0 12 12">
+            <p class="description">Food quality and price value are two significant factors that impact students’ food experience <a class="external-link" href="https://doi.org/10.1080/15378020.2013.810534">(Kwun et al. 2013) <svg class="external-link-icon" width="9" height="9" viewBox="0 0 12 12">
               <path class="st0" d="M1.1,10.9l9.7-9.7"/>
               <path class="st0" d="M1,1.5h9.5V11"/>
             </svg></a></p>
@@ -218,8 +215,8 @@
               <i class="fas fa-square fa-stack-2x  fa-inverse"></i>
               <i class="fas fa-map-marker-alt fa-stack-1x"></i></span></div>
           <div class="col-9 align-self-center">
-            <p class="description">Students are convenience-driven and make choices based on current or future location <a class="underline-link-mini" href="https://sustainability.mit.edu/resource/user-experience-research-connected-campus-food-system">(McClave,
-                2019) <svg class="external-link" width="9" height="9" viewBox="0 0 12 12">
+            <p class="description">Students are convenience-driven and make choices based on current or future location <a class="external-link" href="https://sustainability.mit.edu/resource/user-experience-research-connected-campus-food-system">(McClave,
+                2019) <svg class="external-link-icon" width="9" height="9" viewBox="0 0 12 12">
                   <path class="st0" d="M1.1,10.9l9.7-9.7"/>
                   <path class="st0" d="M1,1.5h9.5V11"/>
                 </svg></a></p>
@@ -243,7 +240,7 @@
             <p class="description">Other universities offer apps with centralized information related to food services on campus, including menus, locations, store hours and online ordering.</p>
           </div>
         </div>
-        <!--spacer--><div class="spacer"></div><!--spacer-->
+        <!--spacer--><div class="spacer-top"></div><!--spacer-->
         <figure>
           <div class="row">
             <div class="col-6">
@@ -256,7 +253,7 @@
           </div>
         </figure>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <section id="section2-2" class="section">
         <h3 class="color-blue">Primary Research</h3>
         <p>Our primary research consisted of semi-structured interviews and online surveys. Participants included both graduate & undergraduate students who were above the age of 18 and purchased at least 3-5 meals on campus each week.</p><br
@@ -278,26 +275,26 @@
           <p class="chart-title" aria-hidden="true">What is the most important factor when deciding where to eat on campus?</p>
           <canvas id="myChart"></canvas>
         </figure>
-        <div class="spacer-large"></div>
+        <div class="spacer-top-lg"></div>
         <h4>Overall Findings</h4>
         <p>Our primary research provided us with a deeper level of insight into some of the frustrations that students experience when it comes to campus food. These pain points can largely be defined by five general themes:﻿</p>
-        <!--spacer--><div class="spacer"></div><!--spacer-->
+        <!--spacer--><div class="spacer-top"></div><!--spacer-->
         <!--Accordian-->
         <div class="accordion" id="accordian">
           <div class="row">
-            <div class="col-md col-2">
+            <div class="col">
               <span data-toggle="tooltip" title="Time (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#time" role="button" aria-expanded="true" aria-controls="#time" aria-label="Time, theme 1 of 5"><i class="far fa-clock"></i></button></span>
             </div>
-            <div class="col-md col-2">
+            <div class="col">
               <span data-toggle="tooltip" title="Quality (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#quality" role="button" aria-expanded="false" aria-controls="#quality" aria-label="Quality, theme 2 of 5"><i class="far fa-thumbs-up"></i></button></span>
             </div>
-            <div class="col-md col-2">
+            <div class="col">
               <span data-toggle="tooltip" title="Cost (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#cost" role="button" aria-expanded="false" aria-controls="#cost" aria-label="Cost, theme 3 of 5"><i class="fas fa-search-dollar"></i></button></span>
             </div>
-            <div class="col-md col-2">
+            <div class="col">
               <span data-toggle="tooltip" title="Proximity (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#proximity" role="button" aria-expanded="false" aria-controls="#proximity" aria-label="Proximity, theme 4 of 5"><i class="fas fa-street-view"></i></button></span>
             </div>
-            <div class="col-md col-2">
+            <div class="col">
               <span data-toggle="tooltip" title="Diet (click to expand)"><button class="btn fa-btn" data-toggle="collapse" href="#diet" role="button" aria-expanded="false" aria-controls="#diet" aria-label="Diet, theme 5 of 5"><i class="fas fa-leaf"></i></button></span>
             </div>
           </div>
@@ -333,7 +330,7 @@
           </div>
         </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <br role="presentation">
       <section id="section2-3" class="section">
         <h3 class="color-blue">Defining the Scope</h3>
@@ -353,7 +350,7 @@
           </div>
         </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <hr class="inner">
       <section id="section3" class="section">
         <h2 class="color-blue">Design</h2>
@@ -362,7 +359,7 @@
         <h3 class="color-blue">Ideation</h3>
         <p>Our next step was to ideate based on the areas of opportunity we identified. As a team, we came up with over 20 different ideas — six of which were my own. To narrow down this list, we voted on the ideas based on feasibility and impact before plotting them on a prioritization grid.</p>
         <!--spacer-->
-        <div class="spacer"></div>
+        <div class="spacer-top"></div>
         <!--spacer-->
         <div class="row">
           <div class="col-md-6">
@@ -389,7 +386,7 @@
           </div>
         </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <section id="section3-2" class="section">
         <h3 class="color-blue">Storyboards & Sketches</h3>
         <div class="row">
@@ -400,7 +397,7 @@
             <a data-toggle="tooltip" title="Click to expand" href="./files/foodme/storyboards.jpg" data-fancybox="storyboard" data-caption="<b>Initial storyboarding</b>"><img class="img-fluid img-custom-large rounded shadow mb-4" src="./files/foodme/storyboards.jpg" alt="Photo of our initial storyboarding. Click to expand"></a>
           </div>
         </div>
-        <!--spacer--><div class="spacer"></div><!--spacer-->
+        <!--spacer--><div class="spacer-top"></div><!--spacer-->
         <div class="row">
           <div class="col-3">
             <span class="fa-stack" aria-hidden="true">
@@ -442,7 +439,7 @@
           </div>
         </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <section id="section3-3" class="section">
         <h3 class="color-blue">Low-fi Prototype</h3>
         <p>Based on these core functionalities, we designed a low-fi prototype, which I personally sketched out using pen and paper:</p>
@@ -481,7 +478,7 @@
           </a>
         </div>
       </section>
-      <!--spacer--><div class="spacer-medium"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top-md"></div><!--spacer-->
       <section id="section3-4" class="section">
         <h3 class="color-blue">Usability Testing</h3>
         <p>To understand if we were on the right track, we conducted formative usability testing with 4 representative users using our low-fi prototype. We gave them 5 tasks to perform using a think-aloud protocol:</p>
@@ -528,7 +525,7 @@
           </a>
         </div>
       </section>
-      <!--spacer--><div class="spacer-medium"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top-md"></div><!--spacer-->
       <section id="section3-5">
         <h3 class="color-blue">Hi-fi Prototype</h3>
         <br role="presentation">
@@ -541,7 +538,7 @@
               <p>Choose from a range of filters to find the perfect place to eat — from budget to distance and everything in between.</p>
             </div>
           </div>
-          <div class="spacer"></div>
+          <div class="spacer-top"></div>
           <div class="row">
             <div class="col-6 align-self-center">
               <p class="title3">Customize your meals.</p>
@@ -551,7 +548,7 @@
               <video class="img-responsive rounded shadow d-block w-100" controls autoplay loop src="./files/foodme/hifi2.mp4" aria-label="video of our high fidelity prototype">Unfortunately, your browser does not support this video.</video>
             </div>
           </div>
-          <div class="spacer"></div>
+          <div class="spacer-top"></div>
           <div class="row">
             <div class="col-5  align-self-center">
               <video class="img-responsive rounded shadow d-block w-100" controls autoplay loop src="./files/foodme/hifi3.mp4" aria-label="video of our high fidelity prototype">Unfortunately, your browser does not support this video.</video>
@@ -562,7 +559,7 @@
             </div>
           </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <hr class="inner">
       <section id="section4" class="section">
         <h2 class="color-blue">Evaluate</h2>
@@ -648,7 +645,7 @@
           <li class="text"><span class="color-blue"><b>UX design is a team sport.</b></span> Developing a product requires a whole range of skills that one person alone will never possess. Working as a team with diverse backgrounds  provides us with the opportunity to collaborate while leveraging our individual strengths to achieve a common goal.</li>
         </ol>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       <hr class="inner">
       <section id="section6">
         <h2 class="color-blue">Extras</h2>
@@ -658,12 +655,12 @@
           <iframe tabindex="0" aria-label="Promotional video of our app" class="resp-iframe" src="https://player.vimeo.com/video/379616947?portrait=0&byline=0&title=0" frameborder="0" allowfullscreen></iframe>
         </div>
       </section>
-      <!--spacer--><div class="spacer"></div><!--spacer-->
+      <!--spacer--><div class="spacer-top"></div><!--spacer-->
       </div>
     </div>
   </div>
 </div>
-<button onclick="topFunction()" id="scrollToTop" class="scrollBtn" tabindex="0" aria-label="scroll to top"><span class="fas fa-chevron-up "></span></button>
+<button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span><span class="scrollbtn-text">Scroll to top</span></button>
 </main>
 
   <!--Footer-->
@@ -671,7 +668,7 @@
     <a href="https://www.linkedin.com/in/kogulansivaneshan/" class="fab fa-linkedin fa-lg footer-fa" aria-label="Linkedin"></a>
     <a href="https://www.behance.net/sivaneshan" class="fab fa-behance fa-lg footer-fa" aria-label="Behance"></a>
     <a href="mailto:kogulan.sivaneshan@gmail.com" class="fas fa-envelope fa-lg footer-fa" aria-label="Email"></a>
-    <p>Handcrafted with ❤️ in Canada.</p>
+    <p>Coded by me with ❤️</p>
   </footer>
 
   <!-- Scripts -->
@@ -681,45 +678,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
   <script src="./js/script.js"></script>
-
-
-  <script>
-    document.getElementById('theme-toggle-container').addEventListener('click',
-      function() {
-        var current_theme = localStorage.getItem('mode');
-        if (current_theme === 'dark') {
-          // switch to light theme
-          disableStylesheet(document.getElementById('dark-stylesheet'));
-          enableStylesheet(document.getElementById('light-stylesheet'));
-          localStorage.setItem('mode', 'light');
-        } else {
-          // switch to dark theme
-          disableStylesheet(document.getElementById('light-stylesheet'));
-          enableStylesheet(document.getElementById('dark-stylesheet'));
-          localStorage.setItem('mode', 'dark');
-        }
-      }
-    );
-
-    document.getElementById('theme-toggle-container').addEventListener('keypress',
-      function(e) {
-        if (e.key === 'Enter') {
-          var current_theme = localStorage.getItem('mode');
-          if (current_theme === 'dark') {
-            // switch to light theme
-            disableStylesheet(document.getElementById('dark-stylesheet'));
-            enableStylesheet(document.getElementById('light-stylesheet'));
-            localStorage.setItem('mode', 'light');
-          } else {
-            // switch to dark theme
-            disableStylesheet(document.getElementById('light-stylesheet'));
-            enableStylesheet(document.getElementById('dark-stylesheet'));
-            localStorage.setItem('mode', 'dark');
-          }
-        }
-      }
-    );
-  </script>
 
   <script>
   Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
