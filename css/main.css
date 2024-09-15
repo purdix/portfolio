@@ -361,7 +361,6 @@ a .logo {
 }
 
 /*-------------------- Navigation (Mobile)  --------------------*/
-
 .navbar-toggler{
   border: none;
 }
@@ -1023,6 +1022,10 @@ a .logo {
   h1 {
     font-size: 6rem;
   }
+
+  .rotateWords{
+  --height: 8rem;
+}
 
   a .logo {
     height: 40px;
