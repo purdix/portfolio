@@ -117,8 +117,11 @@ p,h2,h3,h4,h5,h6,ol,ul{
 }
 
 h1 {
-  font-family: 'Syne', sans-serif;
-  color: var(--color-content-default);
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    color: var(--color-content-default);
 }
 
 .spacer-top {
@@ -167,10 +170,23 @@ h1 {
   color: var(--color-content-highlight) !important;
 }
 
-.content-gradient{
-  -webkit-text-fill-color: transparent;
-  background: var(--color-gradient);
+.content-gradient {
+  background: linear-gradient(var(--bg-angle), var(--color-blue-900), violet);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-spin 9s infinite linear;
+}
+
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+@keyframes text-spin {
+  to {
+    --bg-angle: 360deg;
+  }
 }
 
 .content-weak{
