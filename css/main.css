@@ -57,11 +57,6 @@ html {
   margin-bottom: 250px;
 }
 
-#home{
-  display: flex;
-  align-items: center; /* Vertically centers the content */
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -319,6 +314,7 @@ p {
 a .logo {
   display: inline;
   height: 48px;
+  margin-left: 24px;
 }
 
 .navbar {
@@ -381,15 +377,15 @@ a .logo {
 /*-------------------- Body --------------------*/
 
 .hero-bg{
-  transition: background-color 0.3s;
   background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 80%, rgba(177, 28, 201, 0.36) 90%, rgba(255, 136, 245, 0.48) 100%),
   radial-gradient(115% 100% at 50% 0%, #050407 50%, rgba(29, 16, 63, 1.0) 80%, rgba(58, 31, 255, 0.8) 100%);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   width: 100%;
+  min-height: 100vh;
 }
 
 .bg {
@@ -401,7 +397,7 @@ a .logo {
 }
 
 .welcome-home {
-  margin-top: 200px;
+  padding-top: 200px;
   margin-bottom: 160px;
 }
 
