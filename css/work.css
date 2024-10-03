@@ -97,6 +97,7 @@ main {
 
 .container {
   max-width: 1200px;
+    margin: 0 auto;
 }
 
 .vertical-center {
@@ -461,6 +462,14 @@ ul li.regular-text {
 a .logo {
   display: inline;
   height: 48px;
+  margin-left: 24px;
+}
+
+.navbar {
+  position: sticky; /* Use sticky instead of fixed */
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .navbar-nav>li>a {
@@ -475,7 +484,6 @@ a .logo {
   margin: auto;
   top: 24px;
   border-radius: 12px;
-  padding: 1rem;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -504,10 +512,6 @@ a .logo {
 }
 
 /*-------------------- Navigation (Mobile)  --------------------*/
-.navbar-toggler{
-  border: none;
-}
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
