@@ -127,6 +127,10 @@ h1 {
   overflow: hidden;
 }
 
+.bg-shape{
+  visibility: visible;
+}
+
 .bg-shape1{
  background-color: #8437F6;
  opacity: 0.8;
@@ -193,7 +197,7 @@ h1 {
 
 
 .bg-blur {
-  filter: blur(120px);
+ filter: blur(120px);
 }
 /*-------------------- Links --------------------*/
 
@@ -959,6 +963,10 @@ a .logo {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .bg-shape{
+  visibility: hidden;
+}
   
   /* Ensure background covers the expanded menu */
 .collapse {
