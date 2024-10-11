@@ -395,25 +395,23 @@ body.compensate-for-scrollbar {
 /* Close button on the top right corner of html content */
 
 .fancybox-close-small {
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.75);
   backdrop-filter: blur(20px) saturate(180%);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 25px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     vertical-align: middle;
     color: #000;
     cursor: pointer;
     padding: 8px;
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: 16px;
+    top: 16px;
     z-index: 9999;
 }
 
 .fancybox-close-small:hover {
 background-color: #FFF;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
     color: #000;
     opacity: 1;
 }
