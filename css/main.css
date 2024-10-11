@@ -128,92 +128,72 @@ h1 {
 }
 
 .bg-shape1{
-  width: 2000px;
-  height:600px;
+ background-color: #8437F6;
+ opacity: 0.8;
+  width: 4000px;
+  height:4000px;
   border-radius: 9999px;
   position: relative;
   animation: one 20s infinite;
 }
 
 .bg-shape2{
+  background-color: royalblue;
+  opacity: 1;
   width: 2000px;
-  height:800px;
+  height:2000px;
   border-radius: 9999px;
   position: relative;
   animation: two 20s infinite;
 }
 
 .bg-shape3{
-  width: 1800px;
-  height:600px;
+  background-color: royalblue;
+  opacity: 0.8;
+  width: 4000px;
+  height:4000px;
   border-radius: 9999px;
   position: relative;
   animation: three 20s infinite;
 }
 
 .bg-shape4{
-  width: 800px;
-  height:800px;
+  background-color: #8437F6;
+  opacity: 1;
+  width: 2000px;
+  height:2000px;
   border-radius: 9999px;
   position: relative;
   animation: four 20s infinite;
 }
 
 @keyframes one{
-  0%{left: 650px; top:700px;}
-  25%{left: 575px; top:650px;}
-  50%{left: 475px; top:350px;}
-  75%{left: 525px; top:625px;}
-  100%{left: 650px; top:700px;}
+  0%{left: 50%; top:800px;}
+  50%{left: 50%; top:650px; width: 12000px; height:12000px;}
+  100%{left: 50%; top:800px;}
 }
 
 @keyframes two{
-  0%{left: -450px; top:800px;}
-  25%{left: -550px; top:550px;}
-  50%{left: -750px; top:425px;}
-  75%{left: -525px; top:550px;}
-  100%{left: -450px; top:800px;}
+  0%{left: 50%; top:800px;}
+  50%{left: 50%; top:450px; width: 6000px; height:6000px;}
+  100%{left: 50%; top:800px;}
 }
 
 @keyframes three{
-  0%{left: -450px; top:800px;}
-  25%{left: -350px; top:650px;}
-  50%{left: -300px; top:550px;}
-  75%{left: -200px; top:750px;}
-  100%{left: -450px; top:800px;}
+  0%{left: -20%; top:800px;}
+  50%{left: -20%; top:650px; width: 6000px; height:6000px;}
+  100%{left: -20%; top:800px;}
 }
 
 @keyframes four{
-  0%{left: 100px; top:800px;}
-  25%{left: 50px; top:750px;}
-  50%{left: -50px; top:650px;}
-  75%{left: -25px; top:750px;}
-  100%{left: 100px; top:800px;}
+  0%{left: -80%; top:800px;}
+  50%{left: -80%; top:450px; width: 12000px; height:12000px;}
+  100%{left: -80%; top:800px;}
 }
 
 
 .bg-blur {
-  filter: blur(90px);
-}
-
-.bg-1{
- background-color: #8437F6;
- opacity: 0.4;
-}
-
-.bg-2{
-  background-color: darkmagenta;
-  opacity: 0.4;
-}
-
-.bg-3{
- background-color: darkviolet;
- opacity: 0.4;
-}
-
-.bg-4{
-  background-color: cyan;
-  opacity: 0.4;
+  filter: blur(120px);
 }
 /*-------------------- Links --------------------*/
 
@@ -385,6 +365,11 @@ a .logo {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+
+.password-bg{
+  background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 80%, rgba(177, 28, 201, 0.36) 90%, rgba(255, 136, 245, 0.48) 100%),
+  radial-gradient(115% 100% at 50% 0%, #050407 50%, rgba(29, 16, 63, 1.0) 80%, rgba(58, 31, 255, 0.8) 100%);
 }
 
 .bg {
