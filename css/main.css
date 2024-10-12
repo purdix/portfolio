@@ -1012,10 +1012,6 @@ a .logo {
     outline: none;
   }
 
-  #theme-toggle-container {
-    display: none;
-  }
-
   h1 {
     font-size: 8rem;
     white-space: normal;

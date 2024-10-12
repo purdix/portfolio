@@ -1290,6 +1290,42 @@ color: var(--color-content-default);
     font-size: 8rem;
   }
 
+    a .logo {
+    height: 40px;
+  }
+
+
+  /* Ensure background covers the expanded menu */
+.collapse {
+  position: absolute; /* Position absolute to ensure it's aligned with the navbar */
+  top: 88px; /* Adjust based on the height of your navbar */
+  right: 0; /* Align to the right */
+  width: 100%; /* Ensure it stretches across the full width if desired */
+  background-color: var(--color-bg-nav);
+  border-radius: 12px;
+  border: 1px var(--color-border-nav) solid;
+  padding: 1rem;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
+
+/* Ensure the collapsing transition is smooth */
+.collapsing {
+  position: absolute; /* Position absolute to ensure it's aligned with the navbar */
+  top: 88px; /* Adjust based on the height of your navbar */
+  right: 0; /* Align to the right */
+  width: 100%; /* Ensure it stretches across the full width if desired */
+  background-color: var(--color-bg-nav);
+  border-radius: 12px;
+  border: 1px var(--color-border-nav) solid;
+  padding: 1rem;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
     .hero-section{
   padding: 48px 0px;
 }
