@@ -173,6 +173,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: text-spin 9s infinite linear;
+  -webkit-box-decoration-break: clone;
 }
 
 @property --bg-angle {
