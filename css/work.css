@@ -168,12 +168,11 @@ h1 {
   color: var(--color-content-highlight) !important;
 }
 
-.content-gradient {
-  background: linear-gradient(var(--bg-angle), var(--color-blue-900), violet);
-  -webkit-background-clip: text;
+.content-gradient{
   -webkit-text-fill-color: transparent;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
   animation: text-spin 9s infinite linear;
-  -webkit-box-decoration-break: clone;
 }
 
 @property --bg-angle {
