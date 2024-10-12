@@ -1294,6 +1294,9 @@ color: var(--color-content-default);
     height: 40px;
   }
 
+  .content-gradient {
+  display: block; /* Move "me" to the next line */
+}
 
   /* Ensure background covers the expanded menu */
 .collapse {

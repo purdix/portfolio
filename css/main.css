@@ -1022,8 +1022,8 @@ a .logo {
 }
 
 .content-gradient {
-                display: block; /* Move "me" to the next line */
-            }
+  display: block; /* Move "me" to the next line */
+}
 
   a .logo {
     height: 40px;
