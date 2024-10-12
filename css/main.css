@@ -134,8 +134,8 @@ h1 {
 .bg-shape1{
  background-color: #8437F6;
  opacity: 0.8;
-  width: 50%;
-  height:50%;
+  width: 2000px;
+  height:2000px;
   border-radius: 100%;
   position: relative;
   animation: one 20s infinite;
@@ -144,8 +144,8 @@ h1 {
 .bg-shape2{
   background-color: royalblue;
   opacity: 1;
-  width: 50%;
-  height:50%;
+  width: 2000px;
+  height:2000px;
   border-radius: 100%;
   position: relative;
   animation: two 20s infinite;
@@ -154,8 +154,8 @@ h1 {
 .bg-shape3{
   background-color: royalblue;
   opacity: 0.8;
-  width: 50%;
-  height:50%;
+  width: 2000px;
+  height:2000px;
   border-radius: 100%;
   position: relative;
   animation: three 20s infinite;
@@ -164,8 +164,8 @@ h1 {
 .bg-shape4{
   background-color: #8437F6;
   opacity: 1;
-  width: 50%;
-  height:50%;
+  width: 2000px;
+  height:2000px;
   border-radius: 100%;
   position: relative;
   animation: four 20s infinite;
@@ -173,25 +173,25 @@ h1 {
 
 @keyframes one{
   0%{left: 50%; top:800px;}
-  50%{left: 50%; top:650px; width: 100%; height:100%;}
+  50%{left: 50%; top:650px; width: 12000px; height:12000px;}
   100%{left: 50%; top:800px;}
 }
 
 @keyframes two{
   0%{left: 50%; top:800px;}
-  50%{left: 50%; top:450px; width: 100%; height:100%;}
+  50%{left: 50%; top:450px; width: 12000px; height:12000px;}
   100%{left: 50%; top:800px;}
 }
 
 @keyframes three{
   0%{left: -20%; top:800px;}
-  50%{left: -20%; top:650px; width: 100%; height:100%;}
+  50%{left: -20%; top:650px; width: 12000px; height:12000px;}
   100%{left: -20%; top:800px;}
 }
 
 @keyframes four{
   0%{left: -80%; top:800px;}
-  50%{left: -80%; top:450px; width: 100%; height:100%;}
+  50%{left: -80%; top:450px; width: 12000px; height:12000px;}
   100%{left: -80%; top:800px;}
 }
 
