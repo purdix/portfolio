@@ -97,14 +97,17 @@
               </div>design
             </h1>
           </div>
-          <div class="d-flex col-md-auto align-items-sm-center  ms-5">
-            <div class="circle animate__animated animate__fadeInUp">
-              <img src="./files/memoji.png" class="memoji">
-              <div class="text">
-                <p>KOGULAN SIVANESHAN • KOGULAN SIVANESHAN • </p>
-              </div>
-            </div>
-          </div>
+<div class="d-flex col-md-auto align-items-sm-top ms-5">
+  <div class="circle">
+    <video class="memoji" autoplay muted loop playsinline style="width: 300px; height: auto;">
+      <source src="./files/memoji.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="text">
+      <p>KOGULAN SIVANESHAN • KOGULAN SIVANESHAN • </p>
+    </div>
+  </div>
+</div>
           <script>
             const text = document.querySelector('.text p');
             text.innerHTML = text.innerText.split("").map(

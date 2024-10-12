@@ -173,25 +173,25 @@ h1 {
 
 @keyframes one{
   0%{left: 50%; top:800px;}
-  50%{left: 50%; top:650px; width: 12000px; height:12000px;}
+  50%{left: 50%; top:750px;}
   100%{left: 50%; top:800px;}
 }
 
 @keyframes two{
   0%{left: 50%; top:800px;}
-  50%{left: 50%; top:450px; width: 12000px; height:12000px;}
+  50%{left: 50%; top:750px;}
   100%{left: 50%; top:800px;}
 }
 
 @keyframes three{
   0%{left: -20%; top:800px;}
-  50%{left: -20%; top:650px; width: 12000px; height:12000px;}
+  50%{left: -20%; top:750px;}
   100%{left: -20%; top:800px;}
 }
 
 @keyframes four{
   0%{left: -80%; top:800px;}
-  50%{left: -80%; top:450px; width: 12000px; height:12000px;}
+  50%{left: -80%; top:750px;}
   100%{left: -80%; top:800px;}
 }
 
@@ -415,9 +415,8 @@ a .logo {
 
 .memoji{
   position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 280px;
+  height: 280px;
 }
 
 .text{
