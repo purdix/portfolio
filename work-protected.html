@@ -139,6 +139,7 @@
         var trycatcherror = document.getElementById('trycatcherror');
         var successEl = document.getElementById('success');
         var contentFrame = document.getElementById('contentFrame');
+        var nav = document.getElementById('mainNav');
         
         // Sanity checks
 
@@ -248,7 +249,7 @@
                 contentFrame.srcdoc = decrypted;
 
                 // Hide the existing navigation bar
-    document.getElementById('mainNav').style.display = 'none';
+                document.querySelector("#mainNav").style.display = 'none';
                 
                 successEl.style.display = "inline";
                 setTimeout(function() {
