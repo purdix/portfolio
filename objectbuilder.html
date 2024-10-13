@@ -121,15 +121,23 @@
           <li><a class="nav-link" href="#section1-1">What is Rose Rocket?</a></li>
           <li><a class="nav-link" href="#section1-2">The Problem</a></li>
           <li><a class="nav-link" href="#section1-3">The Objective</a></li>
-          <li><a class="nav-link" href="#section1-4">Our Approach</a></li>
-           <li><a class="nav-link" href="#section1-5">Key Metrics</a></li>
+          <li><a class="nav-link" href="#section1-4">The Approach</a></li>
         </ul>
       </li>
       <li>
         <a class="nav-link" href="#section2">Design Process</a>
         <ul class="nav flex-column">
-          <li><a class="nav-link" href="#section2-1">Secondary Research</a></li>
-          <li><a class="nav-link" href="#section2-2">Primary Research</a></li>
+          <li><a class="nav-link" href="#section2-1">Timeline</a></li>
+          <li><a class="nav-link" href="#section2-2">Constraints</a></li>
+          <li><a class="nav-link" href="#section2-3">Key Metrics</a></li>
+        </ul>
+      </li>
+            <li>
+        <a class="nav-link" href="#section3">Phase 1: POC</a>
+        <ul class="nav flex-column">
+          <li><a class="nav-link" href="#section3-1">Goal</a></li>
+          <li><a class="nav-link" href="#section3-2">Impact</a></li>
+          <li><a class="nav-link" href="#section3-3">Learnings</a></li>
         </ul>
       </li>
       <!-- Add more list items as needed -->
@@ -213,7 +221,7 @@
           </section>
           <hr class="hr">
           <section id="section1-4" class="section">
-            <h3 class="spacer-bottom-sm">Our Approach</h3>
+            <h3 class="spacer-bottom-sm">The Approach</h3>
             <p>To achieve this objective, we aimed to tackle the majority of common challenges (80%) with standard, out-of-the-box features, while addressing the more specialized needs (20%) with builder-esque tools.</p>
             <p class="spacer-bottom">
               The first of these builders, named "Object Builder", aims to solve for these specialized needs by enabling businesses to <b class="content-highlight">define and customize Objects</b> according to their specific requirements.</p>
@@ -226,32 +234,11 @@
               </div>
 
             </section>
-            <hr class="hr">
-            <section id="section1-5" class="section">
-              <h3 class="spacer-bottom-sm">Key Metrics</h3>
-              <p class="spacer-bottom-sm">To track success, we focused on two key metrics:</p>
-              <div class="row">
-                <div class="col-lg-6 d-flex mb-4">
-                  <div class="callout-strong">
-                    <h5 class="content-highlight">PRIMARY METRIC</h5>
-                    <h4>Reduce % of disqualified leads</h4>
-                    <p class="content-weaker">Lower the percentage of leads disqualified early in the sales pipeline due to poor product fit.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6 d-flex mb-4">
-                  <div class="callout">
-                   <h5 class="content-highlight">SECONDARY METRIC</h5>
-                   <h4>Increase adoption rate</h4>
-                   <p class="content-weaker">Increase # of unique object configurations per organization to reflect greater engagement and use of platform customization features.</p>
-                 </div>
-               </div> 
-             </div>
-           </section>
          </section>
          <hr class="hr">
          <section id="section2">
           <h2 class="spacer-bottom-sm content-highlight">Design Process</h2>
-          <section id="subsection2-1">
+          <section id="section2-1">
             <h3 class="spacer-bottom-sm">Timeline</h3>
             <p>For this project, we used a two-phased approach to build, test, and iterate on the feature:</p>
             <div class="spacer-bottom">
@@ -276,7 +263,7 @@
             </div>
           </section>
           <hr class="hr">
-          <section id="subsection2-2">
+          <section id="section2-2">
             <h3 class="spacer-bottom-sm">Constraints</h3>
             <div class="row">
               <div class="col d-flex mb-4">
@@ -305,16 +292,44 @@
             </div>
           </section>
           <hr class="hr">
-          <section id="subsection2-3">
+                      <section id="section2-3" class="section">
+              <h3 class="spacer-bottom-sm">Key Metrics</h3>
+              <p class="spacer-bottom-sm">To track success, we focused on two key metrics:</p>
+              <div class="row">
+                <div class="col-lg-6 d-flex mb-4">
+                  <div class="callout-strong">
+                    <h5 class="content-highlight">PRIMARY METRIC</h5>
+                                       <h4>Increase % of SQLs*</h4>
+                   <p class="content-weaker">Raise the percentage of leads qualified early in the sales pipeline by improving product fit (via Object Builder customization).</p>
+                   <p class="caption">*Sales Qualified Leads</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex mb-4">
+                  <div class="callout">
+                   <h5 class="content-highlight">SECONDARY METRIC</h5>
+                    <h4>Increase adoption rate</h4>
+                    <p class="content-weaker">Increase # of unique object configurations per organization, reflecting greater engagement with customization features.</p>
+                 </div>
+               </div> 
+             </div>
+           </section>
+          <hr class="hr">
+          <section id="section3">
             <div>
-              <h3 class="spacer-bottom-sm">Phase 1: Proof of Concept</h3>
-              <p class="spacer-bottom">As a first step, we aimed to launch Object Builder to our internal Sales and Solutions teams. The goal was for them to start demoing the builder in sales calls, demonstrating its potential to prospective customers, and helping us evaluate its functionality.</p>
-
+              <h2 class="spacer-bottom-sm content-highlight">Phase 1: Proof of Concept</h2>
+              <p>Object Builder was initially launched to our internal Sales and Solutions teams with a limited set of features, including:</p>
+              <ul>
+              <li class="regular-text">Adding new custom fields</li>
+              <li class="regular-text">Creating new sections</li>
+              <li class="regular-text">Reorganizing fields</li>
+              </ul>
+             <p  class="spacer-bottom-sm">The goal was for them to start demoing the builder in sales calls, demonstrating its potential to prospective customers, and helping us evaluate its functionality and adoption.</p>
+              <div class="spacer-bottom">
               <div id="browser">
                 <div id="browser-top-bar">
                   <div id="browser-page-name">Prototype</div>
                   <div class="spacer"></div>
-                  <button class="btn"><img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen" data-width="original" data-scaling="no"></button>
+                  <button class="btn"><img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen" data-width="original" data-scaling="no" title="Enter fullscreen"></button>
                 </div>
                 <div id="browser-frame">
                   <iframe 
@@ -324,6 +339,7 @@
                 </iframe>
               </div>
             </div>
+            <p>The insights gathered from our POC were incredibly valuable.</p>
           </section>
         </section>
       </div>

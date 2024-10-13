@@ -75,7 +75,7 @@
   --color-border-default: var(--color-white-200);
   --color-border-strong: var(--color-white-300);
   --color-border-stronger: var(--color-white-400);
-  --color-border-callout: var(--color-white-100);
+  --color-border-callout: var(--color-white-200);
   --color-border-callout-note: var(--color-blue-400);
   --color-border-tooltip: var(--color-white-100);
 }
@@ -207,8 +207,9 @@ h1 {
     content: '';
     position: absolute;
     top: 26px; /* Adjusted to align with the dot */
-    left: 0;
-    right: 0;
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center the line */
+    width: 90%; /* Set the width relative to the parent container */
     height: 1px;
     background: linear-gradient(to right, transparent 0%, var(--color-white-500) 8%, var(--color-white-500) 92%, transparent 100%);
     z-index: 0;
@@ -425,9 +426,10 @@ ol li.text{
 
 ul li.regular-text {
   margin-left: 1rem;
-  font-size: 1.25;
+  font-size: 1.25rem;
   font-weight: 400;
 }
+
 
 /* SPECIAL CASES */
 .p-strong{
@@ -755,7 +757,7 @@ hr {
   margin-top: 64px;
   margin-bottom: 64px;
   border: 0;
-  border-top: 1px solid var(--color-border-strong);
+  border-top: 1px solid var(--color-border-default);
 }
 
 /* Videos */
