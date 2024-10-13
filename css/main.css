@@ -416,8 +416,7 @@ a .logo {
 
 .memoji{
   position: absolute;
-  width: 280px;
-  height: 280px;
+  margin-top: 24px;
 }
 
 .text{
