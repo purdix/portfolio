@@ -173,6 +173,7 @@ h1 {
   background: var(--color-gradient);
   -webkit-background-clip: text;
   animation: text-spin 9s infinite linear;
+  text-shadow: 0px 0px transparent;
 }
 
 @property --bg-angle {
