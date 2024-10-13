@@ -169,11 +169,10 @@ h1 {
 }
 
 .content-gradient{
-  -webkit-text-fill-color: transparent;
-  background: var(--color-gradient);
-  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--color-gradient);
+  background-clip: text;
   animation: text-spin 9s infinite linear;
-  text-shadow: 0px 0px transparent;
 }
 
 @property --bg-angle {
