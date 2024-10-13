@@ -778,6 +778,11 @@ hr {
   margin-bottom: 120px;
 }
 
+.welcome-other {
+  display: flex;
+  flex-direction: column;
+}
+
 .img {
   object-fit: cover;
   box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.10);
