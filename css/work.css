@@ -695,47 +695,60 @@ a .logo {
 }
 
 /* For sidebar */
-#section1, #section2, #section3 {
+.sticky-top {
+position: sticky;
+background-color: none;
+z-index: 999;
+top: 160px;
+}
+
+.section {
   scroll-margin-top: 160px;
-  position: relative;
 }
 
-.sidenav {
-  position: sticky;
-  top: 160px;
-  background-color: none;
-  margin-top: 5rem;
-  z-index: 999;
+.sidebar-custom {
+  margin-top: 1em;
 }
 
-.sidenav ul {
-  list-style-type: none;
-  padding: 0;
+/* all links */
+.sidebar-custom .nav>li>a {
+  padding: 4px 0px;
 }
 
-.sidenav ul li {
-  margin-bottom: 10px;
+/* nested links */
+.sidebar-custom .nav .nav>li>a {
+  padding-top: 2px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  font-size: 1.125em;
 }
 
-.sidenav ul li a {
+/* active & hover links */
+.sidebar-custom .active,
+.sidebar-custom .nav>li>a:hover,
+.sidebar-custom .nav>li>a:focus {
+  color: var(--color-content-nav);
   text-decoration: none;
-  font-size: 1.25em;
-  color: var(--color-content-nav-inactive);
+  background-color: transparent;
 }
 
-.sidenav ul li a.active {
+.sidebar-custom a.active {
   font-weight: 700;
-  color: var(--color-content-nav);
 }
 
-.sidenav ul li a:hover {
-  color: var(--color-content-nav);
-}
-
-.submenu {
-  margin-left: 20px;
+.sidebar-custom .nav ul.nav {
   display: none;
 }
+
+.sidebar-custom .active~ul.nav {
+  display: block;
+}
+
+.sidebar-custom .nav-link {
+  cursor: pointer;
+}
+
+
 
 /* Line dividers */
 hr {

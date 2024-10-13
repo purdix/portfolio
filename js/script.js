@@ -65,38 +65,3 @@ $(document).ready(function() {
         return false;
      });
  });
-
-// Submenu
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll('.sidenav a');
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', function () {
-        let currentSection = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 160; // Adjust based on your scroll-margin-top
-            const sectionBottom = sectionTop + section.offsetHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionBottom) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const sectionId = link.getAttribute('data-section');
-            const subMenu = link.nextElementSibling;
-
-            if (sectionId === currentSection) {
-                link.classList.add('active');
-                if (subMenu && subMenu.classList.contains('submenu')) {
-                    subMenu.style.display = 'block';
-                }
-            } else {
-                if (subMenu && subMenu.classList.contains('submenu')) {
-                    subMenu.style.display = 'none';
-                }
-            }
-        });
-    });
-});
