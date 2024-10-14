@@ -338,7 +338,7 @@ h1 {
   linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
   border: 2px solid transparent;
   border-radius: 12px;
-  animation: spin 9s infinite linear;
+  animation: spin 4s infinite linear;
 }
 
 @property --bg-angle{
