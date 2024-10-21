@@ -1169,66 +1169,43 @@ color: var(--color-content-default);
 }
 
 /*-------------------- Browser ----------------------*/
+
 #browser {
-  margin: 5% auto;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border-default);
-  width: 100%;
-  display: block;
-  border-radius: 12px;
+    margin: 5% auto;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-default);
+    width: 100%;
+    display: block;
+    border-radius: 12px;
 }
 
 #browser-frame {
-  position: relative;
-  overflow: hidden; /* Optional: Hide any overflow */
-  display: flex;
-  height: 464px;
+    position: relative;
+    overflow: hidden; /* Optional: Hide any overflow */
+    height: 464px;
 }
 
-#iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+#figma-prototype {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block; /* Ensures there's no extra space below the iframe */
 }
 
 #browser-top-bar {
-  display: flex;
-  align-items: center;
-  padding: 8px 12px 8px 20px;
-  position: relative;
-}
-
-.buttons-container {
-  display: flex;
-  gap: 8px; /* Adjust gap between buttons if needed */
-}
-
-.browser-btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 16px;
-  cursor: pointer;
-}
-
-#btn-close {
-  background: #c73632;
-}
-
-#btn-min {
-  background: #ee9742;
-}
-
-#btn-max {
-  background: #79b559;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 8px 20px;
+    position: relative;
 }
 
 .spacer {
-  flex: 1; /* This will balance space on both sides of the title */
+    flex: 1; /* This will balance space on both sides of the title */
 }
 
 #browser-page-name {
-  text-align: left;
-  color: var(--color-content-default);
+    text-align: left;
+    color: var(--color-content-default);
 }
 
 
