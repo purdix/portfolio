@@ -961,7 +961,6 @@ a .logo {
 }
 
 @media only screen and (max-width: 768px) {
-
   .bg-shape{
   visibility: hidden;
 }
