@@ -26,6 +26,7 @@
   --color-bg-main: var(--color-black-900);
   --color-bg-input: var(--color-white-100);
   --color-bg-button: var(--color-blue);
+  --color-bg-tooltip: var(--color-black-900);
 
 
   --color-content-nav: var(--color-white-900);
@@ -40,6 +41,7 @@
   --color-border-nav: var(--color-white-100);
   --color-border-default: var(--color-white-100);
   --color-border-strong: var(--color-white-200);
+    --color-border-tooltip: var(--color-white-100);
 }
 
 /*-------------------- General --------------------*/
@@ -508,9 +510,9 @@ a .logo {
 .tooltip-container .tooltip-text {
   visibility: hidden;
   width: 176px;
-  color: #fff;
-  background-color: rgba(0,0,0,0.94);
-  border: 1px rgba(255, 255, 255, 0.08) solid;
+  color: var(--color-content-default);
+  background-color: var(--color-bg-tooltip);
+  border: 1px var(--color-border-tooltip) solid;
   text-align: center;
   border-radius: 16px;
   padding: 8px 12px 8px 12px;
@@ -520,7 +522,6 @@ a .logo {
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -88px;
 }
 
 .tooltip-container:hover .tooltip-text {

@@ -876,6 +876,7 @@ hr {
   font-size: 0.8rem;
 }
 
+
 /*-------------------- FoodMe --------------------*/
 .card {
   margin-top: 25px;
@@ -1159,9 +1160,9 @@ color: var(--color-content-default);
 .tooltip-container .tooltip-text {
   visibility: hidden;
   width: 176px;
-  color: #fff;
+  color: var(--color-content-default);
   background-color: rgba(0,0,0,0.94);
-  border: 1px rgba(255, 255, 255, 0.08) solid;
+  border: 1px var(--color-border-tooltip) solid;
   text-align: center;
   border-radius: 16px;
   padding: 8px 12px 8px 12px;
