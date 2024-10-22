@@ -160,8 +160,7 @@
               <h3 class="spacer-bottom-xs">What is Rose Rocket?</h3>
               <p>Rose Rocket is a cloud-based Transportation Management System (TMS) built for trucking companies and brokerages. It provides essential tools for managing daily operations, including dispatching, customer communication, billing, and driver management.</p>
             </section>
-            <hr class="hr">
-            <section id="section1-2" class="section">
+            <section id="section1-2" class="section spacer-top">
               <h3 class="spacer-bottom-xs">The Problem</h3>
               <p class="spacer-bottom-sm">In the trucking industry, no two companies are the same. Each one operates with incredibly diverse internal processes and needs. Yet, most TMS solutions provide rigid, one-size-fits-all systems that force companies to conform to the software. For years, Rose Rocket followed a similar approach, leading to several critical challenges:</p>
               <div class="row">
@@ -199,7 +198,7 @@
                 <div class="accordion">
                   <input type="checkbox" title="Click to expand" name="collapse2" id="handle2">
                   <h5 class="handle">
-                    <label for="handle2">Show excerpts from customers</label>
+                    <label for="handle2">Show snippets from support ticket</label>
                   </h5>
                   <div class="content">
                     <p>Below are snippets from support tickets showing a strong demand for deeper customization and reduced inefficiencies:</p>
@@ -214,31 +213,29 @@
                     <div class="callout"><p class="blockquote">Custom fields are a <b class="content-highlight">pretty common request during onboarding</b>. Often we direct the customer to re-purpose one field and add two headers ie PO | Ref Number or find another place to put the info but one additional field will be helpful.</p><p>— Internal support team</p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </section>
-            <hr class="hr">
-            <section id="section1-3" class="section">
+            <section id="section1-3" class="section spacer-top">
               <h3 class="spacer-bottom-sm">The Objective</h3>
               <p class="spacer-bottom-sm">Faced with these challenges, our goal was clear:</p>
               <div class="callout-strong spacer-bottom-sm">
-                <p class="p-strong">Empower users to tailor the software to their unique needs by enabling <b><span class="content-highlight">deep customization </span></b>of core functionality</p>
+                <p class="p-strong">How might we empower users to <b class="content-highlight">tailor the software</b> to meet their specific business needs?</p>
               </div>
 
             </section>
-            <hr class="hr">
-            <section id="section1-4" class="section">
+            <section id="section1-4" class="section spacer-top">
               <h3 class="spacer-bottom-sm">Our Approach</h3>
-              <p>To achieve this objective, we aimed to tackle the majority of common challenges (80%) with standard, out-of-the-box features, while addressing the more specialized needs (20%) with builder-esque tools.</p>
+              <p>Unsurprisingly, tool(s) for product customization seemed like the clear solution. However, we recognized that limitless customization was not going to work for everyone - especially given our user base. </p>
+              <p>To address this, we focused on solving the majority of common challenges (80%) with standard, out-of-the-box features, while using specialized, builder-like tools for the remaining (20%) unique needs.</p>
               <p class="spacer-bottom">
-                The first of these builders, named "Object Builder", aims to solve for these specialized needs by enabling businesses to <b class="content-highlight">define and customize Objects</b> according to their specific requirements.</p>
+                The first tool, "Object Builder," lets users <b class="content-highlight">define and customize Objects</b> to fit their specific data-entry needs.</p>
                 <div class="callout-note">
                   <div class="row">
-                    <div class="col-auto"><img class="icon spacer-bottom-sm" src="./files/icons/info.svg" width="32" height="32" alt="High development costs" caption="" data-width="original" data-scaling="no"></div>
-                    <div class="col-9"><h4>What are "Objects"?</h4></div>
+                    <div class="col-1"><img class="icon spacer-bottom-sm" src="./files/icons/info.svg" width="32" height="32" alt="High development costs" caption="" data-width="original" data-scaling="no"></div>
+                    <div class="col-auto"><h4>What are "Objects"?</h4></div>
                   </div>
-                  <p class="content-weak">Objects are types of information stored in Rose Rocket, such as Orders, Quotes, Tasks, Customers, and Invoices. Each Object has associated fields that appear as columns on a board or as rows in the data panel.</p>
+                  <p class="content-weak">Objects are types of information stored in Rose Rocket, such as Orders, Quotes, Tasks, Customers, and Invoices. Each Object has associated fields for data entry that appear as columns on a board or as rows in a data panel.</p>
                 </div>
 
               </section>
@@ -356,6 +353,7 @@
                   <p class="caption">An interactive prototype of the PoC released to the internal Sales and Solutions team, showcasing key user flows.</p>
                 </div>
               </section>
+              <hr class="hr">
             <section id="section3-2">
             <h3 class="spacer-bottom-sm">Impact</h3>
             <p class="spacer-bottom-sm">In just 4 weeks, the Solutions team found significant value from the PoC:</p>
@@ -372,13 +370,21 @@
                     <p class="content-weaker">Reduced the time required for the Solutions team to setup new orgs from <b class="content-highlight"> 1-3 hours to just a few minutes</b></p>
                  </div>
                </div> 
-               <p class="caption">*Numbers are based on .JSON config templates, a tool co-built with another team for exporting customized Objects.</p>
+               <p class="caption">*Numbers are based on .JSON config templates, a tool co-developed by another team for exporting Objects customized via Object Builder.</p>
              </div>
            </section>
               <hr class="hr">
               <section id="section3-3">
                 <h3 class="spacer-bottom-sm">Learnings</h3>
                 <p>Alongside its impact, internal usage of Object Builder led to some valuable feedback in terms of its functionality and design. Outlined below are some of our key findings:</p>
+                <div class="callout">
+                  <h5 class="content-highlight">FUNCTIONALITY</h5>
+                                    <hr class="hr">
+                  <h4>Extended capabilities</h4>
+                  <p>There is an appetite for Object customization</p>
+                  <h4>Extended capabilities</h4>
+                  <p>There is an appetite for Object customization</p>
+                </div>
               </section>
           </section>
           <hr class="">
@@ -393,43 +399,22 @@
                     <li class="regular-text">Creating new sections</li>
                     <li class="regular-text">Reorganizing fields</li>
                     <li class="regular-text">Editing existing fields  
-                      <span class="tag-bg tooltip-container">
-                        <span class="tag-text">NEW</span>
-                      </span>
+                      <span class="tag-bg"><span class="tag-text">NEW</span></span>
                     </li>
                     <li class="regular-text">Removing existing fields
-                      <span class="tag-bg tooltip-container">
-                        <span class="tag-text">NEW</span>
-                        <span class="tooltip-text">And lots of ☕</span>
-                      </span>
+                      <span class="tag-bg"><span class="tag-text">NEW</span></span>
                     </li>
                   </ul>
-                  <p class="spacer-bottom-sm">The goal was for them to start demoing the builder in sales calls, demonstrating its potential to prospective customers, and helping us evaluate its functionality and adoption.</p>
-                  <div class="spacer-bottom">
-                    <div id="browser">
-                      <div id="browser-top-bar">
-                        <div id="browser-page-name">Figma Prototype</div>
-                        <div class="spacer"></div>
-                        <a href="#" id="fullscreen-button">
-                          <button class="btn">
-                            <img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen icon" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
-                          </button>
-                        </a>
-                      </div>
-                      <div id="browser-frame">
-                        <iframe 
-                        id="figma-prototype" 
-                        src="https://embed.figma.com/proto/N9SRRVSCsPnaYeIs8oBSYx/Case-Studies-(2024)?page-id=12%3A3236&node-id=1016-135332&node-type=frame&viewport=10994%2C-2570%2C0.22&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1016%3A135332&embed-host=share">
-                      </iframe>
-                    </div>
-                  </div>
-
-                  <p class="caption">An interactive prototype of the PoC released to the internal Sales and Solutions team, showcasing key user flows.</p>
-                </div>
               </section>
+              <hr class="hr">
               <section id="section3-2">
                 <h3>Impact</h3>
-                <p>The insights gathered from our PoC were incredibly valuable.</p>
+                <p>Empty text.</p>
+              </section>
+              <hr class="hr">
+              <section id="section3-3">
+                <h3>Learnings</h3>
+                <p>Empty text.</p>
               </section>
           </section>
         </div>
