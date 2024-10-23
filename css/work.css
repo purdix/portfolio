@@ -1070,31 +1070,20 @@ color: var(--color-content-default);
 
 
 /*-------------------- Footer --------------------*/
-.contact-fa{
-  padding: 25px;
-  font-size: 3rem;
-  color: var(--color-content-interactive);
-  transition-property: transform, box-shadow, background-color;
-  transition: all .2s ease-in-out
-}
-
-.contact-fa:hover, .contact-fa:focus    {
-  color: var(--color-content-interactive);
-  transform: scale(1.2);
-  transition-delay: 0s !important;
+.footer-icons{
+  margin-bottom: 20px;
 }
 
 .footer-fa{
   color: var(--color-content-interactive);
   font-size: 1.75rem;
   padding: 15px;
-  margin-bottom: 20px;
-  transition-property: transform, box-shadow, background-color;
-  transition: all .2s ease-in-out
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer-fa:hover, .footer-fa:focus{
-  color: var(--color-content-interactive);
+  transform: scale(1.2);
+ transition-delay: 0s !important;
 }
 
 .glow{
