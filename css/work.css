@@ -753,9 +753,16 @@ top: 160px;
 
 
 /* Line dividers */
-hr {
+.hr {
   margin-top: 64px;
   margin-bottom: 64px;
+  border: 0;
+  border-top: 1px solid var(--color-border-default);
+}
+
+.hr-inner {
+  margin-top: 16px;
+  margin-bottom: 16px;
   border: 0;
   border-top: 1px solid var(--color-border-default);
 }
