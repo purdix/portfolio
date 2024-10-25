@@ -54,6 +54,7 @@
   --color-bg-card: var(--color-black-400);
   --color-bg-callout: var(--color-transparent);
   --color-bg-callout-note: var(--color-blue-000);
+  --color-bg-tab: var(--color-blue-100);
   --color-bg-tooltip: var(--color-black-900);
   --color-bg-button-default: var(--color-transparent);
   --color-bg-button-hover: var(--color-white-100);
@@ -77,6 +78,7 @@
   --color-border-stronger: var(--color-white-400);
   --color-border-callout: var(--color-white-200);
   --color-border-callout-note: var(--color-blue-400);
+  --color-border-tab: var(--color-blue-400);
   --color-border-tooltip: var(--color-white-100);
 }
 
@@ -339,6 +341,14 @@ h1 {
   border: 2px solid transparent;
   border-radius: 12px;
   animation: spin 4s infinite linear;
+}
+
+.callout-feedback{
+  padding: 24px 24px;
+  border: 1px solid var(--color-border-callout);
+  border-radius: 12px;
+  background-color: var(--color-bg-callout);
+  overflow: hidden;
 }
 
 @property --bg-angle{
@@ -833,6 +843,14 @@ top: 160px;
   width: 100%;
 }
 
+.img-responsive {
+    max-width: 100%;       /* Ensures the image doesn't exceed the width of its container */
+    height: auto;          /* Allows height to adjust automatically based on width */
+    border: 1px solid var(--color-border-default);  
+    border-radius: 8px;    
+    object-fit: contain;   /* Ensures the entire image fits within the container */
+}
+
 .link {
   padding: 0px;
   display: inline-block;
@@ -1254,7 +1272,7 @@ color: var(--color-content-default);
 }
 
 .accordion .handle label:before {
-  content: "\f054";
+  content: "\f0da";
   font-family: Font Awesome\ 5 Free;
   display: inline-block;
   vertical-align: middle;
@@ -1266,9 +1284,51 @@ color: var(--color-content-default);
   transform: rotate(90deg);
 }
 
-/*-------------------- Quotes ----------------------*/
+/*-------------------- Toggle ----------------------*/
+.tab-container {
+  display: flex;
+  justify-content: space-between; /* Distribute tabs evenly across the container */
+  margin-bottom: 20px; /* Space below the tabs */
+  width: 100%; /* Make sure the container takes full width */
+}
 
+.tab {
+  flex: 1; 
+  color: var(--color-content-weaker);
+  cursor: pointer;
+  padding: 8px 0;
+  background-color: var(--color-bg-nav); 
+  border: 1px solid var(--color-border-default); 
+  text-align: center; 
+  margin: 0; 
+}
 
+.tab.active {
+  background-color: var(--color-bg-tab);
+  border-color: var(--color-border-tab); /* Active tab border for all sides */
+  color: var(--color-content-interactive);
+  font-weight: 700;
+  position: relative; /* Needed for the z-index trick */
+  z-index: 1; /* Bring the active tab above others */
+}
+
+.tab.active + .tab {
+  border-left: none;
+}
+
+.tab-text {
+  text-align: center;
+}
+
+.tab:first-child {
+  border-top-left-radius: 8px; /* Round top-left corner */
+  border-bottom-left-radius: 8px; /* Round bottom-left corner */
+}
+
+.tab:last-child {
+  border-top-right-radius: 8px; /* Round top-right corner */
+  border-bottom-right-radius: 8px; /* Round bottom-right corner */
+}
 /*-------------------- Responsiveness ----------------------*/
 @media only screen and (max-width:1200px){
   .welcome-home {
@@ -1414,4 +1474,5 @@ color: var(--color-content-default);
   .hero-section{
   padding: 32px 0px;
 }
+
 }

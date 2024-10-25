@@ -8,21 +8,6 @@ function myFunction() {
   }
 }
 
-//Collapsible notes 
-var coll = document.getElementsByClassName("notes-collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
 //Nav scroll
 const navbar = document.querySelector('.navbar-default');
 window.onscroll = () => {
@@ -65,3 +50,18 @@ $(document).ready(function() {
         return false;
      });
  });
+
+
+const tabs = document.querySelectorAll('.tab');
+const toggleImage = document.getElementById('toggleImage');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active')); // Remove active class from all tabs
+    tab.classList.add('active'); // Add active class to clicked tab
+    toggleImage.src = tab.getAttribute('data-image'); // Change image based on clicked tab
+  });
+});
+
+// Set default active tab
+tabs[0].classList.add('active');
