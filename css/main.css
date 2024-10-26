@@ -524,15 +524,6 @@ a .logo {
   -webkit-background-clip: text;
 }
 
-.cursor {
-  display: inline-block;
-  width: 0.1rem;
-  height: 1em; /* Height aligned with text */
-  background-color: var(--color-content-weakest);
-  margin-left: 0.1em; /* Small gap to keep cursor close to text */
-  animation: blink 0.8s steps(2, start) infinite;
-}
-
 @keyframes blink {
   to {
     visibility: hidden;
