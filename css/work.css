@@ -410,7 +410,7 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.025rem;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -845,11 +845,11 @@ top: 160px;
 }
 
 .img-responsive {
-    max-width: 100%;       /* Ensures the image doesn't exceed the width of its container */
-    height: auto;          /* Allows height to adjust automatically based on width */
+    max-width: 100%;
+    height: auto;
     border: 1px solid var(--color-border-default);  
     border-radius: 8px;    
-    object-fit: contain;   /* Ensures the entire image fits within the container */
+    object-fit: contain;
 }
 
 .link {

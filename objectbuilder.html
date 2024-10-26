@@ -241,9 +241,9 @@
               </section>
             </section>
             <hr class="hr">
-            <section id="section2">
+            <section id="section2" class="section spacer-top">
               <h2 class="spacer-bottom-sm content-highlight">Design Process</h2>
-              <section id="section2-1">
+              <section id="section2-1" class="section spacer-top">
                 <h3 class="spacer-bottom-sm">Timeline</h3>
                 <p>For this project, we used a two-phased approach to build, test, and iterate on the feature:</p>
                 <div class="spacer-bottom">
@@ -317,10 +317,10 @@
                </div>
              </section>
              <hr class="hr">
-             <section id="section3">
+             <section id="section3" class="section spacer-top">
               <div>
                 <h2 class="spacer-bottom-sm content-highlight">Phase 1: Proof of Concept (PoC)</h2>
-                <section id="section3-1">
+                <section id="section3-1" class="section spacer-top">
                   <h3>Our Goal</h3>
                   <p>Object Builder was initially launched as a PoC to our internal Sales and Solutions teams with a limited set of features, including:</p>
                   <ul class="spacer-bottom-sm">
@@ -374,49 +374,79 @@
             </section>
             <section id="section3-3" class="section spacer-top">
               <h3 class="spacer-bottom-sm">Feedback</h3>
-              <p class="spacer-bottom-sm">In addition to its measurable impact, the PoC yielded valuable feedback on its functionality and design during sales calls. Below are some of our key insights:</p>
+              <p class="spacer-bottom-sm">In addition to its measurable impact, the PoC yielded valuable feedback on its functionality and design during sales calls. Shown below are some of these insights and how we addressed them:</p>
               <div class="row">
                 <div class="accordion spacer-bottom-xs">
                   <input type="checkbox" title="Click to expand" name="collapse2" id="handle2" checked>
                   <h5 class="handle"><label for="handle2">Functionality <span class="caption">(Click to expand)</span></label></h5>
                   <div class="content">
                     <div class="callout-feedback">
-                      <div class="row">
-                        <div class="col-12 col-lg-6"> 
-                          <h4>Desire for enhanced customization</h4> <!-- Remove bottom margin and add left margin -->
-                          <p class="content-weaker">Users wanted to <b class="content-highlight">customize select fields by adding, removing, reordering, and editing options</b> to better meet their business needs, such as incorporating custom statuses for their Order Object.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img src="./files/objectbuilder/p1-customSelect.png" class="spacer-bottom-xs img-responsive">
-                          <p class="caption">Select fields could not be edited or customized.</p>
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6"> 
+                            <h4>Desire for enhanced customization</h4>
+                            <p class="content-weaker">Users wanted to <b class="content-highlight">customize select fields by adding, removing, reordering, and editing options</b> to better meet their business needs, such as incorporating custom statuses for their Order Object.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <!-- Use a class instead of ID -->
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-customSelect.png" alt="Toggle Image">
+                            <p class="caption">Select fields could not be edited or customized.</p>
+
+                            <!-- Tabs underneath the image -->
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/objectbuilder/p1-customSelect.png" data-caption="Select fields could not be edited or customized.">Before</div>
+                              <div class="tab" data-image="./files/objectbuilder/p1-customSelect-after.png" data-caption="Select fields can now be edited, including adding/removing options and reordering.">After</div>
+                            </div>
+                          </div>
+                        </div>                  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="callout-feedback">
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Need for flexibility in naming</h4>
+                            <p class="content-weaker">
+                              Users expressed the need to <b class="content-highlight">rename fields</b> to match their unique business terminology, such as changing "Partners" to a more familiar term like "Carriers."
+                            </p>
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+                            <!-- Use a class instead of ID -->
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-renameField.png" alt="Toggle Image">
+                            <p class="caption">Default fields were not editable and could not be renamed.</p>
+
+                            <!-- Tabs underneath the image -->
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/objectbuilder/p1-renameField.png" data-caption="Default fields were not editable and could not be renamed.">Before</div>
+                              <div class="tab" data-image="./files/objectbuilder/p1-renameField-after.png" data-caption="Default fields can now be renamed to fit business needs.">After</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content">
                     <div class="callout-feedback">
-                      <div class="row">
-                        <div class="col-12 col-lg-6"> 
-                          <h4>Need for flexibility in naming</h4>
-                          <p class="content-weaker">Users expressed the need to <b class="content-highlight">rename fields</b> to match their unique business terminology, such as changing "Partners" to a more familiar term like "Carriers."</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img src="./files/objectbuilder/p1-renameField.png" class="img-responsive spacer-bottom-xs">
-                          <p class="caption">Default fields were not editable and could not be renamed.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <div class="callout-feedback">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Clarity on permissions</h4>
-                          <p class="content-weaker">Users sought <b class="content-highlight">better guidance on managing field permissions</b>. Many were unsure about how to handle access and editability when creating new custom fields.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img src="./files/objectbuilder/p1-permissions.png" class="spacer-bottom-xs img-responsive">
-                          <p class="caption"> Permissions existed in a separate page with no direct link during field creation.</p>
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Clarity on permissions</h4>
+                            <p class="content-weaker">Users sought <b class="content-highlight">better guidance on managing field permissions</b>. Many were unsure about how to handle access and editability when creating new custom fields.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <!-- Use a class instead of ID -->
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-permissions.png" alt="Toggle Image">
+                            <p class="caption">No guidance was provided on managing permissions during field creation.</p>
+
+                            <!-- Tabs underneath the image -->
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/objectbuilder/p1-permissions.png" data-caption="No guidance on permissions during field creation, leaving users uncertain.">Before</div>
+                              <div class="tab" data-image="./files/objectbuilder/p1-permissions-after.png" data-caption="A clear disclaimer is now shown with a direct link to manage field permissions.">After</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -428,28 +458,39 @@
                   <h5 class="handle"><label for="handle3">Design <span class="caption">(Click to expand)</span></label></h5>
                   <div class="content">
                     <div class="callout-feedback">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Challenges with navigating</h4>
-                          <p class="content-weaker">Users found it <b class="content-highlight">challenging to create and edit custom fields</b>, often struggling to locate them in the full list of fields itself.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img src="./files/objectbuilder/p1-navigation.png" class="spacer-bottom-xs img-responsive">
-                          <p class="caption">Both the button to create new custom fields and the fields themselves were difficult to identify.</p>
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Challenges with navigating</h4>
+                            <p class="content-weaker">Users found it <b class="content-highlight">challenging to create and edit custom fields</b>, often struggling to locate them in the full list of fields itself.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <!-- Use a class instead of ID -->
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-navigation.png" alt="Toggle Image">
+                            <p class="caption">Both the button to create new custom fields and the fields themselves were difficult to identify.</p>
+
+                            <!-- Tabs underneath the image -->
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/objectbuilder/p1-navigation.png" data-caption="The button to create new custom fields and the fields themselves were hard to identify.">Before</div>
+                              <div class="tab" data-image="./files/objectbuilder/p1-navigation-after.png" data-caption="The button to create custom fields is now prioritized in the IA, with clear labels for the fields themselves.">After</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content">
                     <div class="callout-feedback">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Need for enhanced guidance</h4>
-                          <p class="content-weaker">Users requested<b class="content-highlight"> improved in-app guidance on the different types of custom fields</b>, along with examples to illustrate when to use each one effectively.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img src="./files/objectbuilder/p1-creation.png" class="spacer-bottom-xs img-responsive">
-                          <p class="caption">With many options available, it was difficult to understand the differences between them.</p>
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Need for enhanced guidance</h4>
+                            <p class="content-weaker">Users requested<b class="content-highlight"> improved in-app guidance on the different types of custom fields</b>, along with examples to illustrate when to use each one effectively.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img src="./files/objectbuilder/p1-creation.png" class="spacer-bottom-xs img-responsive">
+                            <p class="caption">With many options available, it was difficult to understand the differences between them.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -460,13 +501,13 @@
             </section>
           </section>
           <hr class="hr">
-          <section id="section4">
+          <section id="section4" class="section spacer-top">
             <div>
               <h2 class="spacer-bottom-sm content-highlight">Phase 2: Commercial Launch</h2>
-              <section id="section3-1">
+              <section id="section4-1" class="section spacer-top">
                 <h3>Our Goal</h3>
-                <p>In late Q2, we officially launched Object Builder. Our goal was to equip users with the same tools as the Solutions team, enabling them to tailor their platforms to their unique business needs.</p>
-                <!--<ul class="spacer-bottom-sm">
+                <p>In late Q2, we officially launched Object Builder. Our goal was to equip users with the same tools as the Solutions team, enabling them to tailor their platforms to their unique business needs, including:</p>
+                <ul class="spacer-bottom-sm">
                   <li class="regular-text">Adding new custom fields</li>
                   <li class="regular-text">Creating new sections</li>
                   <li class="regular-text">Reorganizing fields</li>
@@ -476,55 +517,72 @@
                   <li class="regular-text">Removing existing fields
                     <span class="tag-bg"><span class="tag-text">NEW</span></span>
                   </li>
-                </ul>-->
-
-                <p>Prior to this launch, however, we took time to address feedback from the PoC. Below are some of the changes we implemented based on that feedback:</p>
+                </ul>
               </section>
               <hr class="hr">
-              <section id="section3-2">
+              <section id="section4-2" class="section spacer-top">
                 <h3>Impact</h3>
-                <p>Empty text.</p>
-              </section>
-              <hr class="hr">
-              <section id="section3-3">
-                <h3>Feedback</h3>
-                <p>Empty text.</p>
-              </section>
+                <p class="spacer-bottom-sm">In just four weeks, the Solutions team realized substantial value from the PoC:</p>
+                <div class="row">
+                  <div class="col-lg-6 d-flex mb-4">
+                    <div class="callout">
+                     <img class="icon spacer-bottom-sm" src="./files/icons/template.svg" width="48" height="48" alt="Limited customization" caption="" data-width="original" data-scaling="no">
+                     <h4>Consistent MoM growth*</h4>
+                     <p class="content-weaker">Usage has consistently increased over the months, lending itself to</p>
+                     <p class="caption">* MoM = Month over month</p>
+                   </div>
+                 </div>
+                 <div class="col-lg-6 d-flex mb-4">
+                  <div class="callout">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/speed.svg" width="48" height="48" alt="Limited customization" caption="" data-width="original" data-scaling="no">
+                    <h4>17+ closed deals</h4>
+                    <p class="content-weaker">Since its launch, the tool has played a key role in over 17 closed deals, <b class="content-highlight">generating over $150,000</b> in contracted ARR.</p>
+                  </div>
+                </div> 
+                <p class="caption">*Numbers are based on usage of .JSON config templates, a tool co-developed by another team for exporting Objects customized via Object Builder.</p>
+              </div>
             </section>
-          </div>
+            <hr class="hr">
+            <section id="section4-3" class="section spacer-top">
+              <h3>Feedback</h3>
+              <p>Empty text.</p>
+            </section>
+          </section>
         </div>
       </div>
+    </div>
 
-      <button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span><span class="scrollbtn-text">Scroll to top</span></button>
-    </main>
+    <button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span><span class="scrollbtn-text">Scroll to top</span></button>
+  </main>
 
-    <!--Footer-->
-    <footer class="footer">
-      <div class="footer-icons">
-        <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Behance">
-          <i class="fab fa-behance footer-fa"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin footer-fa"></i>
-        </a>
-        <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope footer-fa"></i>
-        </a>
-      </div>
-      <p>Coded by me with 
-        <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
-        <span class="tooltip-text">And lots of ☕
-        </span>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Behance">
+        <i class="fab fa-behance footer-fa"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin footer-fa"></i>
+      </a>
+      <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope footer-fa"></i>
+      </a>
+    </div>
+    <p>Coded by me with 
+      <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
+      <span class="tooltip-text">And lots of ☕
       </span>
-    </p>
-  </footer>
+    </span>
+  </p>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script>
-  <script>
-    document.getElementById('fullscreen-button').addEventListener('click', function(event) {
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+<script>
+  document.getElementById('fullscreen-button').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor behavior
     const iframe = document.getElementById('figma-prototype');
 
