@@ -333,14 +333,27 @@ h1 {
   background-color: var(--color-bg-callout-note);
 }
 
-.callout-strong{
+.callout-strong {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this */
   padding: 32px 32px 16px 32px;
   background: 
-  linear-gradient(#000 0 0) padding-box,
-  linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
   border: 2px solid transparent;
   border-radius: 12px;
   animation: spin 4s infinite linear;
+}
+
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+@keyframes spin {
+  to {
+    --bg-angle: 360deg;
+  }
 }
 
 .callout-feedback{
@@ -349,18 +362,6 @@ h1 {
   border-radius: 12px;
   background-color: var(--color-bg-callout);
   overflow: hidden;
-}
-
-@property --bg-angle{
-  inherits: false;
-  initial-value: 0deg;
-  syntax: "<angle>";
-}
-
-@keyframes spin{
-  to {
-    --bg-angle: 360deg;
-  }
 }
 /*-------------------- Links --------------------*/
 a, a:active,
@@ -1236,9 +1237,6 @@ color: var(--color-content-default);
 
 
 /*-------------------- Accordion ----------------------*/
-.accordion {
-  margin-bottom: 1em;
-}
 
 .accordion > input[type="checkbox"] {
   position: absolute;
