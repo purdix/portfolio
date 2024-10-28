@@ -551,12 +551,6 @@ a .logo {
   -webkit-background-clip: text;
 }
 
-@keyframes blink {
-  to {
-    visibility: hidden;
-  }
-}
-
 /*-------------------- Tooltip ----------------------*/
 .tooltip-container {
   position: relative;

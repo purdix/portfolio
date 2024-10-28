@@ -84,11 +84,13 @@ $(document).ready(function() {
   document.addEventListener('DOMContentLoaded', initializeImageToggle);
 
 //Scramble text
-const words = ["Product", "Visual", "Digital", "UI/UX"];
+const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
 const typingSpeed = 100;  // Speed to type each letter in ms
 const pauseBetweenWords = 6000; // Pause time in ms between words
 
+// Get words from data attribute and split into an array
+const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
 
 function startTypewriterEffect() {
