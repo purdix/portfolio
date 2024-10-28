@@ -596,9 +596,9 @@ a .logo {
 }
 
 /*-------------------- Miscellaneous --------------------*/
-.full-width-container {
+.full-width-container-ObjectBuilder {
   padding-top: 240px;
-  background: linear-gradient(#140338 0%,#42179E 50%,#8569F4 100%);
+  background: linear-gradient(180deg, #7E54DE 0%, #4B2AC0 100%);
 }
 
 .full-width-image img {
