@@ -320,14 +320,14 @@ h1 {
 
 
 .callout{
-  padding: 32px 32px 16px 32px;
+  padding: 24px 24px 16px 24px;
   border: 1px solid var(--color-border-callout);
   border-radius: 12px;
   background-color: var(--color-bg-callout);
 }
 
 .callout-note{
-  padding: 32px 32px 16px 32px;
+  padding: 24px 24px 16px 24px;
   border: 1px solid var(--color-border-callout-note);
   border-radius: 12px;
   background-color: var(--color-bg-callout-note);
@@ -335,7 +335,7 @@ h1 {
 
 .callout-strong {
   position: relative; /* Ensure the pseudo-element is positioned relative to this */
-  padding: 32px 32px 16px 32px;
+  padding: 24px 24px 16px 24px;
   background: 
     linear-gradient(#000 0 0) padding-box,
     linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
@@ -1286,7 +1286,7 @@ color: var(--color-content-default);
 .tab-container {
   display: flex;
   justify-content: space-between; /* Distribute tabs evenly across the container */
-  margin-bottom: 20px; /* Space below the tabs */
+  margin-bottom: 16px; /* Space below the tabs */
   width: 100%; /* Make sure the container takes full width */
 }
 
@@ -1410,16 +1410,16 @@ color: var(--color-content-default);
     padding-right: 30px;
   }
 
-  .spacer-top {
-    margin-top: 32px;
-  }
-
   .spacer-top-xs {
     margin-top: 16px;
   }
 
   .spacer-top-sm {
     margin-top: 24px;
+  }
+
+  .spacer-top {
+    margin-top: 32px;
   }
 
   .spacer-top-md{
@@ -1430,17 +1430,16 @@ color: var(--color-content-default);
     margin-top: 64px;
   }
 
-
-  .spacer-bottom {
-    margin-bottom: 32px;
-  }
-
   .spacer-bottom-xs {
     margin-bottom: 16px;
   }
 
   .spacer-bottom-sm {
     margin-bottom: 24px;
+  }
+
+  .spacer-bottom {
+    margin-bottom: 32px;
   }
 
   .spacer-bottom-md{

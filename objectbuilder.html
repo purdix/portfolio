@@ -75,7 +75,7 @@
   <main class="bg">
     <div  id="scrollUpTitle" tabindex="-1" class="full-width-container animate__animated animate__fadeIn">
       <div class="full-width-image">
-        <img class="animate__animated" src="./files/objectbuilder/objectbuilder.png" alt="">
+        <img class="animate__animated" src="./files/objectbuilder/objectbuilder.png" alt="Screenshot of Object Builder interface showing customizable fields and workflow options">
         <div class="absolute">
           <div class="bg-shape1 bg-1 bg-blur"></div>
           <div class="bg-shape2 bg-2 bg-blur"></div>
@@ -116,7 +116,7 @@
           <nav class="sidebar-custom sticky-top d-none d-md-block" id="scrollHighlight" aria-label="Sidebar">
             <ul class="nav flex-column">
               <li>
-                <a class="nav-link" href="#section1">Introduction</a>
+                <a class="nav-link" href="#section1" aria-label="Navigate to Introduction section">Introduction</a>
                 <ul class="nav flex-column">
                   <li><a class="nav-link" href="#section1-1">What is Rose Rocket?</a></li>
                   <li><a class="nav-link" href="#section1-2">The Problem</a></li>
@@ -125,7 +125,7 @@
                 </ul>
               </li>
               <li>
-                <a class="nav-link" href="#section2">Design Process</a>
+                <a class="nav-link" href="#section2" aria-label="Navigate to Design Process section">Design Process</a>
                 <ul class="nav flex-column">
                   <li><a class="nav-link" href="#section2-1">Timeline</a></li>
                   <li><a class="nav-link" href="#section2-2">Constraints</a></li>
@@ -133,7 +133,7 @@
                 </ul>
               </li>
               <li>
-                <a class="nav-link" href="#section3">Phase 1: Proof of Concept</a>
+                <a class="nav-link" href="#section3" aria-label="Navigate to Phase 1: Proof of Concept section">Phase 1: Proof of Concept</a>
                 <ul class="nav flex-column">
                   <li><a class="nav-link" href="#section3-1">Our Goal</a></li>
                   <li><a class="nav-link" href="#section3-2">Impact</a></li>
@@ -141,12 +141,15 @@
                 </ul>
               </li>
               <li>
-                <a class="nav-link" href="#section4">Phase 2: Launch</a>
+                <a class="nav-link" href="#section4" aria-label="Navigate to Phase 2: Launch section">Phase 2: Launch</a>
                 <ul class="nav flex-column">
                   <li><a class="nav-link" href="#section4-1">Our Goal</a></li>
                   <li><a class="nav-link" href="#section4-2">Impact</a></li>
                   <li><a class="nav-link" href="#section4-3">Feedback</a></li>
                 </ul>
+              </li>
+              <li>
+                <a class="nav-link" href="#section5" aria-label="Navigate to Key Learnings section">Key Learnings</a>
               </li>
               <!-- Add more list items as needed -->
             </ul>
@@ -166,28 +169,28 @@
               <div class="row">
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
-                    <img class="icon spacer-bottom-sm" src="./files/icons/customization.svg" width="48" height="48" alt="Limited customization" caption="" data-width="original" data-scaling="no">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/customization.svg" width="48" height="48" alt="Icon depicting limited customization" caption="" data-width="original" data-scaling="no">
                     <h4>Limited customization*</h4>
                     <p class="content-weak">Rose Rocket often failed to capture key details unique to each customer’s business, limiting their ability to tailor their system.</p>
                   </div>
                 </div>
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
-                    <img class="icon spacer-bottom-sm" src="./files/icons/workarounds.svg" width="48" height="48" alt="Inefficient workarounds" caption="" data-width="original" data-scaling="no">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/workarounds.svg" width="48" height="48" alt="Icon depicting inefficient workarounds" caption="" data-width="original" data-scaling="no">
                     <h4>Inefficient workarounds*</h4>
                     <p class="content-weak">Our Solutions team often resorted to complex workarounds to meet customer needs, introducing frustrating inefficiencies into their workflows.</p>
                   </div>
                 </div>
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
-                    <img class="icon spacer-bottom-sm" src="./files/icons/selfService.svg" width="48" height="48" alt="Lack of self-service" caption="" data-width="original" data-scaling="no">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/selfService.svg" width="48" height="48" alt="Icon depicting lack of self-service" caption="" data-width="original" data-scaling="no">
                     <h4>Lack of self-service*</h4>
                     <p class="content-weak">Customers struggled to set up their organizations independently, resulting in high support demands and time-consuming configurations.</p>
                   </div>
                 </div>
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
-                    <img class="icon spacer-bottom-sm" src="./files/icons/development.svg" width="48" height="48" alt="High development costs" caption="" data-width="original" data-scaling="no">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/development.svg" width="48" height="48" alt="Icon depicting high development costs" caption="" data-width="original" data-scaling="no">
                     <h4>High development costs</h4>
                     <p class="content-weak">Customizing the product for individual needs demanded substantial development resources, leading to costly and unsustainable roadmaps.</p>
                   </div>
@@ -224,7 +227,7 @@
             </section>
             <section id="section1-4" class="section spacer-top">
               <h3 class="spacer-bottom-sm">Our Approach</h3>
-              <p>It’s no surprise that tools for product customization appeared to be the obvious solution. However, we understood that unlimited customization wouldn’t be suitable for everyone, especially considering our existing user base.</p>
+              <p>It’s no surprise that tools for product customization appeared to be the obvious solution. However, we understood that unlimited customization wouldn’t be suitable for everyone.</p>
               <p>To address this, we focused on solving the 80% of common challenges with standard, out-of-the-box features, while reserving the remaining 20% of unique needs with customizable builder tools.</p>
               <p class="spacer-bottom">
                 The first of these tools, named "Object Builder," would allow users to <b class="content-highlight">define and customize Objects</b> to meet their specific data-entry needs.</p>
@@ -334,7 +337,7 @@
                         <div class="spacer"></div>
                         <a href="#" class="fullscreen-button" data-target="figma-prototype-1">
                           <button class="btn">
-                            <img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen icon" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
+                            <img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Button to open the Figma prototype in fullscreen mode" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
                           </button>
                         </a>
                       </div>
@@ -345,7 +348,7 @@
                       </iframe>
                     </div>
                   </div>
-                  <p class="caption">An interactive prototype of the PoC released to the internal Sales and Solutions team, showcasing key user flows.</p>
+                  <p class="caption">An interactive prototype of the PoC released to the internal Sales and Solutions team, highlighting key user flows.</p>
                 </div>
               </section>
               <section id="section3-2" class="section spacer-top"> 
@@ -354,14 +357,14 @@
                 <div class="row">
                   <div class="col-lg-6 d-flex mb-4">
                     <div class="callout">
-                     <img class="icon spacer-bottom-sm" src="./files/icons/template.svg" width="48" height="48" alt="Limited customization" caption="" data-width="original" data-scaling="no">
+                     <img class="icon spacer-bottom-sm" src="./files/icons/template.svg" width="48" height="48" alt="Icon depicting templates" caption="" data-width="original" data-scaling="no">
                      <h4>60+ custom templates created*</h4>
                      <p class="content-weaker">The team leveraged Object Builder to create over <b class="content-highlight">60+ templates tailored to real-world customer needs</b>, greatly improving setup efficiency.</p>
                    </div>
                  </div>
                  <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
-                    <img class="icon spacer-bottom-sm" src="./files/icons/speed.svg" width="48" height="48" alt="Limited customization" caption="" data-width="original" data-scaling="no">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/speed.svg" width="48" height="48" alt="Icon depicting reduced setup time" caption="" data-width="original" data-scaling="no">
                     <h4>Reduced setup time to minutes*</h4>
                     <p class="content-weaker">Reduced the time required for the Solutions team to setup new orgs from <b class="content-highlight"> 1-3 hours to just a few minutes</b></p>
                   </div>
@@ -384,7 +387,7 @@
                           <p class="content-weaker">Users wanted to <b class="content-highlight">customize select fields by adding, removing, reordering, and editing options</b> to better meet their business needs, such as incorporating custom statuses for their Order Object.</p>
                         </div>
                         <div class="col-12 col-lg-6">
-                          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-customSelect.png" alt="Toggle Image">
+                          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p1-customSelect.png">
                           <p class="caption">Select fields could not be customized.</p>
                           <div class="tab-container">
                             <div class="tab active" data-image="./files/objectbuilder/p1-customSelect.png" data-caption="Select fields could not be customized.">Before</div>
@@ -481,174 +484,228 @@
           </section>
           <hr class="hr">
           <section id="section4" class="section spacer-top">
-            <div>
-              <h2 class="spacer-bottom-sm content-highlight">Phase 2: Commercial Launch</h2>
-              <section id="section4-1" class="section spacer-top">
-                <h3>Our Goal</h3>
-                <p>In late Q2, we officially launched Object Builder. Our goal was to equip users with the same tools used by the Solutions team, allowing them to customize their platforms independently.</p>
-                <p>After addressing all the feedback, the full set of features now included:</p>
-                <ul class="spacer-bottom-sm">
-                  <li class="regular-text">Adding new custom fields</li>
-                  <li class="regular-text">Creating new sections</li>
-                  <li class="regular-text">Reorganizing fields</li>
-                  <li class="regular-text">Edit existing fields  
-                    <span class="tag-bg"><span class="tag-text">NEW</span></span>
-                  </li>
-                </ul>
-                <div id="browser-1" class="browser">
-                  <div id="browser-top-bar">
-                    <div id="browser-page-name">Figma Prototype</div>
-                    <div class="spacer"></div>
-                    <a href="#" class="fullscreen-button" data-target="figma-prototype-2">
-                      <button class="btn">
-                        <img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen icon" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
-                      </button>
-                    </a>
+            <h2 class="spacer-bottom-sm content-highlight">Phase 2: Commercial Launch</h2>
+            <section id="section4-1" class="section spacer-top">
+              <h3>Our Goal</h3>
+              <p>In late Q2, we officially launched Object Builder. Our goal was to equip users with the same tools used by the Solutions team, allowing them to customize their platforms independently.</p>
+              <p>After addressing all the feedback, the full set of features now included:</p>
+              <ul class="spacer-bottom-sm">
+                <li class="regular-text">Adding new custom fields</li>
+                <li class="regular-text">Creating new sections</li>
+                <li class="regular-text">Reorganizing fields</li>
+                <li class="regular-text">Edit existing fields  
+                  <span class="tag-bg"><span class="tag-text">NEW</span></span>
+                </li>
+              </ul>
+              <div id="browser-1" class="browser">
+                <div id="browser-top-bar">
+                  <div id="browser-page-name">Figma Prototype</div>
+                  <div class="spacer"></div>
+                  <a href="#" class="fullscreen-button" data-target="figma-prototype-2">
+                    <button class="btn">
+                      <img class="btn-icon" src="./files/icons/fullscreen.svg" alt="Fullscreen icon" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
+                    </button>
+                  </a>
+                </div>
+                <div id="browser-frame">
+                  <iframe 
+                  id="figma-prototype-2" class="figma-prototype"
+                  src="https://embed.figma.com/proto/N9SRRVSCsPnaYeIs8oBSYx/Case-Studies-(2024)?page-id=2669%3A155703&node-id=2669-156303&node-type=frame&viewport=1966%2C912%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2669%3A156303&embed-host=share">
+                </iframe>
+              </div>
+            </div>
+            <p class="caption spacer-bottom-sm">An interactive prototype of the commercially launched feature, highlighting key user flows.</p>
+            <div class="accordion">
+              <input type="checkbox" title="Click to expand" name="collapse3" id="handle4" checked>
+              <h5 class="handle"><label for="handle4">Show main changes <span class="caption">(Click to expand)</span></label></h5>
+              <div class="content">
+                <div class="toggle-container spacer-bottom-sm">
+                  <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-layout.png" alt="Toggle Image">
+                  <p class="caption">Visual comparison between the PoC and commercially launched version.</p>
+                  <div class="tab-container">
+                    <div class="tab active" data-image="./files/objectbuilder/p2-layout.png" data-caption="Visual comparison between the PoC and commercially launched version.">Before</div>
+                    <div class="tab" data-image="./files/objectbuilder/p2-layout-after.png" data-caption="Visual comparison between the PoC and commercially launched version.">After</div>
+                  </div>  
+                  <p class="spacer-bottom-sm spacer-top-sm">Alongside the adjustments outlined above, we implemented several other quality-of-life improvements, including:</p>
+                </div>
+
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Improved visual styling</h4>
+                        <p class="content-weaker">To help provide visual differentiation between the right panel and the center field library, the library was re-styled to cards. Similar to the right panel, field type icons were also added.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-styling.png" alt="Toggle Image">
+
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/objectbuilder/p2-styling.png">Before</div>
+                          <div class="tab" data-image="./files/objectbuilder/p2-styling-after.png">After</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div id="browser-frame">
-                    <iframe 
-                    id="figma-prototype-2" class="figma-prototype"
-                    src="https://embed.figma.com/proto/N9SRRVSCsPnaYeIs8oBSYx/Case-Studies-(2024)?page-id=2669%3A155703&node-id=2669-156303&node-type=frame&viewport=1966%2C912%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2669%3A156303&embed-host=share">
-                  </iframe>
+                </div>
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Simplified navigation</h4>
+                        <p class="content-weaker">To streamline navigation, we combined the Fields Library and Internal/External views, allowing custom fields to be created directly within views for easier management and customization.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-simpleNav.png" alt="Toggle Image">
+
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/objectbuilder/p2-simpleNav.png">Before</div>
+                          <div class="tab" data-image="./files/objectbuilder/p2-simpleNav-after.png">After</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout-feedback">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Reduced visual clutter</h4>
+                        <p class="content-weaker">To minimize visual clutter, we removed extraneous details, like descriptions in the right panel. Buttons also appear only on hover now, allowing more space for essential field information.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-visualClutter.png" alt="Toggle Image">
+
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/objectbuilder/p2-visualClutter.png">Before</div>
+                          <div class="tab" data-image="./files/objectbuilder/p2-visualClutter-after.png">After</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="section4-2" class="section spacer-top">
+                <h3>Impact</h3>
+                <p class="spacer-bottom-sm">In just three months, Object Builder became integral to our platform's sales strategy, contributing to:</p>
+                <div class="row">
+                  <div class="col-lg-6 d-flex">
+                    <div class="callout">
+                     <img class="icon spacer-bottom-sm" src="./files/icons/growth.svg" width="48" height="48" alt="Chart with upward arrow" caption="" data-width="original" data-scaling="no">
+                     <h4>Consistent monthly growth</h4>
+                     <p class="content-weaker">Custom field creation <b class="content-highlight">rose by nearly 190%</b>, from 461 to 1,340 fields across all organizations.</p>
+                   </div>
+                 </div>
+                 <div class="col-lg-6 d-flex">
+                  <div class="callout">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/money.svg" width="48" height="48" alt="Money symbol" caption="" data-width="original" data-scaling="no">
+                    <h4>Significant revenue driver</h4>
+                    <p class="content-weaker">Object Builder was instrumental in securing 21 deals to date, <b class="content-highlight">contributing over $210,000</b> in contracted ARR.</p>
+                  </div>
+                </div> 
+              </div>
+            </section>
+            <section id="section4-3" class="section spacer-top">
+              <h3>Feedback</h3>
+              <p class="spacer-bottom-sm">With the feature now in customers' hands, we used Storybook, Gong and interviews with Support to gather additional feedback. Shown below are some of these insights:</p>
+              <div class="row">
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <h4>Need for additional customization</h4>
+                      <p class="content-weaker">Users expressed desire for advanced data manipulation, including <b class="content-highlight">complex calculations</b> (formulas) and the ability to <b class="content-highlight">aggregate or reference</b> data across different Objects (lookups and rollups).</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-newFields.png" alt="Toggle Image">
+                      <p class="caption"><b>Concept:</b> Introduce new field types, including formulas and lookup fields.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <h4>Confusion around permissions</h4>
+                      <p class="content-weaker">Users continued to find <b class="content-highlight">managing permissions cumbersome</b>, suggesting that integrating permission management directly into Object Builder may be necessary in the future.</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-dataAccess.png" alt="Toggle Image">
+                      <p class="caption"><b>Concept:</b> Integrate permission management directly into the field creation process in Object Builder.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <h4>Cumbersome setup</h4>
+                      <p class="content-weaker">Users reported <b class="content-highlight">difficulty in creating and managing custom fields</b>, expressing a desire to manage these fields directly within the board or record they were working on.</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-manageFields.png" alt="Toggle Image">
+                      <p class="caption"><b>Concept:</b> Allow users to edit fields without interrupting their workflow.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p class="caption spacer-bottom-sm">An interactive prototype of the commercially launched feature, highlighting key user flows.</p>
-              <div class="accordion">
-                <input type="checkbox" title="Click to expand" name="collapse3" id="handle4">
-                <h5 class="handle"><label for="handle4">Show key changes <span class="caption">(Click to expand)</span></label></h5>
-                <div class="content">
-                  <div class="toggle-container spacer-bottom-sm">
-                    <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-layout.png" alt="Toggle Image">
-                    <p class="caption">Visual comparison between the PoC and commercially launched version.</p>
-                    <div class="tab-container spacer-bottom">
-                      <div class="tab active" data-image="./files/objectbuilder/p2-layout.png" data-caption="Visual comparison between the PoC and commercially launched version.">Before</div>
-                      <div class="tab" data-image="./files/objectbuilder/p2-layout-after.png" data-caption="Visual comparison between the PoC and commercially launched version.">After</div>
-                    </div>  
-                    <p class="spacer-bottom-sm">Alongside the adjustments outlined above, we implemented several other quality-of-life improvements, including:</p>
-                  </div>
-
-                  <div class="callout-feedback spacer-bottom-sm">
-                    <div class="toggle-container">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Improved visual styling</h4>
-                          <p class="content-weaker">To help provide visual differentiation between the right panel and the center field library, the library was re-styled to cards. Similar to the right panel, field type icons were also added.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-styling.png" alt="Toggle Image">
-
-                          <div class="tab-container">
-                            <div class="tab active" data-image="./files/objectbuilder/p2-styling.png">Before</div>
-                            <div class="tab" data-image="./files/objectbuilder/p2-styling-after.png">After</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="callout-feedback spacer-bottom-sm">
-                    <div class="toggle-container">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Simplified navigation</h4>
-                          <p class="content-weaker">To streamline navigation, we combined the Fields Library and Internal/External views, allowing custom fields to be created directly within views for easier management and customization.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-simpleNav.png" alt="Toggle Image">
-
-                          <div class="tab-container">
-                            <div class="tab active" data-image="./files/objectbuilder/p2-simpleNav.png">Before</div>
-                            <div class="tab" data-image="./files/objectbuilder/p2-simpleNav-after.png">After</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="callout-feedback">
-                    <div class="toggle-container">
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                          <h4>Reduced visual clutter</h4>
-                          <p class="content-weaker">To minimize visual clutter, we removed extraneous details, like descriptions in the right panel. Buttons also appear only on hover now, allowing more space for essential field information.</p>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/objectbuilder/p2-visualClutter.png" alt="Toggle Image">
-
-                          <div class="tab-container">
-                            <div class="tab active" data-image="./files/objectbuilder/p2-visualClutter.png">Before</div>
-                            <div class="tab" data-image="./files/objectbuilder/p2-visualClutter-after.png">After</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section id="section4-2" class="section spacer-top">
-                  <h3>Impact</h3>
-                  <p class="spacer-bottom-sm">In just three months, Object Builder became integral to our platform's sales strategy, contributing to:</p>
-                  <div class="row">
-                    <div class="col-lg-6 d-flex mb-4">
-                      <div class="callout">
-                       <img class="icon spacer-bottom-sm" src="./files/icons/growth.svg" width="48" height="48" alt="Chart with upward arrow" caption="" data-width="original" data-scaling="no">
-                       <h4>Consistent monthly growth</h4>
-                       <p class="content-weaker">Custom field creation <b class="content-highlight">rose by nearly 190%</b>, from 461 to 1,340 fields across all organizations.</p>
-                     </div>
-                   </div>
-                   <div class="col-lg-6 d-flex mb-4">
-                    <div class="callout">
-                      <img class="icon spacer-bottom-sm" src="./files/icons/money.svg" width="48" height="48" alt="Money symbol" caption="" data-width="original" data-scaling="no">
-                      <h4>Significant revenue driver</h4>
-                      <p class="content-weaker">Object Builder was instrumental in securing 21 deals to date, <b class="content-highlight">contributing over $210,000</b> in contracted ARR.</p>
-                    </div>
-                  </div> 
-                </div>
-              </section>
-              <section id="section4-3" class="section spacer-top">
-                <h3>Feedback</h3>
-                <p>Empty text.</p>
-              </section>
             </section>
-          </div>
-        </div>
-      </div>
+          </section>
+          <hr class="hr">
+          <section id="section5" class="section spacer-top">
+            <h2 class="spacer-bottom-sm content-highlight">Key Learnings</h2>
+            <p>There is clearly a strong market demand for customization within TMS platforms. Consequently, Object Builder has strategically positioned Rose Rocket to stand out, enabling advanced customization opportunities, such as:</p>
+            <ul>
+              <li class="regular-text">
+                Designing tailored custom fields to suit specific user needs
+              </li>
+              <li class="regular-text">
+               Creating custom templates for frequently used workflows, streamlining setup and consistency
+             </li>
+             <li class="regular-text">
+              Defining custom permissions for fields, ensuring sensitive information is accessible only to the appropriate user
+            </li>
+           </ul>
+           <p>By empowering users with customization tools, we gain unique insights into user behavior, allowing us to analyze common field types and configurations. These insights can then directly inform and enhance our core product.</p>
+           <p>As more users engage with Object Builder and the rest of our Builders toolkit it will be exciting to observe and understand evolving usage patterns.</p>
+         </section>
+       </div>
+     </div>
 
-      <button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span><span class="scrollbtn-text">Scroll to top</span></button>
-    </main>
+     <button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
+   </main>
 
-    <!--Footer-->
-    <footer class="footer">
-      <div class="footer-icons">
-        <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Behance">
-          <i class="fab fa-behance footer-fa"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin footer-fa"></i>
-        </a>
-        <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope footer-fa"></i>
-        </a>
-      </div>
-      <p>Coded by me with 
-        <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
-        <span class="tooltip-text">And lots of ☕
-        </span>
+   <!--Footer-->
+   <footer class="footer">
+    <div class="footer-icons">
+      <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Visit Behance profile of Kogulan">
+        <i class="fab fa-behance footer-fa"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="Visit LinkedIn profile of Kogulan">
+        <i class="fab fa-linkedin footer-fa"></i>
+      </a>
+      <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Send email to Kogulan">
+        <i class="fas fa-envelope footer-fa"></i>
+      </a>
+    </div>
+    <p>Coded by me with 
+      <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
+      <span class="tooltip-text">And lots of ☕
       </span>
-    </p>
-  </footer>
+    </span>
+  </p>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script>
-  <script>
-    document.querySelectorAll('.fullscreen-button').forEach(button => {
-      button.addEventListener('click', function(event) {
-        event.preventDefault();
-        const iframeId = button.getAttribute('data-target');
-        const iframe = document.getElementById(iframeId);
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+<script>
+  document.querySelectorAll('.fullscreen-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault();
+      const iframeId = button.getAttribute('data-target');
+      const iframe = document.getElementById(iframeId);
 
-        if (iframe.requestFullscreen) {
-          iframe.requestFullscreen();
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
     } else if (iframe.mozRequestFullScreen) { // Firefox
       iframe.mozRequestFullScreen();
     } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
@@ -657,8 +714,8 @@
       iframe.msRequestFullscreen();
     }
   });
-    });
-  </script>
+  });
+</script>
 
 </body>
 </html>
