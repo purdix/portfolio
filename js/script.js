@@ -87,7 +87,7 @@ $(document).ready(function() {
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
 const typingSpeed = 100;  // Speed to type each letter in ms
-const pauseBetweenWords = 4000; // Pause time in ms between words
+const pauseBetweenWords = 000; // Pause time in ms between words
 
 // Get words from data attribute and split into an array
 const words = typewriterContainer.getAttribute("data-words").split(",");

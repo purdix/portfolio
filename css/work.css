@@ -146,7 +146,7 @@ h1 {
 
 
 .spacer-bottom {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
 
 .spacer-bottom-xs {
@@ -596,9 +596,14 @@ a .logo {
 }
 
 /*-------------------- Miscellaneous --------------------*/
-.full-width-container-ObjectBuilder {
+.herobg-ObjectBuilder {
   padding-top: 240px;
   background: linear-gradient(180deg, #7E54DE 0%, #4B2AC0 100%);
+}
+
+.herobg-Rating {
+  padding-top: 240px;
+  background: linear-gradient(180deg, #3BA2F6 0%, #0F6AE1 100%);
 }
 
 .full-width-image img {
@@ -814,6 +819,10 @@ top: 160px;
 .welcome-other {
   display: flex;
   flex-direction: column;
+}
+
+.welcome-description{
+  padding-top: 32px;
 }
 
 .img {
@@ -1298,12 +1307,13 @@ color: var(--color-content-default);
   background-color: var(--color-bg-nav); 
   border: 1px solid var(--color-border-default); 
   text-align: center; 
-  margin: 0; 
+  margin: 0;
+  border-right: none;
 }
 
 .tab.active {
   background-color: var(--color-bg-tab);
-  border-color: var(--color-border-tab); /* Active tab border for all sides */
+  border: 1px solid var(--color-border-tab);
   color: var(--color-content-interactive);
   font-weight: 700;
   position: relative; /* Needed for the z-index trick */
@@ -1326,6 +1336,11 @@ color: var(--color-content-default);
 .tab:last-child {
   border-top-right-radius: 8px; /* Round top-right corner */
   border-bottom-right-radius: 8px; /* Round bottom-right corner */
+  border-right: 1px solid var(--color-border-default);
+}
+
+.tab.active:last-child {
+  border: 1px solid var(--color-border-tab);
 }
 /*-------------------- Responsiveness ----------------------*/
 @media only screen and (max-width:1200px){
