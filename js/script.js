@@ -138,3 +138,11 @@ function deleteWord(word) {
 
 // Start the typewriter effect on page load
 startTypewriterEffect();
+
+// Anchor button
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}

@@ -61,6 +61,8 @@
   --color-bg-accordion-default: var(--color-white-000);
   --color-bg-accordion-hover: var(--color-white-100);
   --color-bg-overlay: var(--color-white-100);
+  --color-bg-skipbutton-default: var(--color-transparent);
+  --color-bg-skipbutton-hover: var(--color-blue-100);
 
 
   --color-content-nav: var(--color-white-900);
@@ -80,6 +82,8 @@
   --color-border-callout-note: var(--color-blue-400);
   --color-border-tab: var(--color-blue-400);
   --color-border-tooltip: var(--color-white-100);
+  --color-border-skipbutton-default: var(--color-white-200);
+  --color-border-skipbutton-hover: var(--color-blue-400);
 }
 
 /*-------------------- General --------------------*/
@@ -99,7 +103,7 @@ main {
 
 .container {
   max-width: 1200px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .vertical-center {
@@ -121,7 +125,7 @@ p,h2,h3,h4,h5,h6,ol,ul{
 
 h1 {
   font-family: "Poppins", sans-serif;
-    color: var(--color-content-default);
+  color: var(--color-content-default);
 }
 
 .spacer-top {
@@ -198,116 +202,116 @@ h1 {
 }
 
 /*-------------------- Timeline --------------------*/
- .timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 20px 0; /* Added padding for better spacing */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0; /* Added padding for better spacing */
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 26px; /* Adjusted to align with the dot */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center the line */
-    width: 90%; /* Set the width relative to the parent container */
-    height: 1px;
-    background: linear-gradient(to right, transparent 0%, var(--color-white-500) 8%, var(--color-white-500) 92%, transparent 100%);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 26px; /* Adjusted to align with the dot */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center the line */
+  width: 90%; /* Set the width relative to the parent container */
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--color-white-500) 8%, var(--color-white-500) 92%, transparent 100%);
+  z-index: 0;
 }
 
 .dot-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .dot {
-    position: relative;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .dot:before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 300%;
-    height: 300%;
-    margin-left: -100%;
-    margin-top: -100%;
-    border-radius: 50%;
-    background-color: var(--color-content-highlight);
-    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 300%;
+  height: 300%;
+  margin-left: -100%;
+  margin-top: -100%;
+  border-radius: 50%;
+  background-color: var(--color-content-highlight);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .dot:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-content-highlight);
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(0,0,0,.3);
-    animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-content-highlight);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+  animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
 }
 
 @keyframes pulse-ring {
-    0% {
-        transform: scale(.33);
-    }
-    80%, 100% {
-        opacity: 0;
-    }
+  0% {
+    transform: scale(.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
 }
 
 @keyframes pulse-dot {
-    0% {
-        transform: scale(.8);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(.8);
-    }
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
 }
 
 .timeline-label {
-    text-align: center;
-    margin-top: 16px;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .timeline-header {
-    font-weight: 600;
-    color: var(--color-content-default);
+  font-weight: 600;
+  color: var(--color-content-default);
 }
 
 .timeline-date {
-    font-size: 1rem;
-    color: var(--color-content-weak);
+  font-size: 1rem;
+  color: var(--color-content-weak);
 }
 
 /* Alignment styles */
 .align-left .timeline-label, .align-left {
-    text-align: left;
-    align-items: flex-start;
+  text-align: left;
+  align-items: flex-start;
 }
 
 .align-center .timeline-label, .align-center {
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .align-right .timeline-label, .align-right {
-    text-align: right;
-    align-items: flex-end;
+  text-align: right;
+  align-items: flex-end;
 }
 
 /*-------------------- Callouts & Notes --------------------*/
@@ -337,8 +341,8 @@ h1 {
   position: relative; /* Ensure the pseudo-element is positioned relative to this */
   padding: 24px 24px 16px 24px;
   background: 
-    linear-gradient(#000 0 0) padding-box,
-    linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
+  linear-gradient(#000 0 0) padding-box,
+  linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
   border: 2px solid transparent;
   border-radius: 12px;
   animation: spin 4s infinite linear;
@@ -714,10 +718,10 @@ a .logo {
 
 /* For sidebar */
 .sticky-top {
-position: sticky;
-background-color: none;
-z-index: 999;
-top: 160px;
+  position: sticky;
+  background-color: none;
+  z-index: 999;
+  top: 160px;
 }
 
 .section {
@@ -854,11 +858,11 @@ top: 160px;
 }
 
 .img-responsive {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid var(--color-border-default);  
-    border-radius: 8px;    
-    object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border-default);  
+  border-radius: 8px;    
+  object-fit: contain;
 }
 
 .link {
@@ -1050,9 +1054,9 @@ top: 160px;
 .btn-icon{
   display: block;
   margin: auto;
-height: 16px;
-width: 16px;
-color: var(--color-content-default);
+  height: 16px;
+  width: 16px;
+  color: var(--color-content-default);
 }
 
 
@@ -1118,7 +1122,7 @@ color: var(--color-content-default);
 
 .footer-fa:hover, .footer-fa:focus{
   transform: scale(1.2);
- transition-delay: 0s !important;
+  transition-delay: 0s !important;
 }
 
 .glow{
@@ -1207,41 +1211,41 @@ color: var(--color-content-default);
 /*-------------------- Browser ----------------------*/
 
 .browser {
-    margin-bottom: 24px;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border-default);
-    width: 100%;
-    display: block;
-    border-radius: 12px;
+  margin-bottom: 24px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-default);
+  width: 100%;
+  display: block;
+  border-radius: 12px;
 }
 
 #browser-frame {
-    position: relative;
-    overflow: hidden; /* Optional: Hide any overflow */
-    height: 466px;
+  position: relative;
+  overflow: hidden; /* Optional: Hide any overflow */
+  height: 466px;
 }
 
 .figma-prototype {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block; /* Ensures there's no extra space below the iframe */
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block; /* Ensures there's no extra space below the iframe */
 }
 
 #browser-top-bar {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px 8px 20px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px 8px 20px;
+  position: relative;
 }
 
 .spacer {
-    flex: 1; /* This will balance space on both sides of the title */
+  flex: 1; /* This will balance space on both sides of the title */
 }
 
 #browser-page-name {
-    text-align: left;
-    color: var(--color-content-default);
+  text-align: left;
+  color: var(--color-content-default);
 }
 
 
@@ -1290,6 +1294,33 @@ color: var(--color-content-default);
 .accordion > input[type="checkbox"]:checked ~ .handle label:before {
   transform: rotate(90deg);
 }
+
+/*-------------------- Skip button ----------------------*/
+.skipButton {
+    background-color: var(--color-bg-skipbutton-default);
+    border: 1px solid var(--color-border-skipbutton-default);
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--color-content-default);
+    font-size: 1.25rem;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.skipButton:hover {
+    background-color: var(--color-bg-skipbutton-hover);
+    border: 1px solid var(--color-border-skipbutton-hover);
+}
+
+/* Focus styles for keyboard accessibility */
+.skipButton:focus {
+    outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
+    background-color: var(--color-bg-skipbutton-hover); /* Matches hover style */
+    border-color: var(--color-border-skipbutton-hover); /* Matches hover border color */
+}
+
 
 /*-------------------- Toggle ----------------------*/
 .tab-container {
@@ -1368,26 +1399,26 @@ color: var(--color-content-default);
     font-size: 8rem;
   }
 
-    a .logo {
+  a .logo {
     height: 40px;
   }
 
   .content-gradient {
-  display: block; /* Move "me" to the next line */
-}
+    display: block; /* Move "me" to the next line */
+  }
 
   /* Ensure background covers the expanded menu */
-.collapse {
-  position: absolute; /* Position absolute to ensure it's aligned with the navbar */
-  top: 88px; /* Adjust based on the height of your navbar */
-  right: 0; /* Align to the right */
-  width: 100%; /* Ensure it stretches across the full width if desired */
-  background-color: var(--color-bg-nav);
-  border-radius: 12px;
-  border: 1px var(--color-border-nav) solid;
-  padding: 1rem;
-  z-index: 1000; /* Ensure it appears on top of other content */
-}
+  .collapse {
+    position: absolute; /* Position absolute to ensure it's aligned with the navbar */
+    top: 88px; /* Adjust based on the height of your navbar */
+    right: 0; /* Align to the right */
+    width: 100%; /* Ensure it stretches across the full width if desired */
+    background-color: var(--color-bg-nav);
+    border-radius: 12px;
+    border: 1px var(--color-border-nav) solid;
+    padding: 1rem;
+    z-index: 1000; /* Ensure it appears on top of other content */
+  }
 
 /* Ensure the collapsing transition is smooth */
 .collapsing {
@@ -1402,81 +1433,81 @@ color: var(--color-content-default);
   z-index: 1000; /* Ensure it appears on top of other content */
 }
 
-  .navbar-toggler {
-    border: none;
-    outline: none;
-  }
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
 
-    .hero-section{
+.hero-section{
   padding: 48px 0px;
 }
 
-  .full-width-image img {
-    width: 80vw;
-    height: auto;
-  }
+.full-width-image img {
+  width: 80vw;
+  height: auto;
+}
 
-  .sidenav{
-    display: none;
-  }
+.sidenav{
+  display: none;
+}
 
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
-  .spacer-top-xs {
-    margin-top: 16px;
-  }
+.spacer-top-xs {
+  margin-top: 16px;
+}
 
-  .spacer-top-sm {
-    margin-top: 24px;
-  }
+.spacer-top-sm {
+  margin-top: 24px;
+}
 
-  .spacer-top {
-    margin-top: 32px;
-  }
+.spacer-top {
+  margin-top: 32px;
+}
 
-  .spacer-top-md{
-    margin-top: 40px;
-  }
+.spacer-top-md{
+  margin-top: 40px;
+}
 
-  .spacer-top-lg {
-    margin-top: 64px;
-  }
+.spacer-top-lg {
+  margin-top: 64px;
+}
 
-  .spacer-bottom-xs {
-    margin-bottom: 16px;
-  }
+.spacer-bottom-xs {
+  margin-bottom: 16px;
+}
 
-  .spacer-bottom-sm {
-    margin-bottom: 24px;
-  }
+.spacer-bottom-sm {
+  margin-bottom: 24px;
+}
 
-  .spacer-bottom {
-    margin-bottom: 32px;
-  }
+.spacer-bottom {
+  margin-bottom: 32px;
+}
 
-  .spacer-bottom-md{
-    margin-bottom: 40px;
-  }
+.spacer-bottom-md{
+  margin-bottom: 40px;
+}
 
-  .spacer-bottom-lg {
-    margin-bottom: 64px;
-  }
+.spacer-bottom-lg {
+  margin-bottom: 64px;
+}
 
-  hr {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
+hr {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
 
-  .callout{
-    padding: 32px 32px 16px 32px;
-  }
+.callout{
+  padding: 32px 32px 16px 32px;
+}
 
-  .callout-strong{
-    padding: 32px 32px 16px 32px;
-  }
+.callout-strong{
+  padding: 32px 32px 16px 32px;
+}
 }
 
 @media only screen and (max-width: 576px) {
@@ -1484,7 +1515,7 @@ color: var(--color-content-default);
     font-size: 6rem;
   }
   .hero-section{
-  padding: 32px 0px;
-}
+    padding: 32px 0px;
+  }
 
 }
