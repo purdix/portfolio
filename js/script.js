@@ -1,99 +1,68 @@
-//Show password
-function myFunction() {
-  var x = document.getElementById("pass");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
+// Show/hide password
+function togglePasswordVisibility() {
+  const passwordField = document.getElementById("pass");
+  passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-//Nav scroll
+// Nav scroll effect
 const navbar = document.querySelector('.navbar-default');
-window.onscroll = () => {
-  if (window.scrollY > 100) {
-    navbar.classList.add('navbar-scrolled');
-  } else {
-    navbar.classList.remove('navbar-scrolled');
-  }
-};
+const scrollToTopButton = document.getElementById("scrollToTop");
 
-// Scroll up button
-myID = document.getElementById("scrollToTop");
-var myScrollFunc = function() {
-  var y = window.scrollY;
-  if (y >= 300) {
-    myID.className = "scrollbtn scrollbtn-show"
-  } else {
-    myID.className = "scrollbtn"
-  }
-};
-window.addEventListener("scroll", myScrollFunc);
-
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-
-  const title = document.getElementById("scrollUpTitle");
-  title.focus();
-}
-
-//Pronunciation
-function play() {
-  var audio = document.getElementById("audio");
-  audio.play();
-}
-
-// Prevent right click on images
-$(document).ready(function() {
- $("img").on("contextmenu",function(){
-  return false;
-});
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  // Navbar color change on scroll
+  navbar.classList.toggle('navbar-scrolled', scrollY > 100);
+  // Show scroll-to-top button
+  scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
 });
 
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById("scrollUpTitle").focus();
+}
 
-// Function to initialize image toggle components
+// Play audio pronunciation
+function playAudio() {
+  document.getElementById("audio").play();
+}
+
+// Prevent right-click on images
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("contextmenu", (e) => e.preventDefault());
+  });
+
+  initializeImageToggle();
+  startTypewriterEffect();
+});
+
+// Image toggle functionality
 function initializeImageToggle() {
-    // Select each toggle container
-  const toggleContainers = document.querySelectorAll('.toggle-container');
-
-  toggleContainers.forEach(container => {
+  document.querySelectorAll('.toggle-container').forEach(container => {
     const tabs = container.querySelectorAll('.tab');
     const toggleImage = container.querySelector('.toggle-image');
     const caption = container.querySelector('.caption');
 
-      // Attach event listeners to each tab within the container
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-          // Deactivate all tabs in this container
         tabs.forEach(t => t.classList.remove('active'));
-          // Activate the clicked tab
         tab.classList.add('active');
-          // Update image and caption based on data attributes
         toggleImage.src = tab.getAttribute('data-image');
         caption.textContent = tab.getAttribute('data-caption');
       });
     });
-
-      // Set default active tab on page load
+    // Set default active tab
     tabs[0].classList.add('active');
   });
 }
 
-  // Initialize all image toggle components on page load
-document.addEventListener('DOMContentLoaded', initializeImageToggle);
-
-// Text typer
+// Typewriter effect
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
-
-// Set a faster typing speed and shorter pause for mobile
-const isMobile = window.innerWidth <= 768;
-const typingSpeed = isMobile ? 60 : 140; // Faster typing speed for mobile
-const deletingSpeed = isMobile ? 40 : 100; // Faster deleting speed for mobile
-const pauseBetweenWords = isMobile ? 4000 : 4000; // Shorter pause for mobile
-
-// Get words from data attribute and split into an array
+const typingSpeed = 140;
+const deletingSpeed = 100;
+const pauseBetweenWords = 4000;
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
 
@@ -107,9 +76,8 @@ function typeWord(word) {
 
   function type() {
     if (charIndex < word.length) {
-      typewriterTextElement.textContent += word[charIndex];
-      charIndex++;
-      setTimeout(type, typingSpeed); // Use setTimeout directly for smoother timing control
+      typewriterTextElement.textContent += word[charIndex++];
+      setTimeout(type, typingSpeed);
     } else {
       setTimeout(() => deleteWord(word), pauseBetweenWords);
     }
@@ -122,9 +90,8 @@ function deleteWord(word) {
 
   function erase() {
     if (charIndex >= 0) {
-      typewriterTextElement.textContent = word.slice(0, charIndex);
-      charIndex--;
-      setTimeout(erase, deletingSpeed); // Adjusted deleting speed for smoother performance
+      typewriterTextElement.textContent = word.slice(0, charIndex--);
+      setTimeout(erase, deletingSpeed);
     } else {
       wordIndex = (wordIndex + 1) % words.length;
       typeWord(words[wordIndex]);
@@ -133,13 +100,8 @@ function deleteWord(word) {
   erase();
 }
 
-// Start the typewriter effect on page load
-startTypewriterEffect();
-
-// Anchor button
+// Scroll to section by ID
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
+  section?.scrollIntoView({ behavior: 'smooth' });
 }
