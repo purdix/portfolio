@@ -83,10 +83,10 @@ $(document).ready(function() {
   // Initialize all image toggle components on page load
   document.addEventListener('DOMContentLoaded', initializeImageToggle);
 
-//Scramble text
+//Text typer
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
-const typingSpeed = 100;  // Speed to type each letter in ms
+const typingSpeed = window.innerWidth < 768 ? 150 : 100; // Slower on mobile
 const pauseBetweenWords = 4000; // Pause time in ms between words
 
 // Get words from data attribute and split into an array
@@ -102,38 +102,32 @@ function typeWord(word) {
   let charIndex = 0;
   typewriterTextElement.textContent = ""; // Clear text before typing
 
-  const typeInterval = setInterval(() => {
-    typewriterTextElement.textContent += word[charIndex];
-    charIndex++;
-
-    // Check if the entire word is typed out
-    if (charIndex === word.length) {
-      clearInterval(typeInterval); // Stop typing current word
-
-      // Set a delay before starting the next word
-      setTimeout(() => {
-        deleteWord(word);
-      }, pauseBetweenWords);
+  function type() {
+    if (charIndex < word.length) {
+      typewriterTextElement.textContent += word[charIndex];
+      charIndex++;
+      setTimeout(() => requestAnimationFrame(type), typingSpeed);
+    } else {
+      setTimeout(() => deleteWord(word), pauseBetweenWords);
     }
-  }, typingSpeed);
+  }
+  type();
 }
 
 function deleteWord(word) {
   let charIndex = word.length;
 
-  const deleteInterval = setInterval(() => {
-    typewriterTextElement.textContent = word.slice(0, charIndex);
-    charIndex--;
-
-    // Check if the entire word is deleted
-    if (charIndex < 0) {
-      clearInterval(deleteInterval); // Stop deleting
-
-      // Move to the next word in the array
+  function erase() {
+    if (charIndex >= 0) {
+      typewriterTextElement.textContent = word.slice(0, charIndex);
+      charIndex--;
+      setTimeout(() => requestAnimationFrame(erase), typingSpeed);
+    } else {
       wordIndex = (wordIndex + 1) % words.length;
       typeWord(words[wordIndex]);
     }
-  }, typingSpeed);
+  }
+  erase();
 }
 
 // Start the typewriter effect on page load
