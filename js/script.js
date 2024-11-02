@@ -63,8 +63,8 @@ function initializeImageToggle() {
 // Typewriter effect
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
-const typingSpeed = 140;
-const deletingSpeed = 100;
+const typingSpeed = 150;
+const deletingSpeed = 150;
 const pauseBetweenWords = 4000;
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
