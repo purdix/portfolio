@@ -11,7 +11,7 @@ function myFunction() {
 //Nav scroll
 const navbar = document.querySelector('.navbar-default');
 window.onscroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 64) {
         navbar.classList.add('navbar-scrolled');
     } else {
         navbar.classList.remove('navbar-scrolled');
