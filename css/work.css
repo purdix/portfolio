@@ -57,13 +57,13 @@
   --color-bg-callout-note: var(--color-blue-000);
   --color-bg-tab: var(--color-blue-100);
   --color-bg-tooltip: var(--color-black-900);
-  --color-bg-button-default: var(--color-transparent);
-  --color-bg-button-hover: var(--color-white-100);
-  --color-bg-accordion-default: var(--color-white-000);
-  --color-bg-accordion-hover: var(--color-white-100);
+  --color-bg-iconbutton-default: var(--color-transparent);
+  --color-bg-iconbutton-hover: var(--color-white-100);
+  --color-bg-accordion-default: var(--color-white-100);
+  --color-bg-accordion-hover: var(--color-white-200);
   --color-bg-overlay: var(--color-white-100);
-  --color-bg-skipbutton-default: var(--color-white-000);
-  --color-bg-skipbutton-hover: var(--color-white-100);
+  --color-bg-skipbutton-default: var(--color-white-100);
+  --color-bg-skipbutton-hover: var(--color-white-200);
 
 
   --color-content-nav: var(--color-white-900);
@@ -1051,20 +1051,20 @@ a .logo {
 }
 
 /*-------------------- Icon button --------------------*/
-.btn {
+.iconbtn {
   border-radius: 12px;
-  background-color: var(--color-bg-button-default);
+  background-color: var(--color-bg-iconbutton-default);
   padding: 12px;
   border: none;
   color: var(--color-content-default);
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: var(--color-bg-button-hover);
+.iconbtn:hover {
+  background-color: var(--color-iconbg-button-hover);
 }
 
-.btn-icon{
+.iconbtn-icon{
   display: block;
   margin: auto;
   height: 16px;
