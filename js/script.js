@@ -83,18 +83,21 @@ function initializeImageToggle() {
   // Initialize all image toggle components on page load
 document.addEventListener('DOMContentLoaded', initializeImageToggle);
 
-//Text typer
+// Text typer
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
-const typingSpeed = window.innerWidth <= 768 ? 80 : 140;
-const pauseBetweenWords = 4000; 
+
+// Set a faster typing speed and shorter pause for mobile
+const isMobile = window.innerWidth <= 768;
+const typingSpeed = isMobile ? 60 : 140; // Faster typing speed for mobile
+const deletingSpeed = isMobile ? 40 : 100; // Faster deleting speed for mobile
+const pauseBetweenWords = isMobile ? 4000 : 4000; // Shorter pause for mobile
 
 // Get words from data attribute and split into an array
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
 
 function startTypewriterEffect() {
-  // Start typing the first word immediately
   typeWord(words[wordIndex]);
 }
 
@@ -106,7 +109,7 @@ function typeWord(word) {
     if (charIndex < word.length) {
       typewriterTextElement.textContent += word[charIndex];
       charIndex++;
-      setTimeout(() => requestAnimationFrame(type), typingSpeed);
+      setTimeout(type, typingSpeed); // Use setTimeout directly for smoother timing control
     } else {
       setTimeout(() => deleteWord(word), pauseBetweenWords);
     }
@@ -121,7 +124,7 @@ function deleteWord(word) {
     if (charIndex >= 0) {
       typewriterTextElement.textContent = word.slice(0, charIndex);
       charIndex--;
-      setTimeout(() => requestAnimationFrame(erase), typingSpeed);
+      setTimeout(erase, deletingSpeed); // Adjusted deleting speed for smoother performance
     } else {
       wordIndex = (wordIndex + 1) % words.length;
       typeWord(words[wordIndex]);
