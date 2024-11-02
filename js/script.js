@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', initializeImageToggle);
 //Text typer
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
-const typingSpeed = window.innerWidth < 768 ? 150 : 100; // Slower on mobile
+const typingSpeed = 100; // Slower on mobile
 const pauseBetweenWords = 4000; // Pause time in ms between words
 
 // Get words from data attribute and split into an array
