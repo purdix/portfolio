@@ -24,7 +24,10 @@ function scrollToTop() {
 
 // Play audio pronunciation
 function playAudio() {
-  document.getElementById("audio").play();
+    const audio = document.getElementById("audio");
+    if (audio) {
+        audio.play();
+    }
 }
 
 // Prevent right-click on images
