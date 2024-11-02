@@ -38,7 +38,7 @@
   --color-black-100: rgba(0,0,0,0.1);
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
-  --color-gradient-strong: linear-gradient(#11101A, #000);
+  --color-gradient-strong: linear-gradient(#0C0C12, #000);
   --color-white-900: rgba(255,255,255,1);
   --color-white-800: rgba(255,255,255,0.8);
   --color-white-700: rgba(255,255,255,0.7);
@@ -92,7 +92,7 @@ html {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -349,7 +349,7 @@ a .logo {
 
 .navbar-default {
   height: 80px;
-  max-width: 1200px;
+  max-width: 1280px;
   width: 96vw;
   margin: auto;
   top: 24px;
@@ -403,6 +403,8 @@ a .logo {
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .password-bg{
@@ -433,7 +435,7 @@ a .logo {
 
 .welcome-footer{
   position: absolute;
-  max-width: 1200px;
+  max-width: 1280px;
   bottom: 1rem; /*adjust the number depends on your need*/
 }
 

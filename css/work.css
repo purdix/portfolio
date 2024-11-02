@@ -35,7 +35,7 @@
   --color-black-100: rgba(0,0,0,0.1);
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
-  --color-gradient-strong: linear-gradient(#11101A, #000);
+  --color-gradient-strong: linear-gradient(#0C0C12, #000);
   --color-white-900: rgba(255,255,255,1);
   --color-white-800: rgba(255,255,255,0.8);
   --color-white-700: rgba(255,255,255,0.7);
@@ -51,6 +51,7 @@
   --color-bg-interactive: var(--color-blue-900);
   --color-bg-section: var(--color-black-700);
   --color-bg: var(--color-gradient-strong);
+  --color-bg-dark: var(--color-black-900);
   --color-bg-card: var(--color-black-400);
   --color-bg-callout: var(--color-transparent);
   --color-bg-callout-note: var(--color-blue-000);
@@ -61,8 +62,8 @@
   --color-bg-accordion-default: var(--color-white-000);
   --color-bg-accordion-hover: var(--color-white-100);
   --color-bg-overlay: var(--color-white-100);
-  --color-bg-skipbutton-default: var(--color-transparent);
-  --color-bg-skipbutton-hover: var(--color-blue-100);
+  --color-bg-skipbutton-default: var(--color-white-000);
+  --color-bg-skipbutton-hover: var(--color-white-100);
 
 
   --color-content-nav: var(--color-white-900);
@@ -82,8 +83,10 @@
   --color-border-callout-note: var(--color-blue-400);
   --color-border-tab: var(--color-blue-400);
   --color-border-tooltip: var(--color-white-100);
-  --color-border-skipbutton-default: var(--color-white-200);
-  --color-border-skipbutton-hover: var(--color-blue-400);
+  --color-border-skipbutton-default: var(--color-white-000);
+  --color-border-skipbutton-hover: var(--color-white-100);
+  --color-border-accordion-default: var(--color-white-000);
+  --color-border-accordion-hover: var(--color-white-100);
 }
 
 /*-------------------- General --------------------*/
@@ -102,7 +105,7 @@ main {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -494,7 +497,7 @@ a .logo {
 
 .navbar-default {
   height: 80px;
-  max-width: 1200px;
+  max-width: 1280px;
   width: 96vw;
   margin: auto;
   top: 24px;
@@ -600,14 +603,35 @@ a .logo {
 }
 
 /*-------------------- Miscellaneous --------------------*/
+.bg {
+  background: var(--color-bg);
+}
+
+.hero-section{
+  padding: 64px 0px;
+  position: relative;
+  background-color: var(--color-bg-section);
+  z-index: 1;
+}
+
 .herobg-ObjectBuilder {
   padding-top: 240px;
   background: linear-gradient(180deg, #7E54DE 0%, #4B2AC0 100%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  z-index: 2; /* Sits above the black background */
+  overflow: hidden;
 }
 
 .herobg-Rating {
   padding-top: 240px;
   background: linear-gradient(180deg, #3BA2F6 0%, #0F6AE1 100%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  z-index: 2; /* Sits above the black background */
+  overflow: hidden;
 }
 
 .full-width-image img {
@@ -804,17 +828,6 @@ a .logo {
 }
 
 /*-------------------- General Body --------------------*/
-.bg {
-  background: var(--color-bg);
-}
-
-.hero-section{
-  padding: 64px 0px;
-  background: var(--color-bg-section);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-}
-
 .welcome-home {
   margin-top: 240px;
   margin-bottom: 120px;
@@ -1272,6 +1285,7 @@ a .logo {
   padding: 16px 24px;
   background: var(--color-bg-accordion-default);
   color: var(--color-content-default);
+  border: 1px solid var(--color-border-accordion-default);
   border-radius: 12px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -1280,6 +1294,7 @@ a .logo {
 .accordion label:hover,
 .accordion label:focus {
   background: var(--color-bg-accordion-hover);
+  border: 1px solid var(--color-border-accordion-hover);
 }
 
 .accordion .handle label:before {
@@ -1297,28 +1312,28 @@ a .logo {
 
 /*-------------------- Skip button ----------------------*/
 .skipButton {
-    background-color: var(--color-bg-skipbutton-default);
-    border: 1px solid var(--color-border-skipbutton-default);
-    padding: 16px 24px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    color: var(--color-content-default);
-    font-size: 1.25rem;
-    position: relative;
-    transition: background-color 0.3s, border-color 0.3s;
+  background-color: var(--color-bg-skipbutton-default);
+  border: 1px solid var(--color-border-skipbutton-default);
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-content-default);
+  font-size: 1.25rem;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .skipButton:hover {
-    background-color: var(--color-bg-skipbutton-hover);
-    border: 1px solid var(--color-border-skipbutton-hover);
+  background-color: var(--color-bg-skipbutton-hover);
+  border: 1px solid var(--color-border-skipbutton-hover);
 }
 
 /* Focus styles for keyboard accessibility */
 .skipButton:focus {
-    outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
-    background-color: var(--color-bg-skipbutton-hover); /* Matches hover style */
-    border-color: var(--color-border-skipbutton-hover); /* Matches hover border color */
+  outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
+  background-color: var(--color-bg-skipbutton-hover); /* Matches hover style */
+  border-color: var(--color-border-skipbutton-hover); /* Matches hover border color */
 }
 
 
@@ -1391,7 +1406,11 @@ a .logo {
 }
 
 @media only screen and (max-width:1052px){
-
+.skipButton {
+      width: 100%; /* Make the button full width */
+  box-sizing: border-box; /* Ensures padding doesn't expand beyond full width */
+  margin-top: 32px;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1510,10 +1529,4 @@ hr {
   h1 {
     font-size: 6rem;
   }
-
-      .skipButton {
-        margin-top: 32px;
-        width: 100%; /* Make the button full width */
-        box-sizing: border-box; /* Ensures padding doesn't expand beyond full width */
-    }
 }
