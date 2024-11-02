@@ -61,12 +61,12 @@
   --color-bg-interactive: var(--color-blue);
   --color-bg-main: var(--color-black-900);
   --color-bg-input: var(--color-white-100);
-  --color-bg-button: var(--color-blue);
   --color-bg-tooltip: var(--color-black-900);
   --color-bg-submitbutton-default: var(--color-purple-800);
   --color-bg-submitbutton-hover: var(--color-purple-900);
   --color-bg-dialog: var(--color-black-700);
-
+  --color-bg-button-default: var(--color-white-100);
+  --color-bg-button-hover: var(--color-white-200);
 
   --color-content-nav: var(--color-white-900);
   --color-content-nav-inactive: var(--color-white-700);
@@ -84,6 +84,8 @@
   --color-border-strong: var(--color-white-200);
   --color-border-tooltip: var(--color-white-100);
   --color-border-submitbutton: var(--color-purple-400);
+  --color-border-button-default: var(--color-white-000);
+  --color-border-button-hover: var(--color-white-100);
 }
 
 /*-------------------- General --------------------*/

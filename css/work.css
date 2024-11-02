@@ -62,8 +62,8 @@
   --color-bg-accordion-default: var(--color-white-100);
   --color-bg-accordion-hover: var(--color-white-200);
   --color-bg-overlay: var(--color-white-100);
-  --color-bg-skipbutton-default: var(--color-white-100);
-  --color-bg-skipbutton-hover: var(--color-white-200);
+  --color-bg-button-default: var(--color-white-100);
+  --color-bg-button-hover: var(--color-white-200);
 
 
   --color-content-nav: var(--color-white-900);
@@ -83,8 +83,8 @@
   --color-border-callout-note: var(--color-blue-400);
   --color-border-tab: var(--color-blue-400);
   --color-border-tooltip: var(--color-white-100);
-  --color-border-skipbutton-default: var(--color-white-000);
-  --color-border-skipbutton-hover: var(--color-white-100);
+  --color-border-button-default: var(--color-white-000);
+  --color-border-button-hover: var(--color-white-100);
   --color-border-accordion-default: var(--color-white-000);
   --color-border-accordion-hover: var(--color-white-100);
 }
@@ -1310,10 +1310,10 @@ a .logo {
   transform: rotate(90deg);
 }
 
-/*-------------------- Skip button ----------------------*/
-.skipButton {
-  background-color: var(--color-bg-skipbutton-default);
-  border: 1px solid var(--color-border-skipbutton-default);
+/*-------------------- Button ----------------------*/
+.button {
+  background-color: var(--color-bg-button-default);
+  border: 1px solid var(--color-border-button-default);
   padding: 16px 24px;
   border-radius: 8px;
   text-align: center;
@@ -1324,16 +1324,16 @@ a .logo {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.skipButton:hover {
-  background-color: var(--color-bg-skipbutton-hover);
-  border: 1px solid var(--color-border-skipbutton-hover);
+.button:hover {
+  background-color: var(--color-bg-button-hover);
+  border: 1px solid var(--color-border-button-hover);
 }
 
 /* Focus styles for keyboard accessibility */
-.skipButton:focus {
+.button:focus {
   outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
-  background-color: var(--color-bg-skipbutton-hover); /* Matches hover style */
-  border-color: var(--color-border-skipbutton-hover); /* Matches hover border color */
+  background-color: var(--color-bg-button-hover); /* Matches hover style */
+  border-color: var(--color-border-button-hover); /* Matches hover border color */
 }
 
 
@@ -1406,8 +1406,8 @@ a .logo {
 }
 
 @media only screen and (max-width:1052px){
-.skipButton {
-      width: 100%; /* Make the button full width */
+.button {
+  width: 100%; /* Make the button full width */
   box-sizing: border-box; /* Ensures padding doesn't expand beyond full width */
   margin-top: 32px;
 }
