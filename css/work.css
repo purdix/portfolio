@@ -1061,7 +1061,7 @@ a .logo {
 }
 
 .iconbtn:hover {
-  background-color: var(--color-iconbg-button-hover);
+  background-color: var(--color-bg-iconbutton-hover);
 }
 
 .iconbtn-icon{
