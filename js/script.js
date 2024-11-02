@@ -11,11 +11,11 @@ function myFunction() {
 //Nav scroll
 const navbar = document.querySelector('.navbar-default');
 window.onscroll = () => {
-    if (window.scrollY > 64) {
-        navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
-    }
+  if (window.scrollY > 100) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
 };
 
 // Scroll up button
@@ -46,42 +46,42 @@ function play() {
 
 // Prevent right click on images
 $(document).ready(function() {
-     $("img").on("contextmenu",function(){
-        return false;
-     });
- });
+ $("img").on("contextmenu",function(){
+  return false;
+});
+});
 
 
 // Function to initialize image toggle components
-  function initializeImageToggle() {
+function initializeImageToggle() {
     // Select each toggle container
-    const toggleContainers = document.querySelectorAll('.toggle-container');
-    
-    toggleContainers.forEach(container => {
-      const tabs = container.querySelectorAll('.tab');
-      const toggleImage = container.querySelector('.toggle-image');
-      const caption = container.querySelector('.caption');
-      
+  const toggleContainers = document.querySelectorAll('.toggle-container');
+
+  toggleContainers.forEach(container => {
+    const tabs = container.querySelectorAll('.tab');
+    const toggleImage = container.querySelector('.toggle-image');
+    const caption = container.querySelector('.caption');
+
       // Attach event listeners to each tab within the container
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
           // Deactivate all tabs in this container
-          tabs.forEach(t => t.classList.remove('active'));
+        tabs.forEach(t => t.classList.remove('active'));
           // Activate the clicked tab
-          tab.classList.add('active');
+        tab.classList.add('active');
           // Update image and caption based on data attributes
-          toggleImage.src = tab.getAttribute('data-image');
-          caption.textContent = tab.getAttribute('data-caption');
-        });
+        toggleImage.src = tab.getAttribute('data-image');
+        caption.textContent = tab.getAttribute('data-caption');
       });
+    });
 
       // Set default active tab on page load
-      tabs[0].classList.add('active');
-    });
-  }
+    tabs[0].classList.add('active');
+  });
+}
 
   // Initialize all image toggle components on page load
-  document.addEventListener('DOMContentLoaded', initializeImageToggle);
+document.addEventListener('DOMContentLoaded', initializeImageToggle);
 
 //Text typer
 const typewriterContainer = document.querySelector(".typewriter-container");
@@ -135,8 +135,8 @@ startTypewriterEffect();
 
 // Anchor button
 function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
 }
