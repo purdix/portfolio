@@ -504,7 +504,9 @@ background:
   transition-duration: 0.15s;
 }
 
-.rotateWords{
+/* Rotate Words Effect */
+.rotateWords {
+  display: none; /* Hidden by default, shown on mobile only */
   --height: 16rem;
   height: var(--height);
   line-height: var(--height);
@@ -514,10 +516,14 @@ background:
 .rotateWords ol {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.rotateWords ol li{
-  animation: slide-up 18s infinite;
+.rotateWords ol li {
+  animation: slide-up 20s infinite;
+  padding-bottom: 0.3em; /* Extra padding to prevent clipping */
+  line-height: 1.1; /* Increase line-height for more space */
+  height: var(--height); /* Ensure each item is the same height */
 }
 
 @keyframes slide-up {
@@ -530,15 +536,17 @@ background:
   50%, 70% {
     transform: translateY(-200%);
   }
-  75%, 90% {
+  75%, 95% {
     transform: translateY(-300%);
   }
 }
 
-.rotateWords ol li span{
+.rotateWords ol li span {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(20deg, cyan, magenta);
   -webkit-background-clip: text;
+  display: inline-block;
+  padding-bottom: 0.1em; /* Extra padding inside the span */
 }
 
 .typewriter-container {
@@ -552,14 +560,15 @@ background:
 }
 
 .typewriter-text {
-  display: inline-block;
-  text-align: center;
   --height: 16rem;
   display: inline-block;
+  text-align: center;
   white-space: nowrap;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
+
 
 /*-------------------- Tooltip ----------------------*/
 .tooltip-container {
