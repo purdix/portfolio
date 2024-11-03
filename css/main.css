@@ -1045,14 +1045,6 @@ background:
 }
 
 @media only screen and (max-width: 1152px) {
-      /* Rotate Words Effect (Mobile) */
-  .typewriter-container {
-    display: none;
-  }
-  .rotateWords {
-    display: block;
-  }
-
   .circle {
     display: none;
   }
