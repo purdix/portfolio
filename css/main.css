@@ -469,10 +469,6 @@ background:
   animation: rotateText 30s linear infinite;
 }
 
-.text p{
-  font-family: 'Space Mono', monospace !important;
-}
-
 @keyframes rotateText{
   0%{
     transform: rotate(360deg);
