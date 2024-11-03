@@ -24,10 +24,10 @@ function scrollToTop() {
 
 // Play audio pronunciation
 function playAudio() {
-    const audio = document.getElementById("audio");
-    if (audio) {
-        audio.play();
-    }
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.play();
+  }
 }
 
 // Prevent right-click on images
@@ -109,3 +109,10 @@ function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   section?.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+//Name scrolling
+const text = document.querySelector('.text p');
+text.innerHTML = text.innerText.split("").map(
+  (char, i) => `<span style="transform:rotate(${i * 8.6}deg)">${char}</span>`
+  ).join("")
