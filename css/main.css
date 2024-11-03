@@ -1045,21 +1045,20 @@ background:
 }
 
 @media only screen and (max-width: 1152px) {
-  .circle {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-
-    /* Rotate Words Effect (Mobile) */
+      /* Rotate Words Effect (Mobile) */
   .typewriter-container {
     display: none;
   }
   .rotateWords {
     display: block;
   }
-  
+
+  .circle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {  
   /* Ensure background covers the expanded menu */
   .collapse {
     position: absolute; /* Position absolute to ensure it's aligned with the navbar */
