@@ -59,11 +59,11 @@
   --color-bg-tooltip: var(--color-black-900);
   --color-bg-iconbutton-default: var(--color-transparent);
   --color-bg-iconbutton-hover: var(--color-white-100);
-  --color-bg-accordion-default: var(--color-white-100);
-  --color-bg-accordion-hover: var(--color-white-200);
+  --color-bg-accordion-default: var(--color-white-000);
+  --color-bg-accordion-hover: var(--color-white-100);
   --color-bg-overlay: var(--color-white-100);
-  --color-bg-button-default: var(--color-white-100);
-  --color-bg-button-hover: var(--color-white-200);
+  --color-bg-button-default: var(--color-white-000);
+  --color-bg-button-hover: var(--color-white-100);
 
 
   --color-content-nav: var(--color-white-900);
