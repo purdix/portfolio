@@ -60,12 +60,12 @@ function initializeImageToggle() {
   });
 }
 
-const typewriterContainer = document.getElementById("typewriterContainer");
-const rotateWordsContainer = document.getElementById("rotateWordsContainer");
+// Typewriter effect
+const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
 
-const typingSpeed = 100;
-const deletingSpeed = 100;
+const typingSpeed = 100; // 200ms for mobile, 100ms for desktop
+const deletingSpeed = 100; // Same speeds for deleting
 const pauseBetweenWords = 4000;
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
@@ -103,23 +103,6 @@ function deleteWord(word) {
   }
   erase();
 }
-
-function toggleEffect() {
-  if (window.innerWidth <= 768) {
-    // Mobile: Show rotateWords, hide typewriter
-    typewriterContainer.style.display = "none";
-    rotateWordsContainer.style.display = "block";
-  } else {
-    // Desktop: Show typewriter, hide rotateWords
-    typewriterContainer.style.display = "block";
-    rotateWordsContainer.style.display = "none";
-    startTypewriterEffect();
-  }
-}
-
-// Initialize on load and listen for resizing
-window.addEventListener("load", toggleEffect);
-window.addEventListener("resize", toggleEffect);
 
 // Scroll to section by ID
 function scrollToSection(sectionId) {
