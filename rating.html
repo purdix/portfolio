@@ -72,7 +72,7 @@
   </nav>
 
   <!--Main Content-->
-  <main class="bg">
+  <main class="bg" id="main-content">
     <div  id="scrollUpTitle" tabindex="-1" class="herobg-Rating animate__animated animate__fadeIn">
       <div class="full-width-image">
         <img class="animate__animated" src="./files/rating/rating.png" alt="Screenshot of Object Builder interface showing customizable fields and workflow options">
@@ -87,19 +87,21 @@
             <div class="welcome-other">
               <h1 class="animate__animated animate__fadeInUp"><span class="content-gradient">Rating</span> Engine</h1>
             </div>
-            <p class="animate__animated animate__fadeInUp content-weak spacer-top-sm">An intelligent tool that streamlines shipment rating in the trucking industry by eliminating the need for error-prone spreadsheets. With Rating Engine, users are able to build accurate tariffs and optimize their margins with confidence.</p>
+            <p class="animate__animated animate__fadeInUp content-weak spacer-top-sm spacer-bottom">An intelligent tool that streamlines shipment rating in the trucking industry by eliminating the need for error-prone spreadsheets. With Rating Engine, users are able to build accurate tariffs and optimize their margins with confidence.</p>
+            <button onclick="scrollToSection('section3')" class="button spacer-bottom" aria-label="Jump to the designs section">Jump to designs</button>
           </div>
           <div class="col-lg-1"></div>
           <div class="col-lg-4">
             <p class="p-header">Company</p>
-            <p class="spacer-bottom-sm content-weak">Rose Rocket</p>
+            <p class="p-description spacer-bottom-sm content-weak">Rose Rocket</p>
+            <p class="p-header">Team</p>
+            <p class="p-description spacer-bottom-sm content-weak">1 Product Designer (myself), 1 Product Manager, 1 Engineering Lead, 3 Engineers</p>
             <p class="p-header">Role</p>
-            <p class="spacer-bottom-sm content-weak">Product designer</p>
+            <p class="p-description spacer-bottom-sm content-weak">As the sole product designer, I led the end-to-end design of the Rating Engine, working closely with the PM and EL on requirements, conducting user research, and collaborating with Solutions teams and customers to refine the feature.</p>
             <p class="p-header">Duration</p>
-            <p class="spacer-bottom-sm content-weak">4 months (Jul - Oct 2024)</p>
+            <p class="p-description spacer-bottom-sm content-weak">4 months (Jul - Oct 2024)</p>
             <p class="p-header">Tool(s)</p>
-            <p class="spacer-bottom-sm content-weak">Figma</p>
-            <button onclick="scrollToSection('section3')" class="button" aria-label="Jump to the designs section">Jump to designs</button>
+            <p class="p-description spacer-bottom-sm content-weak">Figma</p>
           </div>
         </div>
       </div>
@@ -321,7 +323,7 @@
               <h2 class="spacer-bottom-sm content-highlight">Phase 1: Research & Design</h2>
               <section id="section3-1" class="section spacer-top">
                 <h3 class="spacer-bottom-sm">Defining the scope</h3>
-                <p class="spacer-bottom-sm">While we recognized the need to support LTL rating, the specific requirements were still unclear. To refine our scope, we reviewed past customer calls (via Gong), analyzed support tickets (via Hubspot), and consulted with our internal Solutions team to pinpoint exactly what rating-related features were needed.</p>
+                <p class="spacer-bottom-sm">While we recognized the need to support LTL rating, the specific requirements were still unclear. To refine our scope, we reviewed past customer calls (via Gong), analyzed support tickets (via Hubspot), and consulted with our internal Solutions team to pinpoint exactly what was needed.</p>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse2" id="handle2">
                   <h5 class="handle">
@@ -351,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-                <p class="spacer-bottom-sm">Through this process, we narrowed our scope to include the following:</p>
+                <p class="spacer-bottom-sm">Using our research, we narrowed our scope to include the following:</p>
                 <div class="row d-flex align-items-stretch">
                   <div class="col-lg-4 col-12 mb-4">
                     <div class="callout d-flex flex-column align-items-start h-100">
@@ -455,7 +457,7 @@
             </div>
           </div>
 
-          <button onclick="topFunction()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
+          <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
         </main>
 
         <!--Footer-->

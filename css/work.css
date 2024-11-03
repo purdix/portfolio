@@ -458,7 +458,11 @@ ul li.regular-text {
 .p-header{
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 0.5;
+  line-height: 0.75;
+}
+
+.p-description{
+  font-size: 1.25rem;
 }
 
 .caption {
