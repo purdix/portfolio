@@ -61,54 +61,65 @@ function initializeImageToggle() {
 }
 
 const typewriterContainer = document.getElementById("typewriterContainer");
+const rotateWordsContainer = document.getElementById("rotateWordsContainer");
 const typewriterTextElement = document.getElementById("typewriterText");
 
-if (window.innerWidth > 768) {
-  // Only initialize typewriter effect on larger screens
-  const typingSpeed = 100;
-  const deletingSpeed = 100;
-  const pauseBetweenWords = 4000;
-  const words = typewriterContainer.getAttribute("data-words").split(",");
-  let wordIndex = 0;
+const typingSpeed = 100;
+const deletingSpeed = 100;
+const pauseBetweenWords = 4000;
+const words = typewriterContainer.getAttribute("data-words").split(",");
+let wordIndex = 0;
 
-  function startTypewriterEffect() {
-    typeWord(words[wordIndex]);
-  }
-
-  function typeWord(word) {
-    let charIndex = 0;
-    typewriterTextElement.textContent = ""; // Clear text before typing
-
-    function type() {
-      if (charIndex < word.length) {
-        typewriterTextElement.textContent += word[charIndex++];
-        setTimeout(type, typingSpeed);
-      } else {
-        setTimeout(() => deleteWord(word), pauseBetweenWords);
-      }
-    }
-    type();
-  }
-
-  function deleteWord(word) {
-    let charIndex = word.length;
-
-    function erase() {
-      if (charIndex >= 0) {
-        typewriterTextElement.textContent = word.slice(0, charIndex--);
-        setTimeout(erase, deletingSpeed);
-      } else {
-        wordIndex = (wordIndex + 1) % words.length;
-        typeWord(words[wordIndex]);
-      }
-    }
-    erase();
-  }
-
-  // Start the typewriter effect
-  startTypewriterEffect();
+function startTypewriterEffect() {
+  typeWord(words[wordIndex]);
 }
 
+function typeWord(word) {
+  let charIndex = 0;
+  typewriterTextElement.textContent = ""; // Clear text before typing
+
+  function type() {
+    if (charIndex < word.length) {
+      typewriterTextElement.textContent += word[charIndex++];
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(() => deleteWord(word), pauseBetweenWords);
+    }
+  }
+  type();
+}
+
+function deleteWord(word) {
+  let charIndex = word.length;
+
+  function erase() {
+    if (charIndex >= 0) {
+      typewriterTextElement.textContent = word.slice(0, charIndex--);
+      setTimeout(erase, deletingSpeed);
+    } else {
+      wordIndex = (wordIndex + 1) % words.length;
+      typeWord(words[wordIndex]);
+    }
+  }
+  erase();
+}
+
+function toggleEffect() {
+  if (window.innerWidth <= 768) {
+    // Mobile: Show rotateWords, hide typewriter
+    typewriterContainer.style.display = "none";
+    rotateWordsContainer.style.display = "block";
+  } else {
+    // Desktop: Show typewriter, hide rotateWords
+    typewriterContainer.style.display = "block";
+    rotateWordsContainer.style.display = "none";
+    startTypewriterEffect();
+  }
+}
+
+// Initialize on load and listen for resizing
+window.addEventListener("load", toggleEffect);
+window.addEventListener("resize", toggleEffect);
 
 // Scroll to section by ID
 function scrollToSection(sectionId) {
