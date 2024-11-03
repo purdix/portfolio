@@ -45,7 +45,7 @@
   --color-black-100: rgba(0,0,0,0.1);
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
-  --color-gradient-strong: linear-gradient(#0C0C12, #000);
+  --color-gradient-strong: linear-gradient(#000, #0C0C12);
   --color-white-900: rgba(255,255,255,1);
   --color-white-800: rgba(255,255,255,0.8);
   --color-white-700: rgba(255,255,255,0.7);
