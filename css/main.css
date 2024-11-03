@@ -1123,7 +1123,7 @@ a .logo {
     line-height: 1;
   }
 
-  .hero-subheader{
+  .hero-subheader, .pronunciation{
     font-size: 1.75rem;
   }
 
