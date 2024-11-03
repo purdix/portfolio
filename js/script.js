@@ -65,8 +65,8 @@ const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
 
 const isMobile = window.innerWidth <= 768; // Mobile if width is 768px or less
-const typingSpeed = isMobile ? 300 : 100; // 200ms for mobile, 100ms for desktop
-const deletingSpeed = isMobile ? 220 : 100; // Same speeds for deleting
+const typingSpeed = isMobile ? 260 : 100; // 200ms for mobile, 100ms for desktop
+const deletingSpeed = isMobile ? 200 : 100; // Same speeds for deleting
 const pauseBetweenWords = 4000;
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
