@@ -506,7 +506,7 @@ background:
 
 /* Rotate Words Effect */
 .rotateWords {
-  display: none; /* Hidden by default, shown on mobile only */
+  display: none;
   --height: 16rem;
   height: var(--height);
   line-height: var(--height);
@@ -550,6 +550,7 @@ background:
 }
 
 .typewriter-container {
+  display: block;
   height: var(--height);
   line-height: var(--height);
   overflow: hidden;
@@ -1050,6 +1051,14 @@ background:
 }
 
 @media only screen and (max-width: 768px) {
+
+    /* Rotate Words Effect (Mobile) */
+  .typewriter-container {
+    display: none;
+  }
+  .rotateWords {
+    display: block;
+  }
   
   /* Ensure background covers the expanded menu */
   .collapse {

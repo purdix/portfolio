@@ -60,50 +60,55 @@ function initializeImageToggle() {
   });
 }
 
-// Typewriter effect
-const typewriterContainer = document.querySelector(".typewriter-container");
+const typewriterContainer = document.getElementById("typewriterContainer");
 const typewriterTextElement = document.getElementById("typewriterText");
 
-const isMobile = window.innerWidth <= 768; // Mobile if width is 768px or less
-const typingSpeed = isMobile ? 300 : 100; // 200ms for mobile, 100ms for desktop
-const deletingSpeed = isMobile ? 300 : 100; // Same speeds for deleting
-const pauseBetweenWords = 4000;
-const words = typewriterContainer.getAttribute("data-words").split(",");
-let wordIndex = 0;
+if (window.innerWidth > 768) {
+  // Only initialize typewriter effect on larger screens
+  const typingSpeed = 100;
+  const deletingSpeed = 100;
+  const pauseBetweenWords = 4000;
+  const words = typewriterContainer.getAttribute("data-words").split(",");
+  let wordIndex = 0;
 
-function startTypewriterEffect() {
-  typeWord(words[wordIndex]);
-}
-
-function typeWord(word) {
-  let charIndex = 0;
-  typewriterTextElement.textContent = ""; // Clear text before typing
-
-  function type() {
-    if (charIndex < word.length) {
-      typewriterTextElement.textContent += word[charIndex++];
-      setTimeout(type, typingSpeed);
-    } else {
-      setTimeout(() => deleteWord(word), pauseBetweenWords);
-    }
+  function startTypewriterEffect() {
+    typeWord(words[wordIndex]);
   }
-  type();
-}
 
-function deleteWord(word) {
-  let charIndex = word.length;
+  function typeWord(word) {
+    let charIndex = 0;
+    typewriterTextElement.textContent = ""; // Clear text before typing
 
-  function erase() {
-    if (charIndex >= 0) {
-      typewriterTextElement.textContent = word.slice(0, charIndex--);
-      setTimeout(erase, deletingSpeed);
-    } else {
-      wordIndex = (wordIndex + 1) % words.length;
-      typeWord(words[wordIndex]);
+    function type() {
+      if (charIndex < word.length) {
+        typewriterTextElement.textContent += word[charIndex++];
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(() => deleteWord(word), pauseBetweenWords);
+      }
     }
+    type();
   }
-  erase();
+
+  function deleteWord(word) {
+    let charIndex = word.length;
+
+    function erase() {
+      if (charIndex >= 0) {
+        typewriterTextElement.textContent = word.slice(0, charIndex--);
+        setTimeout(erase, deletingSpeed);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        typeWord(words[wordIndex]);
+      }
+    }
+    erase();
+  }
+
+  // Start the typewriter effect
+  startTypewriterEffect();
 }
+
 
 // Scroll to section by ID
 function scrollToSection(sectionId) {
