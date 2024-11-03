@@ -87,7 +87,7 @@
             <div class="welcome-other">
               <h1 class="animate__animated animate__fadeInUp"><span class="content-gradient">Rating</span> Engine</h1>
             </div>
-            <p class="animate__animated animate__fadeInUp content-weak spacer-top-sm">An intelligent tool that streamlines shipment rating in the trucking industry by eliminating the need for error-prone spreadsheets. With Rating Engine, users are able to set accurate rates and optimize their margins with confidence.</p>
+            <p class="animate__animated animate__fadeInUp content-weak spacer-top-sm">An intelligent tool that streamlines shipment rating in the trucking industry by eliminating the need for error-prone spreadsheets. With Rating Engine, users are able to build accurate tariffs and optimize their margins with confidence.</p>
           </div>
           <div class="col-lg-1"></div>
           <div class="col-lg-4">
@@ -131,8 +131,8 @@
                 <a class="nav-link" href="#section3" aria-label="Navigate to Phase 1: Proof of Concept section">Phase 1: Research & Design</a>
                 <ul class="nav flex-column">
                   <li><a class="nav-link" href="#section3-1">Defining the scope</a></li>
-                  <li><a class="nav-link" href="#section3-2">Solutioning</a></li>
-                  <li><a class="nav-link" href="#section3-3">Feedback</a></li>
+                  <li><a class="nav-link" href="#section3-2">Current flow</a></li>
+                  <li><a class="nav-link" href="#section3-3">Proposed flow</a></li>
                 </ul>
               </li>
               <li>
@@ -178,8 +178,8 @@
                   </div>
                 </div>
               </div>
-              <p>For FTL shipments, rating is relatively straightforward, as companies usually charge a flat rate for the entire truck.</p>
-              <p class="spacer-bottom">In contrast, LTL shipments are far more complex, with rates fluctuating based on a multitude of factors. As a result, many companies depend on unweildy spreadsheets and tribal knowledge to calculate these rates, resulting in several key challenges:</p>
+              <p>For FTL shipments, rating is relatively straightforward, as companies typically charge a flat rate for the entire truck.</p>
+              <p class="spacer-bottom">In contrast, LTL shipments are more complex. Rates fluctuate based on numerous factors—such as weight, distance, and additional services—which together form what’s known as a <b class="content-highlight">tariff.</b> Many companies depend on cumbersome spreadsheets and internal knowledge to manage these tariffs, leading to several key challenges:</p>
               <div class="row">
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
@@ -206,7 +206,7 @@
                   <div class="callout">
                     <img class="icon spacer-bottom-sm" src="./files/icons/time.svg" width="48" height="48" alt="Icon depicting labor-intensive processes" caption="" data-width="original" data-scaling="no">
                     <h4>Labor-intensive to set up and maintain</h4>
-                    <p class="content-weak">Setting up and updating rates is a time-consuming process that requires specialized knowledge, adding to operational strain and inefficiency.</p>
+                    <p class="content-weak">Setting up and updating tariffs is a time-consuming process requiring specialized knowledge, adding to operational strain and inefficiency.</p>
                   </div>
                 </div> 
               </div>
@@ -233,13 +233,13 @@
               <h3 class="spacer-bottom-sm">The Objective</h3>
               <p class="spacer-bottom-sm">Faced with these challenges, our goal was clear:</p>
               <div class="callout-strong spacer-bottom-sm">
-                <p class="p-strong">How might we  <b class="content-highlight">streamline the rating process</b> so that users are empowered to rate LTL shipments with greater confidence, accuracy and ease?</p>
+                <p class="p-strong">How might we  <b class="content-highlight">streamline the rating process</b> so that users are empowered to calculate LTL tariffs with greater confidence, accuracy and ease?</p>
               </div>
 
             </section>
             <section id="section1-4" class="section spacer-top">
               <h3 class="spacer-bottom-sm">Our Approach</h3>
-              <p class="spacer-bottom">While our platform included a rating engine, it only supported flat-rate pricing for FTL shipments. This limitation forced a significant portion of our users, who required more complex LTL rating, to rely on spreadsheets or other TMS solutions.</p>
+              <p class="spacer-bottom">While our platform included a rating engine, it only supported flat-rate pricing for FTL shipments. This limitation forced a significant portion of our users—who required more complex tariff calculations for LTL shipments—to rely on spreadsheets or other TMS solutions.</p>
               <p>This project set out to bridge that gap by introducing a flexible system that would empower users to make confident pricing decisions and <b class="content-highlight">manage the complexities of LTL rating</b> with greater ease.</p>
             </section>
           </section>
@@ -320,8 +320,8 @@
             <div>
               <h2 class="spacer-bottom-sm content-highlight">Phase 1: Research & Design</h2>
               <section id="section3-1" class="section spacer-top">
-                <h3 class="spacer-bottom-sm">Defining scope</h3>
-                <p class="spacer-bottom-sm">While we recognized the need to support LTL rating, the specific requirements were still unclear. To refine our scope, we reviewed past customer calls (via Gong), analyzed support tickets (via Hubspot), and consulted with our internal Solutions team to pinpoint exactly what features were needed.</p>
+                <h3 class="spacer-bottom-sm">Defining the scope</h3>
+                <p class="spacer-bottom-sm">While we recognized the need to support LTL rating, the specific requirements were still unclear. To refine our scope, we reviewed past customer calls (via Gong), analyzed support tickets (via Hubspot), and consulted with our internal Solutions team to pinpoint exactly what rating-related features were needed.</p>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse2" id="handle2">
                   <h5 class="handle">
@@ -357,28 +357,28 @@
                     <div class="callout d-flex flex-column align-items-start h-100">
                       <img src="./files/icons/dimension.svg" height="48" class="spacer-bottom-sm" alt="Icon depicting dimensional rating">
                       <h5>Dimension-based rating</h5>
-                      <p class="content-weaker">Rate shipments variably based on specified dimensions, such as weight and linear feet.</p>
+                      <p class="content-weaker">Support tariffs that variably rate by shipment dimensions, such as weight and linear feet.</p>
                     </div>
                   </div>
                   <div class="col-lg-4 col-12 mb-4">
                     <div class="callout d-flex flex-column align-items-start h-100">
                       <img src="./files/icons/cwt.svg" height="48" class="spacer-bottom-sm" alt="Icon depicting CWT">
                       <h5>Hundredweight (CWT) rating</h5>
-                      <p class="content-weaker">Rate shipments variably based on hundredweight, a unique yet standard measure in the trucking industry.</p>
+                      <p class="content-weaker">Support tariffs that rate by hundredweight (CWT).</p>
                     </div>
                   </div>
                   <div class="col-lg-4 col-12 mb-4">
                     <div class="callout d-flex flex-column align-items-start h-100">
                       <img src="./files/icons/smc3.svg" height="48" class="spacer-bottom-sm" alt="Icon depicting third-party rating">
                       <h5>Third-party rating</h5>
-                      <p class="content-weaker">Retrieve rates from aggregate third-party services like SMC³.</p>
+                      <p class="content-weaker">Retrieve rates from aggregate third-party services, such as SMC³.</p>
                     </div>
                   </div>
                 </div>
               </section>
               <section id="section3-2" class="section spacer-top"> 
-                <h3 class="spacer-bottom-sm">Current state</h3>
-                <p>To gain a better understanding of the current state, I mapped out both the existing and proposed user flows. This helped me get a better understanding of what was needed.</p>
+                <h3 class="spacer-bottom-sm">Current flow</h3>
+                <p class="spacer-bottom-sm">To better understand the current state, I mapped the existing user flow for building a tariff. This exercise not only highlighted necessary changes, but also uncovered further opportunities to improve efficiency and the overall user experience.</p>
                   <div class="toggle-container spacer-bottom-sm">
                   <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/userFlow-before.png" alt="Toggle Image">
                   <p class="caption">Current user flow for creating a tariff.</p>
@@ -387,10 +387,10 @@
   <div class="tab" data-image="./files/rating/userFlow-after.png" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey.">Proposed Flow</div>
 </div>
                   </div>  
-                  <p class="spacer-bottom-sm spacer-top-sm">Alongside the adjustments outlined above, we implemented several other quality-of-life improvements, including:</p>
-                </div>
-
-                <p class="spacer-bottom-sm">To streamline development, I leveraged existing UI patterns from the platform, incorporating familiar elements like record views, boards, and widgets to structure the design effectively.</p>
+                </section>
+                <section id="section3-3" class="section spacer-top">
+                  <h3 class="spacer-bottom-sm">Proposed flow</h3>
+                                  <p class="spacer-bottom-sm">To streamline development, I leveraged existing UI patterns from the platform, incorporating familiar elements like record views, boards, and widgets to structure the design effectively.</p>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse3" id="handle3">
                   <h5 class="handle">
@@ -433,9 +433,6 @@
                     </div>
                   </div></div>
                   <p class="caption">An interactive prototype of the designs for Rating Engine, highlighting key user flows.</p>
-                </section>
-                <section id="section3-3" class="section spacer-top">
-                  <h3 class="spacer-bottom-sm">Feedback</h3>
                 </section>
               </section>
               <hr class="hr">
