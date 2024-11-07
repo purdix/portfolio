@@ -45,6 +45,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Extras -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
   <link href="./css/work.css" rel="stylesheet">
 </head>
 
@@ -132,9 +133,9 @@
               <li>
                 <a class="nav-link" href="#section3" aria-label="Navigate to Phase 1: Proof of Concept section">Phase 1: Research & Design</a>
                 <ul class="nav flex-column">
-                  <li><a class="nav-link" href="#section3-1">Defining the scope</a></li>
-                  <li><a class="nav-link" href="#section3-2">Current flow</a></li>
-                  <li><a class="nav-link" href="#section3-3">Proposed flow</a></li>
+                  <li><a class="nav-link" href="#section3-1">Defining scope</a></li>
+                  <li><a class="nav-link" href="#section3-2">User flows</a></li>
+                  <li><a class="nav-link" href="#section3-3">Designs</a></li>
                 </ul>
               </li>
               <li>
@@ -322,7 +323,7 @@
             <div>
               <h2 class="spacer-bottom-sm content-highlight">Phase 1: Research & Design</h2>
               <section id="section3-1" class="section spacer-top">
-                <h3 class="spacer-bottom-sm">Defining the scope</h3>
+                <h3 class="spacer-bottom-sm">Defining scope</h3>
                 <p class="spacer-bottom-sm">While we recognized the need to support LTL rating, the specific requirements were still unclear. To refine our scope, we reviewed past customer calls (via Gong), analyzed support tickets (via Hubspot), and consulted with our internal Solutions team to pinpoint exactly what was needed.</p>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse2" id="handle2">
@@ -379,24 +380,94 @@
                 </div>
               </section>
               <section id="section3-2" class="section spacer-top"> 
-                <h3 class="spacer-bottom-sm">Current flow</h3>
-                <p class="spacer-bottom-sm">To better understand the current state, I mapped the existing user flow for building a tariff. This exercise not only highlighted necessary changes, but also uncovered further opportunities to improve efficiency and the overall user experience.</p>
+                <h3 class="spacer-bottom-sm">User flows</h3>
+                <p class="spacer-bottom-sm">To better understand the current state, I mapped the existing user flow for building a tariff. This exercise highlighted essential changes and uncovered further opportunities to enhance efficiency and user experience. Using these insights, I then outlined a proposed flow, which I validated with the Solutions team before proceeding to the design phase.</p>
                 <div class="toggle-container spacer-bottom-sm">
-                  <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/userFlow-before.png" alt="Toggle Image">
-                  <p class="caption">Current user flow for creating a tariff.</p>
+                  <!-- Current Flow Image with Fancybox -->
+                  <a data-toggle="tooltip" title="Click to expand" href="./files/rating/userFlow-before.png" data-fancybox="drawing" data-caption="Current user flow for creating a tariff.">
+                    <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" src="./files/rating/userFlow-before.png" alt="Current user flow image">
+                  </a>
+
                   <div class="tab-container">
-                    <div class="tab active" data-image="./files/rating/userFlow-before.png" data-caption="Current user flow for creating a tariff.">Current Flow</div>
-                    <div class="tab" data-image="./files/rating/userFlow-after.png" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey.">Proposed Flow</div>
+                    <!-- Current Flow Tab (active by default) -->
+                    <div class="tab active" data-image="./files/rating/userFlow-before.png" data-caption="Current user flow for creating a tariff.">
+                      Current Flow
+                    </div>
+
+                    <!-- Proposed Flow Tab -->
+                    <div class="tab" data-image="./files/rating/userFlow-after.png" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey.">
+                      Proposed Flow
+                    </div>
                   </div>
-                </div>  
-              </section>
-              <section id="section3-3" class="section spacer-top">
-                <h3 class="spacer-bottom-sm">Proposed flow</h3>
-                <p class="spacer-bottom-sm">To streamline development, I leveraged existing UI patterns from the platform, incorporating familiar elements like record views, boards, and widgets to structure the design effectively.</p>
+                </div>
+
+                <!-- Proposed Flow Image (Hidden Initially) with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" href="./files/rating/userFlow-after.png" data-fancybox="drawing" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey." style="display: none;" id="proposedFlowImage">
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" src="./files/rating/userFlow-after.png" alt="Proposed user flow image">
+                </a>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse3" id="handle3">
                   <h5 class="handle">
-                    <label for="handle3">Show UI patterns <span class="caption">(Click to expand)</span></label>
+                    <label for="handle3">Show flow breakdown <span class="caption">(Click to expand)</span></label>
+                  </h5>
+                  <div class="content">
+                    <!-- Step 1 -->
+
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 1: Create new tariff</h4>
+                            <p class="content-weaker">User creates a new tariff by clicking "Create tariff" on the  board.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-createTariff.png" alt="Toggle Image">
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 2: Add details</h4>
+                            <p class="content-weaker">User inputs key details, including a name, description, effective start and end dates (defining when the tariff is active), and specify the tariff type (Customer or Partner).</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-detailWidget.png" alt="Toggle Image">
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 3: Add dimensions & calculation method</h4>
+                            <p class="content-weaker">User selects a calculation method and dimensions for the tariff.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-dimension-before.png" alt="Toggle Image">
+                             <p class="caption">Users had to navigate to a separate page to choose dimensions and the calculation method.</p>
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/rating/p2-dimension-before.png" data-caption="Users had to navigate to a separate page to choose dimensions and the calculation method.">Before</div>
+                              <div class="tab" data-image="./files/rating/p2-dimension-after.png" data-caption="Users can now select dimensions and the calculation method directly within a widget. The 'Dimensions' page has been renamed to 'Breakpoints' to better reflect its purpose.">After</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> 
+              </section>
+              <section id="section3-3" class="section spacer-top">
+                <h3 class="spacer-bottom-sm">Designs</h3>
+                <p class="spacer-bottom-sm">Using the proposed flow, I quickly built a prototype by leveraging existing UI patterns from the platform. I then presented it to internal teams for additional feedback and to the development team for technical validation.</p>
+                <div class="accordion spacer-bottom-sm">
+                  <input type="checkbox" title="Click to expand" name="collapse4" id="handle4">
+                  <h5 class="handle">
+                    <label for="handle4">Show UI patterns <span class="caption">(Click to expand)</span></label>
                   </h5>
                   <div class="content">
                     <div class="row">
@@ -415,86 +486,89 @@
                         <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/widget.png" alt="Image of a widget in Rose Rocket">
                         <p class="caption content-weaker">Widgets act as assistants, offering streamlined actions to complete workflows, reduce errors, and speed up processes.</p>
                       </div>
-                    </div></div></div>
-                    <div class="spacer-bottom-sm">
-                      <div id="browser-1" class="browser">
-                        <div id="browser-top-bar">
-                          <div id="browser-page-name">Figma Prototype</div>
-                          <div class="spacer"></div>
-                          <a href="#" class="fullscreen-button" data-target="figma-prototype-1">
-                            <button class="iconbtn">
-                              <img class="iconbtn-icon" src="./files/icons/fullscreen.svg" alt="Button to open the Figma prototype in fullscreen mode" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
-                            </button>
-                          </a>
-                        </div>
-                        <div id="browser-frame">
-                          <iframe 
-                          id="figma-prototype-1" class="figma-prototype"
-                          src="https://embed.figma.com/proto/N9SRRVSCsPnaYeIs8oBSYx/Case-Studies-(2024)?page-id=2669%3A172565&node-id=2669-173190&node-type=frame&viewport=1200%2C741%2C0.19&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2669%3A173190&embed-host=share">
-                        </iframe>
-                      </div>
-                    </div></div>
-                    <p class="caption">An interactive prototype of the designs for Rating Engine, highlighting key user flows.</p>
-                  </section>
-                </section>
-                <hr class="hr">
-                <section id="section4" class="section spacer-top">
-                  <h2 class="spacer-bottom-sm content-highlight">Phase 2: Test & Iterate</h2>
-                  <section id="section4-1" class="section spacer-top">
-                    <h3>Our Goal</h3>
-                  </section>
-                  <section id="section4-2" class="section spacer-top">
-                    <h3>Impact</h3>
-                  </section>
-                  <section id="section4-3" class="section spacer-top">
-                    <h3>Feedback</h3>
-                  </section>
-                </section>
-                <hr class="hr">
-                <section id="section5" class="section spacer-top">
-                  <h2 class="spacer-bottom-sm content-highlight">Reflection</h2>
-                </section>
-              </div>
-            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="spacer-bottom-sm">
+                  <div id="browser-1" class="browser">
+                    <div id="browser-top-bar">
+                      <div id="browser-page-name">Figma Prototype</div>
+                      <div class="spacer"></div>
+                      <a href="#" class="fullscreen-button" data-target="figma-prototype-1">
+                        <button class="iconbtn">
+                          <img class="iconbtn-icon" src="./files/icons/fullscreen.svg" alt="Button to open the Figma prototype in fullscreen mode" data-width="original" data-scaling="no" title="Enter fullscreen" aria-label="Enter fullscreen">
+                        </button>
+                      </a>
+                    </div>
+                    <div id="browser-frame">
+                      <iframe 
+                      id="figma-prototype-1" class="figma-prototype"
+                      src="https://embed.figma.com/proto/N9SRRVSCsPnaYeIs8oBSYx/Case-Studies-(2024)?page-id=5554%3A15418&node-id=5554-169771&node-type=frame&viewport=-23694%2C-3419%2C0.69&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5554%3A169771&embed-host=share">
+                    </iframe>
+                  </div>
+                </div></div>
+                <p class="caption">An interactive prototype of the designs for Rating Engine, highlighting key user flows.</p>
+              </section>
+            </section>
+            <hr class="hr">
+            <section id="section4" class="section spacer-top">
+              <h2 class="spacer-bottom-sm content-highlight">Phase 2: Test & Iterate</h2>
+              <section id="section4-1" class="section spacer-top">
+                <h3>Our Goal</h3>
+              </section>
+              <section id="section4-2" class="section spacer-top">
+                <h3>Impact</h3>
+              </section>
+              <section id="section4-3" class="section spacer-top">
+                <h3>Feedback</h3>
+              </section>
+            </section>
+            <hr class="hr">
+            <section id="section5" class="section spacer-top">
+              <h2 class="spacer-bottom-sm content-highlight">Reflection</h2>
+            </section>
+          </div>
+        </div>
 
-            <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
-          </main>
+        <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
+      </main>
 
-          <!--Footer-->
-          <footer class="footer">
-            <div class="footer-icons">
-              <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Visit Behance profile of Kogulan">
-                <i class="fab fa-behance footer-fa"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="Visit LinkedIn profile of Kogulan">
-                <i class="fab fa-linkedin footer-fa"></i>
-              </a>
-              <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Send email to Kogulan">
-                <i class="fas fa-envelope footer-fa"></i>
-              </a>
-            </div>
-            <p>Coded by me with 
-              <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
-              <span class="tooltip-text">And lots of ☕
-              </span>
-            </span>
-          </p>
-        </footer>
+      <!--Footer-->
+      <footer class="footer">
+        <div class="footer-icons">
+          <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Visit Behance profile of Kogulan">
+            <i class="fab fa-behance footer-fa"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="Visit LinkedIn profile of Kogulan">
+            <i class="fab fa-linkedin footer-fa"></i>
+          </a>
+          <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Send email to Kogulan">
+            <i class="fas fa-envelope footer-fa"></i>
+          </a>
+        </div>
+        <p>Coded by me with 
+          <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
+          <span class="tooltip-text">And lots of ☕
+          </span>
+        </span>
+      </p>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <script src="./js/script.js"></script>
-        <script>
-          document.querySelectorAll('.fullscreen-button').forEach(button => {
-            button.addEventListener('click', function(event) {
-              event.preventDefault();
-              const iframeId = button.getAttribute('data-target');
-              const iframe = document.getElementById(iframeId);
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      document.querySelectorAll('.fullscreen-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          const iframeId = button.getAttribute('data-target');
+          const iframe = document.getElementById(iframeId);
 
-              if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
+          if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
     } else if (iframe.mozRequestFullScreen) { // Firefox
       iframe.mozRequestFullScreen();
     } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
@@ -503,8 +577,8 @@
       iframe.msRequestFullscreen();
     }
   });
-          });
-        </script>
+      });
+    </script>
 
-      </body>
-      </html>
+  </body>
+  </html>
