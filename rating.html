@@ -96,9 +96,9 @@
             <p class="p-header">Company</p>
             <p class="p-description spacer-bottom-sm content-weak">Rose Rocket</p>
             <p class="p-header">Team</p>
-            <p class="p-description spacer-bottom-sm content-weak">1 Product Designer (myself), 1 Product Manager, 1 Engineering Lead, 3 Engineers</p>
+            <p class="p-description spacer-bottom-sm content-weak">1 Product Designer (myself), 1 Product Manager, 1 Engineering Lead, 6 Engineers</p>
             <p class="p-header">Role</p>
-            <p class="p-description spacer-bottom-sm content-weak">As the sole product designer, I led the end-to-end design of the Rating Engine, working closely with the PM and Engineering Lead to define requirements, conduct user research, and collaborate with our Solutions teams to refine the feature.</p>
+            <p class="p-description spacer-bottom-sm content-weak">As the sole product designer, I led the end-to-end design of LTL rating in the Rating Engine, working closely with the PM and Engineering Lead to define requirements, conduct user research, and collaborate with our Solutions team to refine the feature.</p>
             <p class="p-header">Duration</p>
             <p class="p-description spacer-bottom-sm content-weak">4 months (Jul - Oct 2024)</p>
             <p class="p-header">Tool(s)</p>
@@ -381,21 +381,21 @@
               </section>
               <section id="section3-2" class="section spacer-top"> 
                 <h3 class="spacer-bottom-sm">User flows</h3>
-                <p class="spacer-bottom-sm">To better understand the current state, I mapped the existing user flow for building a tariff. This exercise highlighted essential changes and uncovered further opportunities to enhance efficiency and user experience. Using these insights, I then outlined a proposed flow, which I validated with the Solutions team before proceeding to the design phase.</p>
+                <p class="spacer-bottom-sm">To better understand the current state, I mapped the existing user flow for building a tariff. This exercise highlighted essential changes and uncovered further opportunities to enhance efficiency. Using these insights, I then outlined a proposed flow, which I validated with the Solutions team before proceeding to designs.</p>
                 <div class="toggle-container spacer-bottom-sm">
                   <!-- Current Flow Image with Fancybox -->
                   <a data-toggle="tooltip" title="Click to expand" href="./files/rating/userFlow-before.png" data-fancybox="drawing" data-caption="Current user flow for creating a tariff.">
                     <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" src="./files/rating/userFlow-before.png" alt="Current user flow image">
                   </a>
-
+                  <p class="caption">Current user flow for creating a tariff (click to expand).</p>
                   <div class="tab-container">
                     <!-- Current Flow Tab (active by default) -->
-                    <div class="tab active" data-image="./files/rating/userFlow-before.png" data-caption="Current user flow for creating a tariff.">
+                    <div class="tab active" data-image="./files/rating/userFlow-before.png" data-caption="Current user flow for creating a tariff (click to expand).">
                       Current Flow
                     </div>
 
                     <!-- Proposed Flow Tab -->
-                    <div class="tab" data-image="./files/rating/userFlow-after.png" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey.">
+                    <div class="tab" data-image="./files/rating/userFlow-after.png" data-caption="Proposed user flow with changes marked. Enhancements include new widgets and step adjustments to streamline the user journey (click to expand).">
                       Proposed Flow
                     </div>
                   </div>
@@ -440,18 +440,57 @@
 
                     <!-- Step 3 -->
                     <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 3: Add fuel</h4>
+                            <p class="content-weaker">Optionally, users can add fuel to their tariff. In doing so, a separate fuel line item would be added to their rate.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-detailWidget.png" alt="Toggle Image">
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Step 4 -->
+                    <div class="callout-feedback spacer-bottom-sm">
                       <div class="toggle-container">
                         <div class="row">
                           <div class="col-12 col-lg-6">
-                            <h4>Step 3: Add dimensions & calculation method</h4>
-                            <p class="content-weaker">User selects a calculation method and dimensions for the tariff.</p>
+                            <h4>Step 4: Add dimensions & calculation method</h4>
+                            <p class="content-weaker">User selects a calculation method and dimensions for the tariff, including:</p>
+                            <ul>
+                              <li class="regular-text content-weaker">Flat rate</li>
+                              <li class="regular-text content-weaker">Per dimension <span class="tag-bg"><span class="tag-text">NEW</span></span></li>
+                              <li class="regular-text content-weaker">CWT <span class="tag-bg"><span class="tag-text">NEW</span></span></li>
+                            </ul>
                           </div>
                           <div class="col-12 col-lg-6">
                             <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-dimension-before.png" alt="Toggle Image">
                              <p class="caption">Users had to navigate to a separate page to choose dimensions and the calculation method.</p>
                             <div class="tab-container">
-                              <div class="tab active" data-image="./files/rating/p2-dimension-before.png" data-caption="Users had to navigate to a separate page to choose dimensions and the calculation method.">Before</div>
-                              <div class="tab" data-image="./files/rating/p2-dimension-after.png" data-caption="Users can now select dimensions and the calculation method directly within a widget. The 'Dimensions' page has been renamed to 'Breakpoints' to better reflect its purpose.">After</div>
+                              <div class="tab active" data-image="./files/rating/p2-dimension-before.png" data-caption="Users had to navigate to a separate page to choose dimensions and the calculation method, as well as define breakpoints.">Before</div>
+                              <div class="tab" data-image="./files/rating/p2-dimension-after.png" data-caption="Users can now choose dimensions and the calculation method directly within a widget.">After</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                      <div class="toggle-container">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 5: Add breakpoints</h4>
+                            <p class="content-weaker">User defines the breakpoints for their prices.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-breakpoint-before.png" alt="Toggle Image">
+                             <p class="caption">After selecting a dimension and calculation method, users defined their price breakpoints on the same page.</p>
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/rating/p2-breakpoint-before.png" data-caption="After selecting a dimension and calculation method, users defined their price breakpoints on the same page.">Before</div>
+                              <div class="tab" data-image="./files/rating/p2-breakpoint-after.png" data-caption="Now titled 'Breakpoints,' users only need to define their breakpoints on this page.">After</div>
                             </div>
                           </div>
                         </div>
@@ -463,7 +502,7 @@
               </section>
               <section id="section3-3" class="section spacer-top">
                 <h3 class="spacer-bottom-sm">Designs</h3>
-                <p class="spacer-bottom-sm">Using the proposed flow, I quickly built a prototype by leveraging existing UI patterns from the platform. I then presented it to internal teams for additional feedback and to the development team for technical validation.</p>
+                <p class="spacer-bottom-sm">Following the proposed flow, I rapidly built a prototype by utilizing existing UI patterns from our platform. I then presented it to internal teams for further feedback and to the development team for technical validation.</p>
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse4" id="handle4">
                   <h5 class="handle">
