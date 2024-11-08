@@ -1411,11 +1411,11 @@ a .logo {
 }
 
 @media only screen and (max-width:1052px){
-.button {
-  width: 100%; /* Make the button full width */
-  box-sizing: border-box; /* Ensures padding doesn't expand beyond full width */
-  margin-top: 32px;
-}
+  .button {
+    width: 100%; /* Make the button full width */
+    box-sizing: border-box; /* Ensures padding doesn't expand beyond full width */
+    margin-top: 32px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1534,4 +1534,9 @@ hr {
   h1 {
     font-size: 6rem;
   }
+
+  .scrollbtn-text {
+    display: none;
+  }
+
 }
