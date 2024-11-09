@@ -141,13 +141,16 @@
               <li>
                 <a class="nav-link" href="#section4" aria-label="Navigate to Phase 2: Launch section">Phase 2: Test & Iterate</a>
                 <ul class="nav flex-column">
-                  <li><a class="nav-link" href="#section4-1">Our Goal</a></li>
-                  <li><a class="nav-link" href="#section4-2">Impact</a></li>
-                  <li><a class="nav-link" href="#section4-3">Feedback</a></li>
+                  <li><a class="nav-link" href="#section4-1">Methodology</a></li>
+                  <li><a class="nav-link" href="#section4-2">Feedback</a></li>
                 </ul>
               </li>
               <li>
-                <a class="nav-link" href="#section5" aria-label="Navigate to Reflection section">Reflection</a>
+                <a class="nav-link" href="#section5" aria-label="Navigate to Phase 3: Release section">Phase 3: Release</a>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link" href="#section5-1">Impact</a></li>
+                  <li><a class="nav-link" href="#section5-2">Future considerations</a></li>
+                </ul>
               </li>
               <!-- Add more list items as needed -->
             </ul>
@@ -505,15 +508,15 @@
                       <div class="toggle-container">
                         <div class="row">
                           <div class="col-12 col-lg-6">
-                            <h4>Updated dimensions list</h4>
-                            <p class="content-weaker">With the addition of more dimensions to the list, the dropdown for selecting dimensions was reorganized and redesigned for improved categorization.</p>
+                            <h4>Enhanced dimensions list</h4>
+                            <p class="content-weaker">The dimensions dropdown was reorganized and redesigned to improve categorization, with additional dimensions added.</p>
                           </div>
                           <div class="col-12 col-lg-6">
                             <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-dimensionDropdown-before.png" alt="Toggle Image">
-                            <p class="caption">Users had to navigate to a separate, hidden section to manage the tariff's dimension and calculation method.</p>
+                            <p class="caption">Users had to interpret dimensions by short form, and the list lacked categorization.</p>
                             <div class="tab-container">
-                              <div class="tab active" data-image="./files/rating/p2-dimensionDropdown-before.png" data-caption="Users had to navigate to a separate, hidden section to manage the tariff's dimension and calculation method.">Before</div>
-                              <div class="tab" data-image="./files/rating/p2-dimensionDropdown-after.png" data-caption="Users can now manage the tariff's dimension and calculation method directly from the board, data panel or via widget.">After</div>
+                              <div class="tab active" data-image="./files/rating/p2-dimensionDropdown-before.png" data-caption="Users had to interpret dimensions by short form, and the list lacked categorization.">Before</div>
+                              <div class="tab" data-image="./files/rating/p2-dimensionDropdown-after.png" data-caption="Users can now easily locate dimensions by category, with full names and short forms provided.">After</div>
                             </div>
                           </div>
                         </div>
@@ -528,61 +531,167 @@
             <section id="section4" class="section spacer-top">
               <h2 class="spacer-bottom-sm content-highlight">Phase 2: Test & Iterate</h2>
               <section id="section4-1" class="section spacer-top">
-                <h3>Our Goal</h3>
+                <h3 class="spacer-bottom-sm">Methodology</h3>
+                <p class="spacer-bottom-sm">To validate our initial designs, I conducted research with both internal and external stakeholders:</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="callout spacer-bottom-sm">
+                      <h4 class="content-highlight">Internal feedback</h4>
+                      <h5>Who</h5>
+                      <p class="content-weak">Solutions team with extensive trucking industry experience.</p>
+                      <h5>What</h5>
+                      <p class="content-weak">Gathered insights to identify pain points and inefficiencies with our proposed designs.</p>
+                      <h5>How</h5>
+                      <p class="content-weak">Attended "Rocket Lab" sessions, where I presented designs to uncover inefficiencies or points of confusion, allowing us to refine the design further.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="callout spacer-bottom-sm">
+                      <h4 class="content-highlight">External feedback</h4>
+                      <h5>Who</h5>
+                      <p class="content-weak">Enterprise customers with rating-focused contracts.</p>
+                      <h5>What</h5>
+                      <p class="content-weak">Compared our designs to their existing workflows to identify points of confusion.</p>
+                      <h5>How</h5>
+                      <p class="content-weak">Joined customer calls to discuss their current processes and introduce our flows. Their feedback highlighted where our design aligned or diverged from their needs.</p>
+                    </div>
+                  </div>
+                </div>
               </section>
               <section id="section4-2" class="section spacer-top">
-                <h3>Impact</h3>
-              </section>
-              <section id="section4-3" class="section spacer-top">
-                <h3>Feedback</h3>
+                <h3 class="spacer-bottom-sm">Feedback</h3>
+                <p class="spacer-bottom-sm">Through these sessions, we were able to make the following improvements:</p>
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Simplified breakpoints</h4>
+                        <p class="content-weaker">Users found it frustrating to set up breakpoints in the current design, as it was difficult to view all dimension breakpoints and challenging to add or delete them.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-simpleBreakpoints-before.png" alt="Toggle Image">
+                        <p class="caption">Users could only see a limited number of breakpoints and had to scroll horizontally if more than five were added.</p>
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/rating/p2-simpleBreakpoints-before.png" data-caption="Users could only see a limited number of breakpoints and had to scroll horizontally if more than five were added.">Before</div>
+                          <div class="tab" data-image="./files/rating/p2-simpleBreakpoints-after.png" data-caption="With horizontal stacking, users can now view their entire set of breakpoints with ease.">After</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Streamlined tariff assignment</h4>
+                        <p class="content-weaker">Users found the current tariff assignment method cumbersome, as it required navigating to each customer or partner individually.</p>
+                        <p class="content-weaker">Many preferred a bulk assignment option, especially those managing tariffs across hundreds of partners.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-partner-before.png" alt="Toggle Image">
+                        <p class="caption">Users had to navigate to each partner or customer to individually assign tariffs.</p>
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/rating/p2-partner-before.png" data-caption="Users had to navigate to each partner or customer to individually assign tariffs.">Before</div>
+                          <div class="tab" data-image="./files/rating/p2-partner-after.png" data-caption="Users can now bulk assign partners or customers directly from the tariff.">After</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="callout-feedback spacer-bottom-sm">
+                  <div class="toggle-container">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <h4>Quick rate breakdowns</h4>
+                        <p class="content-weaker">Users needed a faster way to view rate breakdowns without expanding each card, and they also wanted the ability to quickly reference the original tariff.</p>
+                        <p class="content-weaker"> This became especially critical for customers managing hundreds of tariffs, which was common among those we interviewed.</p>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/p2-rateBreakdown-before.png" alt="Toggle Image">
+                        <p class="caption">Users had to expand each card to see a rate breakdown and had no way to navigate back to the tariff.</p>
+                        <div class="tab-container">
+                          <div class="tab active" data-image="./files/rating/p2-rateBreakdown-before.png" data-caption="Users had to expand each card to see a rate breakdown and had no way to navigate back to the tariff.">Before</div>
+                          <div class="tab" data-image="./files/rating/p2-rateBreakdown-after.png" data-caption="Users can now view a detailed rate breakdown by simply hovering over the cost, with a convenient link added to access the tariff directly.">After</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </section>
             </section>
             <hr class="hr">
             <section id="section5" class="section spacer-top">
-              <h2 class="spacer-bottom-sm content-highlight">Reflection</h2>
+              <h2 class="spacer-bottom-sm content-highlight">Phase 3: Release</h2>
+              <p>With all feedback addressed, we were ready to launch. In September, we introduced LTL rating to our users, and the reception was incredible:</p>
+              <section id="section5-1" class="section spacer-top">
+                <h3 class="spacer-bottom-sm">Impact</h3>
+                <div class="row">
+                  <div class="col-lg-6 d-flex">
+                    <div class="callout">
+                     <img class="icon spacer-bottom-sm" src="./files/icons/growth.svg" width="48" height="48" alt="Chart with upward arrow" caption="" data-width="original" data-scaling="no">
+                     <h4>Significant revenue driver</h4>
+                     <p class="content-weaker">Several major enterprise deals hinging on LTL rating were able to close, <b class="content-highlight">contributing over $4.4M</b> in contracted ARR.</p>
+                   </div>
+                 </div>
+                 <div class="col-lg-6 d-flex">
+                  <div class="callout">
+                    <img class="icon spacer-bottom-sm" src="./files/icons/money.svg" width="48" height="48" alt="Money symbol" caption="" data-width="original" data-scaling="no">
+                    <h4>Increased growth</h4>
+                    <p class="content-weaker">xyz</p>
+                  </div>
+                </div> 
+              </div>
             </section>
-          </div>
+            <section id="section5-2" class="section spacer-top">
+              <h3 class="spacer-bottom-sm">Future considerations</h3>
+              <p class="spacer-bottom-sm">Empty text.</p>
+            </section>
+          </section>
         </div>
+      </div>
 
-        <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
-      </main>
+      <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up" aria-live="polite"></span><span class="scrollbtn-text">Scroll to top</span></button>
+    </main>
 
-      <!--Footer-->
-      <footer class="footer">
-        <div class="footer-icons">
-          <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Visit Behance profile of Kogulan">
-            <i class="fab fa-behance footer-fa"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="Visit LinkedIn profile of Kogulan">
-            <i class="fab fa-linkedin footer-fa"></i>
-          </a>
-          <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Send email to Kogulan">
-            <i class="fas fa-envelope footer-fa"></i>
-          </a>
-        </div>
-        <p>Coded by me with 
-          <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
-          <span class="tooltip-text">And lots of ☕
-          </span>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer-icons">
+        <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Visit Behance profile of Kogulan">
+          <i class="fab fa-behance footer-fa"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="Visit LinkedIn profile of Kogulan">
+          <i class="fab fa-linkedin footer-fa"></i>
+        </a>
+        <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Send email to Kogulan">
+          <i class="fas fa-envelope footer-fa"></i>
+        </a>
+      </div>
+      <p>Coded by me with 
+        <span class="tooltip-container wiggle"><span class="glow">❤️</span> 
+        <span class="tooltip-text">And lots of ☕
         </span>
-      </p>
-    </footer>
+      </span>
+    </p>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/jquery.fancybox.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
-    <script>
-      document.querySelectorAll('.fullscreen-button').forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          const iframeId = button.getAttribute('data-target');
-          const iframe = document.getElementById(iframeId);
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/jquery.fancybox.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    document.querySelectorAll('.fullscreen-button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const iframeId = button.getAttribute('data-target');
+        const iframe = document.getElementById(iframeId);
 
-          if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
     } else if (iframe.mozRequestFullScreen) { // Firefox
       iframe.mozRequestFullScreen();
     } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
@@ -591,8 +700,8 @@
       iframe.msRequestFullscreen();
     }
   });
-      });
-    </script>
+    });
+  </script>
 
-  </body>
-  </html>
+</body>
+</html>
