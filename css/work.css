@@ -418,7 +418,7 @@ h4 {
 h5 {
   font-size: 1.25rem;
   letter-spacing: 0.025rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -467,6 +467,7 @@ ul li.regular-text {
 
 .caption {
   font-size: 0.9rem;
+  font-weight: 400;
   color: var(--color-content-weaker);
 }
 
