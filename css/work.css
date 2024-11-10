@@ -13,7 +13,7 @@
   --color-blue-100: rgba(66,189,255,0.1);
   --color-blue-000: rgba(66,189,255,0.05);
   --color-red-900: rgba(255,52,100,1);
-  --color-green: #b0f588;
+  --color-green: rgba(176, 245, 136, 1);
   --color-orange-900: rgba(226,130,51,1);
   --color-orange-800: rgba(226,130,51,0.8);
   --color-orange-700: rgba(226,130,51,0.7);
@@ -36,7 +36,7 @@
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
   --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue, mediumorchid);
-  --color-gradient-strong: linear-gradient(#0C0C12, #000);
+  --color-gradient-strong: linear-gradient(rgba(12, 12, 18, 1), black);
   --color-white-900: rgba(255,255,255,1);
   --color-white-800: rgba(255,255,255,0.8);
   --color-white-700: rgba(255,255,255,0.7);
