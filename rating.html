@@ -415,24 +415,24 @@
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse4" id="handle4">
                   <h5 class="handle">
-                    <label for="handle4">Show Platform UI patterns <span class="caption">(Click to expand)</span></label>
+                    <label for="handle4">Show Platform components <span class="caption">(Click to expand)</span></label>
                   </h5>
                   <div class="content">
                     <div class="row">
-                      <div class="col-12 d-flex flex-column">
+                      <div class="col-12 d-flex flex-column mb-4">
                         <h4>Record view</h4>
-                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/3panel.png" alt="Image of a 3-panel record view in Rose Rocket">
-                        <p class="caption content-weaker">The standard view of a record in Platform, featuring navigation (left), an activity panel (center), and a data panel (right).</p>
+                        <img class="img-responsive spacer-bottom-xs" src="./files/rating/3panel.png" alt="Image of a 3-panel record view in Rose Rocket">
+                        <p class="caption content-weaker">The standard record view in the Platform features a left navigation panel for accessing tools, a central activity panel displaying user activity logs and widgets (explained below), and a right data panel showing a list of all fields on the Object.</p>
                       </div>
                       <div class="col-md-6 d-flex flex-column">
                         <h4>Board</h4>
-                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/board.png" alt="Image of a board in Rose Rocket">
-                        <p class="caption content-weaker">A spreadsheet-like view that provides an enhanced overview of records for each object.</p>
+                        <img class="img-responsive spacer-bottom-xs" src="./files/rating/board.png" alt="Image of a board in Rose Rocket">
+                        <p class="caption content-weaker">A spreadsheet-style view offering a detailed overview of records, where columns represent the fields of the Object.</p>
                       </div>
                       <div class="col-md-6 d-flex flex-column">
                         <h4>Widget</h4>
-                        <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/rating/widget.png" alt="Image of a widget in Rose Rocket">
-                        <p class="caption content-weaker">Widgets act as assistants, offering streamlined actions to complete workflows, reduce errors, and speed up processes.</p>
+                        <img class="img-responsive spacer-bottom-xs" src="./files/rating/widget.png" alt="Image of a widget in Rose Rocket">
+                        <p class="caption content-weaker">Widgets serve as assistants, enabling streamlined actions to enhance workflows, minimize errors, and accelerate processes.</p>
                       </div>
                     </div>
                   </div>
@@ -455,14 +455,170 @@
                     </iframe>
                   </div>
                 </div></div>
-                <p class="caption">An interactive prototype of the designs for Rating Engine, highlighting key user flows.</p>
+                <p class="caption spacer-bottom-sm">An interactive prototype of the designs for Rating Engine, highlighting key user flows.</p>
+                
+                <div class="accordion spacer-bottom-xs">
+                  <input type="checkbox" title="Click to expand" name="collapse3" id="handle9" checked>
+                  <h5 class="handle">
+                    <label for="handle9">Show flow breakdown <span class="caption">(Click to expand)</span></label>
+                  </h5>
+                  <div class="content">
+
+                    <!-- Step 1 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                      <div class="row">
+                        <div class="col-12 col-lg-6">
+                          <h4>Step 1: Create new tariff</h4>
+                          <p class="content-weaker">User creates a new tariff by clicking "Create tariff" on the  board.</p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-createTariff.png">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                      <div class="row">
+                        <div class="col-12 col-lg-6">
+                          <h4>Step 2: Add details</h4>
+                          <p class="content-weaker">User inputs key details, including a name, description, effective start and end dates (defining when the tariff is active), and specify the tariff type (Customer or Partner).</p>
+                          <p class="content-weaker">User enters key details, such as a name, description, effective start and end dates (defining when the tariff is active), and tariff type (specifying whether it applies to a Customer or Partner).</p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-detailWidget.png">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                      <div class="row">
+                        <div class="col-12 col-lg-6">
+                          <h4>Step 3: Add fuel</h4>
+                          <p class="content-weaker">User can optionally add fuel to their tariff, which creates a separate line item for a fuel surcharge (sourced from the EIA index) in their rate.</p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-fuelWidget.png">
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Step 4 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 4: Add dimensions & calculation method</h4>
+                            <p class="content-weaker">User selects a dimension and calculation method for the tariff, including:</p>
+                            <ul>
+                              <li class="regular-text content-weaker">Flat rate</li>
+                              <li class="regular-text content-weaker">Per dimension <span class="tag-bg"><span class="tag-text">NEW</span></span></li>
+                              <li class="regular-text content-weaker">CWT <span class="tag-bg"><span class="tag-text">NEW</span></span></li>
+                            </ul>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-dimension.png">
+                            <p class="caption">In this example, a user selects "Per dimension" as the calculation method, and "Pound (lb)" as the dimension</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 5: Add breakpoints</h4>
+                            <p class="content-weaker">User navigates to "Breakpoints" to add dimensional breakpoints for pricing, which can vary from one (single pricing) to multiple (variable pricing).</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-breakpoint-after.png" alt="Toggle Image">
+                            <p class="caption">In this example, the user defines three breakpoints: 1–499 lbs, 500–999 lbs, and 1000+ lbs.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 6: Add lanes</h4>
+                            <p class="content-weaker">User navigates to "Lanes & Rates" to add lanes to their tariff.</p>
+                            <p class="content-weaker">Lanes are made up of a pair of pickup and delivery locations. A tariff is only applied if the Order matches one of its defined lanes. Tariffs can have hundreds of defined lanes with unique rates per lane (shown below)</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-lanes.png">
+                            <p class="caption">In this example, a user defines multiple East Coast lanes, including one from Toronto (TO) to Quebec (QC).</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 7: Add rates</h4>
+                            <p class="content-weaker">For each defined lane, the user specifies rates. If multiple breakpoints were set, individual rates must be specified for each breakpoint.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-rates.png">
+                            <p class="caption">In this example, the user needs to define rates for each breakpoint and repeat this process for every lane.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 8: Assign to customer or partner</h4>
+                            <p class="content-weaker">After creating a tariff, it must be assigned to one or more customer(s) or partner(s) in order to become active.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-partner-before.png">
+                            <p class="caption">In this example, a user assigns the tariff to Package Pals (a partner).</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 9: Find rates</h4>
+                            <p class="content-weaker">Once a tariff is created and assigned, users can use them by creating an Order.</p>
+                            <p class="content-weaker">If an Order’s pickup and delivery locations match lanes on a Partner tariff, rates are automatically calculated and displayed. This helps users decide which Partner (the company moving the freight) to use in order to maximize margins.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-useRates.png">
+                            <p class="caption">In this example, a user creates a TO-QC order, which matches one of the defined lanes in the Package Pals tariff created above. Consequently, rates from this tariff will surface in the list.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="callout-feedback spacer-bottom-sm">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <h4>Step 10: Select a rate</h4>
+                            <p class="content-weaker">Once users select a preferred rate and partner, they are automatically assigned to the Order, with costs and margins updated instantly, significantly streamlining the process.</p>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <img class="img-responsive spacer-bottom-xs" src="./files/rating/p2-useRates-selected.png">
+                            <p class="caption">Users can choose a rate as-is or edit them (via Cost Breakdown). In this example, Package Pals' rate is selected, which automatically assigns them to the Order, and updates their cost and margin.</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="accordion spacer-bottom-sm">
                   <input type="checkbox" title="Click to expand" name="collapse3" id="handle3">
                   <h5 class="handle">
                     <label for="handle3">Show main changes <span class="caption">(Click to expand)</span></label>
                   </h5>
                   <div class="content">
-                    <p>In addition to supporting new calculation methods for LTL rating, we made several other quality-of-life improvements:</p>
+                    <p>In addition to new functionality, we made several other quality-of-life improvements to the original designs:</p>
                     <!-- Main change #1--> 
                     <div class="callout-feedback spacer-bottom-sm">
                       <div class="toggle-container">
@@ -524,7 +680,8 @@
                     </div>
 
                   </div>
-                </div> 
+                </div>
+
               </section>
             </section>
             <hr class="hr">

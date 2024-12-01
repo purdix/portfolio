@@ -86,6 +86,7 @@
   --color-border-submitbutton: var(--color-purple-400);
   --color-border-button-default: var(--color-white-000);
   --color-border-button-hover: var(--color-white-100);
+  --color-border-callout: var(--color-white-200);
 }
 
 /*-------------------- General --------------------*/
@@ -122,16 +123,45 @@ html {
   align-items: center;
 }
 
-.spacer {
-  margin-top: 60px;
+
+.spacer-top-xs {
+  margin-top: 16px;
 }
 
-.spacer-medium{
-  margin-top: 120px;
+.spacer-top-sm {
+  margin-top: 24px;
 }
 
-.spacer-large {
-  margin-top: 180px;
+.spacer-top {
+  margin-top: 32px;
+}
+
+.spacer-top-md{
+  margin-top: 40px;
+}
+
+.spacer-top-lg {
+  margin-top: 64px;
+}
+
+.spacer-bottom-xs {
+  margin-bottom: 16px;
+}
+
+.spacer-bottom-sm {
+  margin-bottom: 24px;
+}
+
+.spacer-bottom {
+  margin-bottom: 32px;
+}
+
+.spacer-bottom-md{
+  margin-bottom: 40px;
+}
+
+.spacer-bottom-lg {
+  margin-bottom: 64px;
 }
 
 a, a:hover{
@@ -313,9 +343,15 @@ p {
   line-height: 1.5;
 }
 
-.p2 {
+.p-header{
   font-size: 1.25rem;
-  line-height: 0.5;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.p-description{
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .locked-text {
@@ -334,6 +370,13 @@ p {
 
 .lock-dark {
   display: none;
+}
+
+.hr {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  border: 0;
+  border-top: 1px solid var(--color-border-default);
 }
 
 
@@ -574,6 +617,37 @@ a .logo {
 
 
 
+/*-------------------- Callout Cards ----------------*/
+.callout{
+  padding: 24px 24px 16px 24px;
+  border: 1px solid var(--color-border-callout);
+  border-radius: 12px;
+  background-color: var(--color-bg-callout);
+}
+
+.callout-strong {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this */
+  padding: 24px 24px 16px 24px;
+  background: 
+  linear-gradient(#000 0 0) padding-box,
+  linear-gradient(var(--bg-angle), var(--color-blue-900), violet) border-box;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  animation: spin 4s infinite linear;
+}
+
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+@keyframes spin {
+  to {
+    --bg-angle: 360deg;
+  }
+}
+
 /*-------------------- Tooltip ----------------------*/
 .tooltip-container {
   position: relative;
@@ -715,6 +789,34 @@ a .logo {
   width: 100%;
   height: 275px;
 }
+
+/*-------------------- Button -----------------------*/
+/*-------------------- Button ----------------------*/
+.button {
+  background-color: var(--color-bg-button-default);
+  border: 1px solid var(--color-border-button-default);
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-content-default);
+  font-size: 1.25rem;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color-bg-button-hover);
+  border: 1px solid var(--color-border-button-hover);
+}
+
+/* Focus styles for keyboard accessibility */
+.button:focus {
+  outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
+  background-color: var(--color-bg-button-hover); /* Matches hover style */
+  border-color: var(--color-border-button-hover); /* Matches hover border color */
+}
+
 /*-------------------- Scroll to Top Button --------------------*/
 .scrollbtn {
   visibility: hidden;
