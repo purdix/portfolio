@@ -100,11 +100,6 @@ html {
   font-size: 16px;
 }
 
-.index main,
-.about main {
-  margin-bottom: 250px;
-}
-
 .work-protected {
   margin: 0;
   width: 100%;
@@ -927,8 +922,7 @@ a .logo {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative; /* Change from absolute */
   width: 100%;
   padding: 60px;
   text-align: center;
