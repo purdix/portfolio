@@ -514,6 +514,11 @@ a .logo {
   animation: rotateText 30s linear infinite;
 }
 
+.textWords {
+    font-family: "Noto Sans Mono", serif;
+  font-weight: 400;
+}
+
 @keyframes rotateText{
   0%{
     transform: rotate(360deg);
