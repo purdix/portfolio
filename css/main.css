@@ -319,12 +319,6 @@ p {
   line-height: 1.5;
 }
 
-.strong-link {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--color-content-default);
-}
 
 /* SPECIAL CASES */
 .hero-subheader {
@@ -336,6 +330,7 @@ p {
 .default-subheader {
   font-size: 1.5rem;
   line-height: 1.5;
+  color: var(--color-content-weak);
 }
 
 .p-header{
