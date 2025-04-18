@@ -62,8 +62,8 @@
   --color-bg-main: var(--color-black-900);
   --color-bg-input: var(--color-white-100);
   --color-bg-tooltip: var(--color-black-900);
-  --color-bg-submitbutton-default: var(--color-purple-800);
-  --color-bg-submitbutton-hover: var(--color-purple-900);
+  --color-bg-submitbutton-default: var(--color-blue-700);
+  --color-bg-submitbutton-hover: var(--color-blue-800);
   --color-bg-dialog: var(--color-black-700);
   --color-bg-button-default: var(--color-white-100);
   --color-bg-button-hover: var(--color-white-200);
