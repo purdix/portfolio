@@ -1611,6 +1611,23 @@ hr {
   padding: 24px 24px 8px 24px;
 }
 
+.button-secondary {
+  background-color: var(--color-bg-button-default);
+  border: 1px solid var(--color-border-button-default);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-bg-button-hover);
+  border: 1px solid var(--color-border-button-hover);
+}
+
+/* Focus styles for keyboard accessibility */
+.button-secondary:focus {
+  outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
+  background-color: var(--color-bg-button-hover); /* Matches hover style */
+  border-color: var(--color-border-button-hover); /* Matches hover border color */
+}
+
 }
 
 @media only screen and (max-width: 576px) {
