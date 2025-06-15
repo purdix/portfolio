@@ -55,6 +55,7 @@
   --color-bg-dark: var(--color-black-900);
   --color-bg-card: var(--color-black-400);
   --color-bg-callout: var(--color-transparent);
+  --color-bg-callout-filled: var(--color-white-000);
   --color-bg-callout-note: var(--color-blue-000);
   --color-bg-tab: var(--color-blue-100);
   --color-bg-tooltip: var(--color-black-900);
@@ -65,6 +66,8 @@
   --color-bg-overlay: var(--color-white-100);
   --color-bg-button-default: var(--color-white-000);
   --color-bg-button-hover: var(--color-white-100);
+  --color-bg-button-secondary-default: var(--color-transparent);
+  --color-bg-button-secondary-hover: var(--color-white-000);
 
 
   --color-content-nav: var(--color-white-900);
@@ -86,6 +89,8 @@
   --color-border-tooltip: var(--color-white-100);
   --color-border-button-default: var(--color-white-000);
   --color-border-button-hover: var(--color-white-100);
+  --color-border-button-secondary-default: var(--color-transparent);
+  --color-border-button-secondary-hover: var(--color-transparent);
   --color-border-accordion-default: var(--color-white-000);
   --color-border-accordion-hover: var(--color-white-100);
 }
@@ -349,6 +354,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+.callout-filled{
+  padding: 40px 32px 8px;
+  border-radius: 12px;
+  background-color: var(--color-bg-callout-filled);
 }
 
 .callout{
@@ -1365,6 +1376,32 @@ a .logo {
   background-color: var(--color-bg-button-hover); /* Matches hover style */
   border-color: var(--color-border-button-hover); /* Matches hover border color */
 }
+
+.button-secondary {
+  background-color: var(--color-bg-button-secondary-default);
+  border: 1px solid var(--color-border-button-secondary-default);
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-content-default);
+  font-size: 1.25rem;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-bg-button-secondary-hover);
+  border: 1px solid var(--color-border-button-secondary-hover);
+}
+
+/* Focus styles for keyboard accessibility */
+.button-secondary:focus {
+  outline: 3px solid var(--color-focus-outline); /* Visible focus indicator */
+  background-color: var(--color-bg-button-secondary-hover); /* Matches hover style */
+  border-color: var(--color-border-button-secondary-hover); /* Matches hover border color */
+}
+
 
 
 /*-------------------- Toggle ----------------------*/
