@@ -872,6 +872,12 @@ a .logo {
 }
 
 /* Videos */
+.rounded-video {
+  border-radius: 16px;
+  width: 100%;
+  display: block;
+}
+
 .resp-container{
   position: relative;
   overflow: hidden;
