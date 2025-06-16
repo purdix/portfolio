@@ -36,6 +36,7 @@
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
   --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue, mediumorchid);
+  --color-gradient-orange: linear-gradient(20deg, #F57526 0%, #FFC671 100%);
   --color-gradient-strong: linear-gradient(rgba(12, 12, 18, 1), black);
   --color-white-900: rgba(255,255,255,1);
   --color-white-800: rgba(255,255,255,0.8);
@@ -193,6 +194,13 @@ h1 {
 .content-gradient-blue{
   color: transparent;
   background-image: var(--color-gradient-blue);
+  background-clip: text;
+  animation: text-spin 9s infinite linear;
+}
+
+.content-gradient-orange{
+  color: transparent;
+  background-image: var(--color-gradient-orange);
   background-clip: text;
   animation: text-spin 9s infinite linear;
 }
@@ -665,7 +673,7 @@ a .logo {
   overflow: hidden;
 }
 
-.herobg-Rating {
+.herobg-Zinnia {
   padding-top: 240px;
   background: linear-gradient(180deg, #3BA2F6 0%, #0F6AE1 100%);
   border-bottom-left-radius: 40px;
@@ -675,8 +683,19 @@ a .logo {
   overflow: hidden;
 }
 
+.herobg-Rating {
+  padding-top: 240px;
+  background: linear-gradient(180deg, #7E54DE 0%, #4B2AC0 100%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  z-index: 2; /* Sits above the black background */
+  overflow: hidden;
+}
+
+
 .full-width-image img {
-  height: 50vh;
+  height: 60vh;
   display: block;
   margin-left: auto;
   margin-right: auto
