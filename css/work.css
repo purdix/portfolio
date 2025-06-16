@@ -695,7 +695,7 @@ a .logo {
 
 
 .full-width-image img {
-  height: 60vh;
+  height: 55vh;
   display: block;
   margin-left: auto;
   margin-right: auto
@@ -1475,11 +1475,19 @@ a .logo {
   border: 1px solid var(--color-border-tab);
 }
 /*-------------------- Responsiveness ----------------------*/
+@media only screen and (max-width:1440px){
+  .full-width-image img {
+  width: 90vw;
+  height: auto;
+}
+}
+
+
 @media only screen and (max-width:1200px){
   .welcome-home {
     margin-top: 160px;
     margin-bottom: 80px;
-  }  
+  }
 
   .container {
     padding-left: 60px;
@@ -1553,11 +1561,6 @@ a .logo {
 .navbar-toggler {
   border: none;
   outline: none;
-}
-
-.full-width-image img {
-  width: 90vw;
-  height: auto;
 }
 
 .sidenav{
