@@ -195,6 +195,13 @@
               </li>
               <li>
                 <a class="nav-link" href="#section2" aria-label="Navigate to The Solution section">The Solution</a>
+                                <ul class="nav flex-column">
+                  <li><a class="nav-link" href="#section2-1">Audit</a></li>
+                  <li><a class="nav-link" href="#section2-2">Accessibility</a></li>
+                  <li><a class="nav-link" href="#section2-3">Tokens</a></li>
+                  <li><a class="nav-link" href="#section2-4">Organize & scale</a></li>
+                  <li><a class="nav-link" href="#section2-5">UI kits</a></li>
+                </ul>
               </li>
               <li>
                 <a class="nav-link" href="#section3" aria-label="Navigate to Impact">Impact</a>
@@ -210,10 +217,9 @@
         <div class="col-md-7">
           <section id="section1" class="section">
             <h2 class="spacer-bottom-sm content-highlight">The Problem</h2>
-            <section id="section1-1" class="section spacer-top">
               <h3 class="spacer-bottom-xs">A system that wasn't 'system-ing'</h3>
               <p class="spacer-bottom-sm">When I first joined Rose Rocket, the design system wasn’t really a system at all. The Figma file was disorganized, components were scattered and inconsistent, and the product's UI was a Frankenstein of various out-of-the-box libraries. This created a number of painful challenges for our team:</p>
-              <div class="row">
+              <div class="row spacer-bottom-sm">
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
                     <h4>🧩 No single source of truth</h4>
@@ -232,23 +238,70 @@
                     <p class="content-weak">Without a unified design system, building even simple interfaces took longer and required constant clarification and rework.</p>
                   </div>
                 </div>
-                                <div class="col-lg-6 d-flex mb-4">
+                <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
                     <h4>🎨 Inconsistent UI & UX</h4>
-                    <p class="content-weak">Common patterns—like buttons, forms, and tables—behaved differently across the app, creating a fragmented product experience.</p>
+                    <p class="content-weak">Core patterns, such as buttons, forms, and tables, looked and behaved differently across the app, creating a fragmented experience.</p>
                   </div>
                 </div>
               </div>
-            </section>
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/oldFileOrg.png" alt="Image showing old file organization">
+              <p class="caption spacer-bottom-sm">A screenshot of our old Figma setup, where components were scattered across multiple files with no consistent naming or structure.</p>
             </section>
             <hr class="hr">
+
             <section id="section2" class="section">
               <h2 class="spacer-bottom-sm content-highlight">The Solution</h2>
-              <div class="col-12 spacer-top-xs">
+              <h3 class="spacer-bottom-xs">Rebuilding from the ground up</h3>
+              <p class="spacer-bottom-sm">To fix the chaos, I took the lead in overhauling our design system. This wasn’t just a cleanup. It was about creating a scalable foundation that brought alignment, consistency, and speed across teams.</p>
                 <video class="rounded-video" autoplay muted loop playsinline width="100%">
                 <source src="./files/zinnia/lightDark.webm" type="video/webm">Your browser does not support the video tag.</video>
-              </div>
+              <hr class="hr">
+              <section id="section2-1" class="section">
+              <h3 class="spacer-top sm">Step 1: Audit and align</h3>
+              <p>I kicked off the rebuild by conducting a full audit of our design system. I reviewed every component in use, catalogued inconsistencies, identified accessibility issues, and documented redundancies. This audit became the foundation for prioritizing what needed to be refactored and helped align the team on where to focus our efforts.</p>
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              </section>
+
+<hr class="hr">
+              <section id="section2-2" class="section">
+              <h3 class="spacer-top sm">Step 2: Revamp color and type for accessibility</h3>
+              <p>I led the effort to overhaul our color and type foundations. Using Leonardo, I introduced a new color scale based on contrast ratios, ensuring visual consistency and accessibility across the platform. I also revamped our typographic scale, raising the minimum font size and aligning to WCAG 2.0 standards.</p> 
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              </section>
+
+              <hr class="hr">
+              <section id="section2-3" class="section">
+              <h3 class="spacer-top sm">Step 3: Rebuild components with tokens</h3>
+              <p>With the foundation set, I led the component rebuild. Many of our components were outdated—still using frames, manual overrides, and inconsistent logic. I rebuilt them using modern Figma features like Auto Layout, Variants, and Boolean logic to make them responsive, clean, and reusable.</p>
+              <p>At the same time, I introduced design tokens—defining the naming, architecture, and structure from scratch. These tokens linked our Figma styles to code, ensuring changes stayed in sync across platforms. To drive adoption, I led company-wide sessions walking teams through how and why to use tokens effectively.</p>
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              </section>
+
+              <hr class="hr">
+              <section id="section2-4" class="section">
+              <h3 class="spacer-top sm">Step 4: Organize and scale the system</h3>
+              <p>To bring structure to the chaos, I introduced an Atoms & Molecules framework to standardize how we organized components. This modular system helped designers and devs quickly find and reuse the building blocks they needed without recreating UI from scratch.</p>
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              </section>
+
+
+ <hr class="hr">
+              <section id="section2-4" class="section">
+              <h3 class="spacer-top sm">Step 5: Build for speed with UI kits</h3>
+              <p>To help the team move faster, I created UI Kits—pre-built layouts for our most commonly used flows:</p>
+                  <ul>
+    <li class="regular-text">Board layout: for data-dense table views</li>
+    <li class="regular-text">Records layout: for detailed object views (side panel, modal, full screen)</li>
+    <li class="regular-text">Widgets: for smaller UI blocks representing key actions</li>
+    </ul>
+    <p>These templates turned repeated UI into plug-and-play patterns, reducing design time and ensuring consistency.</p>
+              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              </section>
+
+
             </section>
+
        </div>
      </div>
 
