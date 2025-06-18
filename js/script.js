@@ -52,10 +52,11 @@ function initializeImageToggle() {
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         toggleImage.src = tab.getAttribute('data-image');
-        caption.textContent = tab.getAttribute('data-caption');
+        if (caption) {
+          caption.textContent = tab.getAttribute('data-caption');
+        }
       });
     });
-    // Set default active tab
     tabs[0].classList.add('active');
   });
 }

@@ -36,7 +36,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.kogulan.ca/files/og-image.jpg">
   <meta property="og:image:url" content="https://www.kogulan.ca/files/og-image.jpg">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#000">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap & Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -46,10 +46,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Extras -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
   <link href="./css/work.css" rel="stylesheet">
 </head>
-
 <body class="bg" data-spy="scroll" data-offset="230">
 
   <!-- Main Navigation -->
@@ -184,8 +183,6 @@
   </div>
 
 
-
-
     <div class="container spacer-top-lg">
       <div class="row">
         <div class="col-md-3">
@@ -210,7 +207,6 @@
               <li>
                 <a class="nav-link" href="#section4" aria-label="Navigate to Reflection">Reflection</a>
               </li>
-              <!-- Add more list items as needed -->
             </ul>
           </nav>
         </div>
@@ -389,36 +385,22 @@
   <li class="regular-text"><b>Records</b> – Multi-panel layouts for viewing and editing a single record</li>
   <li class="regular-text"><b>Widgets</b> – Modular UI blocks that drive key workflows</li>
 </ul>
+
+        <div class="toggle-container">
+          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/zinnia/uiKitBoard.png" alt="Toggle Image">
+
+          <p class="caption">Board layout with a spreadsheet-style view</p> <!-- Add this -->
+
+          <div class="tab-container">
+            <div class="tab active" data-image="./files/zinnia/uiKitBoard.png" data-caption="Board layout with a spreadsheet-style view">Board</div>
+            <div class="tab" data-image="./files/zinnia/uiKitRecord.png" data-caption="Record layout showing detailed object view">Record</div>
+            <div class="tab" data-image="./files/zinnia/uiKitWidget.png" data-caption="Widget showing custom UI block for key actions">Widget</div>
+          </div>
+        </div>
+
                 <p>These kits transformed repeated UI into plug-and-play layouts. We then created a separate, template file using realistic data, allowing designers to spin up high-fidelity prototypes in seconds.</p>
               </section>
-
-
  <hr class="hr">
-              <section id="section2-4" class="section">
-              <h3 class="spacer-top sm">Introducing Zinnia</h3>
-              <p>To help the team move faster, I created UI Kits—pre-built layouts for our most commonly used flows:</p>
-                  <ul>
-    <li class="regular-text">Board layout: for data-dense table views</li>
-    <li class="regular-text">Records layout: for detailed object views (side panel, modal, full screen)</li>
-    <li class="regular-text">Widgets: for smaller UI blocks representing key actions</li>
-    </ul>
-    <div class="content">
-<div class="toggle-container">
-                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/zinnia/uiKitBoard.png" alt="Toggle Image">
-                            <div class="tab-container">
-                              <div class="tab active" data-image="./files/zinnia/uiKitBoard.png" data-caption="A spreadsheet-style view offering a detailed overview of records, where columns represent the fields of the Object.">Board</div>
-                              <div class="tab" data-image="./files/zinnia/uiKitRecord.png" data-caption="The standard record view in the Platform features a left navigation panel for accessing tools, a central activity panel displaying user activity logs and widgets, and a right data panel showing a list of all fields on the Object.">Record</div>
-                              <div class="tab" data-image="./files/zinnia/uiKitWidget.png" data-caption="A custom UI block, enabling streamlined actions to enhance workflows, minimize errors, and accelerate processes.">Widget</div>
-                            </div>
-                            </div>
-                            </div>
-
-    <p>These templates turned repeated UI into plug-and-play patterns, reducing design time and ensuring consistency.</p>
-              </section>
-
-
-            </section>
-
        </div>
      </div>
 
@@ -447,15 +429,12 @@
 </footer>
 
 <!-- Scripts -->
-  <script
+<script
     src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-    type="module">
-  </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    type="module"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
-<script src="./js/jquery.fancybox.js"></script>
 <script>
   document.querySelectorAll('.fullscreen-button').forEach(button => {
     button.addEventListener('click', function(event) {
@@ -475,5 +454,6 @@
   });
   });
 </script>
+
 </body>
 </html>
