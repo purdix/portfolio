@@ -301,7 +301,7 @@
               <section id="section2-2" class="section">
               <h3 class="spacer-top sm">Step 2: Revamp accessibility</h3>
               <p>One of the biggest gaps I uncovered was our existing colour scale. It was manually created, with uneven steps and poor accessibility.</p> 
-              <p>Using Leonardo, I rebuilt the palette from the ground up—systematizing colours by contrast and expanding the scale from 50 to 900. Now, every midtone (500+) meets WCAG 2.0 on white backgrounds, giving us a solid foundation for accessible design.</p>
+              <p class="spacer-bottom-sm">To fix this, I used Leonardo—an open-source tool that generates color scales based on contrast ratios. It helped me rebuild our palette systematically, using contrast as the foundation. The new scale spans from 50 to 900, and every midtone (500+) now meets WCAG 2.0 standards on white backgrounds, giving us a solid, accessible foundation to build on.</p>
               <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -313,8 +313,6 @@
                 <!-- Caption underneath the image -->
                 <p class="caption">Image depicting the updated color scale built using contrast-based tooling.</p>
               </div>
-
-              <p>We also introduced new hues to better support future needs and improve design flexibility.</p> 
 
               <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
@@ -332,7 +330,7 @@
               <hr class="hr">
               <section id="section2-3" class="section">
               <h3 class="spacer-top sm">Step 3: Rebuild & tokenize</h3>
-              <p>With the foundation set, our team began rebuilding every component from the ground up. Many of them were outdated, using frames, groups, and detached styles, which made them hard to maintain. We updated them using modern Figma features like Auto Layout and Variant properties to make them more scalable and consistent.</p>
+              <p class="spacer-bottom-sm">With the foundation set, our team began rebuilding every component from the ground up. Many of them were outdated, using frames, groups, and detached styles, which made them hard to maintain. We updated them using modern Figma features like Auto Layout and Variant properties to make them more scalable and consistent.</p>
                             <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -344,7 +342,7 @@
                 <!-- Caption underneath the image -->
                 <p class="caption">Screenshot of our refactored field input, showcasing boolean, text, and other variant properties.</p>
               </div>
-              <p>In parallel, I led the effort to introduce design tokens. I defined the naming conventions, structure, and architecture from scratch, creating a bridge between Figma and code. To support adoption, I hosted a couple company-wide sessions explaining how tokens worked, why they mattered and how to use them effectively.</p>
+              <p class="spacer-bottom-sm">In parallel, I led the effort to introduce design tokens. I defined the naming conventions, structure, and architecture from scratch, creating a bridge between Figma and code. To support adoption, I hosted a couple company-wide sessions explaining how tokens worked, why they mattered and how to use them effectively.</p>
               <div class="toggle-container spacer-bottom-md">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -373,7 +371,7 @@
               <hr class="hr">
               <section id="section2-4" class="section">
               <h3 class="spacer-top sm">Step 4: Organize and scale the system</h3>
-              <p>To bring structure to the chaos, we introduced an Atomic design framework to standardize how we organized our components. This modular system helped designers and devs quickly find and reuse the building blocks they needed without recreating UI from scratch.</p>
+              <p class="spacer-bottom-sm">To bring clarity and structure, we introduced atomic design principles. I proposed a framework that grouped our components into Particles, Atoms, and Molecules—making the system easier to navigate and maintain.</p>
               <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -385,18 +383,36 @@
                 <!-- Caption underneath the image -->
                 <p class="caption">An overview of our Atomic design framework</p>
               </div>
+              <p>We then extended the system to include Organisms and Templates. Working with the team, I helped build a comprehensive UI Kit based on Rose Rocket’s three core paradigms:</p> 
+<ul>
+  <li class="regular-text"><b>Boards</b> – Spreadsheet-like overview of all records</li>
+  <li class="regular-text"><b>Records</b> – Multi-panel layouts for viewing and editing a single record</li>
+  <li class="regular-text"><b>Widgets</b> – Modular UI blocks that drive key workflows</li>
+</ul>
+                <p>These kits transformed repeated UI into plug-and-play layouts. We then created a separate, template file using realistic data, allowing designers to spin up high-fidelity prototypes in seconds.</p>
               </section>
 
 
  <hr class="hr">
               <section id="section2-4" class="section">
-              <h3 class="spacer-top sm">Step 5: Build for speed with UI kits</h3>
+              <h3 class="spacer-top sm">Introducing Zinnia</h3>
               <p>To help the team move faster, I created UI Kits—pre-built layouts for our most commonly used flows:</p>
                   <ul>
     <li class="regular-text">Board layout: for data-dense table views</li>
     <li class="regular-text">Records layout: for detailed object views (side panel, modal, full screen)</li>
     <li class="regular-text">Widgets: for smaller UI blocks representing key actions</li>
     </ul>
+    <div class="content">
+<div class="toggle-container">
+                            <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/zinnia/uiKitBoard.png" alt="Toggle Image">
+                            <div class="tab-container">
+                              <div class="tab active" data-image="./files/zinnia/uiKitBoard.png" data-caption="A spreadsheet-style view offering a detailed overview of records, where columns represent the fields of the Object.">Board</div>
+                              <div class="tab" data-image="./files/zinnia/uiKitRecord.png" data-caption="The standard record view in the Platform features a left navigation panel for accessing tools, a central activity panel displaying user activity logs and widgets, and a right data panel showing a list of all fields on the Object.">Record</div>
+                              <div class="tab" data-image="./files/zinnia/uiKitWidget.png" data-caption="A custom UI block, enabling streamlined actions to enhance workflows, minimize errors, and accelerate processes.">Widget</div>
+                            </div>
+                            </div>
+                            </div>
+
     <p>These templates turned repeated UI into plug-and-play patterns, reducing design time and ensuring consistency.</p>
               </section>
 
