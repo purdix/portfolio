@@ -46,6 +46,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Extras -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
   <link href="./css/work.css" rel="stylesheet">
 </head>
 
@@ -196,11 +197,11 @@
               <li>
                 <a class="nav-link" href="#section2" aria-label="Navigate to The Solution section">The Solution</a>
                                 <ul class="nav flex-column">
-                  <li><a class="nav-link" href="#section2-1">Audit</a></li>
-                  <li><a class="nav-link" href="#section2-2">Accessibility</a></li>
-                  <li><a class="nav-link" href="#section2-3">Tokens</a></li>
-                  <li><a class="nav-link" href="#section2-4">Organize & scale</a></li>
-                  <li><a class="nav-link" href="#section2-5">UI kits</a></li>
+                  <li><a class="nav-link" href="#section2-1">1: Audit & align</a></li>
+                  <li><a class="nav-link" href="#section2-2">2: Revamp accessibility</a></li>
+                  <li><a class="nav-link" href="#section2-3">3: Rebuild & tokenize</a></li>
+                  <li><a class="nav-link" href="#section2-4">4: Organize & scale</a></li>
+                  <li><a class="nav-link" href="#section2-5">5: UI kits</a></li>
                 </ul>
               </li>
               <li>
@@ -245,8 +246,8 @@
                   </div>
                 </div>
               </div>
-              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/oldFileOrg.png" alt="Image showing old file organization">
-              <p class="caption spacer-bottom-sm">A screenshot of our old Figma setup, where components were scattered across multiple files with no consistent naming or structure.</p>
+              <!--<img class="img-responsive spacer-bottom-xs" src="./files/zinnia/oldFileOrg.png" alt="Image showing old file organization">
+              <p class="caption spacer-bottom-sm">A screenshot of our old Figma setup, where components were scattered across multiple files with no consistent naming or structure.</p>-->
             </section>
             <hr class="hr">
 
@@ -254,38 +255,129 @@
               <h2 class="spacer-bottom-sm content-highlight">The Solution</h2>
               <h3 class="spacer-bottom-xs">Rebuilding from the ground up</h3>
               <p class="spacer-bottom-sm">To fix the chaos, I took the lead in overhauling our design system. This wasn’t just a cleanup. It was about creating a scalable foundation that brought alignment, consistency, and speed across teams.</p>
-                <video class="rounded-video" autoplay muted loop playsinline preload="auto" width="100%">
-  <source src="./files/zinnia/lightDark.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
-              <hr class="hr">
-              <section id="section2-1" class="section">
-              <h3 class="spacer-top sm">Step 1: Audit and align</h3>
-              <p class="spacer-bottom-sm">I kicked off the rebuild by conducting a full audit of our design system. I reviewed every component, catalogued inconsistencies and identified accessibility issues. This became the foundation for prioritization and helped align the team on where to focus our efforts.</p>
-              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
-              <p class="caption spacer-bottom-sm">A screenshot of the audit spreadsheet showing notes, links, pass/fail scoring, and priorities.</p>
-              </section>
+<div class="toggle-container spacer-bottom-sm">
+  <a data-toggle="tooltip" title="Click to expand" data-fancybox data-type="video" href="./files/zinnia/lightDark.webm" data-caption="A demo showing how Zinnia supports both light and dark mode seamlessly.">
+    
+    <video 
+      class="rounded-video img-fluid img-responsive spacer-bottom-xs"
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      preload="auto" 
+      width="100%">
+      <source src="./files/zinnia/lightDark.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
 
-<hr class="hr">
+  </a>
+</div>      <hr class="hr">
+              <section id="section2-1" class="section">
+              <h3 class="spacer-top sm">Step 1: Audit & align</h3>
+              <p class="spacer-bottom-sm">I kicked off the rebuild by conducting a full audit of our design system. I reviewed every component, catalogued inconsistencies and identified accessibility issues. This became the foundation for prioritization and helped align the team on where to focus our efforts.</p>
+              
+              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/audit.png" 
+                   data-fancybox 
+                   data-caption="A screenshot of the audit spreadsheet showing notes, links, pass/fail scoring, and priorities.">
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/audit.png" 
+                       alt="A screenshot of the audit spreadsheet showing notes, links, pass/fail scoring, and priorities">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">A screenshot of the audit spreadsheet showing notes, links, pass/fail scoring, and priorities.</p>
+              </div>
+
+              <hr class="hr">
               <section id="section2-2" class="section">
-              <h3 class="spacer-top sm">Step 2: Revamp color and type for accessibility</h3>
-              <p>I led the effort to overhaul our color and type foundations. Using Leonardo, I introduced a new color scale based on contrast ratios, ensuring visual consistency and accessibility across the platform. I also revamped our typographic scale, raising the minimum font size and aligning to WCAG 2.0 standards.</p> 
-              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              <h3 class="spacer-top sm">Step 2: Revamp accessibility</h3>
+              <p>One of the biggest gaps I uncovered was our existing colour scale. It was manually created, with uneven steps and poor accessibility.</p> 
+              <p>Using Leonardo, I rebuilt the palette from the ground up—systematizing colours by contrast and expanding the scale from 50 to 900. Now, every midtone (500+) meets WCAG 2.0 on white backgrounds, giving us a solid foundation for accessible design.</p>
+              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/leonardo.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/leonardo.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Image depicting the updated color scale built using contrast-based tooling.</p>
+              </div>
+
+              <p>We also introduced new hues to better support future needs and improve design flexibility.</p> 
+
+              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/colours.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/colours.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Before-and-after comparison of our colour palette.</p>
+              </div>
               </section>
 
               <hr class="hr">
               <section id="section2-3" class="section">
-              <h3 class="spacer-top sm">Step 3: Rebuild components with tokens</h3>
-              <p>With the foundation set, I led the component rebuild. Many of our components were outdated—still using frames, manual overrides, and inconsistent logic. I rebuilt them using modern Figma features like Auto Layout, Variants, and Boolean logic to make them responsive, clean, and reusable.</p>
-              <p>At the same time, I introduced design tokens—defining the naming, architecture, and structure from scratch. These tokens linked our Figma styles to code, ensuring changes stayed in sync across platforms. To drive adoption, I led company-wide sessions walking teams through how and why to use tokens effectively.</p>
-              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              <h3 class="spacer-top sm">Step 3: Rebuild & tokenize</h3>
+              <p>With the foundation set, our team began rebuilding every component from the ground up. Many of them were outdated, using frames, groups, and detached styles, which made them hard to maintain. We updated them using modern Figma features like Auto Layout and Variant properties to make them more scalable and consistent.</p>
+                            <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/component.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/component.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Screenshot of our refactored field input, showcasing boolean, text, and other variant properties.</p>
+              </div>
+              <p>In parallel, I led the effort to introduce design tokens. I defined the naming conventions, structure, and architecture from scratch, creating a bridge between Figma and code. To support adoption, I hosted a couple company-wide sessions explaining how tokens worked, why they mattered and how to use them effectively.</p>
+              <div class="toggle-container spacer-bottom-md">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/tokens.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/tokens.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Left: FigJam brainstorm of the token structure. Right: Finalized tokens & modes implemented in Figma.</p>
+              </div>
+
+              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/slideshow.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/slideshow.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Screenshots from the two company-wide presentations.</p>
+              </div>
               </section>
 
               <hr class="hr">
               <section id="section2-4" class="section">
               <h3 class="spacer-top sm">Step 4: Organize and scale the system</h3>
               <p>To bring structure to the chaos, I introduced an Atoms & Molecules framework to standardize how we organized components. This modular system helped designers and devs quickly find and reuse the building blocks they needed without recreating UI from scratch.</p>
-              <img class="img-responsive spacer-bottom-xs" src="./files/zinnia/audit.png" alt="Image depicting a Google Sheet with an audit of our design system">
+              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/structure.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/structure.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">Screenshots from the two company-wide presentations.</p>
+              </div>
               </section>
 
 
@@ -341,6 +433,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
+<script src="./js/jquery.fancybox.js"></script>
 <script>
   document.querySelectorAll('.fullscreen-button').forEach(button => {
     button.addEventListener('click', function(event) {
