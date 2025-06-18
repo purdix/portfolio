@@ -47,6 +47,9 @@ function initializeImageToggle() {
     const toggleImage = container.querySelector('.toggle-image');
     const caption = container.querySelector('.caption');
 
+    // ✅ Skip containers without tabs or toggle image
+    if (!tabs.length || !toggleImage) return;
+
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         tabs.forEach(t => t.classList.remove('active'));
@@ -57,6 +60,7 @@ function initializeImageToggle() {
         }
       });
     });
+
     tabs[0].classList.add('active');
   });
 }
