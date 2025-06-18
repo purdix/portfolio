@@ -94,6 +94,11 @@
   box-sizing: border-box;
 }
 
+#mainNav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 html {
   scroll-behavior: smooth;
   position: relative;
@@ -107,7 +112,7 @@ html {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 

@@ -36,6 +36,7 @@
   --color-black-000: rgba(0,0,0,0.05);
   --color-gradient: linear-gradient(20deg, cyan, magenta);
   --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue, mediumorchid);
+  --color-gradient-pink: linear-gradient(20deg, hotpink, mediumorchid);
   --color-gradient-orange: linear-gradient(20deg, #F57526 0%, #FFC671 100%);
   --color-gradient-strong: linear-gradient(rgba(12, 12, 18, 1), black);
   --color-white-900: rgba(255,255,255,1);
@@ -94,11 +95,18 @@
   --color-border-button-secondary-hover: var(--color-transparent);
   --color-border-accordion-default: var(--color-white-000);
   --color-border-accordion-hover: var(--color-white-100);
+
+    --radius-lg: 12px;
 }
 
 /*-------------------- General --------------------*/
 *{
   box-sizing: border-box;
+}
+
+#mainNav {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 html {
@@ -112,7 +120,7 @@ main {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -164,7 +172,7 @@ h1 {
 }
 
 .spacer-bottom-xs {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .spacer-bottom-sm {
@@ -198,6 +206,13 @@ h1 {
   animation: text-spin 9s infinite linear;
 }
 
+.content-gradient-pink{
+  color: transparent;
+  background-image: var(--color-gradient-pink);
+  background-clip: text;
+  animation: text-spin 9s infinite linear;
+}
+
 .content-gradient-orange{
   color: transparent;
   background-image: var(--color-gradient-orange);
@@ -223,6 +238,26 @@ h1 {
 
 .content-weaker{
   color: var(--color-content-weaker);
+}
+/*-------------------- Before & after --------------------*/
+  .slider-handle {
+    transition: transform 0.2s;
+    fill: var(--color-black-500);
+    stroke: none;
+  }
+
+.slider-line{
+    --divider-width: 2px;
+    --divider-color: var(--color-black-500);
+    --default-handle-opacity: 0;
+}
+
+  .slider:hover .slider-handle {
+    transform: scale(1.2);
+  }
+
+.slider-line:hover {
+  cursor: col-resize;
 }
 
 /*-------------------- Timeline --------------------*/
@@ -675,7 +710,7 @@ a .logo {
 
 .herobg-Zinnia {
   padding-top: 240px;
-  background: linear-gradient(180deg, #3BA2F6 0%, #0F6AE1 100%);
+  background: linear-gradient(180deg, #FEB6F8 0%, #A384FF 100%);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   position: relative;

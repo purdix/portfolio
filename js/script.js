@@ -4,17 +4,28 @@ function togglePasswordVisibility() {
   passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-// Nav scroll effect
 const navbar = document.querySelector('.navbar-default');
 const scrollToTopButton = document.getElementById("scrollToTop");
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  // Navbar color change on scroll
-  navbar.classList.toggle('navbar-scrolled', scrollY > 100);
-  // Show scroll-to-top button
-  scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
-});
+// Get current page from URL
+const currentPage = window.location.pathname.split("/").pop();
+
+const scrollPages = ['index.html', 'about.html', 'work.html'];
+const staticPages = ['zinnia.html', 'objectbuilder.html', 'rating.html'];
+
+if (scrollPages.includes(currentPage) || currentPage === '') {
+  // Scroll behavior only on scroll-enabled pages
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    navbar.classList.toggle('navbar-scrolled', scrollY > 100);
+    if (scrollToTopButton) {
+      scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
+    }
+  });
+} else if (staticPages.includes(currentPage)) {
+  // Always apply navbar-scrolled on static pages
+  navbar.classList.add('navbar-scrolled');
+}
 
 // Scroll to top function
 function scrollToTop() {
@@ -121,3 +132,18 @@ const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
   (char, i) => `<span style="transform:rotate(${i * 8.6}deg)">${char}</span>`
   ).join("")
+
+
+//Before & after slider
+function initializeImageComparison() {
+  document.querySelectorAll('.image-comparison').forEach(container => {
+    const slider = container.querySelector('.image-slider');
+    const resize = container.querySelector('.image-resize');
+
+    slider.addEventListener('input', () => {
+      resize.style.width = slider.value + '%';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initializeImageComparison);

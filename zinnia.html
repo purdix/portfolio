@@ -39,6 +39,7 @@
   <meta name="theme-color" content="#000">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap & Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
@@ -74,7 +75,7 @@
 
   <!--Main Content-->
   <main class="bg" id="main-content">
-    <div  id="scrollUpTitle" tabindex="-1" class="herobg-ObjectBuilder animate__animated animate__fadeIn">
+    <div  id="scrollUpTitle" tabindex="-1" class="herobg-Zinnia animate__animated animate__fadeIn">
       <div class="full-width-image">
         <img class="animate__animated" src="./files/zinnia/zinnia.png" alt="Screenshot of Zinnia design system showing various components">
       </div>
@@ -85,7 +86,7 @@
     <div class="row">
       <div class="col-12">
                 <h1 class="animate__animated animate__fadeInUp">
-            <span class="content-gradient">Zinnia</span>
+            <span class="content-gradient-pink">Zinnia</span>
           </h1> </div></div>
           <div class="row">
       <div class="col-lg-8 mb-4">
@@ -94,26 +95,26 @@
         </div>
 
         <p class="animate__animated animate__fadeInUp content-weak spacer-top-sm spacer-bottom">
-          A case study on designing Zinnia — a modern design system built to help Rose Rocket scale with a focus on speed, consistency, and accessibility. I led the effort from the ground up, creating scalable tokens, standardizing documentation, and delivering robust UI kits to unlock:
+          A case study on designing Zinnia — a modern design system built to help Rose Rocket scale with a focus on speed, consistency, and accessibility. I led the effort from the ground up, creating scalable tokens, standardizing documentation, and delivering robust UI kits to unlock huge impact.
         </p>
 
         <div class="row animate__animated animate__fadeInUp">
           <div class="col-md-4 d-flex mb-3">
             <div class="callout-filled w-100">
-              <h5>✅ Systematized UI</h5>
-              <p class="content-weaker">Scalable, reusable patterns built for use across the product</p>
+                        <h5>✅ Faster velocity</h5>
+                        <p class="content-weaker">UI kits and templates reduced repetitive work, helping teams design and ship faster.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex mb-3">
             <div class="callout-filled w-100">
-              <h5>✅ Accessible by design</h5>
-              <p class="content-weaker">System-wide WCAG 2.0 compliance driven by tokens</p>
+                        <h5>✅ Single source of truth</h5>
+                        <p class="content-weaker">Clear documentation and tokenized components created a shared language between design and dev.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex mb-3">
             <div class="callout-filled w-100">
-              <h5>✅ Faster handoff</h5>
-              <p class="content-weaker">A shared language between Figma and code, streamlining development</p>
+                     <h5>✅ Built-in accessibility</h5>
+                        <p class="content-weaker">A new color scale ensured WCAG 2.0 compliancy out of the box.</p>
             </div>
           </div>
         </div>
@@ -198,7 +199,6 @@
                   <li><a class="nav-link" href="#section2-2">2: Revamp accessibility</a></li>
                   <li><a class="nav-link" href="#section2-3">3: Rebuild & tokenize</a></li>
                   <li><a class="nav-link" href="#section2-4">4: Organize & scale</a></li>
-                  <li><a class="nav-link" href="#section2-5">5: UI kits</a></li>
                 </ul>
               </li>
               <li>
@@ -212,21 +212,31 @@
         </div>
 
         <div class="col-md-7">
+          <div class="callout-note spacer-bottom">
+  <div class="d-flex align-items-start">
+    <div>
+      <h4 class="mb-1">🌸 Why Zinnia?</h4>
+      <p class="content-weak mb-0">
+       I named our design system <b>Zinnia</b>, inspired by the first flower grown in space and a nod to our company name, Rose Rocket. Like the platform it supports, the system is meant to grow and evolve—its name is a reminder of that goal.
+      </p>
+    </div>
+  </div>
+</div>
           <section id="section1" class="section">
             <h2 class="spacer-bottom-sm content-highlight">The Problem</h2>
               <h3 class="spacer-bottom-xs">A system that wasn't 'system-ing'</h3>
-              <p class="spacer-bottom-sm">When I first joined Rose Rocket, the design system wasn’t really a system at all. The Figma file was disorganized, components were scattered and inconsistent, and the product's UI was a Frankenstein of various out-of-the-box libraries. This created a number of painful challenges for our team:</p>
+              <p class="spacer-bottom-sm">When I joined Rose Rocket, the design system wasn’t really a system at all. The Figma file was disorganized, components were scattered, and the product UI was a patchwork of out-of-the-box libraries. This created a number of challenges:</p>
               <div class="row spacer-bottom-sm">
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
                     <h4>🧩 No single source of truth</h4>
-                    <p class="content-weak">Designers and developers worked in silos without a shared system, leading to misalignment and duplicated effort.</p>
+                    <p class="content-weak">Designers and developers worked without a shared system, leading to misalignment and duplicated effort.</p>
                   </div>
                 </div>
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
                     <h4>🔧 Reinvented patterns</h4>
-                    <p class="content-weak">Lack of reusable components meant devs had to hardcode UI repeatedly—wasting time and introducing avoidable inconsistencies.</p>
+                    <p class="content-weak">Without reusable components, devs hardcoded UI repeatedly, wasting time and introducing inconsistencies.</p>
                   </div>
                 </div>
                 <div class="col-lg-6 d-flex mb-4">
@@ -238,7 +248,7 @@
                 <div class="col-lg-6 d-flex mb-4">
                   <div class="callout">
                     <h4>🎨 Inconsistent UI & UX</h4>
-                    <p class="content-weak">Core patterns, such as buttons, forms, and tables, looked and behaved differently across the app, creating a fragmented experience.</p>
+                    <p class="content-weak">Core patterns like buttons, inputs, and tables looked and behaved differently across the app.</p>
                   </div>
                 </div>
               </div>
@@ -257,7 +267,7 @@
             <section id="section2" class="section">
               <h2 class="spacer-bottom-sm content-highlight">The Solution</h2>
               <h3 class="spacer-bottom-xs">Rebuilding from the ground up</h3>
-              <p class="spacer-bottom-sm">To fix the chaos, I took the lead in overhauling our design system. This wasn’t just a cleanup. It was about creating a scalable foundation that brought alignment, consistency, and speed across teams.</p>
+              <p class="spacer-bottom-sm">To fix the chaos, I led the effort to overhaul our design system. This wasn’t just cleanup—it was a foundational rebuild that brought alignment, consistency, and speed across teams.</p>
 <div class="spacer-bottom-sm">
   <video
     class="rounded-video img-fluid img-responsive spacer-bottom-xs"
@@ -277,7 +287,7 @@
 <hr class="hr">
               <section id="section2-1" class="section">
               <h3 class="spacer-top sm">Step 1: Audit & align</h3>
-              <p class="spacer-bottom-sm">I kicked off the rebuild by conducting a full audit of our design system. I reviewed every component, catalogued inconsistencies and identified accessibility issues. This became the foundation for prioritization and helped align the team on where to focus our efforts.</p>
+              <p class="spacer-bottom-sm">I started with a full audit of the existing system. I catalogued inconsistencies, documented accessibility gaps, and prioritized what to fix first. This set the direction and got the team aligned.</p>
               
               <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
@@ -296,9 +306,9 @@
               <hr class="hr">
               <section id="section2-2" class="section">
               <h3 class="spacer-top sm">Step 2: Revamp accessibility</h3>
-              <p>One of the biggest gaps I uncovered was our existing colour scale. It was manually created, with uneven steps and poor accessibility.</p> 
-              <p class="spacer-bottom-sm">To fix this, I used Leonardo—an open-source tool that generates color scales based on contrast ratios. It helped me rebuild our palette systematically, using contrast as the foundation. The new scale spans from 50 to 900, and every midtone (500+) now meets WCAG 2.0 standards on white backgrounds, giving us a solid, accessible foundation to build on.</p>
-              <div class="toggle-container spacer-bottom-sm">
+              <p>One major gap was our color scale—it was manually created, uneven, and not accessible.</p> 
+              <p class="spacer-bottom-sm">I used Leonardo, an open-source tool that builds color scales based on contrast. The new palette, structured from 50 to 900, ensured all midtones (500+) met WCAG 2.0 standards on neutral backgrounds.</p>
+              <div class="toggle-container spacer-bottom-md">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
                    href="./files/zinnia/leonardo.png" 
@@ -338,7 +348,7 @@
                 <!-- Caption underneath the image -->
                 <p class="caption">Screenshot of our refactored field input, showcasing boolean, text, and other variant properties.</p>
               </div>
-              <p class="spacer-bottom-sm">In parallel, I led the effort to introduce design tokens. I defined the naming conventions, structure, and architecture from scratch, creating a bridge between Figma and code. To support adoption, I hosted a couple company-wide sessions explaining how tokens worked, why they mattered and how to use them effectively.</p>
+              <p class="spacer-bottom-sm">In parallel, I introduced design tokens, defining the naming, structure, and system architecture from scratch. I also led company-wide sessions to drive adoption and help teams use them effectively.</p>
               <div class="toggle-container spacer-bottom-md">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -367,7 +377,7 @@
               <hr class="hr">
               <section id="section2-4" class="section">
               <h3 class="spacer-top sm">Step 4: Organize and scale the system</h3>
-              <p class="spacer-bottom-sm">To bring clarity and structure, we introduced atomic design principles. I proposed a framework that grouped our components into Particles, Atoms, and Molecules—making the system easier to navigate and maintain.</p>
+              <p class="spacer-bottom-sm">To bring structure and scalability, I introduced atomic design principles, organizing components into Particles, Atoms, and Molecules for easier navigation and maintenance.</p>
               <div class="toggle-container spacer-bottom-sm">
                 <!-- Image with Fancybox -->
                 <a data-toggle="tooltip" title="Click to expand" 
@@ -377,29 +387,111 @@
                        src="./files/zinnia/structure.png">
                 </a>
                 <!-- Caption underneath the image -->
-                <p class="caption">An overview of our Atomic design framework</p>
+                <p class="caption">An overview of our Atomic design framework in Figma.</p>
               </div>
-              <p>We then extended the system to include Organisms and Templates. Working with the team, I helped build a comprehensive UI Kit based on Rose Rocket’s three core paradigms:</p> 
+              <h4 class="spacer-top sm">UI kit</h4>
+              <p>We then extended it to include Organisms and Templates. I worked with the team to build a comprehensive UI Kit based on Rose Rocket’s three layout paradigms:</p> 
 <ul class="spacer-bottom-sm">
-  <li class="regular-text"><b>Boards</b> – Spreadsheet-like overview of all records</li>
-  <li class="regular-text"><b>Records</b> – Multi-panel layouts for viewing and editing a single record</li>
-  <li class="regular-text"><b>Widgets</b> – Modular UI blocks that drive key workflows</li>
+  <li class="regular-text"><b>Boards</b> – Spreadsheet-style pages showing all records</li>
+  <li class="regular-text"><b>Records</b> – Multi-panel layouts for viewing/editing a single record</li>
+  <li class="regular-text"><b>Widgets</b> – Modular UI blocks for core workflows</li>
 </ul>
 
-        <div class="toggle-container spacer-bottom-sm">
-          <img class="toggle-image img-responsive spacer-bottom-xs" src="./files/zinnia/uiKitBoard.png" alt="Toggle Image">
+<div class="toggle-container spacer-bottom-md">
+  <!-- Clickable visible image -->
+  <a id="toggle-fancybox-link"
+     data-toggle="tooltip"
+     title="Click to expand"
+     href="./files/zinnia/uiKitBoard.png"
+     data-fancybox="uikit-gallery"
+     data-caption="Our board component & related properties.">
+    <img id="toggle-fancybox-image"
+         class="toggle-image img-responsive spacer-bottom-xs"
+         src="./files/zinnia/uiKitBoard.png"
+         alt="Toggle Image">
+  </a>
 
-          <div class="tab-container">
-            <div class="tab active" data-image="./files/zinnia/uiKitBoard.png">Board</div>
-            <div class="tab" data-image="./files/zinnia/uiKitRecord.png">Record</div>
-            <div class="tab" data-image="./files/zinnia/uiKitWidget.png">Widget</div>
-          </div>
-        </div>
+  <!-- Hidden links to complete the fancybox gallery -->
+  <a href="./files/zinnia/uiKitRecord.png" data-fancybox="uikit-gallery" data-caption="Our record component & related properties." style="display: none;"></a>
+  <a href="./files/zinnia/uiKitWidget.png" data-fancybox="uikit-gallery" data-caption="Our widget component & related properties." style="display: none;"></a>
 
-                <p>These kits transformed repeated UI into plug-and-play layouts. We then created a separate, template file using realistic data, allowing designers to spin up high-fidelity prototypes in seconds.</p>
+  <!-- Tabs -->
+  <div class="tab-container">
+    <div class="tab active"
+         data-image="./files/zinnia/uiKitBoard.png"
+         data-caption="Our board component & related properties.">Board</div>
+    <div class="tab"
+         data-image="./files/zinnia/uiKitRecord.png"
+         data-caption="Our record component & related properties.">Record</div>
+    <div class="tab"
+         data-image="./files/zinnia/uiKitWidget.png"
+         data-caption="Our widget component & related properties.">Widget</div>
+  </div>
+</div>
+<h4 class="spacer-top sm">Template kit</h4>
+                <p class="spacer-bottom-sm">Our UI kit transformed complicated UI into reusable, drag & drop layouts. To accelerate prototyping, we built a separate template library filled with realistic data, enabling teams to create high-fidelity mockups in seconds.</p>
+                              <div class="toggle-container spacer-bottom-sm">
+                <!-- Image with Fancybox -->
+                <a data-toggle="tooltip" title="Click to expand" 
+                   href="./files/zinnia/template.png" 
+                   data-fancybox>
+                  <img class="toggle-image img-fluid img-responsive spacer-bottom-xs" 
+                       src="./files/zinnia/template.png">
+                </a>
+                <!-- Caption underneath the image -->
+                <p class="caption">A screenshot of an Orders template, with filled-in data.</p>
+              </div>
+
+              <h4 class="spacer-top sm">Mid-fi kit</h4>
+              <p class="spacer-bottom-sm">We also introduced a mid-fi kit for low-effort flows and early feedback—helping designers move even faster during early ideation.</p>
+
+<img-comparison-slider class="slider slider-line spacer-bottom-xs">
+  <img slot="first" width="100%" src="./files/zinnia/boardHigh.png">
+  <img slot="second" width="100%" src="./files/zinnia/boardMid.png">
+  <svg slot="handle"  class="slider-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+    <path d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" vector-effect="non-scaling-stroke"></path>
+  </svg>
+</img-comparison-slider>
+ <p class="caption">Screenshots comparing our high-fidelity & mid-fi template.</p>
+
+
               </section>
             </section>
  <hr class="hr">
+ <section id="section3" class="section">
+   <h2 class="spacer-bottom-sm content-highlight">Impact</h2>
+
+                   <div class="row">
+                    <div class="col-lg-4 d-flex">
+                      <div class="callout">
+                        <h4>⚡️ Faster velocity</h4>
+                        <p class="content-weaker">UI kits and templates reduced repetitive work, helping teams design and ship faster.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="callout">
+                        <h4>🤝 Single source of truth</h4>
+                        <p class="content-weaker">Clear documentation and tokenized components created a shared language between design and dev.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="callout">
+                        <h4>♿ Built-in accessibility</h4>
+                        <p class="content-weaker">A new color scale ensured WCAG 2.0 compliancy out of the box.</p>
+                      </div>
+                    </div>
+                  </div>
+ </section>
+ <hr class="hr">
+<section id="section4" class="section">
+     <h2 class="spacer-bottom-sm content-highlight">Reflection</h2>
+              <h3 class="spacer-bottom-xs">Building the system is only half the work</h3>
+              <ul class="spacer-bottom-sm">
+  <li class="regular-text">Adoption matters just as much as creation. The company sessions helped make tokens stick</li>
+  <li class="regular-text">Good documentation turns a system into something practical and usable</li>
+  <li class="regular-text">Designing systems is fun! Bringing order to chaos and seeing it scale has been incredibly rewarding</li>
+</ul>
+</section>
        </div>
      </div>
 
@@ -428,6 +520,10 @@
 </footer>
 
 <!-- Scripts -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
 <script
     src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
     type="module"></script>
