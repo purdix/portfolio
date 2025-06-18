@@ -4,28 +4,17 @@ function togglePasswordVisibility() {
   passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-const navbar = document.querySelector('.navbar-default');
-const scrollToTopButton = document.getElementById("scrollToTop");
+// Nav scroll effect
+//const navbar = document.querySelector('.navbar-default');
+//const scrollToTopButton = document.getElementById("scrollToTop");
 
-// Get current page from URL
-const currentPage = window.location.pathname.split("/").pop();
-
-const scrollPages = ['index.html', 'about.html', 'work.html'];
-const staticPages = ['zinnia.html', 'objectbuilder.html', 'rating.html'];
-
-if (scrollPages.includes(currentPage) || currentPage === '') {
-  // Scroll behavior only on scroll-enabled pages
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    navbar.classList.toggle('navbar-scrolled', scrollY > 100);
-    if (scrollToTopButton) {
-      scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
-    }
-  });
-} else if (staticPages.includes(currentPage)) {
-  // Always apply navbar-scrolled on static pages
-  navbar.classList.add('navbar-scrolled');
-}
+//window.addEventListener("scroll", () => {
+//  const scrollY = window.scrollY;
+  // Navbar color change on scroll
+//  navbar.classList.toggle('navbar-scrolled', scrollY > 100);
+  // Show scroll-to-top button
+//  scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
+//});
 
 // Scroll to top function
 function scrollToTop() {
