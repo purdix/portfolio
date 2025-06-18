@@ -94,11 +94,6 @@
   box-sizing: border-box;
 }
 
-#mainNav {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 html {
   scroll-behavior: smooth;
   position: relative;
@@ -382,6 +377,11 @@ a .logo {
   margin-left: 24px;
 }
 
+#mainNav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .navbar {
   position: sticky; /* Use sticky instead of fixed */
   top: 0; /* Stick to the top of the viewport */
@@ -396,7 +396,7 @@ a .logo {
 
 .navbar-default {
   height: 80px;
-  max-width: 1280px;
+  max-width: 1400px;
   width: 96vw;
   margin: auto;
   top: 24px;
