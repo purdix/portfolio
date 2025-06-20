@@ -86,9 +86,10 @@
     --color-border-strong: var(--color-white-200);
     --color-border-tooltip: var(--color-white-100);
     --color-border-submitbutton: var(--color-purple-400);
-    --color-border-button-default: var(--color-white-000);
-    --color-border-button-hover: var(--color-white-100);
+    --color-border-button-default: var(--color-white-100);
+    --color-border-button-hover: var(--color-white-200);
     --color-border-callout: var(--color-white-200);
+    --color-border-filter: var(--color-transparent);
 }
 
 /*-------------------- General --------------------*/
@@ -750,10 +751,11 @@ a .logo {
     padding: 10px 16px;
     margin-right: 16px;
     cursor: pointer;
-    font-size: 1.25rem;
     color: var(--color-content-weak);
     border-radius: 12px;
     transition: all 0.2s ease;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .filter-button:not(.active):hover {
@@ -766,6 +768,7 @@ a .logo {
     border-color: var(--color-bg-button-active);
     color: var(--color-content-interactive);
     outline: none;
+    font-weight: 600;
 }
 
 /* Remove background color change on hover for active buttons */
@@ -786,25 +789,24 @@ a .logo {
     display: inline-flex;
     align-items: center;
     padding: 6px 12px;
-    border: 1px solid var(--color-border-callout);
+    border: 1px solid var(--color-border-filter);
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     z-index: 10;
     color: var(--color-content-inverse);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tag-case-study {
-        border: 1px var(--color-border-nav) solid;
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
+ backdrop-filter: blur(20px) saturate(180%);
+ -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 .tag-article {
-        border: 1px var(--color-border-nav) solid;
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
+ backdrop-filter: blur(20px) saturate(180%);
+ -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 /* Work Item Animation and Visibility */
@@ -892,6 +894,7 @@ a .logo {
 
 .card-title {
     padding: 20px 15px 0px;
+    line-height: 1.5;
 }
 
 .card-text {
