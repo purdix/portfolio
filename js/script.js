@@ -50,55 +50,10 @@ function initializeImageToggle() {
     });
 }
 
-// Typewriter effect initialization
-const typewriterContainer = document.querySelector(".typewriter-container");
-const typewriterTextElement = document.getElementById("typewriterText");
-
-const typingSpeed = 100; // 100ms for desktop
-const deletingSpeed = 100; // Same speed for deleting
-const pauseBetweenWords = 4000;
-const words = typewriterContainer.getAttribute("data-words").split(",");
-let wordIndex = 0;
-
-// Start the typewriter effect
-function startTypewriterEffect() {
-    typeWord(words[wordIndex]);
-}
-
-function typeWord(word) {
-    let charIndex = 0;
-    typewriterTextElement.textContent = ""; // Clear text before typing
-
-    function type() {
-        if (charIndex < word.length) {
-            typewriterTextElement.textContent += word[charIndex++];
-            setTimeout(type, typingSpeed);
-        } else {
-            setTimeout(() => deleteWord(word), pauseBetweenWords);
-        }
-    }
-    type();
-}
-
-function deleteWord(word) {
-    let charIndex = word.length;
-
-    function erase() {
-        if (charIndex >= 0) {
-            typewriterTextElement.textContent = word.slice(0, charIndex--);
-            setTimeout(erase, deletingSpeed);
-        } else {
-            wordIndex = (wordIndex + 1) % words.length;
-            typeWord(words[wordIndex]);
-        }
-    }
-    erase();
-}
-
 // Scroll to section by ID
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
-    section ? .scrollIntoView({ behavior: 'smooth' });
+    section?.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Name scrolling effect
@@ -152,3 +107,50 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+// Typewriter effect initialization
+const typewriterContainer = document.querySelector(".typewriter-container");
+const typewriterTextElement = document.getElementById("typewriterText");
+
+const typingSpeed = 100; // 100ms for desktop
+const deletingSpeed = 100; // Same speed for deleting
+const pauseBetweenWords = 4000;
+const words = typewriterContainer.getAttribute("data-words").split(",");
+let wordIndex = 0;
+
+// Start the typewriter effect
+function startTypewriterEffect() {
+    typeWord(words[wordIndex]);
+}
+
+function typeWord(word) {
+    let charIndex = 0;
+    typewriterTextElement.textContent = ""; // Clear text before typing
+
+    function type() {
+        if (charIndex < word.length) {
+            typewriterTextElement.textContent += word[charIndex++];
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(() => deleteWord(word), pauseBetweenWords);
+        }
+    }
+    type();
+}
+
+function deleteWord(word) {
+    let charIndex = word.length;
+
+    function erase() {
+        if (charIndex >= 0) {
+            typewriterTextElement.textContent = word.slice(0, charIndex--);
+            setTimeout(erase, deletingSpeed);
+        } else {
+            wordIndex = (wordIndex + 1) % words.length;
+            typeWord(words[wordIndex]);
+        }
+    }
+    erase();
+}
