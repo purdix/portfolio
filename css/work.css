@@ -233,6 +233,10 @@ h1 {
 }
 
 .content-weak{
+  color: var(--color-content-default);
+}
+
+.content-weak{
   color: var(--color-content-weak);
 }
 
