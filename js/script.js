@@ -1,138 +1,154 @@
-// Show/hide password
-function togglePasswordVisibility() {
-  const passwordField = document.getElementById("pass");
-  passwordField.type = passwordField.type === "password" ? "text" : "password";
-}
-
-// Nav scroll effect
-//const navbar = document.querySelector('.navbar-default');
-//const scrollToTopButton = document.getElementById("scrollToTop");
-
-//window.addEventListener("scroll", () => {
-//  const scrollY = window.scrollY;
-  // Navbar color change on scroll
-//  navbar.classList.toggle('navbar-scrolled', scrollY > 100);
-  // Show scroll-to-top button
-//  scrollToTopButton.className = scrollY >= 300 ? "scrollbtn scrollbtn-show" : "scrollbtn";
-//});
-
 // Scroll to top function
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  document.getElementById("scrollUpTitle").focus();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById("scrollUpTitle").focus();
 }
+
+
 
 // Play audio pronunciation
 function playAudio() {
-  const audio = document.getElementById("audio");
-  if (audio) {
-    audio.play();
-  }
+    const audio = document.getElementById("audio");
+    if (audio) {
+        audio.play();
+    }
 }
 
 // Prevent right-click on images
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("img").forEach(img => {
-    img.addEventListener("contextmenu", (e) => e.preventDefault());
-  });
+    document.querySelectorAll("img").forEach(img => {
+        img.addEventListener("contextmenu", (e) => e.preventDefault());
+    });
 
-  initializeImageToggle();
-  startTypewriterEffect();
+    initializeImageToggle();
+    startTypewriterEffect();
 });
 
 // Image toggle functionality
 function initializeImageToggle() {
-  document.querySelectorAll('.toggle-container').forEach(container => {
-    const tabs = container.querySelectorAll('.tab');
-    const toggleImage = container.querySelector('.toggle-image');
-    const caption = container.querySelector('.caption');
+    document.querySelectorAll('.toggle-container').forEach(container => {
+        const tabs = container.querySelectorAll('.tab');
+        const toggleImage = container.querySelector('.toggle-image');
+        const caption = container.querySelector('.caption');
 
-    // ✅ Skip containers without tabs or toggle image
-    if (!tabs.length || !toggleImage) return;
+        // Skip containers without tabs or toggle image
+        if (!tabs.length || !toggleImage) return;
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        toggleImage.src = tab.getAttribute('data-image');
-        if (caption) {
-          caption.textContent = tab.getAttribute('data-caption');
-        }
-      });
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                toggleImage.src = tab.getAttribute('data-image');
+                if (caption) {
+                    caption.textContent = tab.getAttribute('data-caption');
+                }
+            });
+        });
+
+        // Make the first tab active by default
+        tabs[0].classList.add('active');
     });
-
-    tabs[0].classList.add('active');
-  });
 }
 
-// Typewriter effect
+// Typewriter effect initialization
 const typewriterContainer = document.querySelector(".typewriter-container");
 const typewriterTextElement = document.getElementById("typewriterText");
 
-const typingSpeed = 100; // 200ms for mobile, 100ms for desktop
-const deletingSpeed = 100; // Same speeds for deleting
+const typingSpeed = 100; // 100ms for desktop
+const deletingSpeed = 100; // Same speed for deleting
 const pauseBetweenWords = 4000;
 const words = typewriterContainer.getAttribute("data-words").split(",");
 let wordIndex = 0;
 
+// Start the typewriter effect
 function startTypewriterEffect() {
-  typeWord(words[wordIndex]);
+    typeWord(words[wordIndex]);
 }
 
 function typeWord(word) {
-  let charIndex = 0;
-  typewriterTextElement.textContent = ""; // Clear text before typing
+    let charIndex = 0;
+    typewriterTextElement.textContent = ""; // Clear text before typing
 
-  function type() {
-    if (charIndex < word.length) {
-      typewriterTextElement.textContent += word[charIndex++];
-      setTimeout(type, typingSpeed);
-    } else {
-      setTimeout(() => deleteWord(word), pauseBetweenWords);
+    function type() {
+        if (charIndex < word.length) {
+            typewriterTextElement.textContent += word[charIndex++];
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(() => deleteWord(word), pauseBetweenWords);
+        }
     }
-  }
-  type();
+    type();
 }
 
 function deleteWord(word) {
-  let charIndex = word.length;
+    let charIndex = word.length;
 
-  function erase() {
-    if (charIndex >= 0) {
-      typewriterTextElement.textContent = word.slice(0, charIndex--);
-      setTimeout(erase, deletingSpeed);
-    } else {
-      wordIndex = (wordIndex + 1) % words.length;
-      typeWord(words[wordIndex]);
+    function erase() {
+        if (charIndex >= 0) {
+            typewriterTextElement.textContent = word.slice(0, charIndex--);
+            setTimeout(erase, deletingSpeed);
+        } else {
+            wordIndex = (wordIndex + 1) % words.length;
+            typeWord(words[wordIndex]);
+        }
     }
-  }
-  erase();
+    erase();
 }
 
 // Scroll to section by ID
 function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section?.scrollIntoView({ behavior: 'smooth' });
+    const section = document.getElementById(sectionId);
+    section ? .scrollIntoView({ behavior: 'smooth' });
 }
 
-
-//Name scrolling
+// Name scrolling effect
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
-  (char, i) => `<span style="transform:rotate(${i * 8.6}deg)">${char}</span>`
-  ).join("")
+    (char, i) => `<span style="transform:rotate(${i * 8.6}deg)">${char}</span>`
+).join("");
 
-
-//Before & after slider
+// Before & after slider functionality
 function initializeImageComparison() {
-  document.querySelectorAll('.image-comparison').forEach(container => {
-    const slider = container.querySelector('.image-slider');
-    const resize = container.querySelector('.image-resize');
+    document.querySelectorAll('.image-comparison').forEach(container => {
+        const slider = container.querySelector('.image-slider');
+        const resize = container.querySelector('.image-resize');
 
-    slider.addEventListener('input', () => {
-      resize.style.width = slider.value + '%';
+        slider.addEventListener('input', () => {
+            resize.style.width = slider.value + '%';
+        });
     });
-  });
 }
 
-document.addEventListener('DOMContentLoaded', initializeImageComparison);
+// Filtering functionality with smooth animations
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const workItems = document.querySelectorAll(".work-item");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const filter = this.getAttribute("data-filter");
+
+            // Remove the active class from all filter buttons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            this.classList.add("active");
+
+            // Filter work items with smooth animation
+            workItems.forEach(item => {
+                if (filter === "all" || item.classList.contains(filter)) {
+                    // Show item
+                    item.classList.remove("hiding", "hidden");
+                    item.style.display = "flex";
+                } else {
+                    // Hide item with animation
+                    item.classList.add("hiding");
+                    setTimeout(() => {
+                        item.style.display = "none";
+                        item.classList.add("hidden");
+                        item.classList.remove("hiding");
+                    }, 300);
+                }
+            });
+        });
+    });
+});
