@@ -290,7 +290,7 @@ a:focus {
 
 /*-------------------- Typography --------------------*/
 h1 {
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -327,8 +327,12 @@ p {
 }
 
 /* SPECIAL CASES */
+.content-wrapper{
+  max-width: 1080px; /* or any value you prefer */
+}
+
 .hero-subheader {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--color-content-weak);
 }
