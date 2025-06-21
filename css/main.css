@@ -110,7 +110,7 @@ html {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -208,7 +208,7 @@ h1 {
 
 /*-------------------- Welcome --------------------*/
 .absolute {
-    position: absolute;
+    position: fixed;
     inset: 0;
     justify-content: center;
     display: inline-flex;
@@ -513,7 +513,7 @@ a .logo {
 /*-------------------- Body --------------------*/
 
 .hero-bg {
-    background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 85%, rgba(177, 28, 201, 0.36) 90%, rgba(255, 136, 245, 0.48) 100%),
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 15%, rgba(177, 28, 201, 0.36) 90%, rgba(255, 136, 245, 0.48) 100%),
         radial-gradient(115% 100% at 50% 0%, #000 50%, rgba(29, 16, 63, 1.0) 80%, rgba(58, 31, 255, 0.8) 100%);
     background-size: cover;
     background-position: center;
@@ -705,6 +705,28 @@ a .logo {
     -webkit-background-clip: text;
 }
 
+.homeFont{
+    font-size: 6rem;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    font-weight: 200;
+    font-size: inherit;
+    line-height: inherit;
+    color: var(--color-content-weakest); /* or set your desired color */
+    animation: blink 1s steps(1) infinite;
+    margin-left: 0.1em;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 
 
 /*-------------------- Callout Cards ----------------*/
@@ -864,7 +886,9 @@ a .logo {
 }
 
 .card:not(.card-locked) {
-    background-color: var(--color-bg-default);
+    background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px var(--color-border-default) solid;
     border-radius: 12px;
     transition-property: transform, box-shadow, background-color;
@@ -893,17 +917,17 @@ a .logo {
 }
 
 .card-title {
-    padding: 20px 15px 0px;
+    padding: 0px 12px 0px;
     line-height: 1.5;
 }
 
 .card-text {
     text-align: left;
-    padding: 15px 15px 0px;
+    padding: 8px 12px 0px;
 }
 
 .card-link {
-    padding: 15px 15px 2px;
+    padding: 8px 12px 2px;
     display: inline-block;
     transition-property: color;
     transition-duration: 0.15s;
@@ -1347,6 +1371,10 @@ a .logo {
 }
 
 @media only screen and (max-width: 768px) {
+    .spacer-top-lg {
+    margin-top: 40px;
+}
+
     .filter-container {
         flex-wrap: wrap;
         gap: 8px;
@@ -1438,7 +1466,11 @@ a .logo {
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) { 
+    .spacer-top-lg {
+    margin-top: 24px;
+}
+
     .bg-shape {
         visibility: hidden;
     }
