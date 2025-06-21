@@ -47,6 +47,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="./css/main.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js"></script>
+    <script>
+  UnicornStudio.init()
+    .then((scenes) => {
+      console.log('Unicorn Studio project loaded successfully');
+    })
+    .catch((err) => {
+      console.error('Error loading Unicorn project:', err);
+    });
+</script>
 </head>
 
 <body class="bg-home index" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
@@ -72,18 +81,13 @@
     <!--Main Content-->
     <main id="home">
         <div class="unicorn-overlay"></div>
-        <div class="unicorn-wrapper">
-            <div data-us-project-src="./unicorn.json"></div>
-            <script>
-            UnicornStudio.init()
-                .then((scenes) => {
-                    // Scenes are ready
-                })
-                .catch((err) => {
-                    console.error(err);
-                });
-            </script>
-        </div>
+<div class="unicorn-bg"
+     data-us-project-src="./unicorn.json"
+     data-us-scale="1"
+     data-us-dpi="1.5"
+     data-us-lazyload="true"
+     data-us-production="true">
+</div>
         <div class="container welcome-hero">
             <h1 id="scrollUpTitle" class="spacer-bottom-md homeFont animate__animated animate__fadeInUp" tabindex="-1">
                 <div class="typewriter-container" data-words="Product,Visual,Digital,UI/UX" id="typewriterContainer">
