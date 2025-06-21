@@ -46,6 +46,7 @@
     <!-- Extras -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="./css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js"></script>
 </head>
 
 <body class="bg-home index" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
@@ -72,14 +73,23 @@
     <main id="home">
         <div class="unicorn-overlay"></div>
         <div class="unicorn-wrapper">
-            <div data-us-project="U2j4IE8v0jMSzQw4wxFH" class="unicorn-bg"></div>
+            <div data-us-project-src="./unicorn.json"></div>
+            <script>
+            UnicornStudio.init()
+                .then((scenes) => {
+                    // Scenes are ready
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+            </script>
         </div>
         <div class="container welcome-hero">
-<h1 id="scrollUpTitle" class="spacer-bottom-md homeFont animate__animated animate__fadeInUp" tabindex="-1">
-  <div class="typewriter-container" data-words="Product,Visual,Digital,UI/UX" id="typewriterContainer">
-    <div class="typewriter-text" id="typewriterText"></div><span class="typewriter-cursor">|</span><span class="break"></span> design
-  </div>
-</h1>
+            <h1 id="scrollUpTitle" class="spacer-bottom-md homeFont animate__animated animate__fadeInUp" tabindex="-1">
+                <div class="typewriter-container" data-words="Product,Visual,Digital,UI/UX" id="typewriterContainer">
+                    <div class="typewriter-text" id="typewriterText"></div><span class="typewriter-cursor">|</span><span class="break"></span> design
+                </div>
+            </h1>
             <p class="hero-subheader">Hi, I'm Kogulan<button class="pronunciation" onclick="playAudio()" aria-label="name pronunciation"><span class="fas fa-volume-up" data-toggle="tooltip" data-placement="top" title="Pronunciation"></span><audio id="audio" src="./files/pronunciation.mp3"></audio></button>, a multi-disciplinary designer dedicated to crafting experiences that not only look good, but work well, too.
             </p>
             <h3><a class="strong-link default-subheader" href="./work">More about me<img src="files/arrow.svg" alt="" class="card-link-arrow" width="24"></a></h3>
@@ -236,22 +246,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
-    <script type="text/javascript">
-    ! function() {
-        if (!window.UnicornStudio) {
-            window.UnicornStudio = { isInitialized: !1 };
-            var i = document.createElement("script");
-            i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js";
-            i.onload = function() {
-                if (!window.UnicornStudio.isInitialized) {
-                    UnicornStudio.init();
-                    window.UnicornStudio.isInitialized = !0;
-                }
-            };
-            (document.head || document.body).appendChild(i);
-        }
-    }();
-    </script>
 </body>
 
 </html>
