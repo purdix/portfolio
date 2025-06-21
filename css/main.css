@@ -209,7 +209,7 @@ h1 {
 
 /*-------------------- Welcome --------------------*/
 .absolute {
-    position: fixed;
+    position: absolute;
     inset: 0;
     justify-content: center;
     display: inline-flex;
