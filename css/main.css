@@ -1199,7 +1199,7 @@ a .logo {
 }
 
         .homeFont {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
         .break {
@@ -1354,9 +1354,14 @@ a .logo {
 
     .hero-subheader,
     .pronunciation {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-left: 0px;
     }
+
+    .strong-link {
+    font-size: 1.25rem;
+    line-height: 1.;
+}
 
     .rotateWords {
         --height: 6rem;
