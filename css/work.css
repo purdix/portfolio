@@ -124,6 +124,10 @@ main {
     margin: 0 auto;
 }
 
+.container-unicorn {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 1)5%);
+}
+
 .vertical-center {
     min-height: 50%;
     /* Fallback for browsers do NOT support vh unit */
@@ -748,7 +752,7 @@ a .logo {
 
 .herobg-Zinnia {
     padding-top: 240px;
-    background: linear-gradient(180deg, #FEB6F8 0%, #A384FF 100%);
+    background: var(--color-black-900);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
@@ -776,179 +780,48 @@ a .logo {
     margin-right: auto
 }
 
-.absolute {
+.unicorn-overlay {
     position: absolute;
-    inset: 0;
-    justify-content: center;
-    display: inline-flex;
-    flex-direction: row;
-    z-index: -999;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0.5)40%, rgba(0, 0, 0, 0.05)50%);
+    z-index: -1;
+    pointer-events: none;
 }
 
-.bg-shape1 {
-    width: 500px;
-    height: 500px;
-    border-radius: 9999px;
-    position: relative;
-    animation: one 20s infinite;
+.unicorn-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
 }
 
-.bg-shape2 {
-    width: 800px;
-    height: 800px;
-    border-radius: 9999px;
-    position: relative;
-    animation: two 20s infinite;
-}
-
-.bg-shape3 {
-    width: 600px;
-    height: 600px;
-    border-radius: 9999px;
-    position: relative;
-    animation: three 20s infinite;
-}
-
-.bg-shape4 {
-    width: 600px;
-    height: 600px;
-    border-radius: 9999px;
-    position: relative;
-    animation: four 20s infinite;
-}
-
-
-@keyframes one {
-    0% {
-        left: 650px;
-        top: 400px;
-    }
-
-    25% {
-        left: 575px;
-        top: 350px;
-    }
-
-    50% {
-        left: 475px;
-        top: 250px;
-    }
-
-    75% {
-        left: 525px;
-        top: 325px;
-    }
-
-    100% {
-        left: 650px;
-        top: 400px;
-    }
-}
-
-@keyframes two {
-    0% {
-        left: -450px;
-        top: 500px;
-    }
-
-    25% {
-        left: -550px;
-        top: 350px;
-    }
-
-    50% {
-        left: -750px;
-        top: 225px;
-    }
-
-    75% {
-        left: -525px;
-        top: 350px;
-    }
-
-    100% {
-        left: -450px;
-        top: 500px;
-    }
-}
-
-@keyframes three {
-    0% {
-        left: -450px;
-        top: 550px;
-    }
-
-    25% {
-        left: -350px;
-        top: 450px;
-    }
-
-    50% {
-        left: -300px;
-        top: 350px;
-    }
-
-    75% {
-        left: -200px;
-        top: 450px;
-    }
-
-    100% {
-        left: -450px;
-        top: 550px;
-    }
-}
-
-@keyframes four {
-    0% {
-        left: 700px;
-        top: 550px;
-    }
-
-    25% {
-        left: 575px;
-        top: 450px;
-    }
-
-    50% {
-        left: 450px;
-        top: 350px;
-    }
-
-    75% {
-        left: 525px;
-        top: 450px;
-    }
-
-    100% {
-        left: 700px;
-        top: 550px;
-    }
-}
-
-
-.bg-blur {
-    filter: blur(90px);
-}
-
-.bg-1 {
-    background-color: #8437F6;
-    opacity: 0.4;
-}
-
-.bg-2 {
-    background-color: darkviolet;
-    opacity: 0.4;
-}
-
-.bg-3 {
-    background-color: var(--color-blue-400);
-}
-
-.bg-4 {
-    background-color: royalblue;
-    opacity: 0.4;
+.unicorn-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* sits above the animation, but still behind your content */
+    pointer-events: none;
+    background: linear-gradient(to right,
+        black 0%,
+        rgba(0, 0, 0, 0.75) 10%,
+        rgba(0, 0, 0, 0.2) 25%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.2) 75%,
+        rgba(0, 0, 0, 0.75) 90%,
+        black 100%);
 }
 
 /* For sidebar */

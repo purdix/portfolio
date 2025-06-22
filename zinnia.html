@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
     <link href="./css/work.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js"></script>
 </head>
 
 <body class="bg" data-spy="scroll" data-offset="230">
@@ -74,9 +75,19 @@
     <!--Main Content-->
     <main class="bg" id="main-content">
         <div id="scrollUpTitle" tabindex="-1" class="herobg-Zinnia animate__animated animate__fadeIn">
-            <div class="full-width-image">
-                <img class="animate__animated" src="./files/zinnia/zinnia.png" alt="Screenshot of Zinnia design system showing various components">
-            </div>
+    <!-- Unicorn background -->
+        <div class="unicorn-bg" 
+            data-us-project-src="https://www.kogulan.ca/unicorn-zinnia.json" 
+            data-us-scale="1" 
+            data-us-dpi="1.5" 
+            data-us-lazyload="true" 
+            data-us-production="true">
+        </div>
+
+    <!-- Foreground content -->
+    <div class="full-width-image" style="position: relative; z-index: 10;">
+        <img class="animate__animated" src="./files/zinnia/zinnia.png" alt="Screenshot of Zinnia design system showing various components">
+    </div>
         </div>
         <div class="hero-section" id="main-content">
             <div class="container">
@@ -470,6 +481,11 @@
             }
         });
     });
+    </script>
+    <script>
+    UnicornStudio.init()
+        .then((scenes) => console.log("✅ Unicorn loaded", scenes))
+        .catch((err) => console.error("❌ Error loading Unicorn:", err));
     </script>
 </body>
 
