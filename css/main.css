@@ -712,7 +712,7 @@ a .logo {
     overflow: hidden;
     padding-bottom: 0.2em;
     position: relative;
-    background: linear-gradient(20deg, cyan, magenta);
+    background: linear-gradient(20deg, deepskyblue, lightskyblue);
     /* Shared gradient background */
     -webkit-background-clip: text;
 }
