@@ -38,7 +38,7 @@
     --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue, mediumorchid);
     --color-gradient-pink: linear-gradient(20deg, hotpink, mediumorchid);
     --color-gradient-orange: linear-gradient(20deg, #F57526 0%, #FFC671 100%);
-    --color-gradient-strong: linear-gradient(rgba(12, 12, 18, 1), black);
+    --color-gradient-strong: linear-gradient(black 5%, rgba(12, 12, 18, 1)20%, black);
     --color-white-900: rgba(255, 255, 255, 1);
     --color-white-800: rgba(255, 255, 255, 0.8);
     --color-white-700: rgba(255, 255, 255, 0.7);
