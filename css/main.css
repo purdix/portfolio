@@ -960,6 +960,7 @@ a .logo {
     display: inline-block;
     transition-property: color;
     transition-duration: 0.15s;
+    margin-bottom: 0.75rem;
 }
 
 .card:hover .card-title,
