@@ -1329,6 +1329,10 @@ a .logo {
 
     }
 
+    .card-text {
+        font-size: 1.125rem;
+    }
+
     .spacer-top-lg {
         margin-top: 24px;
     }
@@ -1345,6 +1349,10 @@ a .logo {
     h1 {
         font-size: 4rem;
         line-height: 1;
+    }
+
+    h2{
+        font-size: 1.75rem;
     }
 
     .hero-subheader,
