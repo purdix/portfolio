@@ -918,7 +918,7 @@ a .logo {
 }
 
 .card-container {
-    margin-top: 64px;
+    margin-top: 48px;
 }
 
 .card:not(.card-locked) {
