@@ -47,6 +47,7 @@
     <!-- Extras -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="./css/work.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js"></script>
 </head>
 
 <body class="bg" data-spy="scroll" data-offset="230">
@@ -72,6 +73,15 @@
     <!--Main Content-->
     <main class="bg" id="main-content">
         <div id="scrollUpTitle" tabindex="-1" class="herobg-ObjectBuilder animate__animated animate__fadeIn">
+            <!-- Unicorn background -->
+            <div class="unicorn-bg" data-us-project-src="https://www.kogulan.ca/unicorn-objectbuilder.json" data-us-scale="1" data-us-dpi="1.5" data-us-lazyload="false" data-us-production="true">
+            </div>
+            <script>
+                UnicornStudio.init()
+        .then((scenes) => console.log("✅ Unicorn loaded", scenes))
+        .catch((err) => console.error("❌ Error loading Unicorn:", err));
+    </script>
+            <!-- Foreground content -->
             <div class="full-width-image">
                 <img class="animate__animated" src="./files/objectbuilder/objectbuilder.png" alt="Screenshot of Object Builder interface showing customizable fields and workflow options">
             </div>

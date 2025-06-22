@@ -741,7 +741,7 @@ a .logo {
 
 .herobg-ObjectBuilder {
     padding-top: 240px;
-    background: linear-gradient(180deg, #7E54DE 0%, #4B2AC0 100%);
+    background: black;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
