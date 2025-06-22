@@ -34,8 +34,8 @@
     --color-black-200: rgba(0, 0, 0, 0.2);
     --color-black-100: rgba(0, 0, 0, 0.1);
     --color-black-000: rgba(0, 0, 0, 0.05);
-    --color-gradient: linear-gradient(20deg, cyan, magenta);
-    --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue, mediumorchid);
+    --color-gradient-purple: linear-gradient(20deg, mediumorchid, blueviolet);
+    --color-gradient-blue: linear-gradient(20deg, cyan, deepskyblue);
     --color-gradient-pink: linear-gradient(20deg, hotpink, mediumorchid);
     --color-gradient-orange: linear-gradient(20deg, #F57526 0%, #FFC671 100%);
     --color-gradient-strong: linear-gradient(black 5%, rgba(12, 12, 18, 1)20%, black);
@@ -206,9 +206,9 @@ h1 {
     color: var(--color-content-highlight) !important;
 }
 
-.content-gradient {
+.content-gradient-purple {
     color: transparent;
-    background-image: var(--color-gradient);
+    background-image: var(--color-gradient-purple);
     background-clip: text;
     animation: text-spin 9s infinite linear;
 }
