@@ -104,6 +104,10 @@ html {
     font-size: 16px;
 }
 
+#work {
+  scroll-margin-top: 160px;
+}
+
 .work-protected {
     margin: 0;
     width: 100%;
