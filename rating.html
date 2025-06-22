@@ -83,6 +83,11 @@
             data-us-lazyload="false" 
             data-us-production="true">
         </div>
+                <script>
+    UnicornStudio.init()
+        .then((scenes) => console.log("✅ Unicorn loaded", scenes))
+        .catch((err) => console.error("❌ Error loading Unicorn:", err));
+    </script>
 
         <!-- Foreground content -->
             <div class="full-width-image">
@@ -944,11 +949,6 @@
             }
         });
     });
-    </script>
-        <script>
-    UnicornStudio.init()
-        .then((scenes) => console.log("✅ Unicorn loaded", scenes))
-        .catch((err) => console.error("❌ Error loading Unicorn:", err));
     </script>
 </body>
 
