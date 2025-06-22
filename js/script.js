@@ -18,21 +18,36 @@ function initializeImageToggle() {
         const tabs = container.querySelectorAll('.tab');
         const toggleImage = container.querySelector('.toggle-image');
         const caption = container.querySelector('.caption');
+        const fancyboxLink = container.querySelector('#toggle-fancybox-link');
 
-        if (!tabs.length || !toggleImage) return;
+        if (!tabs.length || !toggleImage || !fancyboxLink) return;
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
+                // Remove active class from all tabs
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                toggleImage.src = tab.getAttribute('data-image');
-                if (caption) {
-                    caption.textContent = tab.getAttribute('data-caption');
-                }
+
+                // Update image and caption
+                const imageSrc = tab.getAttribute('data-image');
+                const imageCaption = tab.getAttribute('data-caption');
+                toggleImage.src = imageSrc;
+                if (caption) caption.textContent = imageCaption;
+
+                // Update fancybox link attributes
+                fancyboxLink.href = imageSrc;
+                fancyboxLink.setAttribute('data-caption', imageCaption);
             });
         });
 
-        tabs[0].classList.add('active');
+        // Set initial state based on first tab
+        const firstTab = tabs[0];
+        const imageSrc = firstTab.getAttribute('data-image');
+        const imageCaption = firstTab.getAttribute('data-caption');
+        toggleImage.src = imageSrc;
+        if (caption) caption.textContent = imageCaption;
+        fancyboxLink.href = imageSrc;
+        fancyboxLink.setAttribute('data-caption', imageCaption);
     });
 }
 
