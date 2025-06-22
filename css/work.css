@@ -35,7 +35,7 @@
     --color-black-100: rgba(0, 0, 0, 0.1);
     --color-black-000: rgba(0, 0, 0, 0.05);
     --color-gradient-purple: linear-gradient(20deg, violet, mediumslateblue);
-    --color-gradient-blue: linear-gradient(20deg, dodgerblue, deepskyblue);
+    --color-gradient-blue: linear-gradient(20deg, deepskyblue, dodgerblue);
     --color-gradient-pink: linear-gradient(20deg, hotpink, mediumorchid);
     --color-gradient-orange: linear-gradient(20deg, #F57526 0%, #FFC671 100%);
     --color-gradient-strong: linear-gradient(black 5%, rgba(12, 12, 18, 1)20%, black);
