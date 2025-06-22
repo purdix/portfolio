@@ -45,7 +45,7 @@
     --color-black-100: rgba(0, 0, 0, 0.1);
     --color-black-000: rgba(0, 0, 0, 0.05);
     --color-grey: #181818;
-    --color-gradient: linear-gradient(20deg, cyan, magenta);
+    --color-gradient: linear-gradient(20deg, deepskyblue, lightskyblue);
     --color-gradient-strong: linear-gradient(#000, #0C0C12);
     --color-white-900: rgba(255, 255, 255, 1);
     --color-white-800: rgba(255, 255, 255, 0.8);
@@ -70,6 +70,7 @@
     --color-bg-button-hover: var(--color-black-900);
     --color-bg-button-active: var(--color-blue-200);
     --color-bg-button-activeHover: var(--color-blue-300);
+    --color-bg-card: var(--color-white-000);
 
     --color-content-nav: var(--color-white-900);
     --color-content-nav-inactive: var(--color-white-700);
@@ -921,10 +922,9 @@ a .logo {
 }
 
 .card:not(.card-locked) {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--color-bg-card);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px var(--color-border-default) solid;
     border-radius: 12px;
     transition-property: transform, box-shadow, background-color;
     transition: all .2s ease-in-out
@@ -941,14 +941,6 @@ a .logo {
 .card:focus:not(.card-locked) {
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.25);
     transform: scale(1.02);
-}
-
-.card-locked {
-    background-color: var(--color-bg-nav) backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px var(--color-border-nav) solid;
-    border-radius: 12px;
-    padding: 150px 25px;
 }
 
 .card-title {
@@ -1309,7 +1301,6 @@ a .logo {
 
     .content-gradient {
         display: block;
-        /* Move "me" to the next line */
     }
 
     a .logo {
