@@ -60,7 +60,7 @@ function initializeFiltering() {
         const isVisible = rect.top >= 0 && rect.top < window.innerHeight;
 
         if (!isVisible) {
-            const yOffset = -200; //
+            const yOffset = -240; //
             const y = cardContainer.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
