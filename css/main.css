@@ -1323,6 +1323,11 @@ a .logo {
 
 @media only screen and (max-width: 576px) {
 
+    .welcome-work {
+    margin-top: 48px;
+    margin-bottom: 80px;
+}
+
 .filter-button {
     padding: 6px 12px;
     font-size: 1.125rem;
