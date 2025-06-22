@@ -66,9 +66,9 @@
     --color-bg-submitbutton-default: var(--color-blue-700);
     --color-bg-submitbutton-hover: var(--color-blue-800);
     --color-bg-dialog: var(--color-black-700);
-    --color-bg-button-default: var(--color-black-500);
-    --color-bg-button-hover: var(--color-black-800);
-    --color-bg-button-active: var(--color-blue-300);
+    --color-bg-button-default: var(--color-black-800);
+    --color-bg-button-hover: var(--color-black-900);
+    --color-bg-button-active: var(--color-blue-200);
     --color-bg-button-activeHover: var(--color-blue-300);
 
     --color-content-nav: var(--color-white-900);
@@ -116,7 +116,7 @@ html {
 }
 
 .container-unicorn {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 1)10%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 1)5%);
 }
 
 .vertical-center {
