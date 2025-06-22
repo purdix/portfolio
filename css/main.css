@@ -948,11 +948,13 @@ a .logo {
 .card-title {
     padding: 0px 12px 0px;
     line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 .card-text {
     text-align: left;
     padding: 8px 12px 0px;
+    margin-bottom: 24px;
 }
 
 .card-link {
@@ -1330,8 +1332,17 @@ a .logo {
 
     }
 
+.card-title {
+        padding: 0px 8px 0px;
+    }
+
     .card-text {
+        padding: 0px 8px 0px;
         font-size: 1.125rem;
+    }
+
+.card-link {
+        padding: 0px 8px 0px;
     }
 
     .spacer-top-lg {
