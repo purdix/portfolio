@@ -794,10 +794,8 @@ a .logo {
 .unicorn-bg {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    max-width: 1280px;
     height: 100%;
     z-index: -2;
     pointer-events: none;
