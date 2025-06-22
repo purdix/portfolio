@@ -1185,22 +1185,12 @@ a .logo {
     }
 }
 
-@media only screen and (max-width: 1152px) {
-    .circle {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 768px) {
 
     .welcome-hero {
     margin-top: 160px;
     margin-bottom: 24px;
 }
-
-        .homeFont {
-        font-size: 4rem;
-    }
 
         .break {
         display: block;
@@ -1322,6 +1312,10 @@ a .logo {
 }
 
 @media only screen and (max-width: 576px) {
+
+        .homeFont {
+        font-size: 4rem;
+    }
 
     .welcome-work {
     margin-top: 48px;

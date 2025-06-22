@@ -150,7 +150,6 @@ function initializeScrollCurveText() {
     ).join("");
 }
 
-// DOMContentLoaded event to initialize all
 document.addEventListener("DOMContentLoaded", () => {
     // Prevent right-click on all images
     document.querySelectorAll("img").forEach(img => {
@@ -162,4 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeTypewriter();
     initializeImageComparison();
     initializeScrollCurveText();
+
+    // Mobile nav menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+            hamburger.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('show');
+        });
+    }
 });
