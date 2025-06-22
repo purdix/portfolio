@@ -798,6 +798,8 @@ a .logo {
 
 .filter-button {
     background-color: var(--color-bg-button-default);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid var(--color-border-button-default);
     padding: 10px 16px;
     margin-right: 16px;
