@@ -405,7 +405,7 @@ p {
 .hero-subheader {
     font-size: 2rem;
     line-height: 1.5;
-    color: var(--color-content-weak);
+    color: var(--color-content-default);
 }
 
 .p-header {
@@ -744,7 +744,7 @@ a .logo {
     font-weight: 200;
     font-size: inherit;
     line-height: inherit;
-    color: var(--color-transparent);
+    color: var(--color-content-default);
     /* or set your desired color */
     animation: blink 1s steps(1) infinite;
     margin-left: 0.1em;
