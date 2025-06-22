@@ -48,10 +48,23 @@ function initializeImageComparison() {
     });
 }
 
-// Initialize filtering functionality
+// Initialize filtering functionality with autoscroll
 function initializeFiltering() {
     const filterButtons = document.querySelectorAll(".filter-button");
     const workItems = document.querySelectorAll(".work-item");
+    const cardContainer = document.querySelector(".card-container");
+
+    // Scroll to cardContainer if it's not currently visible in viewport
+    function scrollToCardsIfNeeded() {
+        const rect = cardContainer.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.top < window.innerHeight;
+
+        if (!isVisible) {
+            const yOffset = -200; //
+            const y = cardContainer.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    }
 
     filterButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -73,6 +86,8 @@ function initializeFiltering() {
                     }, 300);
                 }
             });
+
+            scrollToCardsIfNeeded();
         });
     });
 }
