@@ -60,17 +60,22 @@
     --color-bg-nav: var(--color-black-800);
     --color-bg-default: var(--color-gradient-strong);
     --color-bg-interactive: var(--color-blue);
-    --color-bg-main: var(--color-black-900);
+    --color-bg: var(--color-black-900);
     --color-bg-input: var(--color-white-100);
     --color-bg-tooltip: var(--color-black-900);
     --color-bg-submitbutton-default: var(--color-blue-700);
     --color-bg-submitbutton-hover: var(--color-blue-800);
     --color-bg-dialog: var(--color-black-700);
-    --color-bg-button-default: var(--color-black-800);
-    --color-bg-button-hover: var(--color-black-900);
-    --color-bg-button-active: var(--color-blue-200);
-    --color-bg-button-activeHover: var(--color-blue-300);
+    --color-bg-button-primary-default: var(--color-white-100);
+    --color-bg-button-primary-hover: var(--color-white-200);
+    --color-bg-button-primary-active: var(--color-blue-200);
+    --color-bg-button-primary-activeHover: var(--color-blue-300);
+    --color-bg-button-filter-default: var(--color-black-800);
+    --color-bg-button-filter-hover: var(--color-black-900);
+    --color-bg-button-filter-active: var(--color-blue-200);
+    --color-bg-button-filter-activeHover: var(--color-blue-300);
     --color-bg-card: var(--color-white-000);
+    --color-bg-footer: var(--color-black-800);
 
     --color-content-nav: var(--color-white-900);
     --color-content-nav-inactive: var(--color-white-700);
@@ -85,11 +90,14 @@
 
     --color-border-nav: var(--color-white-100);
     --color-border-default: var(--color-white-100);
+    --color-border-weak: var(--color-white-000);
     --color-border-strong: var(--color-white-200);
     --color-border-tooltip: var(--color-white-100);
     --color-border-submitbutton: var(--color-purple-400);
-    --color-border-button-default: var(--color-white-100);
-    --color-border-button-hover: var(--color-white-200);
+    --color-border-button-primary-default: var(--color-white-100);
+    --color-border-button-primary-hover: var(--color-white-200);
+    --color-border-button-filter-default: var(--color-white-100);
+    --color-border-button-filter-hover: var(--color-white-200);
     --color-border-callout: var(--color-white-200);
     --color-border-filter: var(--color-transparent);
 }
@@ -173,6 +181,10 @@ html {
 .spacer-bottom-lg {
     margin-bottom: 64px;
 }
+
+    .spacer-bottom-xl {
+margin-bottom: 96px;
+    }
 
 a,
 a:hover {
@@ -428,35 +440,42 @@ p {
 
 
 /*-------------------- Navigation (Full)  --------------------*/
-a .logo {
-    display: inline;
-    height: 48px;
-    margin-left: 24px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
-#mainNav {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.logo {
+  height: 40px;
+  width: auto;
+      transition-property: transform, box-shadow, background-color;
+    transition: all .3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.10);
+    transition-duration: 0.15s;
+}
+
+.logo-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-content-default);
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .navbar {
     position: sticky;
-    /* Use sticky instead of fixed */
     top: 0;
-    /* Stick to the top of the viewport */
     width: 100%;
-    /* Ensure it spans the full width */
     z-index: 1000;
-    /* Ensure it stays on top of other content */
-}
-
-.navbar-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 10px;
 }
 
 .navbar-default {
-    height: 80px;
+    padding: 32px;
     max-width: 1400px;
     width: 96vw;
     margin: auto;
@@ -503,6 +522,9 @@ a .logo {
 }
 
 /*-------------------- Body --------------------*/
+.bg{
+    background: var(--color-bg);
+}
 
 .hero-bg {
     background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 80%, rgba(177, 28, 201, 0.2) 85%, rgba(255, 136, 245, 0.3) 95%, rgba(255, 136, 245, 0.4) 100%),
@@ -515,14 +537,6 @@ a .logo {
     width: 100%;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-}
-
-.bg {
-    background: var(--color-bg-default);
-}
-
-.bg-home {
-    background: var(--color-bg-main);
 }
 
 .unicorn-overlay {
@@ -803,11 +817,11 @@ a .logo {
 }
 
 .filter-button {
-    background-color: var(--color-bg-button-default);
+    background-color: var(--color-bg-button-filter-default);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid var(--color-border-button-default);
-    padding: 10px 16px;
+    border: 1px solid var(--color-border-button-filter-default);
+    padding: 8px 16px 10px;
     margin-right: 16px;
     cursor: pointer;
     color: var(--color-content-weak);
@@ -815,16 +829,17 @@ a .logo {
     transition: all 0.2s ease;
     font-size: 1.25rem;
     font-weight: 400;
+    line-height: 1.25;
 }
 
 .filter-button:not(.active):hover {
-    background-color: var(--color-bg-button-hover);
-    border: 1px solid var(--color-border-button-hover);
+    background-color: var(--color-bg-button-filter-hover);
+    border: 1px solid var(--color-border-button-filter-hover);
 }
 
 .filter-button.active {
-    background-color: var(--color-bg-button-active);
-    border-color: var(--color-bg-button-active);
+    background-color: var(--color-bg-button-filter-active);
+    border-color: var(--color-bg-button-filter-active);
     color: var(--color-content-interactive);
     outline: none;
     font-weight: 600;
@@ -832,7 +847,7 @@ a .logo {
 
 /* Remove background color change on hover for active buttons */
 .filter-button.active:hover {
-    background-color: var(--color-bg-button-activeHover);
+    background-color: var(--color-bg-button-filter-activeHover);
 }
 
 /* Remove dashed outline on focus */
@@ -880,36 +895,6 @@ a .logo {
 
 .work-item.hidden {
     display: none !important;
-}
-
-
-/*-------------------- Tooltip ----------------------*/
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.tooltip-container .tooltip-text {
-    visibility: hidden;
-    width: 176px;
-    color: var(--color-content-default);
-    background-color: var(--color-bg-tooltip);
-    border: 1px var(--color-border-tooltip) solid;
-    text-align: center;
-    border-radius: 16px;
-    padding: 8px 12px 8px 12px;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -88px;
-}
-
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
 }
 
 
@@ -1022,33 +1007,32 @@ a .logo {
     height: 275px;
 }
 
-/*-------------------- Button ----------------------*/
-.button {
-    background-color: var(--color-bg-button-default);
-    border: 1px solid var(--color-border-button-default);
-    padding: 16px 24px;
-    border-radius: 8px;
-    text-align: center;
+/*-------------------- Buttons ----------------------*/
+.button-primary {
+    padding: 16px 0px;
+    background-color: var(--color-bg-button-primary-default);
+    border: 1px solid var(--color-border-button-primary-default);
+    padding: 8px 16px;
     cursor: pointer;
     color: var(--color-content-default);
-    font-size: 1.25rem;
-    position: relative;
-    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
 }
 
-.button:hover {
-    background-color: var(--color-bg-button-hover);
-    border: 1px solid var(--color-border-button-hover);
+.button-primary:hover {
+    background-color: var(--color-bg-button-primary-hover);
+    border: 1px solid var(--color-border-button-primary-hover);
+    color: var(--color-content-default);
 }
 
 /* Focus styles for keyboard accessibility */
-.button:focus {
+.button-primary:focus {
     outline: 3px solid var(--color-focus-outline);
-    /* Visible focus indicator */
-    background-color: var(--color-bg-button-hover);
-    /* Matches hover style */
-    border-color: var(--color-border-button-hover);
-    /* Matches hover border color */
+    background-color: var(--color-bg-button-primary-hover);
+    border-color: var(--color-border-button-primary-hover);
 }
 
 /*-------------------- Scroll to Top Button --------------------*/
@@ -1099,86 +1083,127 @@ a .logo {
 }
 
 /*-------------------- Footer --------------------*/
-
-.footer-icons {
-    margin-bottom: 20px;
+.footer {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--color-bg-footer);
+  border-top: 1px solid var(--color-border-default);
 }
 
-.footer-fa {
-    color: var(--color-content-interactive);
-    font-size: 1.75rem;
-    padding: 15px;
-    transition: color 0.3s, transform 0.3s;
+.footer-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 800px;
 }
 
-.footer-fa:hover,
-.footer-fa:focus {
-    transform: scale(1.2);
-    transition-delay: 0s !important;
+.footer-prompt {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-content-default);
+}
+
+.footer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer-inline-links {
+  color: var(--color-content-default);
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.footer-inline-links a {
+  color: var(--color-content-default);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-inline-links a:hover,
+.footer-inline-links a:focus {
+  color: var(--color-content-interactive);
+}
+
+.footer-inline-links span {
+  color: var(--color-content-weaker);
+}
+
+.footer-credit {
+  font-size: 1rem;
+  color: var(--color-content-weaker);
+}
+
+/*-------------------- Tooltip ----------------------*/
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    color: var(--color-content-default);
+    background-color: var(--color-bg-tooltip);
+    border: 1px var(--color-border-tooltip) solid;
+    text-align: center;
+    border-radius: 16px;
+    padding: 8px 12px 8px 12px;
+    white-space: nowrap;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
 }
 
 .glow {
-    animation: glow 4s ease-in-out infinite alternate;
+  animation: glow 4s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-    from {
-        text-shadow: 0 0 8px var(--color-red-900);
-    }
-
-    to {
-        text-shadow: 0 0 16px var(--color-red-900);
-    }
+  from {
+    text-shadow: 0 0 8px var(--color-red-900);
+  }
+  to {
+    text-shadow: 0 0 16px var(--color-red-900);
+  }
 }
 
 .wiggle {
-    animation: wiggle 3s linear infinite;
+  display: inline-block;
+  animation: wiggle 3s linear infinite;
 }
 
 .wiggle:hover {
-    animation: none;
+  animation: none;
 }
 
 @keyframes wiggle {
-
-    0%,
-    7% {
-        transform: rotateZ(0);
-    }
-
-    15% {
-        transform: rotateZ(-8deg);
-    }
-
-    20% {
-        transform: rotateZ(5deg);
-    }
-
-    25% {
-        transform: rotateZ(-6deg);
-    }
-
-    30% {
-        transform: rotateZ(3deg);
-    }
-
-    35% {
-        transform: rotateZ(-1deg);
-    }
-
-    40%,
-    100% {
-        transform: rotateZ(0);
-    }
-}
-
-.footer {
-    position: relative;
-    /* Change from absolute */
-    width: 100%;
-    padding: 60px;
-    text-align: center;
-    background-color: var(--color-bg-section);
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-8deg); }
+  20% { transform: rotateZ(5deg); }
+  25% { transform: rotateZ(-6deg); }
+  30% { transform: rotateZ(3deg); }
+  35% { transform: rotateZ(-1deg); }
+  40%, 100% { transform: rotateZ(0); }
 }
 
 /** Responsiveness **/
@@ -1207,6 +1232,10 @@ a .logo {
 
     .spacer-bottom-lg {
         margin-bottom: 40px;
+    }
+
+        .spacer-bottom-xl {
+margin-bottom: 80px;
     }
 
     .filter-container {
@@ -1300,10 +1329,6 @@ a .logo {
 
     .content-gradient {
         display: block;
-    }
-
-    a .logo {
-        height: 40px;
     }
 
     .subheader1 {

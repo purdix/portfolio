@@ -49,12 +49,12 @@
     <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js"></script>
 </head>
 
-<body class="bg-home index" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
+<body class="bg index" data-spy="scroll" data-target="#scrollHighlight" data-offset="230">
     <!-- Main Navigation -->
     <nav class="fixed-top navbar-scrolled navbar-expand-md navbar-default py-3 d-flex align-items-center" id="mainNav" aria-label="Main">
-        <a class="navbar-brand" href="/">
-            <img class="logo" src="./files/logo.svg" alt="Kogulan Sivaneshan">
-        </a>
+<a class="navbar-logo" href="/">
+  <img class="logo" src="./files/logo-mini.svg" alt="Kogulan Sivaneshan" />
+</a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -215,25 +215,28 @@
         <button onclick="scrollToTop()" id="scrollToTop" class="scrollbtn" tabindex="0" aria-label="scroll to top"><span class="fa fa-chevron-up"></span><span class="scrollbtn-text">Scroll to top</span></button>
     </main>
     <!--Footer-->
-    <footer class="footer">
-        <div class="footer-icons">
-            <a href="https://www.behance.net/sivaneshan" target="_blank" aria-label="Behance">
-                <i class="fab fa-behance footer-fa"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin footer-fa"></i>
-            </a>
-            <a href="mailto:kogulan.sivaneshan@gmail.com" aria-label="Email">
-                <i class="fas fa-envelope footer-fa"></i>
-            </a>
-        </div>
-        <p>Coded by me with
-            <span class="tooltip-container wiggle"><span class="glow">❤️</span>
-                <span class="tooltip-text">And lots of ☕
-                </span>
-            </span>
-        </p>
-    </footer>
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-prompt">Say hi! Always happy to chat.</p>
+    <div class="footer-inline-links">
+  <a href="https://www.behance.com/sivaneshan" target="_blank" rel="noopener">Behance</a>
+  <span>/</span>
+  <a href="https://www.linkedin.com/in/kogulansivaneshan" target="_blank" rel="noopener">LinkedIn</a>
+  <span>/</span>
+  <a href="mailto:kogulan.sivaneshan@gmail.com">Email</a>
+</div>
+            <div class="footer-buttons">
+    <a class="button-primary" target="_blank" href="./files/Resume.pdf">View my resume (PDF)</a>
+    </div>
+    <p class="footer-credit">
+      Coded by me with
+      <span class="tooltip-container wiggle">
+        <span class="glow">❤️</span>
+        <span class="tooltip-text">And lots of ☕</span>
+      </span>
+    </p>
+  </div>
+</footer>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
