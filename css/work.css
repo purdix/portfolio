@@ -1562,6 +1562,18 @@ a .logo {
 
 @media only screen and (max-width: 768px) {
 
+    .herobg-ObjectBuilder {
+    padding-top: 160px;
+}
+
+.herobg-Zinnia {
+    padding-top: 160px;
+}
+
+.herobg-Rating {
+    padding-top: 160px;
+}
+
     h1 {
         font-size: 5rem;
         line-height: 1.125;
