@@ -774,13 +774,17 @@ a .logo {
 
 
 .full-width-image img {
-    height: 55vh;
+    position: relative; /* Ensure it's in a stacking context */
+    z-index: 1; /* Ensure it stacks above unicorn-bg */
+    height: 45vh;
     display: block;
     margin-left: auto;
     margin-right: auto
 }
 
 .unicorn-bg {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
@@ -1516,10 +1520,6 @@ a .logo {
 
 /*-------------------- Responsiveness ----------------------*/
 @media only screen and (max-width:1440px) {
-    .full-width-image img {
-        width: 90vw;
-        height: auto;
-    }
 }
 
 

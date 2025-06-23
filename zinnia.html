@@ -80,9 +80,13 @@
             </div>
             <script>
                 UnicornStudio.init()
-        .then((scenes) => console.log("✅ Unicorn loaded", scenes))
-        .catch((err) => console.error("❌ Error loading Unicorn:", err));
-    </script>
+    .then(() => {
+        const unicorn = document.querySelector('.unicorn-bg');
+        if (unicorn) unicorn.style.opacity = '1';
+    })
+    .then((scenes) => console.log("✅ Unicorn loaded", scenes))
+    .catch((err) => console.error("❌ Error loading Unicorn:", err));
+</script>
             <!-- Foreground content -->
             <div class="full-width-image">
                 <img class="animate__animated" src="./files/zinnia/zinnia.png" alt="Screenshot of Zinnia design system showing various components">

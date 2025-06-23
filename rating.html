@@ -79,6 +79,10 @@
             </div>
             <script>
                 UnicornStudio.init()
+                .then(() => {
+      const unicorn = document.querySelector('.unicorn-bg');
+      if (unicorn) unicorn.style.opacity = '1';
+    })
         .then((scenes) => console.log("✅ Unicorn loaded", scenes))
         .catch((err) => console.error("❌ Error loading Unicorn:", err));
     </script>
