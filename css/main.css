@@ -468,8 +468,8 @@ p {
 }
 
 .navbar-default {
-    padding: 32px;
-    max-width: 1280px;
+    padding: 32px 16px;
+    max-width: 1312px;
     width: 96vw;
     margin: auto;
     top: 24px;
