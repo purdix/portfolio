@@ -776,8 +776,8 @@ a .logo {
 .full-width-image img {
     position: relative; /* Ensure it's in a stacking context */
     z-index: 1; /* Ensure it stacks above unicorn-bg */
-    width: 90vw;
-    max-width: 980px;
+    width: 95vw;
+    max-width: 1020px;
     height: auto;
     display: block;
     margin-left: auto;
