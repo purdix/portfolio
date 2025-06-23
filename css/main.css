@@ -415,7 +415,7 @@ p {
 }
 
 .hero-subheader {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.5;
     color: var(--color-content-default);
 }
@@ -652,8 +652,8 @@ p {
 }
 
 .pronunciation {
-    margin-left: 8px;
-    font-size: 2rem;
+    margin-left: 4px;
+    font-size: 1.25rem;
     border: none;
     background: none;
     cursor: pointer;
@@ -1101,7 +1101,7 @@ p {
 }
 
 .footer-prompt {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   color: var(--color-content-default);
 }
@@ -1209,9 +1209,6 @@ p {
 /** Responsiveness **/
 
 @media only screen and (max-width: 1200px) {
-    .hero-subheader {
-        font-size: 2rem;
-    }
 }
 
 @media only screen and (max-width: 768px) {
