@@ -745,6 +745,8 @@ a .logo {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
+    z-index: 2;
+    /* Sits above the black background */
     overflow: hidden;
 }
 
@@ -754,6 +756,8 @@ a .logo {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
+    z-index: 2;
+    /* Sits above the black background */
     overflow: hidden;
 }
 
@@ -763,6 +767,8 @@ a .logo {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
+    z-index: 2;
+    /* Sits above the black background */
     overflow: hidden;
 }
 
@@ -771,18 +777,7 @@ a .logo {
     height: 55vh;
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-.unicorn-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  pointer-events: none;
+    margin-right: auto
 }
 
 .unicorn-bg {
@@ -791,6 +786,7 @@ a .logo {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -2;
     pointer-events: none;
 }
 
