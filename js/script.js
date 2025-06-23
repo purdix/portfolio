@@ -1,8 +1,31 @@
+//Scroll to section function
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+}
+
 // Scroll to top function
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     document.getElementById("scrollUpTitle")?.focus();
 }
+
+// Show/hide scroll-to-top button on scroll
+window.addEventListener('scroll', function () {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (!scrollBtn) return;
+
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add('scrollbtn-show');
+    } else {
+        scrollBtn.classList.remove('scrollbtn-show');
+    }
+});
 
 // Play audio pronunciation
 function playAudio() {
