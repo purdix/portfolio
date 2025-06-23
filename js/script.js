@@ -1,18 +1,21 @@
 //Scroll to section function
 function scrollToSection(id) {
   const element = document.getElementById(id);
+  const offset = 160; // adjust this to match your header height
   if (element) {
-    window.scrollTo({
-      top: element.offsetTop,
-      behavior: 'smooth',
-    });
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 }
 
 // Scroll to top function
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Delay the focus to avoid interrupting smooth scroll
+  setTimeout(() => {
     document.getElementById("scrollUpTitle")?.focus();
+  }, 600); // Adjust timing to match scroll duration
 }
 
 // Show/hide scroll-to-top button on scroll
