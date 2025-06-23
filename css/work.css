@@ -776,7 +776,9 @@ a .logo {
 .full-width-image img {
     position: relative; /* Ensure it's in a stacking context */
     z-index: 1; /* Ensure it stacks above unicorn-bg */
-    height: 45vh;
+    width: 90vw;
+    max-width: 980px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -1544,6 +1546,7 @@ a .logo {
 }
 
 @media only screen and (max-width:1052px) {
+
     h1 {
         font-size: 6rem;
     }
@@ -1558,6 +1561,7 @@ a .logo {
 }
 
 @media only screen and (max-width: 768px) {
+
     h1 {
         font-size: 5rem;
         line-height: 1.125;
