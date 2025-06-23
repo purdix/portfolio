@@ -440,13 +440,6 @@ p {
 
 
 /*-------------------- Navigation (Full)  --------------------*/
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
 .logo {
   height: 40px;
   width: auto;
@@ -476,7 +469,7 @@ p {
 
 .navbar-default {
     padding: 32px;
-    max-width: 1400px;
+    max-width: 1280px;
     width: 96vw;
     margin: auto;
     top: 24px;
