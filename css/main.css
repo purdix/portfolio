@@ -555,17 +555,13 @@ p {
 
 .unicorn-footer-overlay {
   position: absolute;
-  top: auto;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 800px; /* or larger if needed */
+  height: 800px; /* adjust as needed */
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(0, 0, 0, 0.05) 50%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0.5)20%, rgba(0, 0, 0, 0)30%);
 }
 
 .unicorn-footer-overlay .unicorn-bg {
@@ -599,16 +595,6 @@ p {
     rgba(0, 0, 0, 0.2) 75%,
     rgba(0, 0, 0, 0.75) 90%,
     black 100%);
-}
-
-.unicorn-footer-overlay::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-bg-footer) 100%);
 }
 
 .welcome-work {
@@ -1264,7 +1250,6 @@ p {
 @media only screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 768px) {
-
     .welcome-hero {
         margin-top: 160px;
         margin-bottom: 24px;
