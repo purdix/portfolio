@@ -1157,6 +1157,23 @@ p {
     color: var(--color-content-weaker);
 }
 
+.footer-icons {
+    margin-bottom: 20px;
+}
+
+.footer-fa {
+    color: var(--color-content-interactive);
+    font-size: 1.75rem;
+    padding: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-fa:hover,
+.footer-fa:focus {
+    transform: scale(1.2);
+    transition-delay: 0s !important;
+}
+
 .footer-credit {
     font-size: 1rem;
     color: var(--color-content-weaker);
