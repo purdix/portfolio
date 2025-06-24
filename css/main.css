@@ -75,7 +75,7 @@
     --color-bg-button-filter-active: var(--color-blue-200);
     --color-bg-button-filter-activeHover: var(--color-blue-300);
     --color-bg-card: var(--color-white-000);
-    --color-bg-footer: var(--color-black-800);
+    --color-bg-footer: var(--color-black-700);
 
     --color-content-nav: var(--color-white-900);
     --color-content-nav-inactive: var(--color-white-700);
@@ -1104,6 +1104,8 @@ p {
   position: relative;
   z-index: 0;
   background-color: var(--color-bg-footer);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);  
 }
 
 .footer-content {
