@@ -38,55 +38,44 @@ function playAudio() {
     }
 }
 
-// Initialize image toggle functionality
+/* ---------- Before / After toggle ---------- */
 function initializeImageToggle() {
-    document.querySelectorAll('.toggle-container').forEach(container => {
-        const tabs = container.querySelectorAll('.tab');
-        const toggleImage = container.querySelector('.toggle-image');
-        const caption = container.querySelector('.caption');
-        const fancyboxLink = container.querySelector('#toggle-fancybox-link');
+  /*  loop over every comparison block on the page  */
+  document.querySelectorAll('.toggle-container').forEach(container => {
 
-        if (!tabs.length || !toggleImage || !fancyboxLink) return;
+    /*  cache the pieces we need */
+    const tabs        = Array.from(container.querySelectorAll('.tab'));
+    const toggleImage = container.querySelector('.toggle-image');
+    const captionEl   = container.querySelector('.caption');
+    const fancyboxEl  = container.querySelector('[data-fancybox]'); // optional
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
+    /*  bail out if critical bits are missing  */
+    if (!tabs.length || !toggleImage) return;
 
-                // Update image and caption
-                const imageSrc = tab.getAttribute('data-image');
-                const imageCaption = tab.getAttribute('data-caption');
-                toggleImage.src = imageSrc;
-                if (caption) caption.textContent = imageCaption;
+    /*  helper that updates image, caption, fancybox + active tab  */
+    const render = tab => {
+      const { image:src = '', caption:text = '' } = tab.dataset;
 
-                // Update fancybox link attributes
-                fancyboxLink.href = imageSrc;
-                fancyboxLink.setAttribute('data-caption', imageCaption);
-            });
-        });
+      /* swap image + caption */
+      toggleImage.src = src;
+      if (captionEl)   captionEl.textContent = text;
 
-        // Set initial state based on first tab
-        const firstTab = tabs[0];
-        const imageSrc = firstTab.getAttribute('data-image');
-        const imageCaption = firstTab.getAttribute('data-caption');
-        toggleImage.src = imageSrc;
-        if (caption) caption.textContent = imageCaption;
-        fancyboxLink.href = imageSrc;
-        fancyboxLink.setAttribute('data-caption', imageCaption);
-    });
-}
+      /* keep Fancybox in sync, if you’re using it */
+      if (fancyboxEl) {
+        fancyboxEl.href            = src;
+        fancyboxEl.dataset.caption = text;
+      }
 
-// Initialize before & after image slider
-function initializeImageComparison() {
-    document.querySelectorAll('.image-comparison').forEach(container => {
-        const slider = container.querySelector('.image-slider');
-        const resize = container.querySelector('.image-resize');
+      /* highlight the active pill */
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+    };
 
-        slider?.addEventListener('input', () => {
-            resize.style.width = slider.value + '%';
-        });
-    });
+    /* wire up clicks */
+    tabs.forEach(tab => tab.addEventListener('click', () => render(tab)));
+
+    /* initialise with the first pill (or the one already marked .active) */
+    render(tabs.find(t => t.classList.contains('active')) || tabs[0]);
+  });
 }
 
 // Initialize filtering functionality with autoscroll
