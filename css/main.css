@@ -548,53 +548,51 @@ p {
     width: 100%;
     max-width: 1280px;
     height: 100vh;
-    max-height: 800px;
-    z-index: -2;
+    max-height: 600px;
     pointer-events: none;
 }
 
-.unicorn-footer-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 800px; /* adjust as needed */
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0.5)20%, rgba(0, 0, 0, 0)30%);
+.unicorn-footer-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:800px;
+  z-index:-1;
+  pointer-events:none;
 }
 
-.unicorn-footer-overlay .unicorn-bg {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1280px;
-  height: 100vh;
-  max-height: 800px;
-  z-index: -2;
-  pointer-events: none;
+/* unicorn animation – stays under the overlay */
+.unicorn-footer-overlay .unicorn-bg{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:1280px;
+  height:100vh;
+  max-height:800px;
+  z-index:-3;
+  pointer-events:none;
 }
 
-.unicorn-footer-overlay .unicorn-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(to right,
-    black 0%,
-    rgba(0, 0, 0, 0.75) 10%,
-    rgba(0, 0, 0, 0.2) 25%,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.2) 75%,
-    rgba(0, 0, 0, 0.75) 90%,
-    black 100%);
+.unicorn-footer-overlay::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+
+  /* First gradient listed is drawn on top; swap the order if you want
+     the side fade to sit underneath the vertical fade.               */
+  background:
+    linear-gradient(to right, black 0%,
+      black 15%, rgba(0,0,0,0.25)25%, rgba(0,0,0,0)30%, rgba(0,0,0,0)70%, rgba(0,0,0,0.25)75%, black 85%),
+
+    linear-gradient(to bottom,
+      rgba(0,0,0,1)0%,
+      rgba(0,0,0,.5)20%,
+      rgba(0,0,0,0)30%);
 }
 
 .welcome-work {
@@ -1266,9 +1264,14 @@ p {
 
 /** Responsiveness **/
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .unicorn-footer-overlay::after{
+        background: none;
+    }
+}
 
 @media only screen and (max-width: 768px) {
+
     .welcome-hero {
         margin-top: 160px;
         margin-bottom: 24px;
