@@ -1260,27 +1260,14 @@ p {
 /** Responsiveness **/
 
 @media only screen and (max-width: 1200px) {
-.unicorn-overlay,
-  .unicorn-footer-overlay {
-    background:
-      linear-gradient(to top,
-        rgba(0, 0, 0, 1)   0%,
-        rgba(0, 0, 0, .5) 20%,
-        rgba(0, 0, 0, 0)  30%);
-  }
-  .unicorn-footer-overlay{
-    background:
-      linear-gradient(to bottom,
-        rgba(0, 0, 0, 1)   0%,
-        rgba(0, 0, 0, .5) 20%,
-        rgba(0, 0, 0, 0)  30%);
+  .unicorn-footer-overlay::after {
+    background: none;
   }
 
 
 }
 
 @media only screen and (max-width: 768px) {
-
 .unicorn-footer-overlay .unicorn-bg {
   bottom: 120px;
 }
