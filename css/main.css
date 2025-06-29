@@ -513,81 +513,70 @@ p {
     background: var(--color-bg);
 }
 
-/* ----- Top unicorn overlay ----- */
-.unicorn-overlay {
+/* ---------- shared overlay frame (behind everything) ---------- */
+.unicorn-overlay,
+.unicorn-footer-overlay{
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   height: var(--unicorn-height);
   pointer-events: none;
+  z-index: -5;                      /* <— pushed well behind content */
+
+  /*  Side fade (identical for both) */
   background:
     linear-gradient(to right,
       black 15%,
-      rgba(0, 0, 0, 0.25) 25%,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 0) 70%,
-      rgba(0, 0, 0, 0.25) 75%,
-      black 85%),
-    linear-gradient(to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.5) 20%,
-      rgba(0, 0, 0, 0) 30%);
+      rgba(0,0,0,.25) 25%,
+      rgba(0,0,0,0)   30% 70%,
+      rgba(0,0,0,.25) 75%,
+      black 85%);
 }
 
-.unicorn-overlay .unicorn-bg {
-  position: absolute;
+/* ---------- direction-specific vertical fades ---------- */
+.unicorn-overlay{
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--unicorn-max-width);
-  height: var(--unicorn-height);
-  pointer-events: none;
+}
+.unicorn-overlay::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,
+            rgba(0,0,0,1)   0%,
+            rgba(0,0,0,.5) 20%,
+            rgba(0,0,0,0)  30%);
 }
 
-/* ----- Footer unicorn overlay ----- */
-.unicorn-footer-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: var(--unicorn-height);
-  z-index: -1;
-  pointer-events: none;
+.unicorn-footer-overlay{
+  bottom: 180px;
+}
+.unicorn-footer-overlay::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,
+            rgba(0,0,0,1)   0%,
+            rgba(0,0,0,.5) 20%,
+            rgba(0,0,0,0)  30%);
 }
 
-.unicorn-footer-overlay .unicorn-bg {
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--unicorn-max-width);
-  height: var(--unicorn-height);
-  z-index: -3;
-  pointer-events: none;
+/* ---------- shared UnicornStudio canvas ---------- */
+.unicorn-bg{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:var(--unicorn-max-width);
+  height:var(--unicorn-height);
+  pointer-events:none;
+  z-index:-7;                       /* never above its overlay    */
 }
+.unicorn-footer-overlay .unicorn-bg{ bottom:0; }
 
-.unicorn-footer-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background:
-    linear-gradient(to right,
-      black 0%,
-      black 15%,
-      rgba(0, 0, 0, 0.25) 25%,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 0) 70%,
-      rgba(0, 0, 0, 0.25) 75%,
-      black 85%),
-    linear-gradient(to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.5) 20%,
-      rgba(0, 0, 0, 0) 30%);
+/* ---------- ensure hero stays above everything ---------- */
+.welcome-hero{
+  position: relative;               /* creates its own stack */
+  z-index: 1;                       /* > -5, so always visible */
 }
 
 .welcome-work {
@@ -598,6 +587,7 @@ p {
 .welcome-hero {
     margin-top: 200px;
     margin-bottom: 80px;
+    z-index: 1;
 }
 
 .welcome-other {
@@ -1268,8 +1258,8 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-.unicorn-footer-overlay .unicorn-bg {
-  bottom: 120px;
+.unicorn-footer-overlay {
+    bottom: 120px;
 }
 
     .welcome-hero {
