@@ -70,6 +70,11 @@
     --color-bg-button-hover: var(--color-white-100);
     --color-bg-button-secondary-default: var(--color-transparent);
     --color-bg-button-secondary-hover: var(--color-white-000);
+    --color-bg-button-primary-default: var(--color-white-100);
+    --color-bg-button-primary-hover: var(--color-white-200);
+    --color-bg-button-primary-active: var(--color-blue-200);
+    --color-bg-button-primary-activeHover: var(--color-blue-300);
+    --color-bg-footer: var(--color-white-000);
 
 
     --color-content-nav: var(--color-white-900);
@@ -91,6 +96,8 @@
     --color-border-tooltip: var(--color-white-100);
     --color-border-button-default: var(--color-white-000);
     --color-border-button-hover: var(--color-white-100);
+    --color-border-button-primary-default: var(--color-white-100);
+    --color-border-button-primary-hover: var(--color-white-200);
     --color-border-button-secondary-default: var(--color-transparent);
     --color-border-button-secondary-hover: var(--color-transparent);
     --color-border-accordion-default: var(--color-white-000);
@@ -116,7 +123,7 @@ html {
 }
 
 main {
-    margin-bottom: 250px;
+    margin-bottom: 240px;
 }
 
 .container {
@@ -595,31 +602,41 @@ ul li.regular-text {
 }
 
 /*-------------------- Navigation (Full)  --------------------*/
-a .logo {
-    display: inline;
-    height: 48px;
-    margin-left: 24px;
+.logo {
+    height: 40px;
+    width: auto;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.10);
+    transition-duration: 0.15s;
+}
+
+
+.navbar-brand {
+    display: inline-flex; /* or inline-block */
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;       /* instead of margin-left on .logo */
+    border-radius: 8px;    /* matches focus style */
+}
+
+.navbar-brand:focus-visible {
+    outline: 2px solid var(--color-focus-outline);
+    outline-offset: 2px; /* gives breathing space */
 }
 
 .navbar {
     position: sticky;
-    /* Use sticky instead of fixed */
     top: 0;
-    /* Stick to the top of the viewport */
     width: 100%;
-    /* Ensure it spans the full width */
     z-index: 1000;
-    /* Ensure it stays on top of other content */
-}
-
-.navbar-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 10px;
 }
 
 .navbar-default {
-    height: 80px;
-    max-width: 1400px;
+    padding: 32px 16px;
+    max-width: 1312px;
     width: 96vw;
     margin: auto;
     top: 24px;
@@ -647,9 +664,13 @@ a .logo {
     color: var(--color-content-nav-inactive);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover{
     color: var(--color-content-nav) !important;
+}
+
+.nav-link:focus-visible{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
 }
 
 
@@ -1184,6 +1205,11 @@ a .logo {
     transition-delay: 0s !important;
 }
 
+.scrollbtn:focus{
+    outline: 2px solid var(--color-focus-outline);
+}
+
+
 .scrollbtn-text {
     margin-left: 8px;
     font-family: 'Inter', sans-serif;
@@ -1194,21 +1220,126 @@ a .logo {
 
 
 /*-------------------- Footer --------------------*/
-.footer-icons {
-    margin-bottom: 20px;
+.footer {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid var(--color-border-default);
+    position: relative;
+    z-index: 0;
+    background-color: var(--color-bg-footer);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.footer-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 800px;
+}
+
+.footer-prompt {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--color-content-default);
+}
+
+.footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.footer-inline-links {
+    color: var(--color-content-default);
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.footer-inline-links a {
+    color: var(--color-content-default);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-inline-links a:hover,
+.footer-inline-links a:focus {
+    color: var(--color-content-interactive);
+    outline: 2px solid var(--color-focus-outline);
+}
+
+.footer-inline-links span {
+    color: var(--color-content-weaker);
+}
+
+.footer-icons a {
+  margin-bottom: 20px;
+  display: inline-flex;        /* or inline-block */
+  align-items: center;
+  justify-content: center;
+  padding: 16px;               /* move padding from .footer-fa here */
+  border-radius: 8px; 
+}
+
+.footer-icons a:focus{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
 }
 
 .footer-fa {
     color: var(--color-content-interactive);
     font-size: 1.75rem;
-    padding: 15px;
     transition: color 0.3s, transform 0.3s;
 }
 
-.footer-fa:hover,
-.footer-fa:focus {
-    transform: scale(1.2);
-    transition-delay: 0s !important;
+.footer-icons a:hover .footer-fa,
+.footer-icons a:focus .footer-fa {
+  transform: scale(1.2);
+}
+
+.footer-credit {
+    font-size: 1rem;
+    color: var(--color-content-weaker);
+}
+
+
+/*-------------------- Tooltip ----------------------*/
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    color: var(--color-content-default);
+    background-color: var(--color-bg-tooltip);
+    border: 1px var(--color-border-tooltip) solid;
+    text-align: center;
+    border-radius: 16px;
+    padding: 8px 12px 8px 12px;
+    white-space: nowrap;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
 }
 
 .glow {
@@ -1226,6 +1357,7 @@ a .logo {
 }
 
 .wiggle {
+    display: inline-block;
     animation: wiggle 3s linear infinite;
 }
 
@@ -1264,44 +1396,6 @@ a .logo {
     100% {
         transform: rotateZ(0);
     }
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 60px;
-    text-align: center;
-}
-
-
-/*-------------------- Tooltip ----------------------*/
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.tooltip-container .tooltip-text {
-    visibility: hidden;
-    width: 176px;
-    color: var(--color-content-default);
-    background-color: rgba(0, 0, 0, 0.94);
-    border: 1px var(--color-border-tooltip) solid;
-    text-align: center;
-    border-radius: 16px;
-    padding: 8px 12px 8px 12px;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -88px;
-}
-
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
 }
 
 /*-------------------- Browser ----------------------*/
@@ -1397,6 +1491,31 @@ a .logo {
 }
 
 /*-------------------- Button ----------------------*/
+.button-primary {
+    padding: 16px 0px;
+    background-color: var(--color-bg-button-primary-default);
+    border: 1px solid var(--color-border-button-primary-default);
+    padding: 8px 16px;
+    cursor: pointer;
+    color: var(--color-content-default);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.button-primary:hover {
+    background-color: var(--color-bg-button-primary-hover);
+    border: 1px solid var(--color-border-button-primary-hover);
+    color: var(--color-content-default);
+}
+
+/* Focus styles for keyboard accessibility */
+.button-primary:focus {
+    outline: 2px solid var(--color-focus-outline);
+}
+
 .button {
     background-color: var(--color-bg-button-default);
     border: 1px solid var(--color-border-button-default);
