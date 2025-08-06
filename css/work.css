@@ -1674,6 +1674,10 @@ ul li.regular-text {
         /* Ensures padding doesn't expand beyond full width */
         margin-top: 32px;
     }
+
+                main {
+    margin-bottom: 160px;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1798,6 +1802,10 @@ ul li.regular-text {
         margin-bottom: 48px;
     }
 
+            main {
+    margin-bottom: 120px;
+}
+
     .callout {
         padding: 32px 32px 16px 32px;
     }
@@ -1840,5 +1848,9 @@ ul li.regular-text {
     .scrollbtn-text {
         display: none;
     }
+
+    main {
+    margin-bottom: 80px;
+}
 
 }
