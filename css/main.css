@@ -103,6 +103,8 @@
     --color-border-button-filter-hover: var(--color-white-200);
     --color-border-callout: var(--color-white-200);
     --color-border-filter: var(--color-transparent);
+
+    --color-focus-outline: var(--color-blue-900);
 }
 
 /*-------------------- General --------------------*/
@@ -436,9 +438,7 @@ p {
 .logo {
     height: 40px;
     width: auto;
-    transition-property: transform, box-shadow, background-color;
-    transition: all .3s ease-in-out;
-    margin-left: 16px;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .logo:hover {
@@ -446,12 +446,18 @@ p {
     transition-duration: 0.15s;
 }
 
-.logo-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-content-default);
-    transition: color 0.3s ease;
-    letter-spacing: 0.5px;
+
+.navbar-logo {
+    display: inline-flex; /* or inline-block */
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;       /* instead of margin-left on .logo */
+    border-radius: 8px;    /* matches focus style */
+}
+
+.navbar-logo:focus-visible {
+    outline: 2px solid var(--color-focus-outline);
+    outline-offset: 2px; /* gives breathing space */
 }
 
 .navbar {
@@ -491,17 +497,19 @@ p {
     color: var(--color-content-nav-inactive);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover{
     color: var(--color-content-nav) !important;
 }
 
+.nav-link:focus-visible{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
+}
+
 /*-------------------- Navigation (Mobile)  --------------------*/
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    box-shadow: none;
-    outline: auto 5px -webkit-focus-ring-color;
+.navbar-toggler:focus-visible{
+outline: solid 2px var(--color-focus-outline);
+border-radius: 8px;
 }
 
 .navbar-toggler-icon {
@@ -656,12 +664,18 @@ p {
     transition-property: transform, box-shadow, background-color;
     transition: all .3s ease-in-out;
     color: var(--color-content-interactive);
+    border-radius: 8px;
 }
 
 .pronunciation:hover,
 .pronunciation:focus {
     transform: scale(1.10);
     transition-duration: 0.15s;
+}
+
+.pronunciation:focus-visible{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
 }
 
 /* Rotate Words Effect */
@@ -846,9 +860,12 @@ p {
     background-color: var(--color-bg-button-filter-activeHover);
 }
 
-/* Remove dashed outline on focus */
 .filter-button:focus {
     outline: none;
+}
+
+.filter-button:focus-visible {
+    outline: 2px solid var(--color-focus-outline);
 }
 
 /* Filter Pills */
@@ -924,6 +941,7 @@ p {
 .card:focus:not(.card-locked) {
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.25);
     transform: scale(1.02);
+    outline: 2px solid var(--color-focus-outline);
 }
 
 .card-title {
@@ -950,6 +968,7 @@ p {
 .card:focus .card-title {
     color: var(--color-content-interactive);
 }
+
 
 .card:hover .card-link,
 .card:focus .card-link {
@@ -981,6 +1000,11 @@ p {
     animation: hover 0.8s infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+}
+
+.strong-link:focus-visible{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
 }
 
 @keyframes hover {
@@ -1026,9 +1050,7 @@ p {
 
 /* Focus styles for keyboard accessibility */
 .button-primary:focus {
-    outline: 3px solid var(--color-focus-outline);
-    background-color: var(--color-bg-button-primary-hover);
-    border-color: var(--color-border-button-primary-hover);
+    outline: 2px solid var(--color-focus-outline);
 }
 
 /*-------------------- Scroll to Top Button --------------------*/
@@ -1068,6 +1090,10 @@ p {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
     transform: scale(1.1);
     transition-delay: 0s !important;
+}
+
+.scrollbtn:focus{
+    outline: 2px solid var(--color-focus-outline);
 }
 
 .scrollbtn-text {
@@ -1134,27 +1160,36 @@ p {
 .footer-inline-links a:hover,
 .footer-inline-links a:focus {
     color: var(--color-content-interactive);
+    outline: 2px solid var(--color-focus-outline);
 }
 
 .footer-inline-links span {
     color: var(--color-content-weaker);
 }
 
-.footer-icons {
-    margin-bottom: 20px;
+.footer-icons a {
+  margin-bottom: 20px;
+  display: inline-flex;        /* or inline-block */
+  align-items: center;
+  justify-content: center;
+  padding: 16px;               /* move padding from .footer-fa here */
+  border-radius: 8px; 
+}
+
+.footer-icons a:focus{
+    outline: 2px solid var(--color-focus-outline);
+    border-radius: 8px;
 }
 
 .footer-fa {
     color: var(--color-content-interactive);
     font-size: 1.75rem;
-    padding: 15px;
     transition: color 0.3s, transform 0.3s;
 }
 
-.footer-fa:hover,
-.footer-fa:focus {
-    transform: scale(1.2);
-    transition-delay: 0s !important;
+.footer-icons a:hover .footer-fa,
+.footer-icons a:focus .footer-fa {
+  transform: scale(1.2);
 }
 
 .footer-credit {
